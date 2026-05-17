@@ -1,0 +1,11 @@
+name: reverse
+test_command:
+  - python
+  - -m
+  - pytest
+  - -q
+  - tests
+source_paths:
+  - src
+  - tests
+  - pyproject.toml
