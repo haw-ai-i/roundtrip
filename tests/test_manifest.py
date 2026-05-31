@@ -23,7 +23,7 @@ def test_list_source_files_calc() -> None:
     files = list_source_files(m)
     rels = {f.relative_to(m.fixture_root) for f in files}
     assert Path("src/calc/__init__.py") in rels
-    assert Path("tests/test_calc.py") in rels
+    assert Path("tests/test_calc.py") not in rels
     assert Path("pyproject.toml") in rels
 
 
