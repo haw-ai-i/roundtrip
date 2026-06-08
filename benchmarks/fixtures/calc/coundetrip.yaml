@@ -7,5 +7,8 @@ test_command:
   - tests
 source_paths:
   - src
-  - tests
   - pyproject.toml
+scaffold_paths:
+  - pyproject.toml
+test_paths:
+  - tests
