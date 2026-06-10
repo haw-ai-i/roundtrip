@@ -1,4 +1,8 @@
-"""Stub agent for local smoke tests: copies seeded description and snapshot tree."""
+"""Stub agent for local smoke tests: copies seeded description and snapshot tree.
+
+Regenerate does not read COUNDETRIP_FIXTURE (the pipeline no longer sets it).
+Pass the snapshot location explicitly via --snapshot or COUNDETRIP_STUB_SNAPSHOT.
+"""
 
 from __future__ import annotations
 
@@ -28,7 +32,11 @@ def _cmd_describe(args: argparse.Namespace) -> int:
 
 
 def _cmd_regenerate(args: argparse.Namespace) -> int:
-    fixture = Path(args.fixture or os.environ.get("COUNDETRIP_FIXTURE", "")).resolve()
+    snap_s = args.snapshot or os.environ.get("COUNDETRIP_STUB_SNAPSHOT", "")
+    if not snap_s:
+        print("Missing --snapshot or COUNDETRIP_STUB_SNAPSHOT", file=sys.stderr)
+        return 1
+    snap = Path(snap_s).resolve()
     desc = args.description
     if desc is None:
         d = os.environ.get("COUNDETRIP_DESCRIPTION")
@@ -46,7 +54,6 @@ def _cmd_regenerate(args: argparse.Namespace) -> int:
     if not desc.is_file():
         print(f"Description not found: {desc}", file=sys.stderr)
         return 1
-    snap = fixture / "stub" / "generated_snapshot"
     if not snap.is_dir():
         print(f"Missing snapshot dir: {snap}", file=sys.stderr)
         return 1
@@ -65,8 +72,8 @@ def main(argv: list[str] | None = None) -> int:
     d.add_argument("--out", type=Path, default=None)
     d.set_defaults(func=_cmd_describe)
 
-    r = sub.add_parser("regenerate", help="Copy generated_snapshot into output dir")
-    r.add_argument("--fixture", default=None)
+    r = sub.add_parser("regenerate", help="Copy snapshot dir into output dir")
+    r.add_argument("--snapshot", default=None)
     r.add_argument("--description", type=Path, default=None)
     r.add_argument("--out", type=Path, default=None)
     r.set_defaults(func=_cmd_regenerate)

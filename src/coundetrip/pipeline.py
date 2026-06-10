@@ -11,7 +11,7 @@ from pathlib import Path
 from typing import Any
 
 from coundetrip.agent_adapter import run_agent
-from coundetrip.manifest import load_manifest
+from coundetrip.manifest import list_scaffold_files, list_test_files, load_manifest
 from coundetrip.scoring import describe_text_metrics, parse_pytest_summary
 
 
@@ -53,11 +53,13 @@ def run_roundtrip(
     logs_dir.mkdir(parents=True, exist_ok=True)
     description_path = run_dir / "description.md"
     generated_root = run_dir / "generated"
+    workspace_root = run_dir / "workspace"
 
     report: dict[str, Any] = {
         "fixture": str(manifest.fixture_root),
         "manifest_name": manifest.name,
         "run_dir": str(run_dir),
+        "workspace": str(workspace_root),
         "success": False,
     }
 
@@ -82,14 +84,23 @@ def run_roundtrip(
         _write_report(run_dir, report)
         return report
 
-    # --- regenerate ---
+    # --- regenerate (isolated: scaffold workspace only, never fixture source) ---
+    if workspace_root.exists():
+        shutil.rmtree(workspace_root)
+    workspace_root.mkdir(parents=True)
+    for scaffold_file in list_scaffold_files(manifest):
+        rel = scaffold_file.relative_to(manifest.fixture_root)
+        dest = workspace_root / rel
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(scaffold_file, dest)
+
     if generated_root.exists():
         shutil.rmtree(generated_root)
     generated_root.mkdir(parents=True)
     cp_reg = run_agent(
         regen_cmd,
         stage="regenerate",
-        fixture_root=manifest.fixture_root,
+        workspace=workspace_root,
         run_dir=run_dir,
         description_path=description_path,
         generated_root=generated_root,
@@ -103,7 +114,13 @@ def run_roundtrip(
         _write_report(run_dir, report)
         return report
 
-    # --- evaluate (tests in generated tree) ---
+    # --- evaluate (original tests are the oracle: copy them into generated tree) ---
+    for test_file in list_test_files(manifest):
+        rel = test_file.relative_to(manifest.fixture_root)
+        dest = generated_root / rel
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(test_file, dest)
+
     test_cp = subprocess.run(
         manifest.test_command,
         cwd=str(generated_root),
