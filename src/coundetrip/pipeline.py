@@ -92,7 +92,7 @@ def run_roundtrip(
         rel = scaffold_file.relative_to(manifest.fixture_root)
         dest = workspace_root / rel
         dest.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copyfile(scaffold_file, dest)
+        shutil.copy2(scaffold_file, dest)
 
     if generated_root.exists():
         shutil.rmtree(generated_root)
@@ -114,12 +114,20 @@ def run_roundtrip(
         _write_report(run_dir, report)
         return report
 
-    # --- evaluate (original tests are the oracle: copy them into generated tree) ---
+    # evaluate (original tests are the oracle: copy them into generated tree) 
+    # Clear destination test paths first so nothing agent-written survives there
+    # (extra auto-passing tests, or directories planted at test file paths).
+    for rel_path in manifest.test_paths:
+        dest = generated_root / rel_path
+        if dest.is_dir() and not dest.is_symlink():
+            shutil.rmtree(dest)
+        elif dest.exists() or dest.is_symlink():
+            dest.unlink()
     for test_file in list_test_files(manifest):
         rel = test_file.relative_to(manifest.fixture_root)
         dest = generated_root / rel
         dest.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copyfile(test_file, dest)
+        shutil.copy2(test_file, dest)
 
     test_cp = subprocess.run(
         manifest.test_command,

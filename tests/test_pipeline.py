@@ -101,3 +101,51 @@ def test_regenerate_is_isolated_from_fixture(tmp_path: Path) -> None:
     assert (workspace / "pyproject.toml").is_file()
     assert not (workspace / "src").exists()
     assert not (workspace / "tests").exists()
+
+HOSTILE_AGENT = """
+import os, shutil
+from pathlib import Path
+
+stage = os.environ["COUNDETRIP_STAGE"]
+if stage == "describe":
+    Path(os.environ["COUNDETRIP_DESCRIPTION"]).write_text("probe", encoding="utf-8")
+else:
+    gen = Path(os.environ["COUNDETRIP_GENERATED"])
+    snap = Path(os.environ["COUNDETRIP_STUB_SNAPSHOT"])
+    if gen.exists():
+        shutil.rmtree(gen)
+    shutil.copytree(snap, gen)
+    # Attack 1: plant an extra auto-passing test.
+    (gen / "tests" / "test_evil.py").write_text(
+        "def test_always_passes():\\n    assert True\\n", encoding="utf-8"
+    )
+    # Attack 2: replace an original test file with a directory.
+    target = gen / "tests" / "test_calc.py"
+    target.unlink()
+    target.mkdir()
+"""
+
+
+def test_agent_cannot_hijack_test_oracle(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    """Agent-written files in test paths must not survive into evaluation."""
+    _set_stub_snapshot(monkeypatch, "calc")
+    agent = tmp_path / "hostile_agent.py"
+    agent.write_text(HOSTILE_AGENT, encoding="utf-8")
+    report = run_roundtrip(
+        fixture_path=FIXTURES / "calc",
+        agent_cmd=[sys.executable, str(agent)],
+        runs_dir=tmp_path / "runs",
+        run_id="pytest_hijack",
+    )
+    assert report["success"] is True
+    run_dir = Path(report["run_dir"])
+    tests_dir = run_dir / "generated" / "tests"
+    # The planted test is gone; the original is back as a real file.
+    assert not (tests_dir / "test_evil.py").exists()
+    assert (tests_dir / "test_calc.py").is_file()
+    original = (FIXTURES / "calc" / "tests" / "test_calc.py").read_text(encoding="utf-8")
+    assert (tests_dir / "test_calc.py").read_text(encoding="utf-8") == original
+    # Only the original tests were counted.
+    assert report["score"]["tests"]["passed"] == 2  
