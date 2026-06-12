@@ -13,9 +13,10 @@ cd coundetrip
 uv sync --extra dev
 ```
 
-Run a full roundtrip on the `calc` fixture using the built-in stub agent (copies `stub/description.md` and `stub/generated_snapshot/`):
+Run a full roundtrip on the `calc` fixture using the built-in stub agent (copies `stub/description.md` and `stub/generated_snapshot/`). The stub's regenerate stage needs `COUNDETRIP_STUB_SNAPSHOT` because the pipeline no longer exposes the fixture to regenerate:
 
 ```bash
+COUNDETRIP_STUB_SNAPSHOT="$PWD/benchmarks/fixtures/calc/stub/generated_snapshot" \
 uv run python -m coundetrip run \
   --fixture benchmarks/fixtures/calc \
   --runs-dir runs \
@@ -26,6 +27,7 @@ uv run python -m coundetrip run \
 Or use the console script:
 
 ```bash
+COUNDETRIP_STUB_SNAPSHOT="$PWD/benchmarks/fixtures/calc/stub/generated_snapshot" \
 uv run coundetrip run \
   --fixture benchmarks/fixtures/calc \
   --runs-dir runs \
@@ -61,7 +63,7 @@ Add a directory under `benchmarks/fixtures/<name>/` with:
 
 3. **Stub agent seeds** (for local smoke tests, not for real scoring):
    - `stub/description.md` — copied to `description.md` by `coundetrip.stub_agent describe`.
-   - `stub/generated_snapshot/` — copied to `generated/` by `coundetrip.stub_agent regenerate`.
+   - `stub/generated_snapshot/` — copied to `generated/` by `coundetrip.stub_agent regenerate`. The snapshot location must be passed explicitly via `--snapshot` or `COUNDETRIP_STUB_SNAPSHOT` (the pipeline does not expose the fixture to regenerate).
 
 Example fixtures: `benchmarks/fixtures/calc`, `benchmarks/fixtures/reverse`.
 
@@ -72,10 +74,13 @@ The runner invokes your command twice (describe and regenerate). It sets:
 | Variable | Describe | Regenerate |
 |----------|----------|------------|
 | `COUNDETRIP_STAGE` | `describe` | `regenerate` |
-| `COUNDETRIP_FIXTURE` | absolute path to fixture root | same |
+| `COUNDETRIP_FIXTURE` | absolute path to fixture root | unset (isolation: regenerate never sees the original source) |
+| `COUNDETRIP_WORKSPACE` | unset | absolute path to isolated workspace seeded with `scaffold_paths` content only |
 | `COUNDETRIP_RUN_DIR` | absolute path to this run directory | same |
 | `COUNDETRIP_DESCRIPTION` | path where the agent should write `description.md` | path to existing `description.md` |
 | `COUNDETRIP_GENERATED` | unset | directory to populate with the regenerated tree |
+
+After regenerate, the runner copies the fixture's original `test_paths` into the generated tree (overwriting any agent-written files at those paths) before running `test_command`, so the original tests are always the oracle.
 
 If `--agent` contains `stub_agent`, the runner appends the subcommand `describe` or `regenerate` after your argv (for `python -m coundetrip.stub_agent`). Otherwise the same argv is used for both stages; your entrypoint should branch on `COUNDETRIP_STAGE`.
 
