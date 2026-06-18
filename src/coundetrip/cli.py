@@ -9,6 +9,7 @@ import sys
 from pathlib import Path
 
 from coundetrip.pipeline import run_roundtrip
+from coundetrip.runner import DockerRunner, LocalRunner
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -44,6 +45,17 @@ def main(argv: list[str] | None = None) -> int:
         default=None,
         help="Optional run id subdirectory name (default: auto timestamp)",
     )
+    run_p.add_argument(
+        "--runner",
+        choices=["local", "docker"],
+        default="local",
+        help="Execution backend: local (host) or docker (sandboxed). Default: local",
+    )
+    run_p.add_argument(
+        "--image",
+        default="coundetrip-sandbox",
+        help="Docker image name when --runner docker (default: coundetrip-sandbox)",
+    )
 
     args = parser.parse_args(argv)
     if args.command == "run":
@@ -56,6 +68,7 @@ def main(argv: list[str] | None = None) -> int:
             agent_cmd=agent_cmd,
             runs_dir=args.runs_dir.resolve(),
             run_id=args.run_id,
+            runner=LocalRunner() if args.runner == "local" else DockerRunner(image=args.image),
         )
         print(json.dumps(report, indent=2))
         return 0 if report.get("success") else 1

@@ -1,11 +1,12 @@
-"""Provider-agnostic subprocess adapter for describe / regenerate agents."""
+"""Provider-agnostic adapter for describe / regenerate agents."""
 
 from __future__ import annotations
 
 import os
-import subprocess
 from pathlib import Path
 from typing import Sequence
+
+from coundetrip.runner import LocalRunner, Mount, RunResult, Runner
 
 
 def run_agent(
@@ -18,9 +19,10 @@ def run_agent(
     description_path: Path | None = None,
     generated_root: Path | None = None,
     timeout_sec: int | None = None,
-) -> subprocess.CompletedProcess[str]:
+    runner: Runner | None = None,
+) -> RunResult:
     """
-    Invoke agent with documented environment variables.
+    Invoke an agent for one stage with documented environment variables.
 
     Convention for external agents:
     - COUNDETRIP_STAGE: ``describe`` | ``regenerate``
@@ -34,27 +36,40 @@ def run_agent(
     exposed; the agent sees only the description, the scaffold workspace, and
     the output directory.
 
-    The command line is ``agent_cmd`` with no extra args from this library; scripts
-    should read env vars or document their own flags.
+    The command is executed by ``runner`` (default :class:`LocalRunner`, i.e. on
+    the host). Each path the agent legitimately needs is also declared as a
+    :class:`Mount`, so a container-based runner can expose exactly those paths
+    and nothing else. The mounts mirror the environment variables above.
     """
+    runner = runner or LocalRunner()
+
     env = os.environ.copy()
     env["COUNDETRIP_STAGE"] = stage
     env["COUNDETRIP_RUN_DIR"] = str(run_dir.resolve())
-    if fixture_root is not None:
-        env["COUNDETRIP_FIXTURE"] = str(fixture_root.resolve())
-    if workspace is not None:
-        env["COUNDETRIP_WORKSPACE"] = str(workspace.resolve())
-    if description_path is not None:
-        env["COUNDETRIP_DESCRIPTION"] = str(description_path.resolve())
-    if generated_root is not None:
-        env["COUNDETRIP_GENERATED"] = str(generated_root.resolve())
 
-    return subprocess.run(
+    mounts: list[Mount] = []
+    if fixture_root is not None:
+        p = fixture_root.resolve()
+        env["COUNDETRIP_FIXTURE"] = str(p)
+        mounts.append(Mount(p, "ro"))
+    if workspace is not None:
+        p = workspace.resolve()
+        env["COUNDETRIP_WORKSPACE"] = str(p)
+        mounts.append(Mount(p, "rw"))
+    if description_path is not None:
+        p = description_path.resolve()
+        env["COUNDETRIP_DESCRIPTION"] = str(p)
+        mounts.append(Mount(p, "ro"))
+    if generated_root is not None:
+        p = generated_root.resolve()
+        env["COUNDETRIP_GENERATED"] = str(p)
+        mounts.append(Mount(p, "rw"))
+
+    return runner.execute(
         list(agent_cmd),
-        cwd=str(run_dir),
+        cwd=run_dir,
         env=env,
-        capture_output=True,
-        text=True,
+        mounts=mounts,
+        network="inherit",
         timeout=timeout_sec,
-        check=False,
     )
