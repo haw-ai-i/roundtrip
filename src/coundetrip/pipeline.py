@@ -3,16 +3,29 @@
 from __future__ import annotations
 
 import json
+import os
 import re
 import shutil
-import subprocess
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
 from coundetrip.agent_adapter import run_agent
 from coundetrip.manifest import list_scaffold_files, list_test_files, load_manifest
+from coundetrip.runner import LocalRunner, Mount, Runner
 from coundetrip.scoring import describe_text_metrics, parse_pytest_summary
+
+# Evaluation runs in a controlled, minimal environment so results do not depend
+# on whatever happens to be in the host environment. Only the few variables
+# needed to locate and run the interpreter are carried through. Under the Docker
+# runner even these are dropped (neither COUNDETRIP_* nor forwarded), so the
+# container's own fixed environment is used -- keeping evaluation reproducible
+# and consistent across both backends.
+_EVAL_ENV_KEYS = ("PATH", "HOME", "LANG", "LC_ALL", "LC_CTYPE")
+
+
+def _evaluation_env() -> dict[str, str]:
+    return {k: os.environ[k] for k in _EVAL_ENV_KEYS if k in os.environ}
 
 
 def _safe_run_id(run_id: str | None) -> str:
@@ -29,6 +42,7 @@ def run_roundtrip(
     runs_dir: Path,
     run_id: str | None = None,
     agent_timeout_sec: int | None = 600,
+    runner: Runner | None = None,
 ) -> dict[str, Any]:
     """
     Execute describe → regenerate → evaluate → score.
@@ -47,6 +61,7 @@ def run_roundtrip(
     - Otherwise, run the same agent_cmd for both stages (env-only contract).
     """
     manifest = load_manifest(fixture_path)
+    runner = runner or LocalRunner()
     rid = _safe_run_id(run_id)
     run_dir = (runs_dir / rid / manifest.name).resolve()
     logs_dir = run_dir / "logs"
@@ -75,7 +90,9 @@ def run_roundtrip(
         description_path=description_path,
         generated_root=None,
         timeout_sec=agent_timeout_sec,
+        runner=runner,
     )
+    
     (logs_dir / "describe.stdout.txt").write_text(cp_desc.stdout or "", encoding="utf-8")
     (logs_dir / "describe.stderr.txt").write_text(cp_desc.stderr or "", encoding="utf-8")
     report["describe"] = {"returncode": cp_desc.returncode}
@@ -105,6 +122,7 @@ def run_roundtrip(
         description_path=description_path,
         generated_root=generated_root,
         timeout_sec=agent_timeout_sec,
+        runner=runner,
     )
     (logs_dir / "regenerate.stdout.txt").write_text(cp_reg.stdout or "", encoding="utf-8")
     (logs_dir / "regenerate.stderr.txt").write_text(cp_reg.stderr or "", encoding="utf-8")
@@ -129,13 +147,13 @@ def run_roundtrip(
         dest.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(test_file, dest)
 
-    test_cp = subprocess.run(
+    test_cp = runner.execute(
         manifest.test_command,
-        cwd=str(generated_root),
-        capture_output=True,
-        text=True,
+        cwd=generated_root,
+        env=_evaluation_env(),
+        mounts=[Mount(generated_root, "rw")],
+        network="none",
         timeout=agent_timeout_sec,
-        check=False,
     )
     (logs_dir / "test.stdout.txt").write_text(test_cp.stdout or "", encoding="utf-8")
     (logs_dir / "test.stderr.txt").write_text(test_cp.stderr or "", encoding="utf-8")
