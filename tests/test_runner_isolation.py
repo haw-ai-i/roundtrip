@@ -103,3 +103,41 @@ def test_docker_probe_cannot_reach_source() -> None:
         assert _bytes_read(report) is None
     finally:
         shutil.rmtree(work, ignore_errors=True)
+
+
+@pytest.mark.skipif(not _docker_ok(), reason="docker engine not available")
+def test_docker_runner_permission_error_on_rerun() -> None:
+    """A rerun of the same pipeline run ID should be cleanable without permission errors.
+
+    Under default Docker running as root, the files generated in the first run will
+    be owned by root, and the second run's cleanup will raise a PermissionError.
+    """
+    runs_root = REPO / "runs"
+    runs_root.mkdir(exist_ok=True)
+    work = Path(tempfile.mkdtemp(prefix="docker_iso_", dir=runs_root))
+    
+    # We must NOT ignore errors on the teardown/recreation of directories during rerun.
+    # We will trigger run_roundtrip twice with the same run_id.
+    try:
+        # Run 1: Creates files inside the container as the default container user (root)
+        run_roundtrip(
+            fixture_path=FIXTURES / "calc",
+            agent_cmd=["python", "-c", PROBE],
+            runs_dir=work,
+            run_id="docker_perm_probe",
+            runner=DockerRunner(image="coundetrip-sandbox"),
+        )
+        
+        # Run 2: Tries to clean up the existing generated directory from Run 1.
+        # This will fail with PermissionError if the files were written as root.
+        run_roundtrip(
+            fixture_path=FIXTURES / "calc",
+            agent_cmd=["python", "-c", PROBE],
+            runs_dir=work,
+            run_id="docker_perm_probe",
+            runner=DockerRunner(image="coundetrip-sandbox"),
+        )
+    finally:
+        # We use ignore_errors=True here just to make sure we don't leak temp dirs on the host
+        # if the test fails as expected.
+        shutil.rmtree(work, ignore_errors=True)
