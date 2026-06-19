@@ -144,6 +144,7 @@ def build_docker_command(
     env: Mapping[str, str] | None = None,
     mounts: Sequence[Mount] = (),
     network: str = "inherit",
+    forward_env: Sequence[str] = (),
 ) -> list[str]:
     """Construct the ``docker run`` argv for one stage.
 
@@ -159,13 +160,21 @@ def build_docker_command(
     leaked into the container.
     """
     cwd = Path(cwd).resolve()
-    cmd: list[str] = ["docker", "run", "--rm", "-w", _WORK, "-v", f"{cwd}:{_WORK}:rw"]
+    cmd: list[str] = ["docker", "run", "--rm"]
+    if hasattr(os, "getuid") and hasattr(os, "getgid"):
+        cmd += ["--user", f"{os.getuid()}:{os.getgid()}"]
+    cmd += ["-w", _WORK, "-v", f"{cwd}:{_WORK}:rw"]
 
     externs: list[tuple[Path, str]] = []
     for i, m in enumerate(mounts):
         host = Path(m.host).resolve()
         if host == cwd or _is_relative_to(host, cwd):
-            continue  # already reachable through the work mount
+            # Reachable through the work mount. If declared read-only, overlay a
+            # read-only bind so it stays read-only despite the writable parent.
+            if m.mode == "ro" and host != cwd:
+                rel = host.relative_to(cwd)
+                cmd += ["-v", f"{host}:{_WORK}/{rel}:ro"]
+            continue
         cpath = f"/coundetrip/extern{i}"
         cmd += ["-v", f"{host}:{cpath}:{m.mode}"]
         externs.append((host, cpath))
@@ -173,10 +182,10 @@ def build_docker_command(
     if network == "none":
         cmd += ["--network", "none"]
 
+    forward = tuple(forward_env)
     for key, value in (env or {}).items():
-        if not key.startswith("COUNDETRIP_"):
-            continue
-        cmd += ["-e", f"{key}={_to_container_path(value, cwd, externs)}"]
+        if key.startswith("COUNDETRIP_") or key in forward:
+            cmd += ["-e", f"{key}={_to_container_path(value, cwd, externs)}"]
 
     cmd.append(image)
     cmd += list(argv)
@@ -191,8 +200,9 @@ class DockerRunner:
     source. ``network="none"`` is honored for offline evaluation.
     """
 
-    def __init__(self, image: str = "coundetrip-sandbox") -> None:
+    def __init__(self, image: str = "coundetrip-sandbox", forward_env: Sequence[str] = ()) -> None:
         self.image = image
+        self.forward_env = tuple(forward_env)
 
     def execute(
         self,
@@ -211,6 +221,7 @@ class DockerRunner:
             env=env,
             mounts=mounts,
             network=network,
+            forward_env=self.forward_env,
         )
         cp = subprocess.run(
             cmd,

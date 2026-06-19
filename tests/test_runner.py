@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import os
 from pathlib import Path
 
 from coundetrip.runner import Mount, build_docker_command
@@ -56,7 +57,13 @@ def test_regenerate_does_not_mount_fixture(tmp_path: Path) -> None:
         network="inherit",
     )
     mounts = _flags(cmd, "-v")
-    assert mounts == [f"{run_dir}:/coundetrip/run:rw"]
+    # The run dir is mounted rw; the read-only description is overlaid on top of
+    # it so it stays read-only despite the writable parent.
+    assert f"{run_dir}:/coundetrip/run:rw" in mounts
+    assert f"{description}:/coundetrip/run/description.md:ro" in mounts
+    # workspace/generated are rw and reachable through the work mount (no overlay).
+    assert not any("workspace" in mp and mp.endswith(":ro") for mp in mounts)
+    # The fixture path appears nowhere in the command -> unreachable.
     assert all(str(fixture) not in tok for tok in cmd)
     envs = _flags(cmd, "-e")
     assert "COUNDETRIP_WORKSPACE=/coundetrip/run/workspace" in envs
@@ -108,3 +115,24 @@ def test_non_coundetrip_env_is_dropped(tmp_path: Path) -> None:
     envs = _flags(cmd, "-e")
     assert "COUNDETRIP_STAGE=describe" in envs
     assert all("SECRET_TOKEN" not in e and "HOME" not in e for e in envs)
+
+
+def test_runs_as_host_user(tmp_path: Path) -> None:
+    cmd = build_docker_command(["true"], cwd=tmp_path, image="img")
+    # On a POSIX host the container runs as the caller's uid:gid so bind-mounted
+    # files are not owned by root (keeps run dirs cleanable across reruns).
+    if hasattr(os, "getuid") and hasattr(os, "getgid"):
+        assert f"{os.getuid()}:{os.getgid()}" in _flags(cmd, "--user")
+
+
+def test_forwards_listed_credential_only(tmp_path: Path) -> None:
+    cmd = build_docker_command(
+        ["true"],
+        cwd=tmp_path,
+        image="img",
+        env={"GEMINI_API_KEY": "secret", "OTHER_KEY": "nope"},
+        forward_env=("GEMINI_API_KEY",),
+    )
+    envs = _flags(cmd, "-e")
+    assert "GEMINI_API_KEY=secret" in envs
+    assert all("OTHER_KEY" not in e for e in envs)

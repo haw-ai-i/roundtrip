@@ -59,7 +59,9 @@ def run_agent(
     if description_path is not None:
         p = description_path.resolve()
         env["COUNDETRIP_DESCRIPTION"] = str(p)
-        mounts.append(Mount(p, "ro"))
+        # The description is the output of describe (writable) but a read-only
+        # input to regenerate.
+        mounts.append(Mount(p, "ro" if stage == "regenerate" else "rw"))
     if generated_root is not None:
         p = generated_root.resolve()
         env["COUNDETRIP_GENERATED"] = str(p)

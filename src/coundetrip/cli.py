@@ -68,7 +68,7 @@ def main(argv: list[str] | None = None) -> int:
             agent_cmd=agent_cmd,
             runs_dir=args.runs_dir.resolve(),
             run_id=args.run_id,
-            runner=LocalRunner() if args.runner == "local" else DockerRunner(image=args.image),
+            runner=LocalRunner() if args.runner == "local" else DockerRunner(image=args.image, forward_env=("GEMINI_API_KEY",)),
         )
         print(json.dumps(report, indent=2))
         return 0 if report.get("success") else 1

@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import os
 import re
 import shutil
 from datetime import datetime, timezone
@@ -13,6 +14,18 @@ from coundetrip.agent_adapter import run_agent
 from coundetrip.manifest import list_scaffold_files, list_test_files, load_manifest
 from coundetrip.runner import LocalRunner, Mount, Runner
 from coundetrip.scoring import describe_text_metrics, parse_pytest_summary
+
+# Evaluation runs in a controlled, minimal environment so results do not depend
+# on whatever happens to be in the host environment. Only the few variables
+# needed to locate and run the interpreter are carried through. Under the Docker
+# runner even these are dropped (neither COUNDETRIP_* nor forwarded), so the
+# container's own fixed environment is used -- keeping evaluation reproducible
+# and consistent across both backends.
+_EVAL_ENV_KEYS = ("PATH", "HOME", "LANG", "LC_ALL", "LC_CTYPE")
+
+
+def _evaluation_env() -> dict[str, str]:
+    return {k: os.environ[k] for k in _EVAL_ENV_KEYS if k in os.environ}
 
 
 def _safe_run_id(run_id: str | None) -> str:
@@ -137,7 +150,7 @@ def run_roundtrip(
     test_cp = runner.execute(
         manifest.test_command,
         cwd=generated_root,
-        env=None,
+        env=_evaluation_env(),
         mounts=[Mount(generated_root, "rw")],
         network="none",
         timeout=agent_timeout_sec,
