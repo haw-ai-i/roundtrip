@@ -1,0 +1,15 @@
+name: expr_apl_nodoc
+test_command:
+  - python
+  - -m
+  - pytest
+  - -q
+  - tests
+source_paths:
+  - src
+  - pyproject.toml
+scaffold_paths:
+  - pyproject.toml
+  - src/expr_apl_nodoc/__init__.py
+test_paths:
+  - tests
