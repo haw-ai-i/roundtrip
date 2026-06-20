@@ -75,10 +75,18 @@ class GeminiClient:
         self.usage = {"calls": 0, "prompt_tokens": 0, "output_tokens": 0}
 
     def complete(self, *, system: str, user: str) -> str:
+        if "gemma" in self._model.lower():
+            # Gemma models have no system role; fold the system prompt into the
+            # user turn instead of passing it as a system instruction.
+            contents = f"{system}\n\n{user}"
+            config = {"temperature": self._temperature}
+        else:
+            contents = user
+            config = {"system_instruction": system, "temperature": self._temperature}
         resp = self._client.models.generate_content(
             model=self._model,
-            contents=user,
-            config={"system_instruction": system, "temperature": self._temperature},
+            contents=contents,
+            config=config,
         )
         um = getattr(resp, "usage_metadata", None)
         if um is not None:

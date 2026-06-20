@@ -138,3 +138,22 @@ def test_gemini_client_usage_accumulates_across_calls() -> None:
     client.complete(system="s", user="u")
 
     assert client.usage == {"calls": 2, "prompt_tokens": 20, "output_tokens": 10}
+
+def test_gemma_folds_system_into_user_prompt() -> None:
+    fake = _FakeGenAIClient(_FakeResponse("ok", _FakeUsage(5, 3)))
+    client = llm_agent.GeminiClient(model="gemma-3-4b-it", client=fake)
+
+    client.complete(system="SYS", user="USR")
+
+    sent = fake.models.calls[0]
+    assert "SYS" in sent["contents"] and "USR" in sent["contents"]
+    assert "system_instruction" not in sent["config"]
+def test_gemma_folds_system_into_user_prompt() -> None:
+    fake = _FakeGenAIClient(_FakeResponse("ok", _FakeUsage(5, 3)))
+    client = llm_agent.GeminiClient(model="gemma-3-4b-it", client=fake)
+
+    client.complete(system="SYS", user="USR")
+
+    sent = fake.models.calls[0]
+    assert "SYS" in sent["contents"] and "USR" in sent["contents"]
+    assert "system_instruction" not in sent["config"]
