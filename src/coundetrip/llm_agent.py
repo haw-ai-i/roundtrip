@@ -17,6 +17,7 @@ import json
 import os
 import re
 import sys
+import time
 from pathlib import Path
 from typing import Protocol
 
@@ -45,6 +46,29 @@ class ReplayClient:
         return (self._dir / f"{stage}.txt").read_text(encoding="utf-8")
 
 
+def _is_retryable(exc: Exception) -> bool:
+    """True for transient server-side errors worth retrying with backoff.
+
+    Covers HTTP 429 (rate limit) and 5xx (e.g. 503 UNAVAILABLE "high demand"),
+    detected via a status attribute when present and otherwise by message text.
+    """
+    code = getattr(exc, "code", None) or getattr(exc, "status_code", None)
+    if code in (429, 500, 502, 503, 504):
+        return True
+    msg = str(exc).lower()
+    return any(
+        s in msg
+        for s in (
+            "unavailable",
+            "overloaded",
+            "high demand",
+            "try again later",
+            "internal error",
+            "deadline exceeded",
+        )
+    )
+
+
 class GeminiClient:
     """Live client for the Google Gemini API via the ``google-genai`` SDK.
 
@@ -63,6 +87,8 @@ class GeminiClient:
         *,
         api_key: str | None = None,
         temperature: float = 0.0,
+        max_retries: int = 6,
+        retry_backoff: float = 2.0,
         client: object | None = None,
     ) -> None:
         if client is None:
@@ -72,6 +98,8 @@ class GeminiClient:
         self._client = client
         self._model = model
         self._temperature = temperature
+        self._max_retries = max_retries
+        self._retry_backoff = retry_backoff
         self.usage = {"calls": 0, "prompt_tokens": 0, "output_tokens": 0}
 
     def complete(self, *, system: str, user: str) -> str:
@@ -83,11 +111,20 @@ class GeminiClient:
         else:
             contents = user
             config = {"system_instruction": system, "temperature": self._temperature}
-        resp = self._client.models.generate_content(
-            model=self._model,
-            contents=contents,
-            config=config,
-        )
+        resp = None
+        for attempt in range(self._max_retries):
+            try:
+                resp = self._client.models.generate_content(
+                    model=self._model,
+                    contents=contents,
+                    config=config,
+                )
+                break
+            except Exception as exc:  # noqa: BLE001 - retry transient server errors
+                if attempt < self._max_retries - 1 and _is_retryable(exc):
+                    time.sleep(min(self._retry_backoff * (2 ** attempt), 30.0))
+                    continue
+                raise
         um = getattr(resp, "usage_metadata", None)
         if um is not None:
             self.usage["prompt_tokens"] += getattr(um, "prompt_token_count", 0) or 0
@@ -98,10 +135,12 @@ class GeminiClient:
 
 _DESCRIBE_SYSTEM = (
     "You are given the complete source of a small Python program. Write a precise "
-    "natural-language specification of its behavior: every public function and class, "
-    "its inputs, outputs, and edge cases, detailed enough that another engineer could "
-    "reimplement it from your description alone, without seeing the code. Describe "
-    "behavior, not a line-by-line transcription. Do not include or infer test code."
+    "natural-language specification of its behavior: every module-level function and "
+    "class, including any whose names begin with an underscore, since callers and "
+    "tests may import them directly. Cover each one's inputs, outputs, and edge "
+    "cases, detailed enough that another engineer could reimplement it from your "
+    "description alone, without seeing the code. Describe behavior, not a "
+    "line-by-line transcription. Do not include or infer test code."
 )
 
 _REGENERATE_SYSTEM = (
