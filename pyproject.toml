@@ -9,6 +9,7 @@ description = "Roundtrip benchmark: natural language as source, code as generate
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
+    "google-genai>=2.9.0",
     "PyYAML>=6.0",
 ]
 
