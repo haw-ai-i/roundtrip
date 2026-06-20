@@ -1,0 +1,14 @@
+name: swe_saferepr
+test_command:
+  - python
+  - -m
+  - pytest
+  - -q
+  - tests
+source_paths:
+  - src
+  - pyproject.toml
+scaffold_paths:
+  - pyproject.toml
+test_paths:
+  - tests
