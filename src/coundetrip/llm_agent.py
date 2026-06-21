@@ -130,7 +130,20 @@ class GeminiClient:
             self.usage["prompt_tokens"] += getattr(um, "prompt_token_count", 0) or 0
             self.usage["output_tokens"] += getattr(um, "candidates_token_count", 0) or 0
         self.usage["calls"] += 1
-        return resp.text or ""
+        text = resp.text or ""
+        if not text:
+            reason = None
+            try:
+                cand = (resp.candidates or [None])[0]
+                reason = getattr(cand, "finish_reason", None)
+            except Exception:  # noqa: BLE001 - diagnostics only
+                reason = None
+            feedback = getattr(resp, "prompt_feedback", None)
+            sys.stderr.write(
+                f"[GeminiClient] empty response: finish_reason={reason} "
+                f"prompt_feedback={feedback}\n"
+            )
+        return text
 
 
 _DESCRIBE_SYSTEM = (
@@ -218,6 +231,10 @@ def regenerate(client: LLMClient) -> int:
         + _render_files(scaffold)
     )
     reply = client.complete(system=_REGENERATE_SYSTEM, user=user)
+    try:  # keep the raw reply for debugging format/parse issues
+        (generated.parent / "regenerate_reply.txt").write_text(reply, encoding="utf-8")
+    except OSError:
+        pass
     produced = parse_file_blocks(reply)
     generated.mkdir(parents=True, exist_ok=True)
     # Keep the scaffold, then write the model's source files over it.
@@ -234,7 +251,8 @@ def _build_client() -> LLMClient:
         return ReplayClient(Path(replay))
     if os.environ.get("GEMINI_API_KEY"):
         model = os.environ.get("COUNDETRIP_MODEL", "gemini-3.5-flash")
-        return GeminiClient(model=model)
+        temperature = float(os.environ.get("COUNDETRIP_TEMPERATURE", "0.0"))
+        return GeminiClient(model=model, temperature=temperature)
     raise NotImplementedError(
         "No client configured. Set GEMINI_API_KEY for a live run, or "
         "COUNDETRIP_REPLAY_DIR for a deterministic offline replay."
