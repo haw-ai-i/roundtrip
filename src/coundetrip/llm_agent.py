@@ -101,6 +101,7 @@ class GeminiClient:
         self._max_retries = max_retries
         self._retry_backoff = retry_backoff
         self.usage = {"calls": 0, "prompt_tokens": 0, "output_tokens": 0}
+        self.last_finish_reason = None
 
     def complete(self, *, system: str, user: str) -> str:
         if "gemma" in self._model.lower():
@@ -131,13 +132,14 @@ class GeminiClient:
             self.usage["output_tokens"] += getattr(um, "candidates_token_count", 0) or 0
         self.usage["calls"] += 1
         text = resp.text or ""
-        if not text:
+        reason = None
+        try:
+            cand = (resp.candidates or [None])[0]
+            reason = getattr(cand, "finish_reason", None)
+        except Exception:  # noqa: BLE001 - diagnostics only
             reason = None
-            try:
-                cand = (resp.candidates or [None])[0]
-                reason = getattr(cand, "finish_reason", None)
-            except Exception:  # noqa: BLE001 - diagnostics only
-                reason = None
+        self.last_finish_reason = reason
+        if not text:
             feedback = getattr(resp, "prompt_feedback", None)
             sys.stderr.write(
                 f"[GeminiClient] empty response: finish_reason={reason} "
