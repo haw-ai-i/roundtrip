@@ -3,7 +3,7 @@ import json, sys
 from pathlib import Path
 
 RUNS = [
-    ("saferepr",  "swe_saferepr",            103, "lost one exact output literal"),
+    ("var_swe_saferepr_1",  "swe_saferepr",            103, "lost one exact output literal"),
     ("us_1",      "swe_sympy_unitsystem",    205, "5/33 tests fail"),
     ("sympy_real_2", "swe_sympy_prefixes",   219, "import-time error: regenerated immutability constraint original omits"),
     ("tp_1",      "swe_sympy_tensorproduct", 420, "dropped matrix/trace integration imports"),
