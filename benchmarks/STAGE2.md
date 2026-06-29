@@ -21,3 +21,21 @@ Control = minimal-regen from the UNEDITED description.
 For this localized edit, description-edit and code-edit cost are comparable (~1:1).
 The instrument now cleanly separates edit-driven change from regeneration churn, so
 amplification can be measured honestly across edits of varying structural scope.
+
+## Second edit: structural (tuple membership)
+Edit: "if x is a tuple/Tuple, check membership component-wise -> And(Contains(a,s),...)".
+
+| measure | value |
+|---|---|
+| description edit | 4 lines |
+| control drift | 0 lines |
+| code edit (minimal) | 5 lines |
+
+Model implemented it compactly: `if isinstance(x,(tuple,Tuple)): return And(*(cls(i,s) for i in x))` + 2 imports.
+
+## Finding
+Both a localized edit (~3 code lines) and a structural edit (~5 code lines) come out
+~1:1 with the description edit at the LINE level. Naive free-form amplification (13.5x)
+was an artifact of non-minimal rewriting. Open question: is the Stage-2 hypothesis about
+line-count, edit-effort, or required expertise? Line-count amplification is ~1x for these
+single-file edits; cross-file / multi-callsite edits may differ.
