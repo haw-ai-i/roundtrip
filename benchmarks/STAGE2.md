@@ -39,3 +39,18 @@ Both a localized edit (~3 code lines) and a structural edit (~5 code lines) come
 was an artifact of non-minimal rewriting. Open question: is the Stage-2 hypothesis about
 line-count, edit-effort, or required expertise? Line-count amplification is ~1x for these
 single-file edits; cross-file / multi-callsite edits may differ.
+
+## Edit distribution (minimal-edit instrument, verified diffs)
+| edit | scope | desc lines | code lines | amplification |
+|---|---|---|---|---|
+| raise->return | single-site | 4 | 3 | ~1x |
+| tuple membership | structural | 4 | 5 | ~1x |
+| validation | single-site | 2 | 6 | 3x |
+| doit | new-method | 2 | 3 | 1.5x |
+| multi-method (negate+as_set) | ill-posed | 2 | regen failed | model looped on ambiguous spec, hit MAX_TOKENS |
+
+Finding: line-count amplification is modest (~1-3x) for well-specified single-purpose
+edits, not the large cascade naive free-form diffs suggested. An ambiguous edit broke
+regeneration entirely (no valid output) rather than amplifying - description *clarity*
+matters. Open question for framing: is the Stage-2 hypothesis about line-count (modest
+here) or edit effort / required expertise?
