@@ -17,6 +17,7 @@ import json
 import os
 import re
 import sys
+import time
 from pathlib import Path
 from typing import Protocol
 
@@ -45,6 +46,29 @@ class ReplayClient:
         return (self._dir / f"{stage}.txt").read_text(encoding="utf-8")
 
 
+def _is_retryable(exc: Exception) -> bool:
+    """True for transient server-side errors worth retrying with backoff.
+
+    Covers HTTP 429 (rate limit) and 5xx (e.g. 503 UNAVAILABLE "high demand"),
+    detected via a status attribute when present and otherwise by message text.
+    """
+    code = getattr(exc, "code", None) or getattr(exc, "status_code", None)
+    if code in (429, 500, 502, 503, 504):
+        return True
+    msg = str(exc).lower()
+    return any(
+        s in msg
+        for s in (
+            "unavailable",
+            "overloaded",
+            "high demand",
+            "try again later",
+            "internal error",
+            "deadline exceeded",
+        )
+    )
+
+
 class GeminiClient:
     """Live client for the Google Gemini API via the ``google-genai`` SDK.
 
@@ -63,6 +87,8 @@ class GeminiClient:
         *,
         api_key: str | None = None,
         temperature: float = 0.0,
+        max_retries: int = 6,
+        retry_backoff: float = 2.0,
         client: object | None = None,
     ) -> None:
         if client is None:
@@ -72,28 +98,64 @@ class GeminiClient:
         self._client = client
         self._model = model
         self._temperature = temperature
+        self._max_retries = max_retries
+        self._retry_backoff = retry_backoff
         self.usage = {"calls": 0, "prompt_tokens": 0, "output_tokens": 0}
+        self.last_finish_reason = None
 
     def complete(self, *, system: str, user: str) -> str:
-        resp = self._client.models.generate_content(
-            model=self._model,
-            contents=user,
-            config={"system_instruction": system, "temperature": self._temperature},
-        )
+        if "gemma" in self._model.lower():
+            # Gemma models have no system role; fold the system prompt into the
+            # user turn instead of passing it as a system instruction.
+            contents = f"{system}\n\n{user}"
+            config = {"temperature": self._temperature}
+        else:
+            contents = user
+            config = {"system_instruction": system, "temperature": self._temperature}
+        resp = None
+        for attempt in range(self._max_retries):
+            try:
+                resp = self._client.models.generate_content(
+                    model=self._model,
+                    contents=contents,
+                    config=config,
+                )
+                break
+            except Exception as exc:  # noqa: BLE001 - retry transient server errors
+                if attempt < self._max_retries - 1 and _is_retryable(exc):
+                    time.sleep(min(self._retry_backoff * (2 ** attempt), 30.0))
+                    continue
+                raise
         um = getattr(resp, "usage_metadata", None)
         if um is not None:
             self.usage["prompt_tokens"] += getattr(um, "prompt_token_count", 0) or 0
             self.usage["output_tokens"] += getattr(um, "candidates_token_count", 0) or 0
         self.usage["calls"] += 1
-        return resp.text or ""
+        text = resp.text or ""
+        reason = None
+        try:
+            cand = (resp.candidates or [None])[0]
+            reason = getattr(cand, "finish_reason", None)
+        except Exception:  # noqa: BLE001 - diagnostics only
+            reason = None
+        self.last_finish_reason = reason
+        if not text:
+            feedback = getattr(resp, "prompt_feedback", None)
+            sys.stderr.write(
+                f"[GeminiClient] empty response: finish_reason={reason} "
+                f"prompt_feedback={feedback}\n"
+            )
+        return text
 
 
 _DESCRIBE_SYSTEM = (
     "You are given the complete source of a small Python program. Write a precise "
-    "natural-language specification of its behavior: every public function and class, "
-    "its inputs, outputs, and edge cases, detailed enough that another engineer could "
-    "reimplement it from your description alone, without seeing the code. Describe "
-    "behavior, not a line-by-line transcription. Do not include or infer test code."
+    "natural-language specification of its behavior: every module-level function and "
+    "class, including any whose names begin with an underscore, since callers and "
+    "tests may import them directly. Cover each one's inputs, outputs, and edge "
+    "cases, detailed enough that another engineer could reimplement it from your "
+    "description alone, without seeing the code. Describe behavior, not a "
+    "line-by-line transcription. Do not include or infer test code."
 )
 
 _REGENERATE_SYSTEM = (
@@ -171,6 +233,10 @@ def regenerate(client: LLMClient) -> int:
         + _render_files(scaffold)
     )
     reply = client.complete(system=_REGENERATE_SYSTEM, user=user)
+    try:  # keep the raw reply for debugging format/parse issues
+        (generated.parent / "regenerate_reply.txt").write_text(reply, encoding="utf-8")
+    except OSError:
+        pass
     produced = parse_file_blocks(reply)
     generated.mkdir(parents=True, exist_ok=True)
     # Keep the scaffold, then write the model's source files over it.
@@ -187,7 +253,8 @@ def _build_client() -> LLMClient:
         return ReplayClient(Path(replay))
     if os.environ.get("GEMINI_API_KEY"):
         model = os.environ.get("COUNDETRIP_MODEL", "gemini-3.5-flash")
-        return GeminiClient(model=model)
+        temperature = float(os.environ.get("COUNDETRIP_TEMPERATURE", "0.0"))
+        return GeminiClient(model=model, temperature=temperature)
     raise NotImplementedError(
         "No client configured. Set GEMINI_API_KEY for a live run, or "
         "COUNDETRIP_REPLAY_DIR for a deterministic offline replay."

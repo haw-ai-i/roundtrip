@@ -138,3 +138,75 @@ def test_gemini_client_usage_accumulates_across_calls() -> None:
     client.complete(system="s", user="u")
 
     assert client.usage == {"calls": 2, "prompt_tokens": 20, "output_tokens": 10}
+
+def test_gemma_folds_system_into_user_prompt() -> None:
+    fake = _FakeGenAIClient(_FakeResponse("ok", _FakeUsage(5, 3)))
+    client = llm_agent.GeminiClient(model="gemma-3-4b-it", client=fake)
+
+    client.complete(system="SYS", user="USR")
+
+    sent = fake.models.calls[0]
+    assert "SYS" in sent["contents"] and "USR" in sent["contents"]
+    assert "system_instruction" not in sent["config"]
+def test_gemma_folds_system_into_user_prompt() -> None:
+    fake = _FakeGenAIClient(_FakeResponse("ok", _FakeUsage(5, 3)))
+    client = llm_agent.GeminiClient(model="gemma-3-4b-it", client=fake)
+
+    client.complete(system="SYS", user="USR")
+
+    sent = fake.models.calls[0]
+    assert "SYS" in sent["contents"] and "USR" in sent["contents"]
+    assert "system_instruction" not in sent["config"]
+
+class _ServerError(Exception):
+    """Stand-in for the SDK's transient 503, carrying a status code."""
+
+    def __init__(self, code: int, message: str) -> None:
+        super().__init__(f"{code} {message}")
+        self.code = code
+
+
+class _FlakyModels:
+    """Raises a server error the first ``fail_times`` calls, then succeeds."""
+
+    def __init__(self, response: _FakeResponse, fail_times: int) -> None:
+        self._response = response
+        self._fail_times = fail_times
+        self.calls: list[dict] = []
+
+    def generate_content(self, *, model: str, contents: str, config: dict) -> _FakeResponse:
+        self.calls.append({"model": model, "contents": contents, "config": config})
+        if len(self.calls) <= self._fail_times:
+            raise _ServerError(503, "UNAVAILABLE The model is overloaded. High demand.")
+        return self._response
+
+
+class _FlakyClient:
+    def __init__(self, response: _FakeResponse, fail_times: int) -> None:
+        self.models = _FlakyModels(response, fail_times)
+
+
+def test_gemini_client_retries_then_succeeds_on_server_error() -> None:
+    fake = _FlakyClient(_FakeResponse("ok", _FakeUsage(7, 4)), fail_times=2)
+    # retry_backoff=0 so the test does not actually sleep
+    client = llm_agent.GeminiClient(client=fake, retry_backoff=0.0)
+
+    out = client.complete(system="s", user="u")
+
+    assert out == "ok"
+    assert len(fake.models.calls) == 3  # two failures + one success
+    assert client.usage == {"calls": 1, "prompt_tokens": 7, "output_tokens": 4}
+
+
+def test_gemini_client_raises_after_exhausting_retries() -> None:
+    fake = _FlakyClient(_FakeResponse("ok", _FakeUsage(1, 1)), fail_times=99)
+    client = llm_agent.GeminiClient(client=fake, max_retries=3, retry_backoff=0.0)
+
+    try:
+        client.complete(system="s", user="u")
+    except _ServerError:
+        pass
+    else:  # pragma: no cover - failure path
+        raise AssertionError("expected the server error to propagate after retries")
+
+    assert len(fake.models.calls) == 3  # tried max_retries times, then gave up  

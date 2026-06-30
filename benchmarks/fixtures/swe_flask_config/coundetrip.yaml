@@ -1,0 +1,11 @@
+name: swe_flask_config
+test_command:
+  - python
+  - run_oracle.py
+source_paths:
+  - src/flask/config.py
+scaffold_paths:
+  - scaffold
+test_paths:
+  - run_oracle.py
+  - flask_env_path.txt
