@@ -27,3 +27,20 @@ Hiding the contract means degrading the code, which changes what's being tested.
 
 Open question for Igor: how to design a codebase where good documentation is
 genuinely necessary for a weak agent, without simply making the code bad.
+
+## Run 3: contract only in description (novel2) — EFFECT DEMONSTRATED
+Codebase: policyengine variant with NO _ordered() helper - is_allowed loops in
+list order, and the priority + deny-override + default-deny contract lives ONLY
+in the description. Oracle passes rules UNSORTED.
+
+| condition | resolve() implementation | oracle |
+|---|---|---|
+| A (no desc) | naive list-order loop (copies is_allowed) | FAIL (deny-override) |
+| B (with desc) | sorted(-priority, deny-before-allow) | PASS |
+
+The description carried the contract the code did not expose, flipping the weak
+agent (flash-lite) from a wrong implementation to a correct one. First clean
+demonstration of description-as-documentation improving weak-agent task success.
+
+Note: weak model pastes description markdown into the file; extractor strips
+trailing non-code. Next: repeat for stability + more tasks/codebases for a rate.
