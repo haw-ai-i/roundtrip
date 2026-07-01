@@ -65,3 +65,26 @@ hidden. When the code reveals it - via a reusable helper (early policyengine wit
 _ordered) or a self-documenting field name (early ledger with 'reverses') - the
 agent infers it and the description adds nothing. The effect measures whether the
 description carries information absent from the code, exactly as intended.
+
+## Runs 7-9: faithful Pro-pipeline description (boundary case — NO effect)
+Igor's exact design: Pro (gemini-2.5-pro) describes a correct codebase (taskqueue,
+which correctly implements a non-obvious aging-boost score), then flash-lite does a
+task with vs without Pro's GENERATED description.
+
+| task | A (no desc) | B (with desc) |
+|---|---|---|
+| peek_scores (may reuse _score helper) | 3/3 | 3/3 |
+| score_task standalone (must reproduce formula, no helper reuse) | 3/3 | 3/3 |
+
+No effect. A faithful description of correct, VISIBLE code is redundant: the weak
+agent reads the logic (or reuses the helper) directly. Even forcing reproduction of
+the formula in a standalone function, flash-lite transcribed it correctly from the
+visible _score.
+
+## Overall finding
+Description-as-documentation gives a weak agent uplift IFF the description carries
+information the code does not locally expose (an unimplemented/undocumented contract).
+When the description faithfully restates visible code, it is redundant.
+Connection to Stage 1: maximal roundtrip fidelity implies redundancy with the code,
+so description FIDELITY and agent UPLIFT are in tension — the description helps as
+documentation exactly to the degree it adds intent/contract beyond the code.
