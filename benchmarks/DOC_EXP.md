@@ -88,3 +88,16 @@ When the description faithfully restates visible code, it is redundant.
 Connection to Stage 1: maximal roundtrip fidelity implies redundancy with the code,
 so description FIDELITY and agent UPLIFT are in tension — the description helps as
 documentation exactly to the degree it adds intent/contract beyond the code.
+
+## Run 10: REAL code (tensorproduct, 423 lines, faithful description) — NO effect
+Real sympy file, existing Pro description (Stage 1), flash-lite weak agent.
+Task: scalar_factor() leaning on the scalar-extraction contract in flatten/__new__.
+
+| condition | A (no desc) | B (with desc) |
+|---|---|---|
+| tensorproduct scalar_factor | 2/2 | 2/2 |
+
+Flash-lite correctly extracted scalars by reading the real flatten/args_cnc logic;
+the faithful description added nothing. Confirms the boundary holds on REAL code, not
+just toys: a faithful description of visible, correct code is redundant regardless of
+file size. The effect requires the description to carry info the code doesn't expose.
