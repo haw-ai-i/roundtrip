@@ -1,0 +1,1 @@
+Add a method schedule(self) to RetryPolicy returning the list of delays for attempts 1 through max_attempts, applying the module's delay contract.

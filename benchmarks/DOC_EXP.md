@@ -44,3 +44,24 @@ demonstration of description-as-documentation improving weak-agent task success.
 
 Note: weak model pastes description markdown into the file; extractor strips
 trailing non-code. Next: repeat for stability + more tasks/codebases for a rate.
+
+## Runs 4-6: stability + generality (3 codebases, N=3, weak agent = flash-lite)
+Each codebase hides its decision contract in the DESCRIPTION only (no reusable
+helper encodes it); the oracle exercises the contract on adversarial input.
+
+| codebase | contract hidden in description | A (no desc) | B (with desc) |
+|---|---|---|---|
+| policyengine | priority order + deny-override + default-deny | 0/3 | 3/3 |
+| scheduler | exponential backoff with cap | 0/3 | 3/3 |
+| ledger | timestamp order + link-reversal cancellation | 0/3 | 3/3 |
+
+Result: adding the generated NL description to a weak agent's context flips it
+from consistent failure to consistent success, reproduced across three
+independent codebases. The description supplies a contract the code does not
+expose, and the weak agent cannot infer it from the code alone.
+
+Design lesson (from earlier runs): the effect requires the contract to be genuinely
+hidden. When the code reveals it - via a reusable helper (early policyengine with
+_ordered) or a self-documenting field name (early ledger with 'reverses') - the
+agent infers it and the description adds nothing. The effect measures whether the
+description carries information absent from the code, exactly as intended.
