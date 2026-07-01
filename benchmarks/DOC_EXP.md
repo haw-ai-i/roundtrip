@@ -14,3 +14,16 @@ knowledge masks any effect from the description. Contains is unsuitable (too kno
 
 Next: Pro-materialize a novel codebase (score 1.0), pick a task flash-lite fails
 on raw code, test whether the description rescues it.
+
+## Run 2: novel codebase (policyengine, deny-override contract)
+Both agents implemented `explain` correctly by reusing the existing `_ordered()`
+helper. A (no desc) PASSED; B (with desc) produced the SAME correct method but
+corrupted the file by pasting description markdown into the source (syntax error).
+
+Design difficulty (now hit twice): to make the description NECESSARY, the code must
+hide its own contract. But well-structured code (a helper like `_ordered()`) already
+encodes the contract, so a weak agent reuses it and succeeds without the description.
+Hiding the contract means degrading the code, which changes what's being tested.
+
+Open question for Igor: how to design a codebase where good documentation is
+genuinely necessary for a weak agent, without simply making the code bad.
