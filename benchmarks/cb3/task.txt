@@ -1,0 +1,1 @@
+Add a method balance(self) to Ledger that computes the correct balance per the module's balance contract.

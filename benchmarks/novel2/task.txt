@@ -1,0 +1,1 @@
+Add a method resolve(self, principal, action) to PolicyEngine that returns the deciding Rule object (or None). It must apply the module's decision contract regardless of the order rules were passed in.

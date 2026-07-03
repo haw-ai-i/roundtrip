@@ -1,0 +1,11 @@
+name: swe_sympy_unitsystem_v2
+test_command:
+  - python
+  - run_oracle.py
+source_paths:
+  - sympy/physics/units/unitsystem.py
+scaffold_paths:
+  - scaffold
+test_paths:
+  - run_oracle.py
+  - oracle_env.json
