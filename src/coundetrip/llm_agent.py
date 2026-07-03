@@ -215,7 +215,8 @@ def describe(client: LLMClient) -> int:
         for p in list_source_files(manifest)
     }
     user = "Source files:\n\n" + _render_files(sources)
-    description = client.complete(system=_DESCRIBE_SYSTEM, user=user)
+    _describe_sys = os.environ.get("COUNDETRIP_DESCRIBE_PROMPT", _DESCRIBE_SYSTEM)
+    description = client.complete(system=_describe_sys, user=user)
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(description, encoding="utf-8")
     return 0
