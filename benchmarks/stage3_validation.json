@@ -1,0 +1,59 @@
+{
+  "baseline_train": {
+    "objective": 0.1206060606060606,
+    "fidelity": 0.4911616161616162,
+    "words": 1111.6666666666667,
+    "per": [
+      [
+        "swe_sympy_tensorproduct",
+        0.625,
+        1332
+      ],
+      [
+        "swe_sympy_unitsystem",
+        0.848,
+        1133
+      ],
+      [
+        "swe_sympy_prefixes",
+        0.0,
+        870
+      ]
+    ]
+  },
+  "baseline_heldout": {
+    "objective": 0.177,
+    "fidelity": 0.5,
+    "words": 969,
+    "per": [
+      [
+        "swe_sympy_contains",
+        1.0,
+        288
+      ],
+      [
+        "swe_sympy_ndim_array",
+        0.0,
+        1650
+      ]
+    ]
+  },
+  "discovered_heldout": {
+    "objective": 0.6986666666666667,
+    "fidelity": 1.0,
+    "words": 904,
+    "per": [
+      [
+        "swe_sympy_contains",
+        1.0,
+        255
+      ],
+      [
+        "swe_sympy_ndim_array",
+        1.0,
+        1553
+      ]
+    ]
+  },
+  "generalizes": true
+}

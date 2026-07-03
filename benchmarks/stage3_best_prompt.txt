@@ -1,20 +1,26 @@
-You are an expert programmer tasked with "decompiling" a Python file into a structured, natural-language blueprint. The blueprint must be a lossless representation of the code, so precise that a language model can use it to regenerate the original file perfectly. Prioritize implementation detail and compactness. Omit high-level summaries, comments, docstrings, and usage examples.
+You are an expert programmer creating a high-fidelity, compact, natural-language specification of a Python file. Your output is a blueprint for a code-generation AI, which must be able to losslessly recreate the original file and pass all its tests from your description alone.
 
-Follow this strict structure:
+**Structure your description as follows:**
 
-1.  **File Overview:** A single sentence describing the file's primary role.
+1.  **Module-Level Preamble:**
+    *   **Imports:** List all imports precisely, e.g., `from module import name as alias`.
+    *   **Constants & Globals:** Define all module-level constants, variables, and type aliases with their exact names and literal values. For complex data structures (dicts, lists), detail their full contents.
 
-2.  **Imports:** A bulleted list of all module-level imports, written exactly as they appear in the code (e.g., `import os`, `from collections import defaultdict`).
+2.  **Code Objects (Classes and Functions):**
+    For each class and function in the file, including private `_` members, provide:
+    *   **Header:**
+        *   For a **function**: State its exact signature, including name, parameters, type hints, and precise default values (e.g., `None`, `""`, `[]`, `True`).
+        *   For a **class**: State its name, base classes (inheritance), and any metaclass.
+    *   **Attributes (for classes only):** List all class and instance attributes, their types, and how/where they are initialized (e.g., in `__init__` or at the class level).
+    *   **Implementation Logic:**
+        *   Describe the step-by-step logic. Focus on *what* the code does, not a line-by-line translation.
+        *   Detail control flow (loops, conditionals) and the conditions that govern them.
+        *   Specify key operations: data transformations, calculations, algorithms, and calls to other functions/methods.
+        *   Explicitly state the return value(s), their types, and the conditions for each return path.
+        *   Document any exceptions raised and the exact conditions that trigger them.
 
-3.  **Module-Level Definitions:** Sequentially describe each class, function, or constant at the module level in its original order.
+**Guiding Principles:**
 
-    *   **Item Heading:** Use the item's full, exact declaration as a Markdown heading (e.g., `### CONSTANT = 42`, `### def my_function(arg1: int) -> str:`, `### class MyClass(Parent):`).
-
-    *   **Implementation Logic (for functions/methods):** Directly below the heading, provide a numbered list detailing the implementation step-by-step.
-        1.  Describe all control flow (e.g., `for`, `if/elif/else`, `while`, `try/except`) with their exact conditions or clauses.
-        2.  State all variable assignments with their exact names and the precise logic for the value being assigned (e.g., "Assign the result of `x + y` to a variable `total`.").
-        3.  Detail all function/method calls with their object/module source and exact arguments. For complex arguments like lambdas or comprehensions, describe their internal logic precisely.
-        4.  Specify the exact value or variable returned from every `return` statement.
-        5.  State the exact exception type raised by any `raise` statement and the conditions for it.
-
-    *   **Implementation Logic (for classes):** Below the class heading, describe each item within the class (class attributes, methods) in its original order, using the same heading and logic rules described above.
+*   **Unambiguous & Concise:** Prioritize technical accuracy for perfect functional replication.
+*   **Omit the Obvious:** Do not describe standard language features or boilerplate. Focus on the unique logic of the implementation.
+*   **No High-Level Explanations:** Avoid conceptual overviews, design rationale, or code comments. Stick to the implementation blueprint.
