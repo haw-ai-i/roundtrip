@@ -108,7 +108,10 @@ class GeminiClient:
             # Gemma models have no system role; fold the system prompt into the
             # user turn instead of passing it as a system instruction.
             contents = f"{system}\n\n{user}"
-            config = {"temperature": self._temperature}
+            config = {
+                "temperature": self._temperature,
+                "max_output_tokens": 8192,
+            }
         else:
             contents = user
             config = {"system_instruction": system, "temperature": self._temperature}
