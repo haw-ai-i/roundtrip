@@ -35,3 +35,18 @@ earlier validation run, in which a held-out fixture rose from 0.0 to 1.0, this s
 the loop reliably discovers a generalizing improvement rather than overfitting or
 succeeding by chance: every independent run converged to a prompt that maximizes
 training fidelity and preserves it out of sample.
+
+What the optimizer discovered. The auto-discovered prompt is interpretable, and it
+independently rediscovered fixes for the failure modes identified by hand in Stage 1.
+Where the baseline prompt asked in general terms for inputs, outputs, and edge cases,
+the discovered prompt added specific instructions that map directly onto the observed
+failures: "list all imports precisely" addresses the lost-imports failure mode;
+"define all module-level constants with their exact names and literal values"
+addresses the lost-literal failure mode; and requirements to state exact signatures,
+default values, base classes, and the exact conditions for every exception and return
+path address the lost-constraint failure mode. The optimizer had no access to the
+hand analysis, so the agreement between the failure modes we catalogued and the fixes
+it discovered is independent evidence that the improvements are real and interpretable
+rather than metric gaming. The discovered prompt also retained explicit compactness
+guidance (be concise, omit the obvious, no high-level explanations), pursuing fidelity
+and compactness together, consistent with the compact-complete thesis.
