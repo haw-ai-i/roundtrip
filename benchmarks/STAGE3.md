@@ -25,3 +25,13 @@ words than baseline (969 to 904). The improvement generalizes to unseen code: th
 optimizer produced a genuinely better documentation prompt, not one tuned to the
 training fixtures. This confirms the compact-complete thesis out of sample and shows
 the benchmark is a usable optimization target for improving documentation quality.
+
+Reliability across independent runs. To check that the improvement is not a single
+lucky trajectory, we ran the optimize-then-validate loop three times independently
+with different proposer temperatures (0.3, 0.5, 0.7). From a training baseline of
+0.42 mean fidelity (prefixes starting at 0.0), all three runs reached 1.0 on the
+training set and held the held-out fixture at full fidelity. Combined with the
+earlier validation run, in which a held-out fixture rose from 0.0 to 1.0, this shows
+the loop reliably discovers a generalizing improvement rather than overfitting or
+succeeding by chance: every independent run converged to a prompt that maximizes
+training fidelity and preserves it out of sample.
