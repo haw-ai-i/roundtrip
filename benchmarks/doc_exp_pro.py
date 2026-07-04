@@ -1,4 +1,4 @@
-"""Igor's actual design: Pro MATERIALIZES/describes the codebase (real pipeline),
+"""Pipeline design: Pro MATERIALIZES/describes the codebase (real pipeline),
 then the weak agent (flash-lite) does a task with vs without Pro's description.
 The description is PIPELINE-GENERATED, not hand-written."""
 import sys, subprocess, re, shutil

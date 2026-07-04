@@ -1,6 +1,6 @@
 Context rot check: does a verbose description hurt a weaker model?
 
-Igor hypothesized that the equal-uplift compactness result might be specific to
+We hypothesized that the equal-uplift compactness result might be specific to
 flash-lite, and that a weaker model would show the verbose description hurting
 through context rot, with the needed facts getting lost in filler.
 

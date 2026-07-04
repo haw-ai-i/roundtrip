@@ -1,5 +1,5 @@
 """Compression ratio per fixture: NL description size vs original code size.
-Igor's Stage-1 metric: how much description suffices to regenerate the code."""
+Stage 1 metric: how much description suffices to regenerate the code."""
 import json
 from pathlib import Path
 

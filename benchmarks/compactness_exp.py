@@ -1,4 +1,4 @@
-"""Compactness experiment (Igor's method): compact vs verbose complete description.
+"""Compactness experiment: compact vs verbose complete description.
 Robust extractor strips prose flash-lite pastes into the code file."""
 import sys, subprocess, re, shutil
 from pathlib import Path
