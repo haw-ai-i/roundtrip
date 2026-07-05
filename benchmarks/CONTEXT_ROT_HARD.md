@@ -18,11 +18,13 @@ To remove the confound we wrote a fair verbose description that contains the exa
 strings (in backticks), embedded in the same long, filler-heavy prose with confusable keys
 scattered across paragraphs. We then compared three conditions on Gemma 3 4B:
 
-  COMPACT (108w, keys listed)            8/8
-  VERBOSE unfair (704w, keys described)  0/8
-  VERBOSE fair (559w, keys present)      8/8
+                    COMPACT   VERBOSE unfair   VERBOSE fair
+                    (keys      (keys only       (keys present
+                    listed)    described)       but buried)
+  flash-lite        8/8        0/8              8/8
+  Gemma 3 4B        8/8        0/8              8/8
 
-The fair verbose description passes perfectly. Even buried in long prose among confusable
+The fair verbose description passes perfectly on both models. Even buried in long prose among confusable
 neighbours, once the exact keys are present the small model recovers them without error, and
 correctly distinguishes near-duplicate keys such as max_retries, max_retries_backoff, and
 request_max_retries. Verbosity itself did not hurt.
