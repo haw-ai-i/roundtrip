@@ -1,36 +1,36 @@
 Harder context-rot task: does a verbose description hurt when the task is hard?
 
 The earlier context-rot check used five short facts and found no gap between compact and
-verbose at any model size. We suspected the task was too easy. This is a harder version: 28
-settings including confusable key families (max_retries vs max_retry_delay vs
+verbose at any model size. We suspected the task was too easy, so we built a harder version:
+28 settings including confusable key families (max_retries vs max_retry_delay vs
 connection_max_retries vs request_max_retries; read_timeout vs connect_timeout vs
-socket_timeout vs handshake_timeout). The oracle checks ten specific values sitting among
-their confusable neighbours. The compact description lists the keys verbatim; the verbose
-description carries the same facts in prose, describing each key in words rather than stating
-the literal identifier, with related keys scattered across paragraphs.
+socket_timeout vs handshake_timeout), with an oracle checking ten specific values that sit
+among their confusable neighbours.
 
-Result (fraction of runs passing all ten checks):
+A first version of the verbose description described each key in words but never stated the
+literal key string, while the compact version listed keys verbatim. On that version the
+verbose condition collapsed to 0/8 while compact stayed 8/8, which looked like context rot.
+But the comparison was confounded: the verbose description did not actually contain the exact
+identifiers the task required, so its failure could simply be missing information rather than
+degradation over long context.
 
-  Model            No desc.   Compact (108w)   Verbose (704w)
-  flash-lite       0/8        8/8              0/8
-  Gemma 3 4B       0/8        8/8              0/8
-  llama3.2 (3B)    0/4        4/4              0/4
+To remove the confound we wrote a fair verbose description that contains the exact literal key
+strings (in backticks), embedded in the same long, filler-heavy prose with confusable keys
+scattered across paragraphs. We then compared three conditions on Gemma 3 4B:
 
-The two clean cases are flash-lite and Gemma 3 4B. Both produced complete, valid code and
-failed the verbose condition purely on the keys: given the compact list they copy the exact
-key strings, but given the prose they reconstruct plausible-sounding names from the
-surrounding sentences (retry_count, retry_delay_ms, connection_retry_count) instead of the
-literal keys (max_retries, max_retry_delay, connection_max_retries). Values are usually
-correct; identifiers are not. The verbose form makes exact-identifier recovery fail.
+  COMPACT (108w, keys listed)            8/8
+  VERBOSE unfair (704w, keys described)  0/8
+  VERBOSE fair (559w, keys present)      8/8
 
-llama3.2 (3B) shows the same direction and also paraphrased the keys, but its verbose output
-was additionally incomplete (it emitted only the _default method, not the full class), so its
-failure is confounded by a code-structure issue and is weaker evidence than the other two.
+The fair verbose description passes perfectly. Even buried in long prose among confusable
+neighbours, once the exact keys are present the small model recovers them without error, and
+correctly distinguishes near-duplicate keys such as max_retries, max_retries_backoff, and
+request_max_retries. Verbosity itself did not hurt.
 
-Honest scope: part of what drives the gap is that the verbose description never states the
-literal key strings, only describes them, whereas the compact version lists them verbatim. So
-the finding is precisely that prose-only descriptions of exact identifiers are unrecoverable
-for smaller models, a concrete form of context degradation, rather than pure context-length
-rot. This is the sharper task the earlier null result called for, and it shows verbosity is
-not always free: when identifiers must be recovered exactly and the description buries them in
-prose, the verbose form can destroy a description's usability.
+Conclusion: on this task the apparent context-rot effect was a confound. The verbose form fails
+only when it omits the exact identifiers the task needs, which is a completeness failure, not
+context degradation. When the verbose description is complete, it matches the compact one even
+at 4B and even with heavy filler and distractors. This reinforces the paper's finding:
+verbosity beyond completeness adds nothing, and does not subtract either; what matters is
+completeness. Igor's context-rot hypothesis does not hold on this task once the comparison is
+made fair.
