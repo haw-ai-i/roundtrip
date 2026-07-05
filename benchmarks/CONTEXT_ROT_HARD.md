@@ -22,6 +22,7 @@ scattered across paragraphs. We then compared three conditions on Gemma 3 4B:
                     (keys      (keys only       (keys present
                     listed)    described)       but buried)
   flash-lite        8/8        0/8              8/8
+  gemini-2.5-flash  4/4        0/4              4/4
   Gemma 3 4B        8/8        0/8              8/8
 
 The fair verbose description passes perfectly on both models. Even buried in long prose among confusable
