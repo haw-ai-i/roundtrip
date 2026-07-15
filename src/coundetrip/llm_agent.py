@@ -108,7 +108,10 @@ class GeminiClient:
             # Gemma models have no system role; fold the system prompt into the
             # user turn instead of passing it as a system instruction.
             contents = f"{system}\n\n{user}"
-            config = {"temperature": self._temperature}
+            config = {
+                "temperature": self._temperature,
+                "max_output_tokens": 8192,
+            }
         else:
             contents = user
             config = {"system_instruction": system, "temperature": self._temperature}
@@ -215,7 +218,8 @@ def describe(client: LLMClient) -> int:
         for p in list_source_files(manifest)
     }
     user = "Source files:\n\n" + _render_files(sources)
-    description = client.complete(system=_DESCRIBE_SYSTEM, user=user)
+    _describe_sys = os.environ.get("COUNDETRIP_DESCRIBE_PROMPT", _DESCRIBE_SYSTEM)
+    description = client.complete(system=_describe_sys, user=user)
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(description, encoding="utf-8")
     return 0

@@ -1,31 +1,24 @@
-"""Pipeline design: Pro MATERIALIZES/describes the codebase (real pipeline),
-then the weak agent (flash-lite) does a task with vs without Pro's description.
-The description is PIPELINE-GENERATED, not hand-written."""
+"""Stage 2 comparison with OpenWiki as a third condition.
+A: weak agent, no description
+B: weak agent + our Pro-generated description
+C: weak agent + OpenWiki's documentation"""
 import sys, subprocess, re, shutil
 from pathlib import Path
 sys.path.insert(0, "src")
 from coundetrip.llm_agent import GeminiClient, parse_file_blocks
 
 BASE = Path("benchmarks/pro1")
+OW = Path("benchmarks/pro1_openwiki/openwiki")
 FNAME = "taskqueue.py"
 CODE = (BASE/FNAME).read_text()
-PRO = "gemini-2.5-pro"
 WEAK = "gemini-2.5-flash-lite"
 
-# Step 1: Pro DESCRIBES the code (real describe step)
-DESCRIBE_SYS = ("Describe this Python module in natural language precisely enough that "
-                "an engineer could reimplement it exactly, including any non-obvious "
-                "scoring or priority logic. Do not include code.")
-print("Step 1: Pro describes the code...")
-DESC = GeminiClient(model=PRO, temperature=0.0).complete(system=DESCRIBE_SYS, user=CODE)
-(BASE/"pro_description.md").write_text(DESC)
-print(f"  generated {len(DESC.split())} words")
+DESC = (BASE/"pro_description.md").read_text()
+OW_DOCS = "\n\n".join(p.read_text() for p in sorted(OW.glob("*.md")))
+print(f"our desc: {len(DESC.split())}w | openwiki: {len(OW_DOCS.split())}w")
+print(f"our desc has 60/300: {'60' in DESC and '300' in DESC}")
+print(f"openwiki has 60/300: {'60' in OW_DOCS and '300' in OW_DOCS}")
 
-# Step 2: quick check the description captured the aging-boost contract
-has_contract = ("60" in DESC and "300" in DESC)
-print(f"  description mentions aging thresholds (60/300): {has_contract}")
-
-# Step 3: weak agent does a task, A (no desc) vs B (with Pro's desc)
 TASK = ("Add a method peek_scores(self) to TaskQueue that returns a list of "
         "(task_name, effective_score) tuples for all tasks, using the SAME scoring "
         "the queue uses to pick the next task.")
@@ -52,21 +45,22 @@ def extract(reply):
         out.append(ln)
     return "\n".join(out).rstrip()+"\n"
 
-def run(with_desc, i):
+def run(doc, tag, i):
     ctx = f"=== {FNAME} ===\n{CODE}\n\n"
-    if with_desc: ctx += f"Documentation:\n{DESC}\n\n"
+    if doc: ctx += f"Documentation:\n{doc}\n\n"
     ctx += f"Task: {TASK}\n"
     src = extract(GeminiClient(model=WEAK, temperature=0.0).complete(system=SYS, user=ctx))
-    d = BASE/f"run_{'B' if with_desc else 'A'}_{i}"
+    d = BASE/f"owexp_{tag}_{i}"
     if d.exists(): shutil.rmtree(d)
     d.mkdir(); (d/FNAME).write_text(src)
     if not src.strip(): return False
     r = subprocess.run([sys.executable, "-c", ORACLE % str(d)], capture_output=True, text=True)
     return "ORACLE_PASS" in r.stdout
 
-print("\nStep 3: weak agent with vs without Pro's generated description")
-N=3
-a = sum(run(False,i) for i in range(N))
-b = sum(run(True,i) for i in range(N))
-print(f"\nRESULT (Pro-generated desc):  A(no desc): {a}/{N}   B(with desc): {b}/{N}")
-print("*** EFFECT WITH PIPELINE DESCRIPTION ***" if (a<b) else "no separation - inspect")
+N=4
+a = sum(run("", "A", i) for i in range(N))
+b = sum(run(DESC, "B", i) for i in range(N))
+c = sum(run(OW_DOCS, "C", i) for i in range(N))
+print(f"\nA (no desc):          {a}/{N}")
+print(f"B (our description):  {b}/{N}")
+print(f"C (OpenWiki docs):    {c}/{N}")

@@ -1,0 +1,33 @@
+{
+  "baseline_heldout": {
+    "objective": 0.904,
+    "fidelity": 1.0,
+    "words": 288
+  },
+  "runs": [
+    {
+      "run": 1,
+      "temp": 0.3,
+      "train_fid": 1.0,
+      "heldout_fid": 1.0,
+      "heldout_words": 247,
+      "generalizes": true
+    },
+    {
+      "run": 2,
+      "temp": 0.5,
+      "train_fid": 1.0,
+      "heldout_fid": 1.0,
+      "heldout_words": 412,
+      "generalizes": true
+    },
+    {
+      "run": 3,
+      "temp": 0.7,
+      "train_fid": 1.0,
+      "heldout_fid": 1.0,
+      "heldout_words": 267,
+      "generalizes": true
+    }
+  ]
+}

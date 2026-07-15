@@ -8,7 +8,7 @@ Both conditions PASSED. Flash-lite solved the task WITHOUT the description.
 Reason: Contains is a well-known sympy class; the weak agent already knows it,
 so raw code suffices and the description adds nothing.
 
-Implication: confirms the need (Igor's suggestion) to use a larger model (Pro)
+Implication: confirms the need to use a larger model (Pro)
 to MATERIALIZE A NOVEL codebase the weak agent has not seen — otherwise training
 knowledge masks any effect from the description. Contains is unsuitable (too known).
 
@@ -25,7 +25,7 @@ hide its own contract. But well-structured code (a helper like `_ordered()`) alr
 encodes the contract, so a weak agent reuses it and succeeds without the description.
 Hiding the contract means degrading the code, which changes what's being tested.
 
-Open question for Igor: how to design a codebase where good documentation is
+Open question: how to design a codebase where good documentation is
 genuinely necessary for a weak agent, without simply making the code bad.
 
 ## Run 3: contract only in description (novel2) — EFFECT DEMONSTRATED
@@ -67,7 +67,7 @@ agent infers it and the description adds nothing. The effect measures whether th
 description carries information absent from the code, exactly as intended.
 
 ## Runs 7-9: faithful Pro-pipeline description (boundary case — NO effect)
-Igor's exact design: Pro (gemini-2.5-pro) describes a correct codebase (taskqueue,
+Pipeline design: Pro (gemini-2.5-pro) describes a correct codebase (taskqueue,
 which correctly implements a non-obvious aging-boost score), then flash-lite does a
 task with vs without Pro's GENERATED description.
 

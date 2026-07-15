@@ -1,4 +1,4 @@
-"""Igor point-2: does the NL description help a WEAK agent (flash-lite)?
+"""Documentation experiment: does the NL description help a WEAK agent (flash-lite)?
 A: code+task. B: code+task+description. Behavioral oracle. Effect = A fails, B passes.
 Robust extraction: handles both === path === and ```python fences (weak models
 often ignore the format instruction)."""
