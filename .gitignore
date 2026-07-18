@@ -20,3 +20,14 @@ runs/
 
 # macOS
 .DS_Store
+# experiment run outputs (regenerable by running the scripts)
+benchmarks/*/run_*/
+benchmarks/*/owc_*/
+benchmarks/*/owexp_*/
+benchmarks/*/cmp_*/
+benchmarks/settings_exp/
+benchmarks/settings_hard/
+benchmarks/*_openwiki/
+benchmarks/*/openwiki/
+benchmarks/**/AGENTS.md
+runs/
