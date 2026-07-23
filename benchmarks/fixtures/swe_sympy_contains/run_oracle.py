@@ -32,8 +32,12 @@ if not venv_py.exists():
     sys.exit(2)
 
 shutil.copy2(cands[0], target)
-cp = subprocess.run([str(venv_py), "-m", "pytest", str(oracle), "-q"],
-                    capture_output=True, text=True)
-sys.stdout.write(cp.stdout)
-sys.stderr.write(cp.stderr)
-sys.exit(cp.returncode)
+try:
+    cp = subprocess.run([str(venv_py), "-m", "pytest", str(oracle), "-q"],
+                        capture_output=True, text=True)
+    sys.stdout.write(cp.stdout)
+    sys.stderr.write(cp.stderr)
+    rc = cp.returncode
+finally:
+    shutil.copy2(orig, target)
+sys.exit(rc)
