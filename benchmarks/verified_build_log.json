@@ -1,0 +1,182 @@
+[
+ {
+  "id": "sympy__sympy-11618",
+  "target": "sympy/geometry/point.py",
+  "ok": false,
+  "tail": "baseline exit:    4  (0 = all oracle tests pass)"
+ },
+ {
+  "id": "sympy__sympy-12096",
+  "target": "sympy/core/function.py",
+  "ok": false,
+  "tail": "baseline exit:    4  (0 = all oracle tests pass)"
+ },
+ {
+  "id": "sympy__sympy-12419",
+  "target": "sympy/matrices/expressions/matexpr.py",
+  "ok": false,
+  "tail": ">> git clone --quiet https://github.com/sympy/sympy.git /Users/mdshohelarman/Desktop/coundetrip/swebench_envs/sympy__sympy-12419"
+ },
+ {
+  "id": "sympy__sympy-12481",
+  "target": "sympy/combinatorics/permutations.py",
+  "ok": false,
+  "tail": "baseline exit:    4  (0 = all oracle tests pass)"
+ },
+ {
+  "id": "sympy__sympy-12489",
+  "target": "sympy/combinatorics/permutations.py",
+  "ok": false,
+  "tail": "baseline exit:    4  (0 = all oracle tests pass)"
+ },
+ {
+  "id": "sympy__sympy-13031",
+  "target": "sympy/matrices/sparse.py",
+  "ok": false,
+  "tail": "baseline exit:    4  (0 = all oracle tests pass)"
+ },
+ {
+  "id": "sympy__sympy-13372",
+  "target": "sympy/core/evalf.py",
+  "ok": false,
+  "tail": "baseline exit:    4  (0 = all oracle tests pass)"
+ },
+ {
+  "id": "sympy__sympy-13480",
+  "target": "sympy/functions/elementary/hyperbolic.py",
+  "ok": false,
+  "tail": "baseline exit:    4  (0 = all oracle tests pass)"
+ },
+ {
+  "id": "sympy__sympy-13551",
+  "target": "sympy/concrete/products.py",
+  "ok": false,
+  "tail": "baseline exit:    4  (0 = all oracle tests pass)"
+ },
+ {
+  "id": "sympy__sympy-13615",
+  "target": "sympy/sets/sets.py",
+  "ok": false,
+  "tail": "baseline exit:    4  (0 = all oracle tests pass)"
+ },
+ {
+  "id": "sympy__sympy-13647",
+  "target": "sympy/matrices/common.py",
+  "ok": false,
+  "tail": "baseline exit:    4  (0 = all oracle tests pass)"
+ },
+ {
+  "id": "sympy__sympy-13757",
+  "target": "sympy/polys/polytools.py",
+  "ok": false,
+  "tail": "baseline exit:    4  (0 = all oracle tests pass)"
+ },
+ {
+  "id": "sympy__sympy-13798",
+  "target": "sympy/printing/latex.py",
+  "ok": false,
+  "tail": "baseline exit:    4  (0 = all oracle tests pass)"
+ },
+ {
+  "id": "sympy__sympy-13852",
+  "target": "sympy/functions/special/zeta_functions.py",
+  "ok": false,
+  "tail": "baseline exit:    4  (0 = all oracle tests pass)"
+ },
+ {
+  "id": "sympy__sympy-13878",
+  "target": "sympy/stats/crv_types.py",
+  "ok": false,
+  "tail": "baseline exit:    4  (0 = all oracle tests pass)"
+ },
+ {
+  "id": "sympy__sympy-13974",
+  "target": "sympy/physics/quantum/tensorproduct.py",
+  "ok": false,
+  "tail": "baseline exit:    4  (0 = all oracle tests pass)"
+ },
+ {
+  "id": "sympy__sympy-14531",
+  "target": "sympy/printing/str.py",
+  "ok": false,
+  "tail": "baseline exit:    4  (0 = all oracle tests pass)"
+ },
+ {
+  "id": "sympy__sympy-14711",
+  "target": "sympy/physics/vector/vector.py",
+  "ok": false,
+  "tail": "baseline exit:    4  (0 = all oracle tests pass)"
+ },
+ {
+  "id": "sympy__sympy-14976",
+  "target": "sympy/printing/pycode.py",
+  "ok": false,
+  "tail": "baseline exit:    4  (0 = all oracle tests pass)"
+ },
+ {
+  "id": "sympy__sympy-15017",
+  "target": "sympy/tensor/array/dense_ndim_array.py",
+  "ok": false,
+  "tail": "baseline exit:    4  (0 = all oracle tests pass)"
+ },
+ {
+  "id": "sympy__sympy-15345",
+  "target": "sympy/printing/mathematica.py",
+  "ok": false,
+  "tail": "baseline exit:    4  (0 = all oracle tests pass)"
+ },
+ {
+  "id": "sympy__sympy-15349",
+  "target": "sympy/algebras/quaternion.py",
+  "ok": false,
+  "tail": "baseline exit:    4  (0 = all oracle tests pass)"
+ },
+ {
+  "id": "sympy__sympy-15599",
+  "target": "sympy/core/mod.py",
+  "ok": false,
+  "tail": "baseline exit:    4  (0 = all oracle tests pass)"
+ },
+ {
+  "id": "sympy__sympy-15809",
+  "target": "sympy/functions/elementary/miscellaneous.py",
+  "ok": false,
+  "tail": "baseline exit:    4  (0 = all oracle tests pass)"
+ },
+ {
+  "id": "sympy__sympy-15875",
+  "target": "sympy/core/add.py",
+  "ok": false,
+  "tail": "baseline exit:    4  (0 = all oracle tests pass)"
+ },
+ {
+  "id": "sympy__sympy-15976",
+  "target": "sympy/printing/mathml.py",
+  "ok": false,
+  "tail": "baseline exit:    4  (0 = all oracle tests pass)"
+ },
+ {
+  "id": "sympy__sympy-16450",
+  "target": "sympy/simplify/simplify.py",
+  "ok": false,
+  "tail": "baseline exit:    4  (0 = all oracle tests pass)"
+ },
+ {
+  "id": "sympy__sympy-16766",
+  "target": "sympy/printing/pycode.py",
+  "ok": false,
+  "tail": "baseline exit:    4  (0 = all oracle tests pass)"
+ },
+ {
+  "id": "sympy__sympy-16792",
+  "target": "sympy/utilities/codegen.py",
+  "ok": false,
+  "tail": "baseline exit:    4  (0 = all oracle tests pass)"
+ },
+ {
+  "id": "sympy__sympy-16886",
+  "target": "sympy/crypto/crypto.py",
+  "ok": false,
+  "tail": "baseline exit:    4  (0 = all oracle tests pass)"
+ }
+]

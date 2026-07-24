@@ -1,0 +1,6 @@
+{
+  "env_path": "~/Desktop/coundetrip/swebench_envs/sympy__sympy-22714",
+  "target_rel": "sympy/geometry/point.py",
+  "oracle_rel": "sympy/geometry/tests/test_point.py",
+  "source_basename": "point.py"
+}

@@ -1,0 +1,11 @@
+name: swe_v_rings_24539
+test_command:
+  - python
+  - run_oracle.py
+source_paths:
+  - sympy/polys/rings.py
+scaffold_paths:
+  - scaffold
+test_paths:
+  - run_oracle.py
+  - oracle_env.json

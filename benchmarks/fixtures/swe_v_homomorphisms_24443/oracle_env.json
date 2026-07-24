@@ -1,0 +1,6 @@
+{
+  "env_path": "~/Desktop/coundetrip/swebench_envs/sympy__sympy-24443",
+  "target_rel": "sympy/combinatorics/homomorphisms.py",
+  "oracle_rel": "sympy/combinatorics/tests/test_homomorphisms.py",
+  "source_basename": "homomorphisms.py"
+}

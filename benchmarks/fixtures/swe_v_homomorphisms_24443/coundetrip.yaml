@@ -1,0 +1,11 @@
+name: swe_v_homomorphisms_24443
+test_command:
+  - python
+  - run_oracle.py
+source_paths:
+  - sympy/combinatorics/homomorphisms.py
+scaffold_paths:
+  - scaffold
+test_paths:
+  - run_oracle.py
+  - oracle_env.json

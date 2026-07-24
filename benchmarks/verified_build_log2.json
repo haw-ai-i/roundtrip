@@ -1,0 +1,128 @@
+[
+ {
+  "id": "sympy__sympy-24539",
+  "target": "sympy/polys/rings.py",
+  "ok": true,
+  "tail": "baseline exit:    0  (0 = all oracle tests pass)"
+ },
+ {
+  "id": "sympy__sympy-24443",
+  "target": "sympy/combinatorics/homomorphisms.py",
+  "ok": true,
+  "tail": "baseline exit:    0  (0 = all oracle tests pass)"
+ },
+ {
+  "id": "sympy__sympy-23824",
+  "target": "sympy/physics/hep/gamma_matrices.py",
+  "ok": true,
+  "tail": "baseline exit:    0  (0 = all oracle tests pass)"
+ },
+ {
+  "id": "sympy__sympy-23534",
+  "target": "sympy/core/symbol.py",
+  "ok": true,
+  "tail": "baseline exit:    0  (0 = all oracle tests pass)"
+ },
+ {
+  "id": "sympy__sympy-23413",
+  "target": "sympy/polys/matrices/normalforms.py",
+  "ok": true,
+  "tail": "baseline exit:    0  (0 = all oracle tests pass)"
+ },
+ {
+  "id": "sympy__sympy-23262",
+  "target": "sympy/utilities/lambdify.py",
+  "ok": true,
+  "tail": "baseline exit:    0  (0 = all oracle tests pass)"
+ },
+ {
+  "id": "sympy__sympy-22914",
+  "target": "sympy/printing/pycode.py",
+  "ok": true,
+  "tail": "baseline exit:    0  (0 = all oracle tests pass)"
+ },
+ {
+  "id": "sympy__sympy-22714",
+  "target": "sympy/geometry/point.py",
+  "ok": true,
+  "tail": "baseline exit:    0  (0 = all oracle tests pass)"
+ },
+ {
+  "id": "sympy__sympy-22456",
+  "target": "sympy/codegen/ast.py",
+  "ok": true,
+  "tail": "baseline exit:    0  (0 = all oracle tests pass)"
+ },
+ {
+  "id": "sympy__sympy-21847",
+  "target": "sympy/polys/monomials.py",
+  "ok": false,
+  "tail": "baseline exit:    4  (0 = all oracle tests pass)"
+ },
+ {
+  "id": "sympy__sympy-21612",
+  "target": "sympy/printing/str.py",
+  "ok": false,
+  "tail": "baseline exit:    4  (0 = all oracle tests pass)"
+ },
+ {
+  "id": "sympy__sympy-21596",
+  "target": "sympy/sets/handlers/intersection.py",
+  "ok": false,
+  "tail": "baseline exit:    4  (0 = all oracle tests pass)"
+ },
+ {
+  "id": "sympy__sympy-21379",
+  "target": "sympy/core/mod.py",
+  "ok": false,
+  "tail": "baseline exit:    4  (0 = all oracle tests pass)"
+ },
+ {
+  "id": "sympy__sympy-20916",
+  "target": "sympy/printing/conventions.py",
+  "ok": false,
+  "tail": "baseline exit:    4  (0 = all oracle tests pass)"
+ },
+ {
+  "id": "sympy__sympy-20801",
+  "target": "sympy/core/numbers.py",
+  "ok": false,
+  "tail": "baseline exit:    4  (0 = all oracle tests pass)"
+ },
+ {
+  "id": "sympy__sympy-20590",
+  "target": "sympy/core/_print_helpers.py",
+  "ok": false,
+  "tail": "baseline exit:    4  (0 = all oracle tests pass)"
+ },
+ {
+  "id": "sympy__sympy-20428",
+  "target": "sympy/polys/domains/expressiondomain.py",
+  "ok": false,
+  "tail": "baseline exit:    4  (0 = all oracle tests pass)"
+ },
+ {
+  "id": "sympy__sympy-20154",
+  "target": "sympy/utilities/iterables.py",
+  "ok": false,
+  "tail": ">> git clone --quiet https://github.com/sympy/sympy.git /Users/mdshohelarman/Desktop/coundetrip/swebench_envs/sympy__sympy-20154"
+ },
+ {
+  "id": "sympy__sympy-24661",
+  "target": "sympy/parsing/sympy_parser.py",
+  "ok": true,
+  "tail": "retry"
+ },
+ {
+  "id": "sympy__sympy-24562",
+  "target": "sympy/core/numbers.py",
+  "ok": true,
+  "tail": "retry"
+ },
+ {
+  "id": "sympy__sympy-21930",
+  "target": "sympy/physics/secondquant.py",
+  "ok": true,
+  "tail": "retry"
+ }
+]
