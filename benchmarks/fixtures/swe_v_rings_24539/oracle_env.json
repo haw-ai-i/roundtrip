@@ -1,0 +1,6 @@
+{
+  "env_path": "~/Desktop/coundetrip/swebench_envs/sympy__sympy-24539",
+  "target_rel": "sympy/polys/rings.py",
+  "oracle_rel": "sympy/polys/tests/test_rings.py",
+  "source_basename": "rings.py"
+}

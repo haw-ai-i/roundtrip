@@ -1,0 +1,11 @@
+name: swe_v_point_22714
+test_command:
+  - python
+  - run_oracle.py
+source_paths:
+  - sympy/geometry/point.py
+scaffold_paths:
+  - scaffold
+test_paths:
+  - run_oracle.py
+  - oracle_env.json

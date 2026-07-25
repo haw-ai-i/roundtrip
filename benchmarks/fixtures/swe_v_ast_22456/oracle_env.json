@@ -1,0 +1,6 @@
+{
+  "env_path": "~/Desktop/coundetrip/swebench_envs/sympy__sympy-22456",
+  "target_rel": "sympy/codegen/ast.py",
+  "oracle_rel": "sympy/codegen/tests/test_ast.py",
+  "source_basename": "ast.py"
+}

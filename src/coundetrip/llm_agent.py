@@ -174,6 +174,21 @@ _REGENERATE_SYSTEM = (
 _BLOCK_RE = re.compile(r"^=== (.+?) ===$", re.MULTILINE)
 
 
+def _strip_code_fences(text: str) -> str:
+    """Remove markdown code fences a model may wrap around a file body.
+    A leading ```lang line and a trailing ``` line are dropped; content is unchanged
+    when no fences are present."""
+    lines = text.split("\n")
+    if lines and lines[0].lstrip().startswith("```"):
+        lines = lines[1:]
+        # drop matching closing fence if present
+        for j in range(len(lines) - 1, -1, -1):
+            if lines[j].strip() == "```":
+                lines = lines[:j] + lines[j+1:]
+                break
+    return "\n".join(lines)
+
+
 def parse_file_blocks(text: str) -> dict[str, str]:
     """Parse '=== path ===' delimited blocks into ``{path: content}``.
 
@@ -193,6 +208,7 @@ def parse_file_blocks(text: str) -> dict[str, str]:
         content = text[body_start:body_end]
         if content.endswith("\n"):
             content = content[:-1]
+        content = _strip_code_fences(content)
         files[path] = content
     return files
 

@@ -1,0 +1,11 @@
+name: swe_v_gamma_matrices_23824
+test_command:
+  - python
+  - run_oracle.py
+source_paths:
+  - sympy/physics/hep/gamma_matrices.py
+scaffold_paths:
+  - scaffold
+test_paths:
+  - run_oracle.py
+  - oracle_env.json
