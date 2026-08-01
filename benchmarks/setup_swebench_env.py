@@ -34,7 +34,9 @@ PYTHON_FOR_REPO = {
     "sympy__sympy-12": "3.9",
     "sympy__sympy-13": "3.9",
     "sympy__sympy-14": "3.9",
-    # 2019-2020 sympy (15xxx-20xxx): fine on 3.10
+    # 2020 sympy (20xxx): distutils still required, removed in 3.12
+    "sympy__sympy-20": "3.10",
+    # 2019-2020 sympy (15xxx-19xxx): fine on 3.10
     "sympy__sympy-1": "3.10",
     # Era-appropriate interpreters. Some repos' pinned dependency stacks have no
     # wheels for the current Python (e.g. numpy<2 stops at 3.12), so the venv is
