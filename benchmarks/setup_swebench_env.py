@@ -26,6 +26,20 @@ def run(cmd, cwd=None, check=True):
     return subprocess.run(cmd, cwd=cwd, shell=isinstance(cmd, str), check=check)
 
 
+
+EXTRA_PINS = {
+    # Per-repo dependency pins discovered by probing (see verified_build_log*).
+    # sphinx 4.x era on Python 3.14: pkg_resources removal, imghdr removal,
+    # and unpinned sphinxcontrib helpers drifting to Sphinx>=5 requirements.
+    "sphinx-doc__sphinx": [
+        "setuptools<81", "standard-imghdr",
+        "sphinxcontrib-applehelp==1.0.2", "sphinxcontrib-devhelp==1.0.2",
+        "sphinxcontrib-htmlhelp==2.0.0", "sphinxcontrib-serializinghtml==1.1.5",
+        "sphinxcontrib-qthelp==1.0.3", "sphinxcontrib-jsmath==1.0.1",
+        "alabaster==0.7.12",
+    ],
+}
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("instance_id")
@@ -58,6 +72,10 @@ def main() -> int:
     run([str(py), "-m", "pip", "install", "-q", "-U", "pip"])
     run([str(py), "-m", "pip", "install", "-q", "-e", "."], cwd=target)
     run([str(py), "-m", "pip", "install", "-q", f"pytest=={args.pytest}"])
+    for prefix, pins in EXTRA_PINS.items():
+        if args.instance_id.startswith(prefix):
+            run([str(py), "-m", "pip", "install", "-q", *pins])
+
 
     (target / "_gold.patch").write_text(r["patch"], encoding="utf-8")
     (target / "_test.patch").write_text(r["test_patch"], encoding="utf-8")
