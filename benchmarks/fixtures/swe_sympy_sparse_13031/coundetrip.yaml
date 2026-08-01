@@ -1,0 +1,11 @@
+name: swe_sympy_sparse_13031
+test_command:
+  - python
+  - run_oracle.py
+source_paths:
+  - sympy/matrices/sparse.py
+scaffold_paths:
+  - scaffold
+test_paths:
+  - run_oracle.py
+  - oracle_env.json

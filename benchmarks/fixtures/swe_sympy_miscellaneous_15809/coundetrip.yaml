@@ -1,0 +1,11 @@
+name: swe_sympy_miscellaneous_15809
+test_command:
+  - python
+  - run_oracle.py
+source_paths:
+  - sympy/functions/elementary/miscellaneous.py
+scaffold_paths:
+  - scaffold
+test_paths:
+  - run_oracle.py
+  - oracle_env.json

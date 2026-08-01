@@ -1,0 +1,49 @@
+# Implementation target
+Write the module at `sympy/core/evalf.py`.
+Other modules import these names from it, so they MUST exist with these exact names:
+- `DEFAULT_MAXPREC`
+- `EvalfMixin`
+- `INF`
+- `LG10`
+- `MINUS_INF`
+- `N`
+- `PrecisionExhausted`
+- `add_terms`
+- `as_mpmath`
+- `bitcount`
+- `check_convergence`
+- `check_target`
+- `chop_parts`
+- `complex_accuracy`
+- `do_integral`
+- `evalf`
+- `evalf_abs`
+- `evalf_add`
+- `evalf_atan`
+- `evalf_bernoulli`
+- `evalf_ceiling`
+- `evalf_floor`
+- `evalf_im`
+- `evalf_integral`
+- `evalf_log`
+- `evalf_mul`
+- `evalf_piecewise`
+- `evalf_pow`
+- `evalf_prod`
+- `evalf_re`
+- `evalf_subs`
+- `evalf_sum`
+- `evalf_symbol`
+- `evalf_table`
+- `evalf_trig`
+- `fastlog`
+- `finalize_complex`
+- `get_abs`
+- `get_complex_part`
+- `get_integer_part`
+- `hypsum`
+- `iszero`
+- `pure_complex`
+- `rnd`
+- `scaled_zero`
+Implement them to satisfy the specification. Do not write tests.

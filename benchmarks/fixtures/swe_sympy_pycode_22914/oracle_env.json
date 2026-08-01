@@ -1,0 +1,50 @@
+{
+  "env_path": "~/Desktop/coundetrip/swebench_envs/sympy__sympy-22914",
+  "target_rel": "sympy/printing/pycode.py",
+  "source_basename": "pycode.py",
+  "test_selection": [
+    "test_PythonCodePrinter",
+    "test_PythonCodePrinter_standard",
+    "test_MpmathPrinter",
+    "test_NumPyPrinter",
+    "test_SciPyPrinter",
+    "test_pycode_reserved_words",
+    "test_sqrt",
+    "test_frac",
+    "test_printmethod",
+    "test_codegen_ast_nodes",
+    "test_issue_14283",
+    "test_NumPyPrinter_print_seq",
+    "test_issue_16535_16536",
+    "test_Integral",
+    "test_fresnel_integrals",
+    "test_beta",
+    "test_airy",
+    "test_airy_prime"
+  ],
+  "oracle_files": [
+    "sympy/printing/tests/test_pycode.py"
+  ],
+  "fail_to_pass": [
+    "test_PythonCodePrinter"
+  ],
+  "pass_to_pass": [
+    "test_PythonCodePrinter_standard",
+    "test_MpmathPrinter",
+    "test_NumPyPrinter",
+    "test_SciPyPrinter",
+    "test_pycode_reserved_words",
+    "test_sqrt",
+    "test_frac",
+    "test_printmethod",
+    "test_codegen_ast_nodes",
+    "test_issue_14283",
+    "test_NumPyPrinter_print_seq",
+    "test_issue_16535_16536",
+    "test_Integral",
+    "test_fresnel_integrals",
+    "test_beta",
+    "test_airy",
+    "test_airy_prime"
+  ]
+}

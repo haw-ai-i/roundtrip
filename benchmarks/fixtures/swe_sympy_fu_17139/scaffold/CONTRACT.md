@@ -1,0 +1,46 @@
+# Implementation target
+Write the module at `sympy/simplify/fu.py`.
+Other modules import these names from it, so they MUST exist with these exact names:
+- `CTR1`
+- `CTR2`
+- `CTR3`
+- `CTR4`
+- `FU`
+- `L`
+- `RL1`
+- `RL2`
+- `TR0`
+- `TR1`
+- `TR10`
+- `TR10i`
+- `TR11`
+- `TR111`
+- `TR12`
+- `TR12i`
+- `TR13`
+- `TR14`
+- `TR15`
+- `TR16`
+- `TR2`
+- `TR22`
+- `TR2i`
+- `TR3`
+- `TR4`
+- `TR5`
+- `TR6`
+- `TR7`
+- `TR8`
+- `TR9`
+- `TRmorrie`
+- `TRpower`
+- `_TR56`
+- `_osborne`
+- `_osbornei`
+- `as_f_sign_1`
+- `fu`
+- `fufuncs`
+- `hyper_as_trig`
+- `process_common_addends`
+- `sincos_to_sum`
+- `trig_split`
+Implement them to satisfy the specification. Do not write tests.

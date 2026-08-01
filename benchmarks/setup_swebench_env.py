@@ -34,6 +34,8 @@ PYTHON_FOR_REPO = {
     "sympy__sympy-12": "3.9",
     "sympy__sympy-13": "3.9",
     "sympy__sympy-14": "3.9",
+    # 2021 sympy (21xxx): still needs distutils
+    "sympy__sympy-21": "3.10",
     # 2020 sympy (20xxx): distutils still required, removed in 3.12
     "sympy__sympy-20": "3.10",
     # 2019-2020 sympy (15xxx-19xxx): fine on 3.10

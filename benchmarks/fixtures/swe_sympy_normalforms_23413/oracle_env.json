@@ -1,0 +1,21 @@
+{
+  "env_path": "~/Desktop/coundetrip/swebench_envs/sympy__sympy-23413",
+  "target_rel": "sympy/polys/matrices/normalforms.py",
+  "source_basename": "normalforms.py",
+  "test_selection": [
+    "test_hermite_normal",
+    "test_smith_normal",
+    "test_smith_normal_deprecated"
+  ],
+  "oracle_files": [
+    "sympy/matrices/tests/test_normalforms.py",
+    "sympy/polys/matrices/tests/test_normalforms.py"
+  ],
+  "fail_to_pass": [
+    "test_hermite_normal"
+  ],
+  "pass_to_pass": [
+    "test_smith_normal",
+    "test_smith_normal_deprecated"
+  ]
+}

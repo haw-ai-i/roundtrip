@@ -1,0 +1,134 @@
+{
+ "made": [
+  "swe_pydata_computation_6599",
+  "swe_pydata_rolling_6744",
+  "swe_pydata_computation_7229",
+  "swe_pydata_rolling_7233",
+  "swe_pydata_indexing_7393",
+  "swe_sphinx_doc_python_9602",
+  "swe_sphinx_doc_python_9698",
+  "swe_sphinx_doc_extension_9711",
+  "swe_sympy_function_12096",
+  "swe_sympy_matexpr_12419",
+  "swe_sympy_permutations_12481",
+  "swe_sympy_permutations_12489",
+  "swe_sympy_sparse_13031",
+  "swe_sympy_evalf_13372",
+  "swe_sympy_hyperbolic_13480",
+  "swe_sympy_products_13551",
+  "swe_sympy_sets_13615",
+  "swe_sympy_common_13647",
+  "swe_sympy_polytools_13757",
+  "swe_sympy_zeta_functions_13852",
+  "swe_sympy_crv_types_13878",
+  "swe_sympy_tensorproduct_13974",
+  "swe_sympy_str_14531",
+  "swe_sympy_vector_14711",
+  "swe_sympy_dense_ndim_array_15017",
+  "swe_sympy_mathematica_15345",
+  "swe_sympy_quaternion_15349",
+  "swe_sympy_mod_15599",
+  "swe_sympy_miscellaneous_15809",
+  "swe_sympy_add_15875",
+  "swe_sympy_mathml_15976",
+  "swe_sympy_simplify_16450",
+  "swe_sympy_pycode_16766",
+  "swe_sympy_codegen_16792",
+  "swe_sympy_crypto_16886",
+  "swe_sympy_fu_17139",
+  "swe_sympy_matexpr_17630",
+  "swe_sympy_point_17655",
+  "swe_sympy_diophantine_18189",
+  "swe_sympy_residue_ntheory_18199",
+  "swe_sympy_relational_18211",
+  "swe_sympy_polytools_18698",
+  "swe_sympy_factortools_19040",
+  "swe_sympy_repr_19346",
+  "swe_sympy_conditionset_19495",
+  "swe_sympy_sympify_19637",
+  "swe_sympy_perm_groups_19954",
+  "swe_sympy_iterables_20154",
+  "swe_sympy_expressiondomain_20428",
+  "swe_sympy__print_helpers_20590",
+  "swe_sympy_conventions_20916",
+  "swe_sympy_mod_21379",
+  "swe_sympy_intersection_21596",
+  "swe_sympy_str_21612",
+  "swe_sympy_monomials_21847",
+  "swe_sympy_secondquant_21930",
+  "swe_sympy_ast_22456",
+  "swe_sympy_point_22714",
+  "swe_sympy_pycode_22914",
+  "swe_sympy_lambdify_23262",
+  "swe_sympy_normalforms_23413",
+  "swe_sympy_symbol_23534",
+  "swe_sympy_gamma_matrices_23824",
+  "swe_sympy_contains_23950",
+  "swe_sympy_unitsystem_24066",
+  "swe_sympy_unitsystem_24213",
+  "swe_sympy_homomorphisms_24443",
+  "swe_sympy_rings_24539"
+ ],
+ "skipped": [
+  {
+   "id": "flask-4992",
+   "reason": "not in Verified"
+  },
+  {
+   "id": "pydata__xarray-6721",
+   "reason": "self-check exit 4: no tests ran in 1.40s"
+  },
+  {
+   "id": "sphinx-doc__sphinx-9367",
+   "reason": "self-check exit 1: ImportError: Error importing plugin \"sphinx.testing.fixtures\": cannot import name 'Union' "
+  },
+  {
+   "id": "sphinx-doc__sphinx-9658",
+   "reason": "self-check exit 1: 5 failed, 20 passed, 9 warnings in 0.04s"
+  },
+  {
+   "id": "sphinx-doc__sphinx-9673",
+   "reason": "self-check exit 1: 6 failed, 19 passed, 37 warnings in 1.23s"
+  },
+  {
+   "id": "sympy__sympy-11618",
+   "reason": "self-check exit 2: 6 warnings, 1 error in 0.20s"
+  },
+  {
+   "id": "sympy__sympy-13798",
+   "reason": "self-check exit 1: 3 failed, 111 passed, 2 xfailed, 32 warnings in 1.64s"
+  },
+  {
+   "id": "sympy__sympy-14976",
+   "reason": "self-check exit 1: 3 failed, 12 passed, 1 deselected, 2 xfailed, 4 warnings in 0.18s"
+  },
+  {
+   "id": "sympy__sympy-18763",
+   "reason": "self-check exit 1: 2 failed, 143 passed, 2 xfailed, 28 warnings in 0.89s"
+  },
+  {
+   "id": "sympy__sympy-20801",
+   "reason": "self-check exit 1: 1 failed, 96 passed, 3 deselected, 2638 warnings in 2.89s"
+  },
+  {
+   "id": "sympy__sympy-23117",
+   "reason": "not in Verified"
+  },
+  {
+   "id": "sympy__sympy-24152",
+   "reason": "not in Verified"
+  },
+  {
+   "id": "sympy__sympy-24562",
+   "reason": "self-check exit 1: 1 failed, 105 passed, 3 deselected, 2085 warnings in 1.63s"
+  },
+  {
+   "id": "sympy__sympy-24661",
+   "reason": "self-check exit 1: 7 failed, 22 passed, 4 warnings in 0.16s"
+  },
+  {
+   "id": "sympy__sympy-24909",
+   "reason": "not in Verified"
+  }
+ ]
+}

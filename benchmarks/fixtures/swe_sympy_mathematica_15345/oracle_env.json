@@ -1,0 +1,32 @@
+{
+  "env_path": "~/Desktop/coundetrip/swebench_envs/sympy__sympy-15345",
+  "target_rel": "sympy/printing/mathematica.py",
+  "source_basename": "mathematica.py",
+  "test_selection": [
+    "test_Function",
+    "test_Integer",
+    "test_Rational",
+    "test_Pow",
+    "test_Mul",
+    "test_constants",
+    "test_containers",
+    "test_Integral",
+    "test_Derivative"
+  ],
+  "oracle_files": [
+    "sympy/printing/tests/test_mathematica.py"
+  ],
+  "fail_to_pass": [
+    "test_Function"
+  ],
+  "pass_to_pass": [
+    "test_Integer",
+    "test_Rational",
+    "test_Pow",
+    "test_Mul",
+    "test_constants",
+    "test_containers",
+    "test_Integral",
+    "test_Derivative"
+  ]
+}

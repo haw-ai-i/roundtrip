@@ -1,0 +1,19 @@
+{
+  "env_path": "~/Desktop/coundetrip/swebench_envs/sympy__sympy-20916",
+  "target_rel": "sympy/printing/conventions.py",
+  "source_basename": "conventions.py",
+  "test_selection": [
+    "test_super_sub",
+    "test_requires_partial"
+  ],
+  "oracle_files": [
+    "sympy/printing/tests/test_conventions.py",
+    "sympy/testing/quality_unicode.py"
+  ],
+  "fail_to_pass": [
+    "test_super_sub"
+  ],
+  "pass_to_pass": [
+    "test_requires_partial"
+  ]
+}

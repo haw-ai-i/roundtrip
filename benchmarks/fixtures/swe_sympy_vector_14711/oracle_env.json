@@ -1,0 +1,20 @@
+{
+  "env_path": "~/Desktop/coundetrip/swebench_envs/sympy__sympy-14711",
+  "target_rel": "sympy/physics/vector/vector.py",
+  "source_basename": "vector.py",
+  "test_selection": [
+    "test_Vector",
+    "test_Vector_diffs",
+    "test_vector_var_in_dcm"
+  ],
+  "oracle_files": [
+    "sympy/physics/vector/tests/test_vector.py"
+  ],
+  "fail_to_pass": [
+    "test_Vector"
+  ],
+  "pass_to_pass": [
+    "test_Vector_diffs",
+    "test_vector_var_in_dcm"
+  ]
+}

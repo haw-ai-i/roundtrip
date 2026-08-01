@@ -1,0 +1,24 @@
+{
+  "env_path": "~/Desktop/coundetrip/swebench_envs/sympy__sympy-13852",
+  "target_rel": "sympy/functions/special/zeta_functions.py",
+  "source_basename": "zeta_functions.py",
+  "test_selection": [
+    "test_polylog_values",
+    "test_zeta_eval",
+    "test_dirichlet_eta_eval",
+    "test_stieltjes",
+    "test_stieltjes_evalf"
+  ],
+  "oracle_files": [
+    "sympy/functions/special/tests/test_zeta_functions.py"
+  ],
+  "fail_to_pass": [
+    "test_polylog_values"
+  ],
+  "pass_to_pass": [
+    "test_zeta_eval",
+    "test_dirichlet_eta_eval",
+    "test_stieltjes",
+    "test_stieltjes_evalf"
+  ]
+}

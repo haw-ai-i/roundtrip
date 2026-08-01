@@ -1,0 +1,22 @@
+{
+  "env_path": "~/Desktop/coundetrip/swebench_envs/sympy__sympy-15349",
+  "target_rel": "sympy/algebras/quaternion.py",
+  "source_basename": "quaternion.py",
+  "test_selection": [
+    "test_quaternion_conversions",
+    "test_quaternion_construction",
+    "test_quaternion_complex_real_addition",
+    "test_quaternion_functions"
+  ],
+  "oracle_files": [
+    "sympy/algebras/tests/test_quaternion.py"
+  ],
+  "fail_to_pass": [
+    "test_quaternion_conversions"
+  ],
+  "pass_to_pass": [
+    "test_quaternion_construction",
+    "test_quaternion_complex_real_addition",
+    "test_quaternion_functions"
+  ]
+}

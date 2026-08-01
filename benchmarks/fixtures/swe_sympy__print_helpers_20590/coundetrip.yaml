@@ -1,0 +1,11 @@
+name: swe_sympy__print_helpers_20590
+test_command:
+  - python
+  - run_oracle.py
+source_paths:
+  - sympy/core/_print_helpers.py
+scaffold_paths:
+  - scaffold
+test_paths:
+  - run_oracle.py
+  - oracle_env.json

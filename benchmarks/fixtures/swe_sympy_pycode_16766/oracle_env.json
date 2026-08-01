@@ -1,0 +1,30 @@
+{
+  "env_path": "~/Desktop/coundetrip/swebench_envs/sympy__sympy-16766",
+  "target_rel": "sympy/printing/pycode.py",
+  "source_basename": "pycode.py",
+  "test_selection": [
+    "test_PythonCodePrinter",
+    "test_MpmathPrinter",
+    "test_NumPyPrinter",
+    "test_SciPyPrinter",
+    "test_pycode_reserved_words",
+    "test_printmethod",
+    "test_codegen_ast_nodes",
+    "test_issue_14283"
+  ],
+  "oracle_files": [
+    "sympy/printing/tests/test_pycode.py"
+  ],
+  "fail_to_pass": [
+    "test_PythonCodePrinter"
+  ],
+  "pass_to_pass": [
+    "test_MpmathPrinter",
+    "test_NumPyPrinter",
+    "test_SciPyPrinter",
+    "test_pycode_reserved_words",
+    "test_printmethod",
+    "test_codegen_ast_nodes",
+    "test_issue_14283"
+  ]
+}

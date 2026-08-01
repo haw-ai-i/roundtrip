@@ -1,0 +1,11 @@
+name: swe_sympy_diophantine_18189
+test_command:
+  - python
+  - run_oracle.py
+source_paths:
+  - sympy/solvers/diophantine.py
+scaffold_paths:
+  - scaffold
+test_paths:
+  - run_oracle.py
+  - oracle_env.json

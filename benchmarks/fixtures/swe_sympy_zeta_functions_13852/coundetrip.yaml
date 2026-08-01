@@ -1,0 +1,11 @@
+name: swe_sympy_zeta_functions_13852
+test_command:
+  - python
+  - run_oracle.py
+source_paths:
+  - sympy/functions/special/zeta_functions.py
+scaffold_paths:
+  - scaffold
+test_paths:
+  - run_oracle.py
+  - oracle_env.json

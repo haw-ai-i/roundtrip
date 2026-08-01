@@ -1,0 +1,24 @@
+{
+  "env_path": "~/Desktop/coundetrip/swebench_envs/sympy__sympy-13974",
+  "target_rel": "sympy/physics/quantum/tensorproduct.py",
+  "source_basename": "tensorproduct.py",
+  "test_selection": [
+    "test_tensor_product_simp",
+    "test_tensor_product_abstract",
+    "test_tensor_product_expand",
+    "test_tensor_product_commutator",
+    "test_issue_5923"
+  ],
+  "oracle_files": [
+    "sympy/physics/quantum/tests/test_tensorproduct.py"
+  ],
+  "fail_to_pass": [
+    "test_tensor_product_simp"
+  ],
+  "pass_to_pass": [
+    "test_tensor_product_abstract",
+    "test_tensor_product_expand",
+    "test_tensor_product_commutator",
+    "test_issue_5923"
+  ]
+}
