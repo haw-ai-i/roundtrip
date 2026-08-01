@@ -27,7 +27,25 @@ def run(cmd, cwd=None, check=True):
 
 
 
+PYTHON_FOR_REPO = {
+    # pre-2021 sympy (1xxxx ids) predates the distutils removal; use its era Python
+    # 2017-2018 sympy (11xxx-14xxx): collections ABC aliases removed in 3.10
+    "sympy__sympy-11": "3.9",
+    "sympy__sympy-12": "3.9",
+    "sympy__sympy-13": "3.9",
+    "sympy__sympy-14": "3.9",
+    # 2019-2020 sympy (15xxx-20xxx): fine on 3.10
+    "sympy__sympy-1": "3.10",
+    # Era-appropriate interpreters. Some repos' pinned dependency stacks have no
+    # wheels for the current Python (e.g. numpy<2 stops at 3.12), so the venv is
+    # created with an interpreter of the instance's era, resolved via uv.
+    "pydata__xarray": "3.10",
+}
+
 EXTRA_PINS = {
+    # pre-2021 sympy: old conftest uses the removed py library API
+    "sympy__sympy-1": ["py<1.9"],
+    "pydata__xarray": ["numpy<2", "pandas<2.1"],
     # Per-repo dependency pins discovered by probing (see verified_build_log*).
     # sphinx 4.x era on Python 3.14: pkg_resources removal, imghdr removal,
     # and unpinned sphinxcontrib helpers drifting to Sphinx>=5 requirements.
@@ -67,7 +85,19 @@ def main() -> int:
     run(["git", "checkout", "--quiet", r["base_commit"]], cwd=target)
 
     venv = target / ".venv"
-    run([sys.executable, "-m", "venv", str(venv)])
+    base_python = sys.executable
+    for prefix, pyver in PYTHON_FOR_REPO.items():
+        if args.instance_id.startswith(prefix):
+            found = subprocess.run(["uv", "python", "find", pyver],
+                                   capture_output=True, text=True)
+            if found.returncode == 0 and found.stdout.strip():
+                base_python = found.stdout.strip()
+                print(f">> era interpreter for {prefix}: Python {pyver} at {base_python}")
+            else:
+                print(f">> WARNING: Python {pyver} not found via uv; "
+                      f"falling back to {sys.executable}. Run: uv python install {pyver}")
+            break
+    run([base_python, "-m", "venv", str(venv)])
     py = venv / "bin" / "python"
     run([str(py), "-m", "pip", "install", "-q", "-U", "pip"])
     run([str(py), "-m", "pip", "install", "-q", "-e", "."], cwd=target)
