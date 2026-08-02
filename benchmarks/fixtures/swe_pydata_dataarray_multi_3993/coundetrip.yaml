@@ -1,0 +1,12 @@
+name: swe_pydata_dataarray_multi_3993
+test_command:
+  - python
+  - run_oracle.py
+source_paths:
+  - xarray/core/dataarray.py
+  - xarray/core/dataset.py
+scaffold_paths:
+  - scaffold
+test_paths:
+  - run_oracle.py
+  - oracle_env.json

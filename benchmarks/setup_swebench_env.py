@@ -59,7 +59,7 @@ EXTRA_PINS = {
     ],
     # pre-2021 sympy: old conftest uses the removed py library API
     "sympy__sympy-1": ["py<1.9"],
-    "pydata__xarray": ["numpy<2", "pandas<2.1"],
+    "pydata__xarray": ["numpy<2", "pandas<2.1", "dask[array]<2023", "scipy<1.11", "bottleneck"],
     # Per-repo dependency pins discovered by probing (see verified_build_log*).
     # sphinx 4.x era on Python 3.14: pkg_resources removal, imghdr removal,
     # and unpinned sphinxcontrib helpers drifting to Sphinx>=5 requirements.

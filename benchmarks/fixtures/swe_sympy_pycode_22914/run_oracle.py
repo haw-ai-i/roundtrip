@@ -46,7 +46,27 @@ shutil.copy2(cands[0], target)
 node_ids = [t for t in selection if "::" in t]
 bare = [t for t in selection if "::" not in t]
 if node_ids and not bare:
-    args = node_ids
+    # SWE-bench selections were generated under the reference harness; some
+    # parametrized ids may not exist in this environment (optional dependencies
+    # change parametrization). pytest aborts the whole run on a single missing
+    # id, so pre-collect what exists and intersect. FAIL_TO_PASS ids must all
+    # exist; missing PASS_TO_PASS ids are dropped and reported.
+    files = sorted({t.split("::")[0] for t in node_ids})
+    col = subprocess.run([str(venv_py), "-m", "pytest", "--collect-only", "-q", *files],
+                         cwd=str(env), capture_output=True, text=True, timeout=600)
+    existing = {l.strip() for l in col.stdout.splitlines() if "::" in l}
+    f2p = set(cfg.get("fail_to_pass") or [])
+    missing_f2p = [t for t in node_ids if t in f2p and t not in existing]
+    if missing_f2p:
+        sys.stderr.write(f"run_oracle: FAIL_TO_PASS test(s) not collectable in this env: {missing_f2p[:5]}\n")
+        for t in targets:
+            shutil.copy2(t.with_suffix(t.suffix + ".orig"), t)
+        sys.exit(2)
+    kept = [t for t in node_ids if t in existing]
+    dropped = len(node_ids) - len(kept)
+    if dropped:
+        sys.stderr.write(f"run_oracle: dropped {dropped} PASS_TO_PASS id(s) not present in this env\n")
+    args = kept
 elif bare:
     files = [str(env / f) for f in oracle_files]
     expr = " or ".join(sorted(set(bare)))

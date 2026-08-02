@@ -131,6 +131,26 @@ def main():
 
         check = subprocess.run([sys.executable, "run_oracle.py"], cwd=fdir,
                                capture_output=True, text=True)
+        if check.returncode != 0:
+            # Baseline calibration: a PASS_TO_PASS test that fails on the gold
+            # code is environment drift and cannot inform regeneration scoring.
+            # Drop such tests with a logged record. A FAIL_TO_PASS failure on
+            # gold invalidates the fixture.
+            out = check.stdout + check.stderr
+            failed = [l.split()[1] for l in out.splitlines()
+                      if l.startswith("FAILED ") and len(l.split()) > 1]
+            f2p_set = set(f2p)
+            if failed and not (set(failed) & f2p_set):
+                new_sel = [t for t in selection if t not in set(failed)]
+                cfgp = fdir / "oracle_env.json"
+                cfg = json.loads(cfgp.read_text())
+                cfg["test_selection"] = new_sel
+                cfg["dropped_p2p_on_gold"] = sorted(set(failed))
+                cfgp.write_text(json.dumps(cfg, indent=2))
+                check = subprocess.run([sys.executable, "run_oracle.py"], cwd=fdir,
+                                       capture_output=True, text=True)
+                if check.returncode == 0:
+                    print(f"CAL  {fname:<44} dropped {len(set(failed))} drifted P2P on gold")
         if check.returncode == 0:
             made.append(fname)
             print(f"OK   {fname:<44} ({len(names)} names, {len(selection)} tests)")
