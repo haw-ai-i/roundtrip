@@ -28,6 +28,8 @@ def run(cmd, cwd=None, check=True):
 
 
 PYTHON_FOR_REPO = {
+    # this instance's test_rewriting imports sympy._compilation -> distutils
+    "sympy__sympy-22080": "3.10",
     # sphinx 3.x era (85xx ids): types.Union-era code, needs a pre-3.10 stdlib
     "sphinx-doc__sphinx-85": "3.9",
     # pre-2021 sympy (1xxxx ids) predates the distutils removal; use its era Python
