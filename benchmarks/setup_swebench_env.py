@@ -28,6 +28,8 @@ def run(cmd, cwd=None, check=True):
 
 
 PYTHON_FOR_REPO = {
+    # sphinx 3.x era (85xx ids): types.Union-era code, needs a pre-3.10 stdlib
+    "sphinx-doc__sphinx-85": "3.9",
     # pre-2021 sympy (1xxxx ids) predates the distutils removal; use its era Python
     # 2017-2018 sympy (11xxx-14xxx): collections ABC aliases removed in 3.10
     "sympy__sympy-11": "3.9",
@@ -47,6 +49,14 @@ PYTHON_FOR_REPO = {
 }
 
 EXTRA_PINS = {
+    # sphinx 3.x era: jinja2 3 removed environmentfilter; docutils 0.17 moved roman
+    "sphinx-doc__sphinx-85": [
+        "setuptools<81", "standard-imghdr", "jinja2<3.0", "markupsafe<2.1", "docutils<0.17",
+        "sphinxcontrib-applehelp==1.0.2", "sphinxcontrib-devhelp==1.0.2",
+        "sphinxcontrib-htmlhelp==2.0.0", "sphinxcontrib-serializinghtml==1.1.5",
+        "sphinxcontrib-qthelp==1.0.3", "sphinxcontrib-jsmath==1.0.1",
+        "alabaster==0.7.12",
+    ],
     # pre-2021 sympy: old conftest uses the removed py library API
     "sympy__sympy-1": ["py<1.9"],
     "pydata__xarray": ["numpy<2", "pandas<2.1"],
