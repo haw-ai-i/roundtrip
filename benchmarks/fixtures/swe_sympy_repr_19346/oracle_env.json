@@ -1,6 +1,9 @@
 {
   "env_path": "~/Desktop/coundetrip/swebench_envs/sympy__sympy-19346",
   "target_rel": "sympy/printing/repr.py",
+  "target_rels": [
+    "sympy/printing/repr.py"
+  ],
   "source_basename": "repr.py",
   "test_selection": [
     "test_dict",

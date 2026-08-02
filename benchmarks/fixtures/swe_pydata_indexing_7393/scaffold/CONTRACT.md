@@ -1,5 +1,7 @@
 # Implementation target
 Write the module at `xarray/core/indexing.py`.
+
+## `xarray/core/indexing.py`
 Other modules import these names from it, so they MUST exist with these exact names:
 - `ArrayApiIndexingAdapter`
 - `BasicIndexer`
@@ -34,4 +36,5 @@ Other modules import these names from it, so they MUST exist with these exact na
 - `merge_sel_results`
 - `posify_mask_indexer`
 - `slice_slice`
+
 Implement them to satisfy the specification. Do not write tests.

@@ -1,5 +1,7 @@
 # Implementation target
 Write the module at `sympy/solvers/diophantine.py`.
+
+## `sympy/solvers/diophantine.py`
 Other modules import these names from it, so they MUST exist with these exact names:
 - `PQa`
 - `_can_do_sum_of_squares`
@@ -52,4 +54,5 @@ Other modules import these names from it, so they MUST exist with these exact na
 - `sum_of_three_squares`
 - `transformation_to_DN`
 - `transformation_to_normal`
+
 Implement them to satisfy the specification. Do not write tests.

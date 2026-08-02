@@ -1,5 +1,7 @@
 # Implementation target
 Write the module at `sympy/stats/crv_types.py`.
+
+## `sympy/stats/crv_types.py`
 Other modules import these names from it, so they MUST exist with these exact names:
 - `Arcsin`
 - `ArcsinDistribution`
@@ -79,4 +81,5 @@ Other modules import these names from it, so they MUST exist with these exact na
 - `WignerSemicircleDistribution`
 - `oo`
 - `rv`
+
 Implement them to satisfy the specification. Do not write tests.

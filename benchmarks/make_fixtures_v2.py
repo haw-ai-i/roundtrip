@@ -51,11 +51,12 @@ def contract_names(target, env, modpath):
     return sorted(pub | imported)
 
 
-def short_name(iid, target_rel):
+def short_name(iid, target_rel, nfiles=1):
     repo = iid.split("__")[0].replace("-", "_")
     num = iid.split("-")[-1]
     mod = target_rel.split("/")[-1].removesuffix(".py")
-    return f"swe_{repo}_{mod}_{num}"
+    tag = "_multi" if nfiles > 1 else ""
+    return f"swe_{repo}_{mod}{tag}_{num}"
 
 
 def main():
@@ -72,37 +73,49 @@ def main():
             skipped.append((iid, "not in Verified")); continue
         src = [f for f in FILE_RE.findall(r["patch"])
                if "/test" not in f and not f.startswith("test")]
-        if len(src) != 1:
+        if not 1 <= len(src) <= 5:
             skipped.append((iid, f"{len(src)} source files")); continue
-        target_rel = src[0]
-        target = env / target_rel
-        if not target.exists():
-            skipped.append((iid, "target missing")); continue
+        if len({f.rsplit("/", 1)[0] for f in src}) > 1:
+            skipped.append((iid, "cross-directory multi-file (deferred)")); continue
+        targets = [(rel, env / rel) for rel in src]
+        missing = [rel for rel, t in targets if not t.exists()]
+        if missing:
+            skipped.append((iid, f"target missing: {missing[0]}")); continue
+        target_rel = src[0]  # primary, used for naming
         test_files = FILE_RE.findall(r["test_patch"])
         f2p = json.loads(r["FAIL_TO_PASS"]); p2p = json.loads(r["PASS_TO_PASS"])
         selection = f2p + p2p
         if not selection:
             skipped.append((iid, "empty selection")); continue
 
-        fname = short_name(iid, target_rel)
+        fname = short_name(iid, target_rel, len(targets))
         fdir = FIXTURES / fname
         if fdir.exists():
             shutil.rmtree(fdir)
         (fdir / "scaffold").mkdir(parents=True)
-        spec = fdir / target_rel
-        spec.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copy2(target, spec)
+        all_names = {}
+        for rel, t in targets:
+            spec = fdir / rel
+            spec.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(t, spec)
+            all_names[rel] = contract_names(t, env, rel)
+        names = [n for ns in all_names.values() for n in ns]
 
-        names = contract_names(target, env, target_rel)
-        (fdir / "scaffold" / "CONTRACT.md").write_text(
-            "# Implementation target\n"
-            f"Write the module at `{target_rel}`.\n"
-            "Other modules import these names from it, so they MUST exist with these exact names:\n"
-            + "".join(f"- `{n}`\n" for n in names)
-            + "Implement them to satisfy the specification. Do not write tests.\n")
+        contract = ["# Implementation target\n"]
+        if len(targets) == 1:
+            contract.append(f"Write the module at `{target_rel}`.\n")
+        else:
+            contract.append(f"Write the following {len(targets)} modules. They live in the same package and may import each other.\n")
+        for rel, ns in all_names.items():
+            contract.append(f"\n## `{rel}`\n")
+            contract.append("Other modules import these names from it, so they MUST exist with these exact names:\n")
+            contract.extend(f"- `{n}`\n" for n in ns)
+        contract.append("\nImplement them to satisfy the specification. Do not write tests.\n")
+        (fdir / "scaffold" / "CONTRACT.md").write_text("".join(contract))
         (fdir / "oracle_env.json").write_text(json.dumps({
             "env_path": f"~/Desktop/coundetrip/swebench_envs/{iid}",
             "target_rel": target_rel,
+            "target_rels": [rel for rel, _ in targets],
             "source_basename": target_rel.split("/")[-1],
             "test_selection": selection,
             "oracle_files": test_files,
@@ -112,7 +125,7 @@ def main():
         shutil.copy2(ORACLE_TEMPLATE, fdir / "run_oracle.py")
         (fdir / "coundetrip.yaml").write_text(
             f"name: {fname}\ntest_command:\n  - python\n  - run_oracle.py\n"
-            f"source_paths:\n  - {target_rel}\nscaffold_paths:\n  - scaffold\n"
+            "source_paths:\n" + "".join(f"  - {rel}\n" for rel, _ in targets) + "scaffold_paths:\n  - scaffold\n"
             f"test_paths:\n  - run_oracle.py\n  - oracle_env.json\n")
         (fdir / "issue.md").write_text(r["problem_statement"])
 

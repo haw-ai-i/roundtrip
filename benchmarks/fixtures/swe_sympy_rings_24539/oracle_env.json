@@ -1,6 +1,9 @@
 {
   "env_path": "~/Desktop/coundetrip/swebench_envs/sympy__sympy-24539",
   "target_rel": "sympy/polys/rings.py",
+  "target_rels": [
+    "sympy/polys/rings.py"
+  ],
   "source_basename": "rings.py",
   "test_selection": [
     "test_PolyElement_as_expr",

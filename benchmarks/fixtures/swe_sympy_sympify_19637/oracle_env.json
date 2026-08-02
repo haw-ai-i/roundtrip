@@ -1,6 +1,9 @@
 {
   "env_path": "~/Desktop/coundetrip/swebench_envs/sympy__sympy-19637",
   "target_rel": "sympy/core/sympify.py",
+  "target_rels": [
+    "sympy/core/sympify.py"
+  ],
   "source_basename": "sympify.py",
   "test_selection": [
     "test_kernS",

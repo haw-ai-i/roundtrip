@@ -1,5 +1,6 @@
 {
  "made": [
+  "swe_pydata_indexing_multi_3095",
   "swe_pydata_computation_6599",
   "swe_pydata_rolling_6744",
   "swe_pydata_computation_7229",
@@ -36,6 +37,7 @@
   "swe_sympy_codegen_16792",
   "swe_sympy_crypto_16886",
   "swe_sympy_fu_17139",
+  "swe_sympy_radsimp_multi_17318",
   "swe_sympy_matexpr_17630",
   "swe_sympy_point_17655",
   "swe_sympy_diophantine_18189",
@@ -46,6 +48,7 @@
   "swe_sympy_repr_19346",
   "swe_sympy_conditionset_19495",
   "swe_sympy_sympify_19637",
+  "swe_sympy_dagger_multi_19783",
   "swe_sympy_perm_groups_19954",
   "swe_sympy_iterables_20154",
   "swe_sympy_expressiondomain_20428",
@@ -75,8 +78,32 @@
    "reason": "not in Verified"
   },
   {
+   "id": "pydata__xarray-3305",
+   "reason": "self-check exit 1: 25 failed, 535 passed, 94 skipped, 69 warnings in 2.83s"
+  },
+  {
+   "id": "pydata__xarray-3993",
+   "reason": "self-check exit 4: 1486 skipped, 5 warnings in 1.33s"
+  },
+  {
    "id": "pydata__xarray-6721",
-   "reason": "self-check exit 4: no tests ran in 1.40s"
+   "reason": "self-check exit 4: no tests ran in 0.66s"
+  },
+  {
+   "id": "pydata__xarray-6938",
+   "reason": "self-check exit 1: 14 failed, 279 passed, 138 skipped in 0.79s"
+  },
+  {
+   "id": "pydata__xarray-6992",
+   "reason": "self-check exit 4: no tests ran in 0.32s"
+  },
+  {
+   "id": "sphinx-doc__sphinx-8548",
+   "reason": "self-check exit 1: ImportError: Error importing plugin \"sphinx.testing.fixtures\": cannot import name 'environ"
+  },
+  {
+   "id": "sphinx-doc__sphinx-8593",
+   "reason": "self-check exit 1: ImportError: Error importing plugin \"sphinx.testing.fixtures\": cannot import name 'environ"
   },
   {
    "id": "sphinx-doc__sphinx-9367",
@@ -84,31 +111,35 @@
   },
   {
    "id": "sphinx-doc__sphinx-9658",
-   "reason": "self-check exit 1: 5 failed, 20 passed, 9 warnings in 0.04s"
+   "reason": "self-check exit 1: 5 failed, 20 passed, 9 warnings in 0.03s"
   },
   {
    "id": "sphinx-doc__sphinx-9673",
-   "reason": "self-check exit 1: 6 failed, 19 passed, 37 warnings in 1.23s"
+   "reason": "self-check exit 1: 6 failed, 19 passed, 37 warnings in 0.80s"
   },
   {
    "id": "sympy__sympy-11618",
-   "reason": "self-check exit 2: 6 warnings, 1 error in 0.20s"
+   "reason": "self-check exit 2: 6 warnings, 1 error in 0.09s"
   },
   {
    "id": "sympy__sympy-13798",
-   "reason": "self-check exit 1: 3 failed, 111 passed, 2 xfailed, 32 warnings in 1.64s"
+   "reason": "self-check exit 1: 3 failed, 111 passed, 2 xfailed, 32 warnings in 0.86s"
   },
   {
    "id": "sympy__sympy-14976",
-   "reason": "self-check exit 1: 3 failed, 12 passed, 1 deselected, 2 xfailed, 4 warnings in 0.18s"
+   "reason": "self-check exit 1: 3 failed, 12 passed, 1 deselected, 2 xfailed, 4 warnings in 0.21s"
   },
   {
    "id": "sympy__sympy-18763",
-   "reason": "self-check exit 1: 2 failed, 143 passed, 2 xfailed, 28 warnings in 0.89s"
+   "reason": "self-check exit 1: 2 failed, 143 passed, 2 xfailed, 48 warnings in 1.84s"
   },
   {
    "id": "sympy__sympy-20801",
-   "reason": "self-check exit 1: 1 failed, 96 passed, 3 deselected, 2638 warnings in 2.89s"
+   "reason": "self-check exit 1: 1 failed, 96 passed, 3 deselected, 2592 warnings in 2.10s"
+  },
+  {
+   "id": "sympy__sympy-22080",
+   "reason": "self-check exit 2: 49 deselected, 4 warnings, 1 error in 0.18s"
   },
   {
    "id": "sympy__sympy-23117",
@@ -120,11 +151,11 @@
   },
   {
    "id": "sympy__sympy-24562",
-   "reason": "self-check exit 1: 1 failed, 105 passed, 3 deselected, 2085 warnings in 1.63s"
+   "reason": "self-check exit 1: 1 failed, 105 passed, 3 deselected, 2066 warnings in 1.21s"
   },
   {
    "id": "sympy__sympy-24661",
-   "reason": "self-check exit 1: 7 failed, 22 passed, 4 warnings in 0.16s"
+   "reason": "self-check exit 1: 7 failed, 22 passed, 4 warnings in 0.08s"
   },
   {
    "id": "sympy__sympy-24909",

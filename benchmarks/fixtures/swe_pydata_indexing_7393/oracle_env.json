@@ -1,6 +1,9 @@
 {
   "env_path": "~/Desktop/coundetrip/swebench_envs/pydata__xarray-7393",
   "target_rel": "xarray/core/indexing.py",
+  "target_rels": [
+    "xarray/core/indexing.py"
+  ],
   "source_basename": "indexing.py",
   "test_selection": [
     "xarray/tests/test_indexes.py::test_restore_dtype_on_multiindexes[int32]",

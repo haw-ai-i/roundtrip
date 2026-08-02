@@ -1,6 +1,9 @@
 {
   "env_path": "~/Desktop/coundetrip/swebench_envs/sympy__sympy-23413",
   "target_rel": "sympy/polys/matrices/normalforms.py",
+  "target_rels": [
+    "sympy/polys/matrices/normalforms.py"
+  ],
   "source_basename": "normalforms.py",
   "test_selection": [
     "test_hermite_normal",

@@ -1,6 +1,9 @@
 {
   "env_path": "~/Desktop/coundetrip/swebench_envs/sympy__sympy-15345",
   "target_rel": "sympy/printing/mathematica.py",
+  "target_rels": [
+    "sympy/printing/mathematica.py"
+  ],
   "source_basename": "mathematica.py",
   "test_selection": [
     "test_Function",

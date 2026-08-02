@@ -1,5 +1,7 @@
 # Implementation target
 Write the module at `sympy/core/function.py`.
+
+## `sympy/core/function.py`
 Other modules import these names from it, so they MUST exist with these exact names:
 - `Application`
 - `AppliedUndef`
@@ -26,4 +28,5 @@ Other modules import these names from it, so they MUST exist with these exact na
 - `expand_power_exp`
 - `expand_trig`
 - `nfloat`
+
 Implement them to satisfy the specification. Do not write tests.

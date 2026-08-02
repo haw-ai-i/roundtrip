@@ -1,6 +1,9 @@
 {
   "env_path": "~/Desktop/coundetrip/swebench_envs/sympy__sympy-22456",
   "target_rel": "sympy/codegen/ast.py",
+  "target_rels": [
+    "sympy/codegen/ast.py"
+  ],
   "source_basename": "ast.py",
   "test_selection": [
     "test_String",

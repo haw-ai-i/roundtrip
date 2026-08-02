@@ -1,6 +1,9 @@
 {
   "env_path": "~/Desktop/coundetrip/swebench_envs/sphinx-doc__sphinx-9602",
   "target_rel": "sphinx/domains/python.py",
+  "target_rels": [
+    "sphinx/domains/python.py"
+  ],
   "source_basename": "python.py",
   "test_selection": [
     "tests/test_domain_py.py::test_parse_annotation_Literal",

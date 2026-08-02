@@ -1,5 +1,7 @@
 # Implementation target
 Write the module at `sympy/utilities/lambdify.py`.
+
+## `sympy/utilities/lambdify.py`
 Other modules import these names from it, so they MUST exist with these exact names:
 - `CUPY`
 - `CUPY_DEFAULT`
@@ -29,4 +31,5 @@ Other modules import these names from it, so they MUST exist with these exact na
 - `implemented_function`
 - `lambdastr`
 - `lambdify`
+
 Implement them to satisfy the specification. Do not write tests.

@@ -1,5 +1,7 @@
 # Implementation target
 Write the module at `sympy/ntheory/residue_ntheory.py`.
+
+## `sympy/ntheory/residue_ntheory.py`
 Other modules import these names from it, so they MUST exist with these exact names:
 - `_discrete_log_pohlig_hellman`
 - `_discrete_log_pollard_rho`
@@ -20,4 +22,5 @@ Other modules import these names from it, so they MUST exist with these exact na
 - `quadratic_residues`
 - `sqrt_mod`
 - `sqrt_mod_iter`
+
 Implement them to satisfy the specification. Do not write tests.

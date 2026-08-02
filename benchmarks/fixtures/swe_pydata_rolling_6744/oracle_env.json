@@ -1,6 +1,9 @@
 {
   "env_path": "~/Desktop/coundetrip/swebench_envs/pydata__xarray-6744",
   "target_rel": "xarray/core/rolling.py",
+  "target_rels": [
+    "xarray/core/rolling.py"
+  ],
   "source_basename": "rolling.py",
   "test_selection": [
     "xarray/tests/test_rolling.py::TestDataArrayRolling::test_rolling_iter[numpy-3-True-1]",

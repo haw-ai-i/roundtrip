@@ -1,6 +1,9 @@
 {
   "env_path": "~/Desktop/coundetrip/swebench_envs/sympy__sympy-15809",
   "target_rel": "sympy/functions/elementary/miscellaneous.py",
+  "target_rels": [
+    "sympy/functions/elementary/miscellaneous.py"
+  ],
   "source_basename": "miscellaneous.py",
   "test_selection": [
     "test_Min",

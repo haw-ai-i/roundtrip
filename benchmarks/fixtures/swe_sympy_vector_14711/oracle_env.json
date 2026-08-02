@@ -1,6 +1,9 @@
 {
   "env_path": "~/Desktop/coundetrip/swebench_envs/sympy__sympy-14711",
   "target_rel": "sympy/physics/vector/vector.py",
+  "target_rels": [
+    "sympy/physics/vector/vector.py"
+  ],
   "source_basename": "vector.py",
   "test_selection": [
     "test_Vector",

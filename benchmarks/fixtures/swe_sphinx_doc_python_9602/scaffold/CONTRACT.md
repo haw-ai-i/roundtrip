@@ -1,5 +1,7 @@
 # Implementation target
 Write the module at `sphinx/domains/python.py`.
+
+## `sphinx/domains/python.py`
 Other modules import these names from it, so they MUST exist with these exact names:
 - `ModuleEntry`
 - `ObjectEntry`
@@ -32,4 +34,5 @@ Other modules import these names from it, so they MUST exist with these exact na
 - `py_sig_re`
 - `setup`
 - `type_to_xref`
+
 Implement them to satisfy the specification. Do not write tests.

@@ -1,5 +1,7 @@
 # Implementation target
 Write the module at `sympy/simplify/fu.py`.
+
+## `sympy/simplify/fu.py`
 Other modules import these names from it, so they MUST exist with these exact names:
 - `CTR1`
 - `CTR2`
@@ -43,4 +45,5 @@ Other modules import these names from it, so they MUST exist with these exact na
 - `process_common_addends`
 - `sincos_to_sum`
 - `trig_split`
+
 Implement them to satisfy the specification. Do not write tests.

@@ -1,0 +1,12 @@
+name: swe_sympy_radsimp_multi_17318
+test_command:
+  - python
+  - run_oracle.py
+source_paths:
+  - sympy/simplify/radsimp.py
+  - sympy/simplify/sqrtdenest.py
+scaffold_paths:
+  - scaffold
+test_paths:
+  - run_oracle.py
+  - oracle_env.json

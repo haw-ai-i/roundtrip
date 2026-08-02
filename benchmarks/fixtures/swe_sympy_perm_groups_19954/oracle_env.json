@@ -1,6 +1,9 @@
 {
   "env_path": "~/Desktop/coundetrip/swebench_envs/sympy__sympy-19954",
   "target_rel": "sympy/combinatorics/perm_groups.py",
+  "target_rels": [
+    "sympy/combinatorics/perm_groups.py"
+  ],
   "source_basename": "perm_groups.py",
   "test_selection": [
     "test_sylow_subgroup",

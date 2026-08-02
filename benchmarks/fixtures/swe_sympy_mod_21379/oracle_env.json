@@ -1,6 +1,9 @@
 {
   "env_path": "~/Desktop/coundetrip/swebench_envs/sympy__sympy-21379",
   "target_rel": "sympy/core/mod.py",
+  "target_rels": [
+    "sympy/core/mod.py"
+  ],
   "source_basename": "mod.py",
   "test_selection": [
     "test_Mod",

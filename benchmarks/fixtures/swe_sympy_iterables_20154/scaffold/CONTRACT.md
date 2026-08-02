@@ -1,5 +1,7 @@
 # Implementation target
 Write the module at `sympy/utilities/iterables.py`.
+
+## `sympy/utilities/iterables.py`
 Other modules import these names from it, so they MUST exist with these exact names:
 - `_partition`
 - `_set_partitions`
@@ -53,4 +55,5 @@ Other modules import these names from it, so they MUST exist with these exact na
 - `unflatten`
 - `uniq`
 - `variations`
+
 Implement them to satisfy the specification. Do not write tests.

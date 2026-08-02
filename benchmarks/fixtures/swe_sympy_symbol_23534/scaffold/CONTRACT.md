@@ -1,5 +1,7 @@
 # Implementation target
 Write the module at `sympy/core/symbol.py`.
+
+## `sympy/core/symbol.py`
 Other modules import these names from it, so they MUST exist with these exact names:
 - `Dummy`
 - `Str`
@@ -12,4 +14,5 @@ Other modules import these names from it, so they MUST exist with these exact na
 - `symbols`
 - `uniquely_named_symbol`
 - `var`
+
 Implement them to satisfy the specification. Do not write tests.

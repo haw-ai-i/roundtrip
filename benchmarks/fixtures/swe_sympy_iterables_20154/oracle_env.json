@@ -1,6 +1,9 @@
 {
   "env_path": "~/Desktop/coundetrip/swebench_envs/sympy__sympy-20154",
   "target_rel": "sympy/utilities/iterables.py",
+  "target_rels": [
+    "sympy/utilities/iterables.py"
+  ],
   "source_basename": "iterables.py",
   "test_selection": [
     "test_partitions",

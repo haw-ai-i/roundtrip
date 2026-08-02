@@ -1,6 +1,9 @@
 {
   "env_path": "~/Desktop/coundetrip/swebench_envs/sympy__sympy-16792",
   "target_rel": "sympy/utilities/codegen.py",
+  "target_rels": [
+    "sympy/utilities/codegen.py"
+  ],
   "source_basename": "codegen.py",
   "test_selection": [
     "test_ccode_unused_array_arg",

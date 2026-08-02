@@ -1,6 +1,9 @@
 {
   "env_path": "~/Desktop/coundetrip/swebench_envs/sympy__sympy-13031",
   "target_rel": "sympy/matrices/sparse.py",
+  "target_rels": [
+    "sympy/matrices/sparse.py"
+  ],
   "source_basename": "sparse.py",
   "test_selection": [
     "test_sparse_matrix",

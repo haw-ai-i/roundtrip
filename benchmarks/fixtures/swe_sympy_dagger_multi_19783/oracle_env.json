@@ -1,0 +1,41 @@
+{
+  "env_path": "~/Desktop/coundetrip/swebench_envs/sympy__sympy-19783",
+  "target_rel": "sympy/physics/quantum/dagger.py",
+  "target_rels": [
+    "sympy/physics/quantum/dagger.py",
+    "sympy/physics/quantum/operator.py"
+  ],
+  "source_basename": "dagger.py",
+  "test_selection": [
+    "test_dagger_mul",
+    "test_identity",
+    "test_scalars",
+    "test_matrix",
+    "test_eval_adjoint",
+    "test_operator",
+    "test_operator_inv",
+    "test_hermitian",
+    "test_unitary",
+    "test_outer_product",
+    "test_operator_dagger"
+  ],
+  "oracle_files": [
+    "sympy/physics/quantum/tests/test_dagger.py",
+    "sympy/physics/quantum/tests/test_operator.py"
+  ],
+  "fail_to_pass": [
+    "test_dagger_mul",
+    "test_identity"
+  ],
+  "pass_to_pass": [
+    "test_scalars",
+    "test_matrix",
+    "test_eval_adjoint",
+    "test_operator",
+    "test_operator_inv",
+    "test_hermitian",
+    "test_unitary",
+    "test_outer_product",
+    "test_operator_dagger"
+  ]
+}

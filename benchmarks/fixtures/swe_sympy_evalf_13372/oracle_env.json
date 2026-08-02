@@ -1,6 +1,9 @@
 {
   "env_path": "~/Desktop/coundetrip/swebench_envs/sympy__sympy-13372",
   "target_rel": "sympy/core/evalf.py",
+  "target_rels": [
+    "sympy/core/evalf.py"
+  ],
   "source_basename": "evalf.py",
   "test_selection": [
     "test_evalf_bugs",

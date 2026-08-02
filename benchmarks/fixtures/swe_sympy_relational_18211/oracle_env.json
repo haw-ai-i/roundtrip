@@ -1,6 +1,9 @@
 {
   "env_path": "~/Desktop/coundetrip/swebench_envs/sympy__sympy-18211",
   "target_rel": "sympy/core/relational.py",
+  "target_rels": [
+    "sympy/core/relational.py"
+  ],
   "source_basename": "relational.py",
   "test_selection": [
     "test_issue_18188",

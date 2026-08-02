@@ -1,5 +1,7 @@
 # Implementation target
 Write the module at `sympy/functions/elementary/hyperbolic.py`.
+
+## `sympy/functions/elementary/hyperbolic.py`
 Other modules import these names from it, so they MUST exist with these exact names:
 - `HyperbolicFunction`
 - `InverseHyperbolicFunction`
@@ -17,4 +19,5 @@ Other modules import these names from it, so they MUST exist with these exact na
 - `sech`
 - `sinh`
 - `tanh`
+
 Implement them to satisfy the specification. Do not write tests.

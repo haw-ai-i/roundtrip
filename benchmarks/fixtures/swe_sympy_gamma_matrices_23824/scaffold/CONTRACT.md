@@ -1,5 +1,7 @@
 # Implementation target
 Write the module at `sympy/physics/hep/gamma_matrices.py`.
+
+## `sympy/physics/hep/gamma_matrices.py`
 Other modules import these names from it, so they MUST exist with these exact names:
 - `GammaMatrix`
 - `LorentzIndex`
@@ -8,4 +10,5 @@ Other modules import these names from it, so they MUST exist with these exact na
 - `kahane_simplify`
 - `simplify_gamma_expression`
 - `simplify_gpgp`
+
 Implement them to satisfy the specification. Do not write tests.
