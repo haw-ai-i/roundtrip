@@ -77,9 +77,27 @@ if node_ids and not bare:
         sys.stderr.write(f"run_oracle: dropped {dropped} PASS_TO_PASS id(s) not present in this env\n")
     args = kept
 elif bare:
+    # Resolve bare test names to exact node ids: -k matches substrings, which
+    # both re-includes dropped names and can over-select. Collection gives the
+    # exact ids (with all parametrizations) for precisely the named tests.
     files = [str(env / f) for f in oracle_files]
-    expr = " or ".join(sorted(set(bare)))
-    args = files + ["-k", expr]
+    col = subprocess.run([str(venv_py), "-m", "pytest", "--collect-only", "-q", *files],
+                         cwd=str(env), capture_output=True, text=True, timeout=600)
+    ids = [l.strip() for l in col.stdout.splitlines() if "::" in l]
+    base = lambda i: i.split("::")[-1].split("[")[0]
+    want = set(bare)
+    matched = [i for i in ids if base(i) in want]
+    found_names = {base(i) for i in matched}
+    f2p_names = set(cfg.get("fail_to_pass") or [])
+    missing_f2p = sorted(n for n in want & f2p_names if n not in found_names)
+    if missing_f2p:
+        sys.stderr.write(f"run_oracle: FAIL_TO_PASS test(s) not collectable: {missing_f2p[:5]}\n")
+        restore_all()
+        sys.exit(2)
+    dropped = sorted(want - found_names)
+    if dropped:
+        sys.stderr.write(f"run_oracle: dropped {len(dropped)} name(s) not present in this env\n")
+    args = matched
 else:
     args = [str(env / f) for f in oracle_files]
 

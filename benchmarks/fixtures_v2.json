@@ -18,6 +18,8 @@
   "swe_sphinx_doc___init___multi_8548",
   "swe_sphinx_doc_python_xdir_8551",
   "swe_sphinx_doc___init___multi_8593",
+  "swe_sphinx_doc_ast_9367",
+  "swe_sphinx_doc_python_xdir_9461",
   "swe_sphinx_doc_python_9602",
   "swe_sphinx_doc_mock_9658",
   "swe_sphinx_doc_typehints_9673",
@@ -34,10 +36,12 @@
   "swe_sympy_sets_13615",
   "swe_sympy_common_13647",
   "swe_sympy_polytools_13757",
+  "swe_sympy_latex_13798",
   "swe_sympy_zeta_functions_13852",
   "swe_sympy_matrices_xdir_13877",
   "swe_sympy_crv_types_13878",
   "swe_sympy_tensorproduct_13974",
+  "swe_sympy_latex_xdir_14248",
   "swe_sympy_str_14531",
   "swe_sympy_vector_14711",
   "swe_sympy_pycode_14976",
@@ -60,6 +64,7 @@
   "swe_sympy_residue_ntheory_18199",
   "swe_sympy_relational_18211",
   "swe_sympy_polytools_18698",
+  "swe_sympy_latex_18763",
   "swe_sympy_factortools_19040",
   "swe_sympy_repr_19346",
   "swe_sympy_conditionset_19495",
@@ -98,28 +103,8 @@
    "reason": "not in Verified"
   },
   {
-   "id": "sphinx-doc__sphinx-9367",
-   "reason": "self-check exit 2: run_oracle: FAIL_TO_PASS test(s) not collectable: ['tests/test_pycode_ast.py::test_unparse"
-  },
-  {
-   "id": "sphinx-doc__sphinx-9461",
-   "reason": "self-check exit 2: run_oracle: FAIL_TO_PASS test(s) not collectable: ['tests/test_domain_py.py::test_pyproper"
-  },
-  {
    "id": "sympy__sympy-11618",
-   "reason": "self-check exit 2: 6 warnings, 1 error in 0.16s"
-  },
-  {
-   "id": "sympy__sympy-13798",
-   "reason": "self-check exit 1: 3 failed, 111 passed, 2 xfailed, 32 warnings in 2.41s"
-  },
-  {
-   "id": "sympy__sympy-14248",
-   "reason": "self-check exit 1: 3 failed, 506 passed, 6 deselected, 5 xfailed, 114 warnings in 4.98s"
-  },
-  {
-   "id": "sympy__sympy-18763",
-   "reason": "self-check exit 1: 2 failed, 143 passed, 2 xfailed, 30 warnings in 1.19s"
+   "reason": "self-check exit 2: run_oracle: FAIL_TO_PASS test(s) not collectable: ['test_issue_11617']"
   },
   {
    "id": "sympy__sympy-23117",
@@ -131,7 +116,7 @@
   },
   {
    "id": "sympy__sympy-24661",
-   "reason": "self-check exit 1: 7 failed, 22 passed, 4 warnings in 0.15s"
+   "reason": "self-check exit 1: 7 failed, 21 passed, 4 warnings in 0.13s"
   },
   {
    "id": "sympy__sympy-24909",

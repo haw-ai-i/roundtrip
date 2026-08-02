@@ -28,6 +28,9 @@ def run(cmd, cwd=None, check=True):
 
 
 PYTHON_FOR_REPO = {
+    # sphinx 4.1 era: version-guarded "from types import Union" (3.10-alpha name)
+    "sphinx-doc__sphinx-93": "3.9",
+    "sphinx-doc__sphinx-94": "3.9",
     # sphinx 2.x-3.x era (7xxx-8xxx ids)
     "sphinx-doc__sphinx-7": "3.9",
     "sphinx-doc__sphinx-8": "3.9",
