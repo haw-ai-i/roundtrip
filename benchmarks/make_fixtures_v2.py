@@ -75,8 +75,7 @@ def main():
                if "/test" not in f and not f.startswith("test")]
         if not 1 <= len(src) <= 5:
             skipped.append((iid, f"{len(src)} source files")); continue
-        if len({f.rsplit("/", 1)[0] for f in src}) > 1:
-            skipped.append((iid, "cross-directory multi-file (deferred)")); continue
+        cross_dir = len({f.rsplit("/", 1)[0] for f in src}) > 1
         targets = [(rel, env / rel) for rel in src]
         missing = [rel for rel, t in targets if not t.exists()]
         if missing:
@@ -89,6 +88,8 @@ def main():
             skipped.append((iid, "empty selection")); continue
 
         fname = short_name(iid, target_rel, len(targets))
+        if len(targets) > 1 and cross_dir:
+            fname = fname.replace("_multi_", "_xdir_")
         fdir = FIXTURES / fname
         if fdir.exists():
             shutil.rmtree(fdir)
@@ -139,6 +140,11 @@ def main():
             out = check.stdout + check.stderr
             failed = [l.split()[1] for l in out.splitlines()
                       if l.startswith("FAILED ") and len(l.split()) > 1]
+            # sympy-style selections carry bare test names; normalize failed
+            # node ids to base function names so removal and the F2P guard
+            # compare like with like.
+            if selection and "::" not in selection[0]:
+                failed = [f.split("::")[-1].split("[")[0] for f in failed]
             f2p_set = set(f2p)
             if failed and not (set(failed) & f2p_set):
                 new_sel = [t for t in selection if t not in set(failed)]

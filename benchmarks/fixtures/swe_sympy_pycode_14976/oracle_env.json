@@ -1,0 +1,48 @@
+{
+  "env_path": "~/Desktop/coundetrip/swebench_envs/sympy__sympy-14976",
+  "target_rel": "sympy/printing/pycode.py",
+  "target_rels": [
+    "sympy/printing/pycode.py"
+  ],
+  "source_basename": "pycode.py",
+  "test_selection": [
+    "test_MpmathPrinter",
+    "test_PythonCodePrinter",
+    "test_NumPyPrinter",
+    "test_SciPyPrinter",
+    "test_pycode_reserved_words",
+    "test_printmethod",
+    "test_codegen_ast_nodes",
+    "test_nsolve_denominator",
+    "test_issue_6408",
+    "test_increased_dps",
+    "test_nsolve_dict_kwarg"
+  ],
+  "oracle_files": [
+    "sympy/printing/tests/test_pycode.py",
+    "sympy/solvers/tests/test_numeric.py"
+  ],
+  "fail_to_pass": [
+    "test_MpmathPrinter"
+  ],
+  "pass_to_pass": [
+    "test_PythonCodePrinter",
+    "test_NumPyPrinter",
+    "test_SciPyPrinter",
+    "test_pycode_reserved_words",
+    "test_printmethod",
+    "test_codegen_ast_nodes",
+    "test_nsolve_denominator",
+    "test_nsolve",
+    "test_issue_6408",
+    "test_increased_dps",
+    "test_nsolve_precision",
+    "test_nsolve_complex",
+    "test_nsolve_dict_kwarg"
+  ],
+  "dropped_p2p_on_gold": [
+    "test_nsolve",
+    "test_nsolve_complex",
+    "test_nsolve_precision"
+  ]
+}

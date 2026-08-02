@@ -28,6 +28,9 @@ def run(cmd, cwd=None, check=True):
 
 
 PYTHON_FOR_REPO = {
+    # sphinx 2.x-3.x era (7xxx-8xxx ids)
+    "sphinx-doc__sphinx-7": "3.9",
+    "sphinx-doc__sphinx-8": "3.9",
     # this instance's test_rewriting imports sympy._compilation -> distutils
     "sympy__sympy-22080": "3.10",
     # sphinx 3.x era (85xx ids): types.Union-era code, needs a pre-3.10 stdlib
@@ -51,6 +54,20 @@ PYTHON_FOR_REPO = {
 }
 
 EXTRA_PINS = {
+    "sphinx-doc__sphinx-7": [
+        "setuptools<81", "standard-imghdr", "jinja2<3.0", "markupsafe<2.1", "docutils<0.17",
+        "sphinxcontrib-applehelp==1.0.2", "sphinxcontrib-devhelp==1.0.2",
+        "sphinxcontrib-htmlhelp==2.0.0", "sphinxcontrib-serializinghtml==1.1.5",
+        "sphinxcontrib-qthelp==1.0.3", "sphinxcontrib-jsmath==1.0.1",
+        "alabaster==0.7.12",
+    ],
+    "sphinx-doc__sphinx-8": [
+        "setuptools<81", "standard-imghdr", "jinja2<3.0", "markupsafe<2.1", "docutils<0.17",
+        "sphinxcontrib-applehelp==1.0.2", "sphinxcontrib-devhelp==1.0.2",
+        "sphinxcontrib-htmlhelp==2.0.0", "sphinxcontrib-serializinghtml==1.1.5",
+        "sphinxcontrib-qthelp==1.0.3", "sphinxcontrib-jsmath==1.0.1",
+        "alabaster==0.7.12",
+    ],
     # sphinx 3.x era: jinja2 3 removed environmentfilter; docutils 0.17 moved roman
     "sphinx-doc__sphinx-85": [
         "setuptools<81", "standard-imghdr", "jinja2<3.0", "markupsafe<2.1", "docutils<0.17",

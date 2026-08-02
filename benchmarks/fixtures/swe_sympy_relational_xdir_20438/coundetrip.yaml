@@ -1,0 +1,13 @@
+name: swe_sympy_relational_xdir_20438
+test_command:
+  - python
+  - run_oracle.py
+source_paths:
+  - sympy/core/relational.py
+  - sympy/sets/handlers/comparison.py
+  - sympy/sets/handlers/issubset.py
+scaffold_paths:
+  - scaffold
+test_paths:
+  - run_oracle.py
+  - oracle_env.json

@@ -1,0 +1,13 @@
+name: swe_sphinx_doc_other_xdir_10673
+test_command:
+  - python
+  - run_oracle.py
+source_paths:
+  - sphinx/directives/other.py
+  - sphinx/environment/adapters/toctree.py
+  - sphinx/environment/collectors/toctree.py
+scaffold_paths:
+  - scaffold
+test_paths:
+  - run_oracle.py
+  - oracle_env.json
