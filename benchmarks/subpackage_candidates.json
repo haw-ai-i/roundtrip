@@ -1,0 +1,771 @@
+{
+ "sympy__sympy-23950": [
+  {
+   "subpackage": "sympy/assumptions",
+   "source_files": 9,
+   "source_lines": 3290,
+   "tests_dir": "sympy/assumptions/tests",
+   "test_files": [
+    "test_assumptions_2.py",
+    "test_context.py",
+    "test_matrices.py",
+    "test_query.py",
+    "test_refine.py",
+    "test_satask.py",
+    "test_sathandlers.py",
+    "test_wrapper.py"
+   ]
+  },
+  {
+   "subpackage": "sympy/assumptions/handlers",
+   "source_files": 6,
+   "source_lines": 2605,
+   "tests_dir": "sympy/assumptions/tests",
+   "test_files": [
+    "test_matrices.py"
+   ]
+  },
+  {
+   "subpackage": "sympy/assumptions/predicates",
+   "source_files": 6,
+   "source_lines": 1577,
+   "tests_dir": "sympy/assumptions/tests",
+   "test_files": [
+    "test_matrices.py"
+   ]
+  },
+  {
+   "subpackage": "sympy/calculus",
+   "source_files": 5,
+   "source_lines": 2629,
+   "tests_dir": "sympy/calculus/tests",
+   "test_files": [
+    "test_accumulationbounds.py",
+    "test_euler.py",
+    "test_finite_diff.py",
+    "test_singularities.py",
+    "test_util.py"
+   ]
+  },
+  {
+   "subpackage": "sympy/concrete",
+   "source_files": 7,
+   "source_lines": 4236,
+   "tests_dir": "sympy/concrete/tests",
+   "test_files": [
+    "test_delta.py",
+    "test_gosper.py",
+    "test_guess.py",
+    "test_products.py",
+    "test_sums_products.py"
+   ]
+  },
+  {
+   "subpackage": "sympy/discrete",
+   "source_files": 3,
+   "source_lines": 1079,
+   "tests_dir": "sympy/discrete/tests",
+   "test_files": [
+    "test_convolutions.py",
+    "test_recurrences.py",
+    "test_transforms.py"
+   ]
+  },
+  {
+   "subpackage": "sympy/external",
+   "source_files": 3,
+   "source_lines": 632,
+   "tests_dir": "sympy/external/tests",
+   "test_files": [
+    "test_autowrap.py",
+    "test_codegen.py",
+    "test_importtools.py",
+    "test_numpy.py",
+    "test_pythonmpq.py",
+    "test_scipy.py"
+   ]
+  },
+  {
+   "subpackage": "sympy/functions/elementary",
+   "source_files": 7,
+   "source_lines": 11611,
+   "tests_dir": "sympy/functions/elementary/tests",
+   "test_files": [
+    "test_complexes.py",
+    "test_exponential.py",
+    "test_hyperbolic.py",
+    "test_integers.py",
+    "test_interface.py",
+    "test_miscellaneous.py",
+    "test_piecewise.py",
+    "test_trigonometric.py"
+   ]
+  },
+  {
+   "subpackage": "sympy/functions/special",
+   "source_files": 14,
+   "source_lines": 12286,
+   "tests_dir": "sympy/functions/special/tests",
+   "test_files": [
+    "test_bessel.py",
+    "test_beta_functions.py",
+    "test_bsplines.py",
+    "test_delta_functions.py",
+    "test_elliptic_integrals.py",
+    "test_error_functions.py",
+    "test_gamma_functions.py",
+    "test_hyper.py",
+    "test_mathieu.py",
+    "test_singularity_functions.py",
+    "test_spec_polynomials.py",
+    "test_spherical_harmonics.py",
+    "test_tensor_functions.py",
+    "test_zeta_functions.py"
+   ]
+  },
+  {
+   "subpackage": "sympy/geometry",
+   "source_files": 10,
+   "source_lines": 11967,
+   "tests_dir": "sympy/geometry/tests",
+   "test_files": [
+    "test_curve.py",
+    "test_ellipse.py",
+    "test_entity.py",
+    "test_geometrysets.py",
+    "test_line.py",
+    "test_parabola.py",
+    "test_plane.py",
+    "test_point.py",
+    "test_polygon.py",
+    "test_util.py"
+   ]
+  },
+  {
+   "subpackage": "sympy/holonomic",
+   "source_files": 4,
+   "source_lines": 3421,
+   "tests_dir": "sympy/holonomic/tests",
+   "test_files": [
+    "test_holonomic.py",
+    "test_recurrence.py"
+   ]
+  },
+  {
+   "subpackage": "sympy/integrals",
+   "source_files": 15,
+   "source_lines": 16271,
+   "tests_dir": "sympy/integrals/tests",
+   "test_files": [
+    "test_deltafunctions.py",
+    "test_failing_integrals.py",
+    "test_heurisch.py",
+    "test_integrals.py",
+    "test_intpoly.py",
+    "test_lineintegrals.py",
+    "test_manual.py",
+    "test_meijerint.py",
+    "test_prde.py",
+    "test_quadrature.py",
+    "test_rationaltools.py",
+    "test_rde.py",
+    "test_risch.py",
+    "test_singularityfunctions.py",
+    "test_transforms.py",
+    "test_trigonometry.py"
+   ]
+  },
+  {
+   "subpackage": "sympy/integrals/rubi",
+   "source_files": 4,
+   "source_lines": 18738,
+   "tests_dir": "sympy/integrals/rubi/tests",
+   "test_files": [
+    "test_rubi_integrate.py",
+    "test_utility_function.py"
+   ]
+  },
+  {
+   "subpackage": "sympy/integrals/rubi/parsetools",
+   "source_files": 3,
+   "source_lines": 836,
+   "tests_dir": "sympy/integrals/rubi/parsetools/tests",
+   "test_files": [
+    "test_parse.py"
+   ]
+  },
+  {
+   "subpackage": "sympy/interactive",
+   "source_files": 3,
+   "source_lines": 1120,
+   "tests_dir": "sympy/interactive/tests",
+   "test_files": [
+    "test_interactive.py",
+    "test_ipython.py"
+   ]
+  },
+  {
+   "subpackage": "sympy/liealgebras",
+   "source_files": 12,
+   "source_lines": 1968,
+   "tests_dir": "sympy/liealgebras/tests",
+   "test_files": [
+    "test_cartan_matrix.py",
+    "test_cartan_type.py",
+    "test_dynkin_diagram.py",
+    "test_root_system.py",
+    "test_type_A.py",
+    "test_type_B.py",
+    "test_type_C.py",
+    "test_type_D.py",
+    "test_type_E.py",
+    "test_type_F.py",
+    "test_type_G.py",
+    "test_weyl_group.py"
+   ]
+  },
+  {
+   "subpackage": "sympy/multipledispatch",
+   "source_files": 4,
+   "source_lines": 668,
+   "tests_dir": "sympy/multipledispatch/tests",
+   "test_files": [
+    "test_conflict.py",
+    "test_core.py",
+    "test_dispatcher.py"
+   ]
+  },
+  {
+   "subpackage": "sympy/ntheory",
+   "source_files": 14,
+   "source_lines": 8656,
+   "tests_dir": "sympy/ntheory/tests",
+   "test_files": [
+    "test_bbp_pi.py",
+    "test_continued_fraction.py",
+    "test_digits.py",
+    "test_ecm.py",
+    "test_egyptian_fraction.py",
+    "test_elliptic_curve.py",
+    "test_factor_.py",
+    "test_generate.py",
+    "test_modular.py",
+    "test_multinomial.py",
+    "test_partitions.py",
+    "test_primetest.py",
+    "test_qs.py",
+    "test_residue.py"
+   ]
+  },
+  {
+   "subpackage": "sympy/parsing",
+   "source_files": 5,
+   "source_lines": 2749,
+   "tests_dir": "sympy/parsing/tests",
+   "test_files": [
+    "test_ast_parser.py",
+    "test_autolev.py",
+    "test_c_parser.py",
+    "test_fortran_parser.py",
+    "test_implicit_multiplication_application.py",
+    "test_latex.py",
+    "test_latex_deps.py",
+    "test_mathematica.py",
+    "test_maxima.py",
+    "test_sym_expr.py",
+    "test_sympy_parser.py"
+   ]
+  },
+  {
+   "subpackage": "sympy/physics",
+   "source_files": 8,
+   "source_lines": 5068,
+   "tests_dir": "sympy/physics/tests",
+   "test_files": [
+    "test_clebsch_gordan.py",
+    "test_hydrogen.py",
+    "test_paulialgebra.py",
+    "test_physics_matrices.py",
+    "test_pring.py",
+    "test_qho_1d.py",
+    "test_secondquant.py",
+    "test_sho.py"
+   ]
+  },
+  {
+   "subpackage": "sympy/physics/mechanics",
+   "source_files": 12,
+   "source_lines": 5298,
+   "tests_dir": "sympy/physics/mechanics/tests",
+   "test_files": [
+    "test_body.py",
+    "test_functions.py",
+    "test_joint.py",
+    "test_jointsmethod.py",
+    "test_kane.py",
+    "test_kane2.py",
+    "test_kane3.py",
+    "test_kane4.py",
+    "test_lagrange.py",
+    "test_lagrange2.py",
+    "test_linearize.py",
+    "test_method.py",
+    "test_models.py",
+    "test_particle.py",
+    "test_rigidbody.py",
+    "test_system.py"
+   ]
+  },
+  {
+   "subpackage": "sympy/physics/optics",
+   "source_files": 5,
+   "source_lines": 2927,
+   "tests_dir": "sympy/physics/optics/tests",
+   "test_files": [
+    "test_gaussopt.py",
+    "test_medium.py",
+    "test_polarization.py",
+    "test_utils.py",
+    "test_waves.py"
+   ]
+  },
+  {
+   "subpackage": "sympy/physics/units",
+   "source_files": 5,
+   "source_lines": 1508,
+   "tests_dir": "sympy/physics/units/tests",
+   "test_files": [
+    "test_dimensions.py",
+    "test_dimensionsystem.py",
+    "test_prefixes.py",
+    "test_quantities.py",
+    "test_unit_system_cgs_gauss.py",
+    "test_unitsystem.py",
+    "test_util.py"
+   ]
+  },
+  {
+   "subpackage": "sympy/physics/vector",
+   "source_files": 7,
+   "source_lines": 4868,
+   "tests_dir": "sympy/physics/vector/tests",
+   "test_files": [
+    "test_dyadic.py",
+    "test_fieldfunctions.py",
+    "test_frame.py",
+    "test_functions.py",
+    "test_output.py",
+    "test_point.py",
+    "test_printing.py",
+    "test_vector.py"
+   ]
+  },
+  {
+   "subpackage": "sympy/plotting",
+   "source_files": 4,
+   "source_lines": 3874,
+   "tests_dir": "sympy/plotting/tests",
+   "test_files": [
+    "test_experimental_lambdify.py",
+    "test_plot.py",
+    "test_plot_implicit.py",
+    "test_textplot.py"
+   ]
+  },
+  {
+   "subpackage": "sympy/plotting/intervalmath",
+   "source_files": 3,
+   "source_lines": 942,
+   "tests_dir": "sympy/plotting/intervalmath/tests",
+   "test_files": [
+    "test_interval_functions.py",
+    "test_interval_membership.py",
+    "test_intervalmath.py"
+   ]
+  },
+  {
+   "subpackage": "sympy/polys/agca",
+   "source_files": 4,
+   "source_lines": 2915,
+   "tests_dir": "sympy/polys/agca/tests",
+   "test_files": [
+    "test_extensions.py",
+    "test_homomorphisms.py",
+    "test_ideals.py",
+    "test_modules.py"
+   ]
+  },
+  {
+   "subpackage": "sympy/polys/matrices",
+   "source_files": 9,
+   "source_lines": 4656,
+   "tests_dir": "sympy/polys/matrices/tests",
+   "test_files": [
+    "test_ddm.py",
+    "test_dense.py",
+    "test_domainmatrix.py",
+    "test_domainscalar.py",
+    "test_eigen.py",
+    "test_linsolve.py",
+    "test_normalforms.py",
+    "test_sdm.py"
+   ]
+  },
+  {
+   "subpackage": "sympy/polys/numberfields",
+   "source_files": 7,
+   "source_lines": 5064,
+   "tests_dir": "sympy/polys/numberfields/tests",
+   "test_files": [
+    "test_basis.py",
+    "test_minpoly.py",
+    "test_modules.py",
+    "test_numbers.py",
+    "test_primes.py",
+    "test_subfield.py",
+    "test_utilities.py"
+   ]
+  },
+  {
+   "subpackage": "sympy/printing/pretty",
+   "source_files": 3,
+   "source_lines": 4120,
+   "tests_dir": "sympy/printing/pretty/tests",
+   "test_files": [
+    "test_pretty.py"
+   ]
+  },
+  {
+   "subpackage": "sympy/series",
+   "source_files": 14,
+   "source_lines": 6289,
+   "tests_dir": "sympy/series/tests",
+   "test_files": [
+    "test_approximants.py",
+    "test_aseries.py",
+    "test_demidovich.py",
+    "test_formal.py",
+    "test_fourier.py",
+    "test_gruntz.py",
+    "test_kauers.py",
+    "test_limits.py",
+    "test_limitseq.py",
+    "test_lseries.py",
+    "test_nseries.py",
+    "test_order.py",
+    "test_residues.py",
+    "test_sequences.py",
+    "test_series.py"
+   ]
+  },
+  {
+   "subpackage": "sympy/sets",
+   "source_files": 7,
+   "source_lines": 5057,
+   "tests_dir": "sympy/sets/tests",
+   "test_files": [
+    "test_conditionset.py",
+    "test_contains.py",
+    "test_fancysets.py",
+    "test_ordinals.py",
+    "test_powerset.py",
+    "test_setexpr.py",
+    "test_sets.py"
+   ]
+  },
+  {
+   "subpackage": "sympy/simplify",
+   "source_files": 15,
+   "source_lines": 12765,
+   "tests_dir": "sympy/simplify/tests",
+   "test_files": [
+    "test_combsimp.py",
+    "test_cse.py",
+    "test_epathtools.py",
+    "test_fu.py",
+    "test_function.py",
+    "test_gammasimp.py",
+    "test_hyperexpand.py",
+    "test_powsimp.py",
+    "test_radsimp.py",
+    "test_ratsimp.py",
+    "test_rewrite.py",
+    "test_simplify.py",
+    "test_sqrtdenest.py",
+    "test_trigsimp.py"
+   ]
+  },
+  {
+   "subpackage": "sympy/solvers",
+   "source_files": 9,
+   "source_lines": 11582,
+   "tests_dir": "sympy/solvers/tests",
+   "test_files": [
+    "test_constantsimp.py",
+    "test_decompogen.py",
+    "test_inequalities.py",
+    "test_numeric.py",
+    "test_pde.py",
+    "test_polysys.py",
+    "test_recurr.py",
+    "test_solvers.py",
+    "test_solveset.py"
+   ]
+  },
+  {
+   "subpackage": "sympy/solvers/ode",
+   "source_files": 8,
+   "source_lines": 11836,
+   "tests_dir": "sympy/solvers/ode/tests",
+   "test_files": [
+    "test_lie_group.py",
+    "test_ode.py",
+    "test_riccati.py",
+    "test_single.py",
+    "test_subscheck.py",
+    "test_systems.py"
+   ]
+  },
+  {
+   "subpackage": "sympy/stats/sampling",
+   "source_files": 3,
+   "source_lines": 371,
+   "tests_dir": "sympy/stats/sampling/tests",
+   "test_files": [
+    "test_sample_continuous_rv.py",
+    "test_sample_discrete_rv.py",
+    "test_sample_finite_rv.py"
+   ]
+  },
+  {
+   "subpackage": "sympy/strategies",
+   "source_files": 6,
+   "source_lines": 520,
+   "tests_dir": "sympy/strategies/tests",
+   "test_files": [
+    "test_core.py",
+    "test_rl.py",
+    "test_strat.py",
+    "test_tools.py",
+    "test_traverse.py",
+    "test_tree.py"
+   ]
+  },
+  {
+   "subpackage": "sympy/strategies/branch",
+   "source_files": 3,
+   "source_lines": 140,
+   "tests_dir": "sympy/strategies/branch/tests",
+   "test_files": [
+    "test_core.py",
+    "test_tools.py",
+    "test_traverse.py"
+   ]
+  },
+  {
+   "subpackage": "sympy/tensor",
+   "source_files": 5,
+   "source_lines": 6035,
+   "tests_dir": "sympy/tensor/tests",
+   "test_files": [
+    "test_functions.py",
+    "test_index_methods.py",
+    "test_indexed.py",
+    "test_tensor.py",
+    "test_tensor_element.py",
+    "test_tensor_operators.py"
+   ]
+  },
+  {
+   "subpackage": "sympy/tensor/array",
+   "source_files": 7,
+   "source_lines": 2039,
+   "tests_dir": "sympy/tensor/array/tests",
+   "test_files": [
+    "test_array_comprehension.py",
+    "test_array_derivatives.py",
+    "test_arrayop.py",
+    "test_immutable_ndim_array.py",
+    "test_mutable_ndim_array.py",
+    "test_ndim_array.py",
+    "test_ndim_array_conversions.py"
+   ]
+  },
+  {
+   "subpackage": "sympy/tensor/array/expressions",
+   "source_files": 7,
+   "source_lines": 3707,
+   "tests_dir": "sympy/tensor/array/expressions/tests",
+   "test_files": [
+    "test_array_expressions.py",
+    "test_arrayexpr_derivatives.py",
+    "test_as_explicit.py",
+    "test_convert_array_to_indexed.py",
+    "test_convert_array_to_matrix.py",
+    "test_convert_index_to_array.py",
+    "test_convert_matrix_to_array.py"
+   ]
+  },
+  {
+   "subpackage": "sympy/unify",
+   "source_files": 3,
+   "source_lines": 413,
+   "tests_dir": "sympy/unify/tests",
+   "test_files": [
+    "test_rewrite.py",
+    "test_sympy.py",
+    "test_unify.py"
+   ]
+  },
+  {
+   "subpackage": "sympy/utilities/_compilation",
+   "source_files": 4,
+   "source_lines": 1259,
+   "tests_dir": "sympy/utilities/_compilation/tests",
+   "test_files": [
+    "test_compilation.py"
+   ]
+  },
+  {
+   "subpackage": "sympy/vector",
+   "source_files": 13,
+   "source_lines": 4800,
+   "tests_dir": "sympy/vector/tests",
+   "test_files": [
+    "test_coordsysrect.py",
+    "test_dyadic.py",
+    "test_field_functions.py",
+    "test_functions.py",
+    "test_implicitregion.py",
+    "test_integrals.py",
+    "test_operators.py",
+    "test_parametricregion.py",
+    "test_printing.py",
+    "test_vector.py"
+   ]
+  }
+ ],
+ "pydata__xarray-7393": [
+  {
+   "subpackage": "xarray",
+   "source_files": 3,
+   "source_lines": 1512,
+   "tests_dir": "xarray/tests",
+   "test_files": [
+    "test_accessor_dt.py",
+    "test_accessor_str.py",
+    "test_array_api.py",
+    "test_backends.py",
+    "test_backends_api.py",
+    "test_backends_common.py",
+    "test_backends_file_manager.py",
+    "test_backends_locks.py",
+    "test_backends_lru_cache.py",
+    "test_calendar_ops.py",
+    "test_cftime_offsets.py",
+    "test_cftimeindex.py",
+    "test_cftimeindex_resample.py",
+    "test_coarsen.py",
+    "test_coding.py",
+    "test_coding_strings.py",
+    "test_coding_times.py",
+    "test_combine.py",
+    "test_computation.py",
+    "test_concat.py",
+    "test_conventions.py",
+    "test_cupy.py",
+    "test_dask.py",
+    "test_dataarray.py",
+    "test_dataset.py",
+    "test_deprecation_helpers.py",
+    "test_distributed.py",
+    "test_dtypes.py",
+    "test_duck_array_ops.py",
+    "test_extensions.py",
+    "test_formatting.py",
+    "test_formatting_html.py",
+    "test_groupby.py",
+    "test_indexes.py",
+    "test_indexing.py",
+    "test_interp.py",
+    "test_merge.py",
+    "test_missing.py",
+    "test_nputils.py",
+    "test_options.py",
+    "test_plot.py",
+    "test_plugins.py",
+    "test_print_versions.py",
+    "test_rolling.py",
+    "test_sparse.py",
+    "test_testing.py",
+    "test_tutorial.py",
+    "test_ufuncs.py",
+    "test_units.py",
+    "test_utils.py",
+    "test_variable.py",
+    "test_weighted.py"
+   ]
+  },
+  {
+   "subpackage": "xarray/coding",
+   "source_files": 7,
+   "source_lines": 4027,
+   "tests_dir": "xarray/tests",
+   "test_files": [
+    "test_calendar_ops.py",
+    "test_cftime_offsets.py",
+    "test_cftimeindex.py"
+   ]
+  },
+  {
+   "subpackage": "xarray/plot",
+   "source_files": 5,
+   "source_lines": 7521,
+   "tests_dir": "xarray/tests",
+   "test_files": [
+    "test_utils.py"
+   ]
+  },
+  {
+   "subpackage": "xarray/util",
+   "source_files": 4,
+   "source_lines": 1083,
+   "tests_dir": "xarray/tests",
+   "test_files": [
+    "test_deprecation_helpers.py",
+    "test_print_versions.py"
+   ]
+  }
+ ],
+ "sphinx-doc__sphinx-9711": [
+  {
+   "subpackage": "sphinx/cmd",
+   "source_files": 3,
+   "source_lines": 1075,
+   "tests_dir": "tests",
+   "test_files": [
+    "test_build.py",
+    "test_quickstart.py"
+   ]
+  },
+  {
+   "subpackage": "sphinx/environment/adapters",
+   "source_files": 3,
+   "source_lines": 537,
+   "tests_dir": "tests",
+   "test_files": [
+    "test_toctree.py"
+   ]
+  },
+  {
+   "subpackage": "sphinx/environment/collectors",
+   "source_files": 5,
+   "source_lines": 644,
+   "tests_dir": "tests",
+   "test_files": [
+    "test_metadata.py",
+    "test_toctree.py"
+   ]
+  }
+ ]
+}
