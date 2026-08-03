@@ -31,6 +31,7 @@ PYTHON_FOR_REPO = {
     # pytest tests itself; 5.x-6.x source uses ast.Str (removed 3.12)
     "pytest-dev__pytest": "3.9",
     # sphinx 4.1 era: version-guarded "from types import Union" (3.10-alpha name)
+    "sphinx-doc__sphinx-9": "3.9",
     "sphinx-doc__sphinx-93": "3.9",
     "sphinx-doc__sphinx-94": "3.9",
     # sphinx 2.x-3.x era (7xxx-8xxx ids)

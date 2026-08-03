@@ -1,8 +1,19 @@
 {
  "made": [
+  "swe_pydata_variable_2905",
   "swe_pydata_indexing_multi_3095",
+  "swe_pydata_combine_3151",
   "swe_pydata_dataset_multi_3305",
+  "swe_pydata_dataset_3677",
   "swe_pydata_dataarray_multi_3993",
+  "swe_pydata_weighted_4075",
+  "swe_pydata_dataarray_4094",
+  "swe_pydata_nanops_4356",
+  "swe_pydata_merge_4629",
+  "swe_pydata_computation_4687",
+  "swe_pydata_dataarray_4695",
+  "swe_pydata_variables_4966",
+  "swe_pydata_computation_6461",
   "swe_pydata_computation_6599",
   "swe_pydata_common_6721",
   "swe_pydata_rolling_6744",
@@ -27,15 +38,40 @@
   "swe_pytest_dev_logging_7571",
   "swe_pytest_dev_pathlib_7982",
   "swe_pytest_dev_python_multi_8399",
+  "swe_sphinx_doc_code_10323",
+  "swe_sphinx_doc_typehints_10449",
+  "swe_sphinx_doc_gettext_10466",
+  "swe_sphinx_doc_inheritance_diagram_10614",
   "swe_sphinx_doc_other_xdir_10673",
+  "swe_sphinx_doc_rst_11445",
+  "swe_sphinx_doc_other_11510",
+  "swe_sphinx_doc_python_7454",
   "swe_sphinx_doc_python_xdir_7462",
   "swe_sphinx_doc_c_xdir_7590",
+  "swe_sphinx_doc___init___7748",
+  "swe_sphinx_doc_inspect_7757",
+  "swe_sphinx_doc_mock_7889",
+  "swe_sphinx_doc___init___7910",
+  "swe_sphinx_doc_linkcheck_7985",
+  "swe_sphinx_doc___init___8035",
+  "swe_sphinx_doc_docstring_8056",
   "swe_sphinx_doc_application_xdir_8120",
+  "swe_sphinx_doc_linkcheck_8269",
+  "swe_sphinx_doc_typehints_8459",
+  "swe_sphinx_doc_linkcheck_8475",
   "swe_sphinx_doc___init___multi_8548",
   "swe_sphinx_doc_python_xdir_8551",
   "swe_sphinx_doc___init___multi_8593",
+  "swe_sphinx_doc___init___8595",
+  "swe_sphinx_doc_python_8638",
+  "swe_sphinx_doc_viewcode_8721",
+  "swe_sphinx_doc_docfields_9230",
+  "swe_sphinx_doc_python_9258",
+  "swe_sphinx_doc_inspect_9281",
+  "swe_sphinx_doc_quickstart_9320",
   "swe_sphinx_doc_ast_9367",
   "swe_sphinx_doc_python_xdir_9461",
+  "swe_sphinx_doc_python_9591",
   "swe_sphinx_doc_python_9602",
   "swe_sphinx_doc_mock_9658",
   "swe_sphinx_doc_typehints_9673",
@@ -115,12 +151,16 @@
  ],
  "skipped": [
   {
+   "id": "astropy__astropy-14365",
+   "reason": "self-check exit 2: run_oracle: FAIL_TO_PASS test(s) not collectable: ['astropy/io/ascii/tests/test_qdp.py::te"
+  },
+  {
    "id": "flask-4992",
    "reason": "not in Verified"
   },
   {
    "id": "pytest-dev__pytest-5262",
-   "reason": "self-check exit 2: 1 error in 1.89 seconds"
+   "reason": "self-check exit 2: 1 error in 1.97 seconds"
   },
   {
    "id": "pytest-dev__pytest-7324",
@@ -128,7 +168,27 @@
   },
   {
    "id": "pytest-dev__pytest-7521",
-   "reason": "self-check exit 2: 2 errors in 8.30s"
+   "reason": "self-check exit 2: 2 errors in 2.78s"
+  },
+  {
+   "id": "sphinx-doc__sphinx-10435",
+   "reason": "self-check exit 2: run_oracle: FAIL_TO_PASS test(s) not collectable: ['tests/test_build_latex.py::test_latex_"
+  },
+  {
+   "id": "sphinx-doc__sphinx-7440",
+   "reason": "self-check exit 2: run_oracle: FAIL_TO_PASS test(s) not collectable: ['tests/test_domain_std.py::test_glossar"
+  },
+  {
+   "id": "sphinx-doc__sphinx-8265",
+   "reason": "self-check exit 2: run_oracle: FAIL_TO_PASS test(s) not collectable: ['tests/test_pycode_ast.py::test_unparse"
+  },
+  {
+   "id": "sphinx-doc__sphinx-8621",
+   "reason": "self-check exit 2: run_oracle: FAIL_TO_PASS test(s) not collectable: ['tests/test_markup.py::test_inline[veri"
+  },
+  {
+   "id": "sphinx-doc__sphinx-9229",
+   "reason": "self-check exit 1: 1 failed, 13 passed in 0.74s"
   },
   {
    "id": "sympy__sympy-11618",
@@ -144,7 +204,7 @@
   },
   {
    "id": "sympy__sympy-24661",
-   "reason": "self-check exit 1: 7 failed, 21 passed, 4 warnings in 0.10s"
+   "reason": "self-check exit 1: 7 failed, 21 passed, 4 warnings in 0.09s"
   },
   {
    "id": "sympy__sympy-24909",

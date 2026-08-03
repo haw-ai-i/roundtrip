@@ -1,0 +1,27 @@
+{
+  "env_path": "~/Desktop/coundetrip/swebench_envs/sphinx-doc__sphinx-8721",
+  "target_rel": "sphinx/ext/viewcode.py",
+  "target_rels": [
+    "sphinx/ext/viewcode.py"
+  ],
+  "source_basename": "viewcode.py",
+  "test_selection": [
+    "tests/test_ext_viewcode.py::test_viewcode_epub_default",
+    "tests/test_ext_viewcode.py::test_linkcode",
+    "tests/test_ext_viewcode.py::test_local_source_files"
+  ],
+  "oracle_files": [
+    "tests/test_ext_viewcode.py"
+  ],
+  "fail_to_pass": [
+    "tests/test_ext_viewcode.py::test_viewcode_epub_default"
+  ],
+  "pass_to_pass": [
+    "tests/test_ext_viewcode.py::test_viewcode_epub_enabled",
+    "tests/test_ext_viewcode.py::test_linkcode",
+    "tests/test_ext_viewcode.py::test_local_source_files"
+  ],
+  "dropped_p2p_on_gold": [
+    "tests/test_ext_viewcode.py::test_viewcode_epub_enabled"
+  ]
+}

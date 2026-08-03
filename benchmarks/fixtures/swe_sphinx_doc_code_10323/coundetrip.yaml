@@ -1,0 +1,11 @@
+name: swe_sphinx_doc_code_10323
+test_command:
+  - python
+  - run_oracle.py
+source_paths:
+  - sphinx/directives/code.py
+scaffold_paths:
+  - scaffold
+test_paths:
+  - run_oracle.py
+  - oracle_env.json
