@@ -174,6 +174,60 @@ _REGENERATE_SYSTEM = (
 _BLOCK_RE = re.compile(r"^=== (.+?) ===$", re.MULTILINE)
 
 
+class OpenAIClient:
+    """Client for any OpenAI-compatible endpoint (local vLLM or llama.cpp).
+    Used for open-weight models such as Qwen. Qwen3 may wrap output in
+    <think>...</think>; the wrapper is stripped so describe/regenerate see clean
+    text. temperature=0 for determinism. A client may be injected for testing.
+    """
+
+    def __init__(self, *, model="qwen3-8b", base_url=None, api_key=None,
+                 temperature=0.0, max_retries=5, client=None):
+        if client is None:
+            from openai import OpenAI
+            base_url = base_url or os.environ.get(
+                "COUNDETRIP_OPENAI_BASE", "http://localhost:8113/v1")
+            client = OpenAI(base_url=base_url, api_key=api_key or "local")
+        self._client = client
+        self._model = model
+        self._temperature = temperature
+        self._max_retries = max_retries
+        self.usage = None
+
+    @staticmethod
+    def _strip_think(text):
+        import re
+        return re.sub(r"^\s*<think>.*?</think>\s*", "", text, flags=re.DOTALL)
+
+    def complete(self, *, system: str, user: str) -> str:
+        import time
+        system = f"/no_think\n{system}"
+        last = None
+        for attempt in range(self._max_retries):
+            try:
+                resp = self._client.chat.completions.create(
+                    model=self._model,
+                    temperature=self._temperature,
+                    messages=[
+                        {"role": "system", "content": system},
+                        {"role": "user", "content": user},
+                    ],
+                )
+                u = getattr(resp, "usage", None)
+                if u is not None:
+                    self.usage = {
+                        "prompt_tokens": getattr(u, "prompt_tokens", None),
+                        "completion_tokens": getattr(u, "completion_tokens", None),
+                    }
+                return self._strip_think(resp.choices[0].message.content or "")
+            except Exception as exc:
+                last = exc
+                if not _is_retryable(exc) or attempt == self._max_retries - 1:
+                    raise
+                time.sleep(2 ** attempt)
+        raise last
+
+
 def _strip_code_fences(text: str) -> str:
     """Remove markdown code fences a model may wrap around a file body.
     A leading ```lang line and a trailing ``` line are dropped; content is unchanged
@@ -271,6 +325,10 @@ def _build_client() -> LLMClient:
     replay = os.environ.get("COUNDETRIP_REPLAY_DIR")
     if replay:
         return ReplayClient(Path(replay))
+    if os.environ.get("COUNDETRIP_LLM", "").lower() == "openai":
+        model = os.environ.get("COUNDETRIP_MODEL", "qwen3-8b")
+        temperature = float(os.environ.get("COUNDETRIP_TEMPERATURE", "0.0"))
+        return OpenAIClient(model=model, temperature=temperature)
     if os.environ.get("GEMINI_API_KEY"):
         model = os.environ.get("COUNDETRIP_MODEL", "gemini-3.5-flash")
         temperature = float(os.environ.get("COUNDETRIP_TEMPERATURE", "0.0"))
