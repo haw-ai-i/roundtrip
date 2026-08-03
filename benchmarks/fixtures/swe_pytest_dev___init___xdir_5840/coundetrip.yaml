@@ -1,0 +1,12 @@
+name: swe_pytest_dev___init___xdir_5840
+test_command:
+  - python
+  - run_oracle.py
+source_paths:
+  - src/_pytest/config/__init__.py
+  - src/_pytest/pathlib.py
+scaffold_paths:
+  - scaffold
+test_paths:
+  - run_oracle.py
+  - oracle_env.json

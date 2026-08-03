@@ -1,0 +1,25 @@
+{
+  "env_path": "~/Desktop/coundetrip/swebench_envs/pytest-dev__pytest-5809",
+  "target_rel": "src/_pytest/pastebin.py",
+  "target_rels": [
+    "src/_pytest/pastebin.py"
+  ],
+  "source_basename": "pastebin.py",
+  "test_selection": [
+    "testing/test_pastebin.py::TestPaste::test_create_new_paste",
+    "testing/test_pastebin.py::TestPasteCapture::test_failed",
+    "testing/test_pastebin.py::TestPasteCapture::test_all",
+    "testing/test_pastebin.py::TestPasteCapture::test_non_ascii_paste_text"
+  ],
+  "oracle_files": [
+    "testing/test_pastebin.py"
+  ],
+  "fail_to_pass": [
+    "testing/test_pastebin.py::TestPaste::test_create_new_paste"
+  ],
+  "pass_to_pass": [
+    "testing/test_pastebin.py::TestPasteCapture::test_failed",
+    "testing/test_pastebin.py::TestPasteCapture::test_all",
+    "testing/test_pastebin.py::TestPasteCapture::test_non_ascii_paste_text"
+  ]
+}

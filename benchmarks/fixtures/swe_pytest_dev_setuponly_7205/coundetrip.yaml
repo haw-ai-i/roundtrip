@@ -1,0 +1,11 @@
+name: swe_pytest_dev_setuponly_7205
+test_command:
+  - python
+  - run_oracle.py
+source_paths:
+  - src/_pytest/setuponly.py
+scaffold_paths:
+  - scaffold
+test_paths:
+  - run_oracle.py
+  - oracle_env.json

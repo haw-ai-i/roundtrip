@@ -28,6 +28,8 @@ def run(cmd, cwd=None, check=True):
 
 
 PYTHON_FOR_REPO = {
+    # pytest tests itself; 5.x-6.x source uses ast.Str (removed 3.12)
+    "pytest-dev__pytest": "3.9",
     # sphinx 4.1 era: version-guarded "from types import Union" (3.10-alpha name)
     "sphinx-doc__sphinx-93": "3.9",
     "sphinx-doc__sphinx-94": "3.9",
@@ -137,7 +139,10 @@ def main() -> int:
     py = venv / "bin" / "python"
     run([str(py), "-m", "pip", "install", "-q", "-U", "pip"])
     run([str(py), "-m", "pip", "install", "-q", "-e", "."], cwd=target)
-    run([str(py), "-m", "pip", "install", "-q", f"pytest=={args.pytest}"])
+    # When the repo under test IS pytest, its own editable-installed source is the
+    # pytest being exercised; installing a released pytest would clobber it.
+    if not args.instance_id.startswith("pytest-dev__pytest"):
+        run([str(py), "-m", "pip", "install", "-q", f"pytest=={args.pytest}"])
     for prefix, pins in EXTRA_PINS.items():
         if args.instance_id.startswith(prefix):
             run([str(py), "-m", "pip", "install", "-q", *pins])
