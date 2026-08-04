@@ -279,6 +279,73 @@ def _render_files(files: dict[str, str]) -> str:
     return "\n".join(f"=== {path} ===\n{content}" for path, content in files.items())
 
 
+def ast_describe(sources: dict[str, str]) -> str:
+    """Deterministic, zero-cost description baseline: emit each public
+    function and class as its signature plus docstring, no model call.
+
+    Tests how much roundtrip fidelity comes from the interface alone versus
+    from a model-written behavioural description.
+    """
+    import ast
+
+    def fmt_args(a: ast.arguments) -> str:
+        parts = []
+        posonly = getattr(a, "posonlyargs", [])
+        for arg in posonly + a.args:
+            t = f": {ast.unparse(arg.annotation)}" if arg.annotation else ""
+            parts.append(arg.arg + t)
+        if posonly:
+            parts.insert(len(posonly), "/")
+        if a.vararg:
+            parts.append("*" + a.vararg.arg)
+        elif a.kwonlyargs:
+            parts.append("*")
+        for arg in a.kwonlyargs:
+            t = f": {ast.unparse(arg.annotation)}" if arg.annotation else ""
+            parts.append(arg.arg + t)
+        if a.kwarg:
+            parts.append("**" + a.kwarg.arg)
+        return ", ".join(parts)
+
+    def describe_func(node, indent="") -> list[str]:
+        prefix = "async def" if isinstance(node, ast.AsyncFunctionDef) else "def"
+        ret = f" -> {ast.unparse(node.returns)}" if node.returns else ""
+        lines = [f"{indent}{prefix} {node.name}({fmt_args(node.args)}){ret}:"]
+        doc = ast.get_docstring(node)
+        if doc:
+            lines.append(f'{indent}    """{doc.strip()}"""')
+        return lines
+
+    out = []
+    for rel, code in sources.items():
+        out.append(f"# File: {rel}")
+        try:
+            tree = ast.parse(code)
+        except SyntaxError:
+            out.append("# (unparseable)")
+            continue
+        for node in tree.body:
+            if isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef)):
+                if node.name.startswith("_"):
+                    continue
+                out += describe_func(node)
+            elif isinstance(node, ast.ClassDef):
+                if node.name.startswith("_"):
+                    continue
+                bases = ", ".join(ast.unparse(b) for b in node.bases)
+                out.append(f"class {node.name}({bases}):" if bases else f"class {node.name}:")
+                cdoc = ast.get_docstring(node)
+                if cdoc:
+                    out.append(f'    """{cdoc.strip()}"""')
+                for sub in node.body:
+                    if isinstance(sub, (ast.FunctionDef, ast.AsyncFunctionDef)) and not (
+                        sub.name.startswith("_") and sub.name != "__init__"
+                    ):
+                        out += describe_func(sub, indent="    ")
+        out.append("")
+    return "\n".join(out)
+
+
 def describe(client: LLMClient) -> int:
     fixture = Path(os.environ["COUNDETRIP_FIXTURE"])
     out = Path(os.environ["COUNDETRIP_DESCRIPTION"])
@@ -287,9 +354,12 @@ def describe(client: LLMClient) -> int:
         str(p.relative_to(fixture)): p.read_text(encoding="utf-8")
         for p in list_source_files(manifest)
     }
-    user = "Source files:\n\n" + _render_files(sources)
-    _describe_sys = os.environ.get("COUNDETRIP_DESCRIBE_PROMPT", _DESCRIBE_SYSTEM)
-    description = client.complete(system=_describe_sys, user=user)
+    if os.environ.get("COUNDETRIP_DESCRIBER", "").lower() == "ast":
+        description = ast_describe(sources)
+    else:
+        user = "Source files:\n\n" + _render_files(sources)
+        _describe_sys = os.environ.get("COUNDETRIP_DESCRIBE_PROMPT", _DESCRIBE_SYSTEM)
+        description = client.complete(system=_describe_sys, user=user)
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(description, encoding="utf-8")
     return 0
