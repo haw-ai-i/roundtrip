@@ -68,12 +68,28 @@ if runner == "django":
     def to_label(t):
         m = _re.match(r"(\w+)\s+\(([\w.]+)\)", t)
         return f"{m.group(2)}.{m.group(1)}" if m else t
-    labels = [to_label(t) for t in selection]
-    f2p_labels = {to_label(t) for t in (cfg.get("fail_to_pass") or [])}
+    def valid(t):
+        # SWE-bench sometimes stores a test's docstring instead of its label;
+        # keep only strings matching "method (module.Class)".
+        return bool(_re.match(r"\w+\s+\([\w.]+\)$", t))
+    labels = [to_label(t) for t in selection if valid(t)]
+    f2p_raw = cfg.get("fail_to_pass") or []
+    f2p_valid = [t for t in f2p_raw if valid(t)]
+    f2p_labels = {to_label(t) for t in f2p_valid}
+    # If any F2P entry was a docstring (unmatchable), we cannot verify it -> skip fixture.
+    if len(f2p_valid) != len(f2p_raw):
+        sys.stderr.write("run_oracle: some FAIL_TO_PASS entries are docstrings, not labels; cannot verify\n")
+        restore_all()
+        sys.exit(2)
     tests_dir = env / "tests"
-    cp = subprocess.run(
-        [str(venv_py), "runtests.py", *labels, "--verbosity", "1", "--noinput"],
-        cwd=str(tests_dir), capture_output=True, text=True, timeout=1800)
+    try:
+        cp = subprocess.run(
+            [str(venv_py), "runtests.py", *labels, "--verbosity", "1", "--noinput", "--parallel", "1"],
+            cwd=str(tests_dir), capture_output=True, text=True, timeout=300)
+    except subprocess.TimeoutExpired:
+        sys.stderr.write("run_oracle: django runtests.py timed out (300s)\n")
+        restore_all()
+        sys.exit(2)
     sys.stdout.write(cp.stdout)
     sys.stderr.write(cp.stderr)
     restore_all()
