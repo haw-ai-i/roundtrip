@@ -126,8 +126,17 @@ def main() -> int:
         shutil.rmtree(target)
     target.parent.mkdir(parents=True, exist_ok=True)
 
-    run(["git", "clone", "--quiet", f"https://github.com/{r['repo']}.git", str(target)])
-    run(["git", "checkout", "--quiet", r["base_commit"]], cwd=target)
+    url = f"https://github.com/{r['repo']}.git"
+    target.mkdir(parents=True, exist_ok=True)
+    run(["git", "init", "--quiet"], cwd=target)
+    run(["git", "remote", "add", "origin", url], cwd=target)
+    try:
+        run(["git", "fetch", "--quiet", "--depth", "1", "origin", r["base_commit"]], cwd=target)
+        run(["git", "checkout", "--quiet", "FETCH_HEAD"], cwd=target)
+    except Exception:
+        shutil.rmtree(target)
+        run(["git", "clone", "--quiet", "--filter=blob:none", url, str(target)])
+        run(["git", "checkout", "--quiet", r["base_commit"]], cwd=target)
 
     venv = target / ".venv"
     base_python = sys.executable
