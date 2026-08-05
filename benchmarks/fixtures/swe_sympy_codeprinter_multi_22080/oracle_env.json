@@ -204,5 +204,6 @@
     "test_imag_real",
     "test_single_e",
     "test_beta_math"
-  ]
+  ],
+  "runner": "pytest"
 }

@@ -1928,6 +1928,7 @@
     "xarray/tests/test_weighted.py::test_weighted_operations_keep_attr[None-False-sum]",
     "xarray/tests/test_weighted.py::test_weighted_operations_keep_attr[None-False-mean]"
   ],
+  "runner": "pytest",
   "dropped_p2p_on_gold": [
     "xarray/tests/test_weighted.py::test_weighted_operations_nonequal_coords[False-mean]",
     "xarray/tests/test_weighted.py::test_weighted_operations_nonequal_coords[False-sum]",

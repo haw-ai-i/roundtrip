@@ -48,5 +48,6 @@
     "tests/test_ext_napoleon.py::SkipMemberTest::test_module_special_doc",
     "tests/test_ext_napoleon.py::SkipMemberTest::test_module_special_undoc",
     "tests/test_ext_napoleon.py::SkipMemberTest::test_namedtuple"
-  ]
+  ],
+  "runner": "pytest"
 }

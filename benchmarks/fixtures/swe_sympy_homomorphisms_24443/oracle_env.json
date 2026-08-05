@@ -17,5 +17,6 @@
   ],
   "pass_to_pass": [
     "test_isomorphisms"
-  ]
+  ],
+  "runner": "pytest"
 }

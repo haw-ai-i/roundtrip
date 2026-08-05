@@ -309,5 +309,6 @@
     "test_issue_15669",
     "test_issue_17988",
     "test_issue_18205"
-  ]
+  ],
+  "runner": "pytest"
 }

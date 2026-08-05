@@ -75,5 +75,6 @@
     "test_issue_22819",
     "test_issue_20288",
     "test_prefixed_property"
-  ]
+  ],
+  "runner": "pytest"
 }

@@ -173,5 +173,6 @@
     "testing/test_skipping.py::test_mark_xfail_item",
     "testing/test_skipping.py::test_summary_list_after_errors",
     "testing/test_skipping.py::test_relpath_rootdir"
-  ]
+  ],
+  "runner": "pytest"
 }

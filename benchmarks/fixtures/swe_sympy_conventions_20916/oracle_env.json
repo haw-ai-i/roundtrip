@@ -18,5 +18,6 @@
   ],
   "pass_to_pass": [
     "test_requires_partial"
-  ]
+  ],
+  "runner": "pytest"
 }

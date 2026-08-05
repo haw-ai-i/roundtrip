@@ -56,5 +56,6 @@
     "test_matadd_of_matrices",
     "test_doit_args",
     "test_generic_identity"
-  ]
+  ],
+  "runner": "pytest"
 }

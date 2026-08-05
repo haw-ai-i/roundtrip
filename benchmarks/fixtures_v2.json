@@ -1,5 +1,6 @@
 {
  "made": [
+  "swe_django_dateparse_10999",
   "swe_pydata_variable_2905",
   "swe_pydata_indexing_multi_3095",
   "swe_pydata_combine_3151",
@@ -160,7 +161,7 @@
   },
   {
    "id": "pytest-dev__pytest-5262",
-   "reason": "self-check exit 2: 1 error in 1.97 seconds"
+   "reason": "self-check exit 2: 1 error in 2.51 seconds"
   },
   {
    "id": "pytest-dev__pytest-7324",
@@ -168,7 +169,7 @@
   },
   {
    "id": "pytest-dev__pytest-7521",
-   "reason": "self-check exit 2: 2 errors in 2.78s"
+   "reason": "self-check exit 2: 2 errors in 7.49s"
   },
   {
    "id": "sphinx-doc__sphinx-10435",
@@ -188,7 +189,7 @@
   },
   {
    "id": "sphinx-doc__sphinx-9229",
-   "reason": "self-check exit 1: 1 failed, 13 passed in 0.74s"
+   "reason": "self-check exit 1: 1 failed, 13 passed in 1.07s"
   },
   {
    "id": "sympy__sympy-11618",
@@ -204,7 +205,7 @@
   },
   {
    "id": "sympy__sympy-24661",
-   "reason": "self-check exit 1: 7 failed, 21 passed, 4 warnings in 0.09s"
+   "reason": "self-check exit 1: 7 failed, 21 passed, 4 warnings in 0.35s"
   },
   {
    "id": "sympy__sympy-24909",

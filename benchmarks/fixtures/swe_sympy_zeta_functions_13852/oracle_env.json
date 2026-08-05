@@ -23,5 +23,6 @@
     "test_dirichlet_eta_eval",
     "test_stieltjes",
     "test_stieltjes_evalf"
-  ]
+  ],
+  "runner": "pytest"
 }

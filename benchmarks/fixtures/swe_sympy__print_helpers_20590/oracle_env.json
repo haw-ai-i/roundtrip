@@ -57,5 +57,6 @@
     "test_atomic",
     "test_as_dummy",
     "test_canonical_variables"
-  ]
+  ],
+  "runner": "pytest"
 }

@@ -21,5 +21,6 @@
     "testing/test_pastebin.py::TestPasteCapture::test_failed",
     "testing/test_pastebin.py::TestPasteCapture::test_all",
     "testing/test_pastebin.py::TestPasteCapture::test_non_ascii_paste_text"
-  ]
+  ],
+  "runner": "pytest"
 }

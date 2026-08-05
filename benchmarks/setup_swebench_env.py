@@ -28,6 +28,12 @@ def run(cmd, cwd=None, check=True):
 
 
 PYTHON_FOR_REPO = {
+    # django 2.x-3.x era: distutils (removed 3.12), older stdlib
+    "django__django-1": "3.9",
+    "django__django-2": "3.9",
+    "django__django-3": "3.10",
+    "django__django-4": "3.10",
+    "django__django-5": "3.11",
     # pytest tests itself; 5.x-6.x source uses ast.Str (removed 3.12)
     "pytest-dev__pytest": "3.9",
     # sphinx 4.1 era: version-guarded "from types import Union" (3.10-alpha name)

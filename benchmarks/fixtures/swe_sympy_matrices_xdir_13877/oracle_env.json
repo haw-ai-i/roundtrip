@@ -236,5 +236,6 @@
     "test_opportunistic_simplification",
     "test_partial_pivoting",
     "test_iszero_substitution"
-  ]
+  ],
+  "runner": "pytest"
 }

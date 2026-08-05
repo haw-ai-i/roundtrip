@@ -197,5 +197,6 @@
     "test__neg__",
     "test_issue_18507",
     "test_issue_17130"
-  ]
+  ],
+  "runner": "pytest"
 }

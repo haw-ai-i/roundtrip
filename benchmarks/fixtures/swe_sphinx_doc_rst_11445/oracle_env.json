@@ -33,5 +33,6 @@
     "tests/test_util_rst.py::test_prepend_prolog_with_roles_in_sections",
     "tests/test_util_rst.py::test_textwidth",
     "tests/test_util_rst.py::test_heading"
-  ]
+  ],
+  "runner": "pytest"
 }

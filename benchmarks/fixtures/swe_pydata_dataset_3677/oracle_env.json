@@ -52,6 +52,7 @@
     "xarray/tests/test_merge.py::TestMergeMethod::test_merge_fill_value[2.0]",
     "xarray/tests/test_merge.py::TestMergeMethod::test_merge_no_conflicts"
   ],
+  "runner": "pytest",
   "dropped_p2p_on_gold": [
     "xarray/tests/test_merge.py::TestMergeFunction::test_merge_no_conflicts_single_var",
     "xarray/tests/test_merge.py::TestMergeMethod::test_merge_auto_align",

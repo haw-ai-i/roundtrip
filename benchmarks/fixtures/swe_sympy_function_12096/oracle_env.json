@@ -101,5 +101,6 @@
     "test_issue_2790",
     "test_ITE",
     "test_Min_Max"
-  ]
+  ],
+  "runner": "pytest"
 }

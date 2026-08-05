@@ -103,5 +103,6 @@
     "test_issue_9326",
     "test_issue_10323",
     "test_AssocOp_Function"
-  ]
+  ],
+  "runner": "pytest"
 }

@@ -97,5 +97,6 @@
     "test__can_do_sum_of_squares",
     "test_diophantine_permute_sign",
     "test_issue_9538"
-  ]
+  ],
+  "runner": "pytest"
 }

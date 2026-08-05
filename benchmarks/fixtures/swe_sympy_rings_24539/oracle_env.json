@@ -139,5 +139,6 @@
     "test_PolyElement_sqf_norm",
     "test_PolyElement_sqf_list",
     "test_PolyElement_factor_list"
-  ]
+  ],
+  "runner": "pytest"
 }

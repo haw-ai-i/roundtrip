@@ -21,6 +21,7 @@
     "tests/test_ext_viewcode.py::test_linkcode",
     "tests/test_ext_viewcode.py::test_local_source_files"
   ],
+  "runner": "pytest",
   "dropped_p2p_on_gold": [
     "tests/test_ext_viewcode.py::test_viewcode_epub_enabled"
   ]

@@ -49,5 +49,6 @@
     "test_Product_is_convergent",
     "test_reverse_order",
     "test_issue_9983"
-  ]
+  ],
+  "runner": "pytest"
 }

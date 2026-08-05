@@ -167,5 +167,6 @@
     "test_jordan_form",
     "test_singular_values",
     "test_integrate"
-  ]
+  ],
+  "runner": "pytest"
 }

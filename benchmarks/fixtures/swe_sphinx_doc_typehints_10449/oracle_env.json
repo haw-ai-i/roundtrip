@@ -70,6 +70,7 @@
     "tests/test_ext_autodoc_configs.py::test_autodoc_default_options",
     "tests/test_ext_autodoc_configs.py::test_autodoc_default_options_with_values"
   ],
+  "runner": "pytest",
   "dropped_p2p_on_gold": [
     "tests/test_ext_autodoc_configs.py::test_autodoc_default_options",
     "tests/test_ext_autodoc_configs.py::test_autodoc_default_options_with_values",

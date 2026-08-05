@@ -107,5 +107,6 @@
     "test_NZQRC_unions",
     "test_imageset_intersection",
     "test_issue_17858"
-  ]
+  ],
+  "runner": "pytest"
 }

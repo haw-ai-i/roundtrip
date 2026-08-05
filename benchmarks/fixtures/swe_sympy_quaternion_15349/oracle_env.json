@@ -21,5 +21,6 @@
     "test_quaternion_construction",
     "test_quaternion_complex_real_addition",
     "test_quaternion_functions"
-  ]
+  ],
+  "runner": "pytest"
 }

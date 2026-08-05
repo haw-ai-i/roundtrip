@@ -45,5 +45,6 @@
     "testing/python/integration.py::TestNoselikeTestAttribute::test_class_with_nasty_getattr",
     "testing/python/integration.py::TestParameterize::test_idfn_marker",
     "testing/python/integration.py::TestParameterize::test_idfn_fixture"
-  ]
+  ],
+  "runner": "pytest"
 }

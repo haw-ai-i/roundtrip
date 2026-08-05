@@ -31,5 +31,6 @@
     "test_containers",
     "test_Integral",
     "test_Derivative"
-  ]
+  ],
+  "runner": "pytest"
 }

@@ -127,5 +127,6 @@
     "test_conjugacy_class",
     "test_conjugacy_classes",
     "test_coset_class"
-  ]
+  ],
+  "runner": "pytest"
 }

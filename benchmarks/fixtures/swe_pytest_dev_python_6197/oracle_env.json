@@ -308,5 +308,6 @@
     "testing/test_skipping.py::test_invalid_skip_keyword_parameter",
     "testing/test_skipping.py::test_mark_xfail_item",
     "testing/test_skipping.py::test_summary_list_after_errors"
-  ]
+  ],
+  "runner": "pytest"
 }

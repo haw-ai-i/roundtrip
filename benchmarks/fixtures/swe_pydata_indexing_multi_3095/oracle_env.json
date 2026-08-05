@@ -522,5 +522,6 @@
     "xarray/tests/test_variable.py::TestBackendIndexing::test_CopyOnWriteArray",
     "xarray/tests/test_variable.py::TestBackendIndexing::test_MemoryCachedArray",
     "xarray/tests/test_variable.py::TestBackendIndexing::test_DaskIndexingAdapter"
-  ]
+  ],
+  "runner": "pytest"
 }

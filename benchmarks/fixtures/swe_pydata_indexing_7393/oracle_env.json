@@ -159,5 +159,6 @@
     "xarray/tests/test_indexes.py::test_safe_cast_to_index",
     "xarray/tests/test_indexes.py::test_safe_cast_to_index_cftimeindex",
     "xarray/tests/test_indexes.py::test_safe_cast_to_index_datetime_datetime"
-  ]
+  ],
+  "runner": "pytest"
 }

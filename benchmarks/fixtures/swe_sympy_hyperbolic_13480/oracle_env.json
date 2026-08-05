@@ -101,5 +101,6 @@
     "test_sech_rewrite",
     "test_derivs",
     "test_sinh_expansion"
-  ]
+  ],
+  "runner": "pytest"
 }

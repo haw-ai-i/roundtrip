@@ -95,5 +95,6 @@
     "test_Cycle",
     "test_Permutation",
     "test_diffgeom"
-  ]
+  ],
+  "runner": "pytest"
 }

@@ -58,6 +58,27 @@ if missing:
     restore_all()
     sys.exit(2)
 
+runner = cfg.get("runner", "pytest")
+
+if runner == "django":
+    # django uses its own test runner (tests/runtests.py) and labels of the form
+    # "method (module.Class)" -> convert to "module.Class.method". Scope to the
+    # instance's own F2P+P2P; drop P2P that fail on gold; F2P must all run.
+    import re as _re
+    def to_label(t):
+        m = _re.match(r"(\w+)\s+\(([\w.]+)\)", t)
+        return f"{m.group(2)}.{m.group(1)}" if m else t
+    labels = [to_label(t) for t in selection]
+    f2p_labels = {to_label(t) for t in (cfg.get("fail_to_pass") or [])}
+    tests_dir = env / "tests"
+    cp = subprocess.run(
+        [str(venv_py), "runtests.py", *labels, "--verbosity", "1", "--noinput"],
+        cwd=str(tests_dir), capture_output=True, text=True, timeout=1800)
+    sys.stdout.write(cp.stdout)
+    sys.stderr.write(cp.stderr)
+    restore_all()
+    sys.exit(cp.returncode)
+
 node_ids = [t for t in selection if "::" in t]
 bare = [t for t in selection if "::" not in t]
 if node_ids and not bare:

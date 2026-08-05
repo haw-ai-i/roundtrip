@@ -35,5 +35,6 @@
     "test_unit",
     "test_dot",
     "test__normalize_dimension"
-  ]
+  ],
+  "runner": "pytest"
 }

@@ -4799,6 +4799,7 @@
     "xarray/tests/test_units.py::TestDataset::test_merge[int64-coords-compatible_unit]",
     "xarray/tests/test_units.py::TestDataset::test_merge[int64-coords-identical_unit]"
   ],
+  "runner": "pytest",
   "dropped_p2p_on_gold": [
     "xarray/tests/test_dataset.py::TestDataset::test_constructor_pandas_single",
     "xarray/tests/test_dataset.py::TestDataset::test_ds_resample_apply_func_args",

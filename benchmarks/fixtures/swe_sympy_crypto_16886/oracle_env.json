@@ -99,5 +99,6 @@
     "test_gm_public_key",
     "test_encipher_decipher_bg",
     "test_bg_private_key"
-  ]
+  ],
+  "runner": "pytest"
 }

@@ -120,5 +120,6 @@
     "testing/test_conftest.py::test_conftest_exception_handling",
     "testing/test_conftest.py::test_hook_proxy",
     "testing/test_conftest.py::test_required_option_help"
-  ]
+  ],
+  "runner": "pytest"
 }

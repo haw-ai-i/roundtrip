@@ -115,5 +115,6 @@
     "test_equivalent_internal_lines_VT2_AT",
     "test_internal_external_VT2T2_AT",
     "test_internal_external_pqrs_AT"
-  ]
+  ],
+  "runner": "pytest"
 }

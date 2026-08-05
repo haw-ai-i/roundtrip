@@ -266,5 +266,6 @@
     "testing/test_reports.py::TestHooks::test_collect_report",
     "testing/test_reports.py::TestHooks::test_invalid_report_types[pytest_runtest_logreport]",
     "testing/test_reports.py::TestHooks::test_invalid_report_types[pytest_collectreport]"
-  ]
+  ],
+  "runner": "pytest"
 }

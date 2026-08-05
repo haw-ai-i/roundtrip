@@ -1906,6 +1906,7 @@
     "xarray/tests/test_groupby.py::TestDatasetResample::test_ds_resample_apply_func_args",
     "xarray/tests/test_groupby.py::test_groupby_cumsum"
   ],
+  "runner": "pytest",
   "dropped_p2p_on_gold": [
     "xarray/tests/test_dataarray.py::TestDataArray::test_sel_float",
     "xarray/tests/test_groupby.py::TestDataArrayResample::test_da_resample_func_args",

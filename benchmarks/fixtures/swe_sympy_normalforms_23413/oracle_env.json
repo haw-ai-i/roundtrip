@@ -20,5 +20,6 @@
   "pass_to_pass": [
     "test_smith_normal",
     "test_smith_normal_deprecated"
-  ]
+  ],
+  "runner": "pytest"
 }

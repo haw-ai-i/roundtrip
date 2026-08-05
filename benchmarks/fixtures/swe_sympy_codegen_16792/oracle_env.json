@@ -123,5 +123,6 @@
     "test_global_vars",
     "test_custom_codegen",
     "test_c_with_printer"
-  ]
+  ],
+  "runner": "pytest"
 }

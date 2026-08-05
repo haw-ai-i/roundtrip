@@ -65,5 +65,6 @@
     "testing/test_setuponly.py::test_capturing",
     "testing/test_setuponly.py::test_show_fixtures_and_execute_test",
     "testing/test_setuponly.py::test_setup_show_with_KeyboardInterrupt_in_test"
-  ]
+  ],
+  "runner": "pytest"
 }

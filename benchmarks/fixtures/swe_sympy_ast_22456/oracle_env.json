@@ -73,5 +73,6 @@
     "test_FunctionPrototype_and_FunctionDefinition",
     "test_Return",
     "test_FunctionCall"
-  ]
+  ],
+  "runner": "pytest"
 }

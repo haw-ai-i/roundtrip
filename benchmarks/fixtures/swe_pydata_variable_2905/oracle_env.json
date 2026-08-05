@@ -725,6 +725,7 @@
     "xarray/tests/test_variable.py::TestBackendIndexing::test_MemoryCachedArray",
     "xarray/tests/test_variable.py::TestBackendIndexing::test_DaskIndexingAdapter"
   ],
+  "runner": "pytest",
   "dropped_p2p_on_gold": [
     "xarray/tests/test_variable.py::TestAsCompatibleData::test_datetime",
     "xarray/tests/test_variable.py::TestIndexVariable::test_datetime64_conversion",

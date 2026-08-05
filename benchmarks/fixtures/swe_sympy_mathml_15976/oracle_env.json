@@ -89,5 +89,6 @@
     "test_print_basic",
     "test_root_notation_print",
     "test_print_matrix_symbol"
-  ]
+  ],
+  "runner": "pytest"
 }

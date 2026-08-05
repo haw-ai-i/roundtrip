@@ -1709,6 +1709,7 @@
     "xarray/tests/test_dataset.py::test_subclass_slots",
     "xarray/tests/test_dataset.py::test_weakref"
   ],
+  "runner": "pytest",
   "dropped_p2p_on_gold": [
     "xarray/tests/test_dataset.py::TestDataset::test_align",
     "xarray/tests/test_dataset.py::TestDataset::test_align_exclude",

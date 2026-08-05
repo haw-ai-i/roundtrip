@@ -173,5 +173,6 @@
     "testing/test_mark.py::test_markers_from_parametrize",
     "testing/test_mark.py::test_marker_expr_eval_failure_handling[NOT",
     "testing/test_mark.py::test_marker_expr_eval_failure_handling[bogus=]"
-  ]
+  ],
+  "runner": "pytest"
 }

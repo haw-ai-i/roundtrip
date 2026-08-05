@@ -19,5 +19,6 @@
   "pass_to_pass": [
     "test_kahane_algorithm",
     "test_gamma_matrix_class"
-  ]
+  ],
+  "runner": "pytest"
 }

@@ -53,5 +53,6 @@
     "test_random_parameters_given",
     "test_conjugate_priors",
     "test_issue_10003"
-  ]
+  ],
+  "runner": "pytest"
 }

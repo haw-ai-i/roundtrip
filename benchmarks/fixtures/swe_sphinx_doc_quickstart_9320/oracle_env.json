@@ -33,5 +33,6 @@
     "tests/test_quickstart.py::test_quickstart_and_build",
     "tests/test_quickstart.py::test_default_filename",
     "tests/test_quickstart.py::test_extensions"
-  ]
+  ],
+  "runner": "pytest"
 }

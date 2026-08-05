@@ -35,5 +35,6 @@
     "tests/test_environment_toctree.py::test_get_toctree_for_collapse",
     "tests/test_environment_toctree.py::test_get_toctree_for_maxdepth",
     "tests/test_environment_toctree.py::test_get_toctree_for_includehidden"
-  ]
+  ],
+  "runner": "pytest"
 }

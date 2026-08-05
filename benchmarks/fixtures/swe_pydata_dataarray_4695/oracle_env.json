@@ -1732,6 +1732,7 @@
     "xarray/tests/test_dataarray.py::test_delete_coords",
     "xarray/tests/test_dataarray.py::test_deepcopy_obj_array"
   ],
+  "runner": "pytest",
   "dropped_p2p_on_gold": [
     "xarray/tests/test_dataarray.py::TestDataArray::test_da_resample_func_args",
     "xarray/tests/test_dataarray.py::TestDataArray::test_groupby_bins_sort",

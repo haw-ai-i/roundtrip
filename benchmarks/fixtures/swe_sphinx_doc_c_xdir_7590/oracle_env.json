@@ -65,5 +65,6 @@
     "tests/test_domain_cpp.py::test_build_domain_cpp_with_add_function_parentheses_is_True",
     "tests/test_domain_cpp.py::test_build_domain_cpp_with_add_function_parentheses_is_False",
     "tests/test_domain_cpp.py::test_xref_consistency"
-  ]
+  ],
+  "runner": "pytest"
 }

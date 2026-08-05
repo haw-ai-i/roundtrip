@@ -23,5 +23,6 @@
     "test_issue_6194",
     "test_issue_10326",
     "test_binary_symbols"
-  ]
+  ],
+  "runner": "pytest"
 }

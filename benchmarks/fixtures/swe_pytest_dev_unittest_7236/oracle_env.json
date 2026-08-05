@@ -117,5 +117,6 @@
     "testing/test_unittest.py::test_pdb_teardown_called",
     "testing/test_unittest.py::test_pdb_teardown_skipped[@pytest.mark.skip]",
     "testing/test_unittest.py::test_async_support"
-  ]
+  ],
+  "runner": "pytest"
 }

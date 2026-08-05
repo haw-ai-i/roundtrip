@@ -26,5 +26,6 @@
     "tests/test_build_linkcheck.py::test_anchors_ignored",
     "tests/test_build_linkcheck.py::test_auth",
     "tests/test_build_linkcheck.py::test_linkcheck_request_headers"
-  ]
+  ],
+  "runner": "pytest"
 }

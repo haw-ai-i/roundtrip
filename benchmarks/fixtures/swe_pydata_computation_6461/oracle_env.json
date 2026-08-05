@@ -509,5 +509,6 @@
     "xarray/tests/test_computation.py::test_cross[a5-b5-ae5-be5-cartesian--1-True]",
     "xarray/tests/test_computation.py::test_cross[a6-b6-ae6-be6-cartesian--1-False]",
     "xarray/tests/test_computation.py::test_cross[a6-b6-ae6-be6-cartesian--1-True]"
-  ]
+  ],
+  "runner": "pytest"
 }

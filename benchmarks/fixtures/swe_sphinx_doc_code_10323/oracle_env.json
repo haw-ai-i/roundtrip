@@ -94,6 +94,7 @@
     "tests/test_directive_code.py::test_linenothreshold",
     "tests/test_directive_code.py::test_code_block_dedent"
   ],
+  "runner": "pytest",
   "dropped_p2p_on_gold": [
     "tests/test_directive_code.py::test_linenothreshold",
     "tests/test_directive_code.py::test_literal_include_linenos"

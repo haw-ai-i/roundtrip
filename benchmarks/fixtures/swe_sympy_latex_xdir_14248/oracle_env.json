@@ -893,6 +893,7 @@
     "test_SymmetricDifference",
     "test_UnevaluatedExpr"
   ],
+  "runner": "pytest",
   "dropped_p2p_on_gold": [
     "test_latex_Float"
   ]

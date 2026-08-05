@@ -59,6 +59,7 @@
     "tests/test_util_typing.py::test_stringify_broken_type_hints",
     "tests/test_util_typing.py::test_stringify_mock"
   ],
+  "runner": "pytest",
   "dropped_p2p_on_gold": [
     "tests/test_util_typing.py::test_restify",
     "tests/test_util_typing.py::test_restify_type_hints_Union",

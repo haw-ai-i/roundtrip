@@ -142,5 +142,6 @@
     "tests/test_ext_autodoc_autoclass.py::test_class_alias",
     "tests/test_ext_autodoc_autoclass.py::test_class_alias_having_doccomment",
     "tests/test_ext_autodoc_autoproperty.py::test_properties"
-  ]
+  ],
+  "runner": "pytest"
 }

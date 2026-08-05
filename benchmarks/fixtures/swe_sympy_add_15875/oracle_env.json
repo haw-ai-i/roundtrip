@@ -175,5 +175,6 @@
     "test_Mul_does_not_distribute_infinity",
     "test_issue_8247_8354",
     "test_issue_14392"
-  ]
+  ],
+  "runner": "pytest"
 }

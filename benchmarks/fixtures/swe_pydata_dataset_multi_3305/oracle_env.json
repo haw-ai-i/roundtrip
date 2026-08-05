@@ -1294,6 +1294,7 @@
     "xarray/tests/test_dataarray.py::test_no_dict",
     "xarray/tests/test_dataarray.py::test_subclass_slots"
   ],
+  "runner": "pytest",
   "dropped_p2p_on_gold": [
     "xarray/tests/test_dataarray.py::TestDataArray::test_align",
     "xarray/tests/test_dataarray.py::TestDataArray::test_align_copy",

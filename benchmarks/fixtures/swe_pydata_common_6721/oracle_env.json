@@ -2825,6 +2825,7 @@
     "xarray/tests/test_dataset.py::TestNumpyCoercion::test_from_pint_wrapping_dask",
     "xarray/tests/test_dataset.py::test_string_keys_typing"
   ],
+  "runner": "pytest",
   "dropped_p2p_on_gold": [
     "xarray/tests/test_dataset.py::TestDataset::test_constructor_pandas_single"
   ]

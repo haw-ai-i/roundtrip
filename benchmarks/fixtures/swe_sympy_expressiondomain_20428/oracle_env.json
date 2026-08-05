@@ -323,5 +323,6 @@
     "test_issue_19113",
     "test_issue_19360",
     "test_poly_copy_equals_original"
-  ]
+  ],
+  "runner": "pytest"
 }

@@ -159,5 +159,6 @@
     "testing/test_collection.py::test_collector_respects_tbstyle",
     "testing/test_collection.py::test_does_not_eagerly_collect_packages",
     "testing/test_collection.py::test_does_not_put_src_on_path"
-  ]
+  ],
+  "runner": "pytest"
 }

@@ -1237,5 +1237,6 @@
     "xarray/tests/test_duck_array_ops.py::test_least_squares[True-False]",
     "xarray/tests/test_duck_array_ops.py::test_least_squares[False-True]",
     "xarray/tests/test_duck_array_ops.py::test_least_squares[False-False]"
-  ]
+  ],
+  "runner": "pytest"
 }

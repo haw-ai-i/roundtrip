@@ -43,5 +43,6 @@
     "test_diff_and_applyfunc",
     "test_op_priority",
     "test_symbolic_indexing"
-  ]
+  ],
+  "runner": "pytest"
 }

@@ -135,5 +135,6 @@
     "testing/test_unittest.py::test_do_cleanups_on_setup_failure",
     "testing/test_unittest.py::test_do_cleanups_on_teardown_failure",
     "testing/test_unittest.py::test_plain_unittest_does_not_support_async"
-  ]
+  ],
+  "runner": "pytest"
 }

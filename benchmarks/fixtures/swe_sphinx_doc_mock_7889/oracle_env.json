@@ -25,5 +25,6 @@
     "tests/test_ext_autodoc_mock.py::test_mock_does_not_follow_upper_modules",
     "tests/test_ext_autodoc_mock.py::test_abc_MockObject",
     "tests/test_ext_autodoc_mock.py::test_mock_decorator"
-  ]
+  ],
+  "runner": "pytest"
 }

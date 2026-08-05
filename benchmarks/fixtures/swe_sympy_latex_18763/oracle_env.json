@@ -297,5 +297,6 @@
     "test_unit_printing",
     "test_issue_17092",
     "test_latex_decimal_separator"
-  ]
+  ],
+  "runner": "pytest"
 }

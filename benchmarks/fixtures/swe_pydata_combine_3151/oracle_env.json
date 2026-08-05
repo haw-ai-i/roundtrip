@@ -138,6 +138,7 @@
     "xarray/tests/test_combine.py::TestAutoCombineDeprecation::test_auto_combine_with_coords",
     "xarray/tests/test_combine.py::TestAutoCombineDeprecation::test_auto_combine_without_coords"
   ],
+  "runner": "pytest",
   "dropped_p2p_on_gold": [
     "xarray/tests/test_combine.py::TestAutoCombineOldAPI::test_auto_combine_fill_value[2.0]",
     "xarray/tests/test_combine.py::TestAutoCombineOldAPI::test_auto_combine_fill_value[2]",

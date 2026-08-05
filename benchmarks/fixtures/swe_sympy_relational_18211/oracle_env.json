@@ -123,5 +123,6 @@
     "test_trigsimp",
     "test_polynomial_relation_simplification",
     "test_multivariate_linear_function_simplification"
-  ]
+  ],
+  "runner": "pytest"
 }

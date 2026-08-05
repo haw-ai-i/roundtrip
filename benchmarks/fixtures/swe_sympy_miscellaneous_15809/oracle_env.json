@@ -37,5 +37,6 @@
     "test_issue_12638",
     "test_instantiation_evaluation",
     "test_rewrite_as_Abs"
-  ]
+  ],
+  "runner": "pytest"
 }

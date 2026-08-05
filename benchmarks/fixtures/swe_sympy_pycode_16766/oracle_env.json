@@ -29,5 +29,6 @@
     "test_printmethod",
     "test_codegen_ast_nodes",
     "test_issue_14283"
-  ]
+  ],
+  "runner": "pytest"
 }

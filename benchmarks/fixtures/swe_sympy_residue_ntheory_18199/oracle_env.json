@@ -242,5 +242,6 @@
     "test_linear_coeffs",
     "test_is_modular",
     "test_invert_modular"
-  ]
+  ],
+  "runner": "pytest"
 }

@@ -63,5 +63,6 @@
     "xarray/tests/test_coding.py::test_decode_unsigned_from_signed[2]",
     "xarray/tests/test_coding.py::test_decode_unsigned_from_signed[4]",
     "xarray/tests/test_coding.py::test_decode_unsigned_from_signed[8]"
-  ]
+  ],
+  "runner": "pytest"
 }

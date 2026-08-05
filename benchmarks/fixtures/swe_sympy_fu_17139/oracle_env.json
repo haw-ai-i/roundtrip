@@ -152,5 +152,6 @@
     "test_clear_coefficients",
     "test_nc_simplify",
     "test_issue_15965"
-  ]
+  ],
+  "runner": "pytest"
 }

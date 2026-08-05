@@ -31,5 +31,6 @@
     "test_subs_CondSet_tebr",
     "test_dummy_eq",
     "test_contains"
-  ]
+  ],
+  "runner": "pytest"
 }

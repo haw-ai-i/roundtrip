@@ -80,5 +80,6 @@
     "tests/test_domain_py.py::test_modindex_common_prefix",
     "tests/test_domain_py.py::test_noindexentry",
     "tests/test_domain_py.py::test_warn_missing_reference"
-  ]
+  ],
+  "runner": "pytest"
 }

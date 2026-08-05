@@ -27,5 +27,6 @@
     "tests/test_build_gettext.py::test_gettext_template",
     "tests/test_build_gettext.py::test_gettext_template_msgid_order_in_sphinxpot",
     "tests/test_build_gettext.py::test_build_single_pot"
-  ]
+  ],
+  "runner": "pytest"
 }

@@ -219,6 +219,7 @@
     "test_MatrixElement_printing",
     "test_Quaternion_latex_printing"
   ],
+  "runner": "pytest",
   "dropped_p2p_on_gold": [
     "test_latex_Float"
   ]

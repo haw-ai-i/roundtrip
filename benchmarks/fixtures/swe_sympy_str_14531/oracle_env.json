@@ -186,5 +186,6 @@
     "test_SymmetricDifference",
     "test_UnevaluatedExpr",
     "test_MatrixElement_printing"
-  ]
+  ],
+  "runner": "pytest"
 }

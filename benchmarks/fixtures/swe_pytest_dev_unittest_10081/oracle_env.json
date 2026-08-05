@@ -141,5 +141,6 @@
     "testing/test_unittest.py::test_traceback_pruning",
     "testing/test_unittest.py::test_raising_unittest_skiptest_during_collection",
     "testing/test_unittest.py::test_plain_unittest_does_not_support_async"
-  ]
+  ],
+  "runner": "pytest"
 }

@@ -207,6 +207,7 @@
     "test_issue_6133",
     "test_abc"
   ],
+  "runner": "pytest",
   "dropped_p2p_on_gold": [
     "test_Float"
   ]

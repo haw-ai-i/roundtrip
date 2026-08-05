@@ -91,5 +91,6 @@
     "test_issue_13474",
     "test_simplify_function_inverse",
     "test_clear_coefficients"
-  ]
+  ],
+  "runner": "pytest"
 }

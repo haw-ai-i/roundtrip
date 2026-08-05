@@ -171,5 +171,6 @@
     "testing/test_collection.py::TestImportModeImportlib::test_modules_not_importable_as_side_effect",
     "testing/test_collection.py::test_does_not_crash_on_error_from_decorated_function",
     "testing/test_collection.py::test_collect_pyargs_with_testpaths"
-  ]
+  ],
+  "runner": "pytest"
 }

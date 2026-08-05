@@ -137,5 +137,6 @@
     "test_single_e",
     "test_beta_math",
     "test_lambdify_cse"
-  ]
+  ],
+  "runner": "pytest"
 }

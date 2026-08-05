@@ -113,6 +113,7 @@ def main():
             contract.extend(f"- `{n}`\n" for n in ns)
         contract.append("\nImplement them to satisfy the specification. Do not write tests.\n")
         (fdir / "scaffold" / "CONTRACT.md").write_text("".join(contract))
+        is_django = iid.startswith("django__django")
         (fdir / "oracle_env.json").write_text(json.dumps({
             "env_path": f"~/Desktop/coundetrip/swebench_envs/{iid}",
             "target_rel": target_rel,
@@ -122,6 +123,7 @@ def main():
             "oracle_files": test_files,
             "fail_to_pass": f2p,
             "pass_to_pass": p2p,
+            "runner": "django" if is_django else "pytest",
         }, indent=2))
         shutil.copy2(ORACLE_TEMPLATE, fdir / "run_oracle.py")
         (fdir / "coundetrip.yaml").write_text(

@@ -49,5 +49,6 @@
     "test_beta",
     "test_airy",
     "test_airy_prime"
-  ]
+  ],
+  "runner": "pytest"
 }

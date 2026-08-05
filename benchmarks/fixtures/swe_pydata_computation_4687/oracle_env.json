@@ -3442,6 +3442,7 @@
     "xarray/tests/test_units.py::TestPlots::test_units_facetgrid_2d_imshow_plot_colorbar_labels",
     "xarray/tests/test_units.py::TestPlots::test_units_facetgrid_2d_contourf_plot_colorbar_labels"
   ],
+  "runner": "pytest",
   "dropped_p2p_on_gold": [
     "xarray/tests/test_computation.py::test_apply_1d_and_0d",
     "xarray/tests/test_computation.py::test_apply_groupby_add",

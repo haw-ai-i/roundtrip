@@ -104,6 +104,7 @@
     "tests/test_intl.py::test_image_glob_intl",
     "tests/test_intl.py::test_image_glob_intl_using_figure_language_filename"
   ],
+  "runner": "pytest",
   "dropped_p2p_on_gold": [
     "tests/test_intl.py::test_text_docfields"
   ]

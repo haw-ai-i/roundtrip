@@ -49,5 +49,6 @@
     "tests/test_build_linkcheck.py::test_connect_to_selfsigned_with_tls_cacerts",
     "tests/test_build_linkcheck.py::test_connect_to_selfsigned_with_requests_env_var",
     "tests/test_build_linkcheck.py::test_connect_to_selfsigned_nonexistent_cert_file"
-  ]
+  ],
+  "runner": "pytest"
 }

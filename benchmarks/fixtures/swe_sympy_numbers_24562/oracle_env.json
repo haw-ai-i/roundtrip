@@ -225,6 +225,7 @@
     "test_floordiv",
     "test_negation"
   ],
+  "runner": "pytest",
   "dropped_p2p_on_gold": [
     "test_Float"
   ]

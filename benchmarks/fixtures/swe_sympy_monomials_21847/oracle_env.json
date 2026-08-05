@@ -33,5 +33,6 @@
     "test_monomial_pow",
     "test_monomial_min",
     "test_monomial_divides"
-  ]
+  ],
+  "runner": "pytest"
 }

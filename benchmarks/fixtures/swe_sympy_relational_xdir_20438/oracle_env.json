@@ -205,5 +205,6 @@
     "test_DisjointUnion_iter",
     "test_DisjointUnion_len",
     "test_issue_20089"
-  ]
+  ],
+  "runner": "pytest"
 }

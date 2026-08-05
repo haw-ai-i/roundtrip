@@ -28,5 +28,6 @@
     "tests/test_ext_inheritance_diagram.py::test_inheritance_diagram_latex",
     "tests/test_ext_inheritance_diagram.py::test_inheritance_diagram_latex_alias",
     "tests/test_ext_inheritance_diagram.py::test_import_classes"
-  ]
+  ],
+  "runner": "pytest"
 }

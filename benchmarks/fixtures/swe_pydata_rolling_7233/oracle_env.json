@@ -393,5 +393,6 @@
     "xarray/tests/test_coarsen.py::test_coarsen_da_reduce[dask-max-4-2]",
     "xarray/tests/test_coarsen.py::TestCoarsenConstruct::test_coarsen_construct[True]",
     "xarray/tests/test_coarsen.py::TestCoarsenConstruct::test_coarsen_construct[False]"
-  ]
+  ],
+  "runner": "pytest"
 }

@@ -79,5 +79,6 @@
     "xarray/tests/test_merge.py::TestMergeMethod::test_merge_fill_value[fill_value3]",
     "xarray/tests/test_merge.py::TestMergeMethod::test_merge_no_conflicts",
     "xarray/tests/test_merge.py::TestMergeMethod::test_merge_dataarray"
-  ]
+  ],
+  "runner": "pytest"
 }

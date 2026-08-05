@@ -3649,5 +3649,6 @@
     "xarray/tests/test_rolling.py::TestDatasetRolling::test_ndrolling_construct[False-0.0-center2]",
     "xarray/tests/test_rolling.py::TestDatasetRollingExp::test_rolling_exp[1-numpy]",
     "xarray/tests/test_rolling.py::TestDatasetRollingExp::test_rolling_exp_keep_attrs[1-numpy]"
-  ]
+  ],
+  "runner": "pytest"
 }

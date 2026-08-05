@@ -348,5 +348,6 @@
     "test_factor_terms",
     "test_issue_11198",
     "test_Poly_precision"
-  ]
+  ],
+  "runner": "pytest"
 }

@@ -97,5 +97,6 @@
     "test__partition",
     "test_ordered_partitions",
     "test_rotations"
-  ]
+  ],
+  "runner": "pytest"
 }

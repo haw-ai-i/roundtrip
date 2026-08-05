@@ -175,5 +175,6 @@
     "test_issue_8247_8354",
     "test_Add_is_zero",
     "test_issue_14392"
-  ]
+  ],
+  "runner": "pytest"
 }
