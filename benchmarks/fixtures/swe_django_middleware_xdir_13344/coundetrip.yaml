@@ -1,0 +1,13 @@
+name: swe_django_middleware_xdir_13344
+test_command:
+  - python
+  - run_oracle.py
+source_paths:
+  - django/contrib/sessions/middleware.py
+  - django/middleware/cache.py
+  - django/middleware/security.py
+scaffold_paths:
+  - scaffold
+test_paths:
+  - run_oracle.py
+  - oracle_env.json

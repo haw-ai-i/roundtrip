@@ -1,0 +1,33 @@
+{
+  "env_path": "~/Desktop/coundetrip/swebench_envs/django__django-13212",
+  "target_rel": "django/core/validators.py",
+  "target_rels": [
+    "django/core/validators.py",
+    "django/forms/fields.py"
+  ],
+  "source_basename": "validators.py",
+  "test_selection": [
+    "test_value_placeholder_with_char_field (forms_tests.tests.test_validators.ValidatorCustomMessageTests)",
+    "test_value_placeholder_with_decimal_field (forms_tests.tests.test_validators.ValidatorCustomMessageTests)",
+    "test_value_placeholder_with_file_field (forms_tests.tests.test_validators.ValidatorCustomMessageTests)",
+    "test_value_placeholder_with_integer_field (forms_tests.tests.test_validators.ValidatorCustomMessageTests)",
+    "test_value_placeholder_with_null_character (forms_tests.tests.test_validators.ValidatorCustomMessageTests)",
+    "test_all_errors_get_reported (forms_tests.tests.test_validators.TestFieldWithValidators)",
+    "test_field_validators_can_be_any_iterable (forms_tests.tests.test_validators.TestFieldWithValidators)"
+  ],
+  "oracle_files": [
+    "tests/forms_tests/tests/test_validators.py"
+  ],
+  "fail_to_pass": [
+    "test_value_placeholder_with_char_field (forms_tests.tests.test_validators.ValidatorCustomMessageTests)",
+    "test_value_placeholder_with_decimal_field (forms_tests.tests.test_validators.ValidatorCustomMessageTests)",
+    "test_value_placeholder_with_file_field (forms_tests.tests.test_validators.ValidatorCustomMessageTests)",
+    "test_value_placeholder_with_integer_field (forms_tests.tests.test_validators.ValidatorCustomMessageTests)",
+    "test_value_placeholder_with_null_character (forms_tests.tests.test_validators.ValidatorCustomMessageTests)"
+  ],
+  "pass_to_pass": [
+    "test_all_errors_get_reported (forms_tests.tests.test_validators.TestFieldWithValidators)",
+    "test_field_validators_can_be_any_iterable (forms_tests.tests.test_validators.TestFieldWithValidators)"
+  ],
+  "runner": "django"
+}

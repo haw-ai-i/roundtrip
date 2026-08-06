@@ -127,24 +127,30 @@ def main() -> int:
     target.parent.mkdir(parents=True, exist_ok=True)
 
     url = f"https://github.com/{r['repo']}.git"
-    target.mkdir(parents=True, exist_ok=True)
-    run(["git", "init", "--quiet"], cwd=target)
-    run(["git", "remote", "add", "origin", url], cwd=target)
-    try:
-        run(["git", "fetch", "--quiet", "--depth", "1", "origin", r["base_commit"]], cwd=target)
-        run(["git", "checkout", "--quiet", "FETCH_HEAD"], cwd=target)
-    except Exception:
-        # Some commits can't be fetched at depth 1. Try a blobless fetch of the
-        # commit (fast: no file history, just the tree we need) before any full clone.
+    cache = Path.home() / "Desktop" / "coundetrip" / "repo_cache" / f"{r['repo'].replace('/', '__')}.git"
+    if target.exists():
+        shutil.rmtree(target)
+    if cache.exists():
+        # Local cache clone: instant, offline, full history so any commit checks out.
+        run(["git", "clone", "--quiet", "--local", str(cache), str(target)])
+        run(["git", "checkout", "--quiet", r["base_commit"]], cwd=target)
+    else:
+        # No cache for this repo yet: fall back to a network fetch of the commit.
+        target.mkdir(parents=True, exist_ok=True)
+        run(["git", "init", "--quiet"], cwd=target)
+        run(["git", "remote", "add", "origin", url], cwd=target)
         try:
-            run(["git", "fetch", "--quiet", "--filter=blob:none", "origin", r["base_commit"]], cwd=target)
+            run(["git", "fetch", "--quiet", "--depth", "1", "origin", r["base_commit"]], cwd=target)
             run(["git", "checkout", "--quiet", "FETCH_HEAD"], cwd=target)
-        except Exception as e2:
-            print(f">> partial fetch failed ({e2}); full blobless clone", file=sys.stderr)
-            shutil.rmtree(target)
-            target.mkdir(parents=True, exist_ok=True)
-            run(["git", "clone", "--quiet", "--filter=blob:none", url, str(target)])
-            run(["git", "checkout", "--quiet", r["base_commit"]], cwd=target)
+        except Exception:
+            try:
+                run(["git", "fetch", "--quiet", "--filter=blob:none", "origin", r["base_commit"]], cwd=target)
+                run(["git", "checkout", "--quiet", "FETCH_HEAD"], cwd=target)
+            except Exception as e2:
+                print(f">> partial fetch failed ({e2}); full blobless clone", file=sys.stderr)
+                shutil.rmtree(target)
+                run(["git", "clone", "--quiet", "--filter=blob:none", url, str(target)])
+                run(["git", "checkout", "--quiet", r["base_commit"]], cwd=target)
 
     venv = target / ".venv"
     base_python = sys.executable

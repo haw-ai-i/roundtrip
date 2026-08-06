@@ -1,0 +1,33 @@
+{
+  "env_path": "~/Desktop/coundetrip/swebench_envs/django__django-12155",
+  "target_rel": "django/contrib/admindocs/utils.py",
+  "target_rels": [
+    "django/contrib/admindocs/utils.py",
+    "django/contrib/admindocs/views.py"
+  ],
+  "source_basename": "utils.py",
+  "test_selection": [
+    "test_parse_rst_with_docstring_no_leading_line_feed (admin_docs.test_utils.TestUtils)",
+    "test_description_output (admin_docs.test_utils.TestUtils)",
+    "test_initial_header_level (admin_docs.test_utils.TestUtils)",
+    "test_parse_docstring (admin_docs.test_utils.TestUtils)",
+    "test_parse_rst (admin_docs.test_utils.TestUtils)",
+    "test_publish_parts (admin_docs.test_utils.TestUtils)",
+    "test_title_output (admin_docs.test_utils.TestUtils)"
+  ],
+  "oracle_files": [
+    "tests/admin_docs/test_utils.py"
+  ],
+  "fail_to_pass": [
+    "test_parse_rst_with_docstring_no_leading_line_feed (admin_docs.test_utils.TestUtils)"
+  ],
+  "pass_to_pass": [
+    "test_description_output (admin_docs.test_utils.TestUtils)",
+    "test_initial_header_level (admin_docs.test_utils.TestUtils)",
+    "test_parse_docstring (admin_docs.test_utils.TestUtils)",
+    "test_parse_rst (admin_docs.test_utils.TestUtils)",
+    "test_publish_parts (admin_docs.test_utils.TestUtils)",
+    "test_title_output (admin_docs.test_utils.TestUtils)"
+  ],
+  "runner": "django"
+}
