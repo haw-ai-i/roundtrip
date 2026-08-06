@@ -1,0 +1,11 @@
+name: swe_django_schema_12708
+test_command:
+  - python
+  - run_oracle.py
+source_paths:
+  - django/db/backends/base/schema.py
+scaffold_paths:
+  - scaffold
+test_paths:
+  - run_oracle.py
+  - oracle_env.json

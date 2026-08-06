@@ -1,0 +1,11 @@
+name: swe_django_defaultfilters_15863
+test_command:
+  - python
+  - run_oracle.py
+source_paths:
+  - django/template/defaultfilters.py
+scaffold_paths:
+  - scaffold
+test_paths:
+  - run_oracle.py
+  - oracle_env.json

@@ -1,0 +1,11 @@
+name: swe_sympy_vector_14711
+test_command:
+  - python
+  - run_oracle.py
+source_paths:
+  - sympy/physics/vector/vector.py
+scaffold_paths:
+  - scaffold
+test_paths:
+  - run_oracle.py
+  - oracle_env.json

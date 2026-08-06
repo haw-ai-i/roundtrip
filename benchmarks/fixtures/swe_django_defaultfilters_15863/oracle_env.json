@@ -1,0 +1,38 @@
+{
+  "env_path": "~/Desktop/coundetrip/swebench_envs/django__django-15863",
+  "target_rel": "django/template/defaultfilters.py",
+  "target_rels": [
+    "django/template/defaultfilters.py"
+  ],
+  "source_basename": "defaultfilters.py",
+  "test_selection": [
+    "test_inputs (template_tests.filter_tests.test_floatformat.FunctionTests)",
+    "test_floatformat01 (template_tests.filter_tests.test_floatformat.FloatformatTests)",
+    "test_floatformat02 (template_tests.filter_tests.test_floatformat.FloatformatTests)",
+    "test_float_dunder_method (template_tests.filter_tests.test_floatformat.FunctionTests)",
+    "test_force_grouping (template_tests.filter_tests.test_floatformat.FunctionTests)",
+    "test_infinity (template_tests.filter_tests.test_floatformat.FunctionTests)",
+    "#15789",
+    "test_negative_zero_values (template_tests.filter_tests.test_floatformat.FunctionTests)",
+    "test_unlocalize (template_tests.filter_tests.test_floatformat.FunctionTests)",
+    "test_zero_values (template_tests.filter_tests.test_floatformat.FunctionTests)"
+  ],
+  "oracle_files": [
+    "tests/template_tests/filter_tests/test_floatformat.py"
+  ],
+  "fail_to_pass": [
+    "test_inputs (template_tests.filter_tests.test_floatformat.FunctionTests)"
+  ],
+  "pass_to_pass": [
+    "test_floatformat01 (template_tests.filter_tests.test_floatformat.FloatformatTests)",
+    "test_floatformat02 (template_tests.filter_tests.test_floatformat.FloatformatTests)",
+    "test_float_dunder_method (template_tests.filter_tests.test_floatformat.FunctionTests)",
+    "test_force_grouping (template_tests.filter_tests.test_floatformat.FunctionTests)",
+    "test_infinity (template_tests.filter_tests.test_floatformat.FunctionTests)",
+    "#15789",
+    "test_negative_zero_values (template_tests.filter_tests.test_floatformat.FunctionTests)",
+    "test_unlocalize (template_tests.filter_tests.test_floatformat.FunctionTests)",
+    "test_zero_values (template_tests.filter_tests.test_floatformat.FunctionTests)"
+  ],
+  "runner": "django"
+}

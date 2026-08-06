@@ -1,0 +1,31 @@
+name: swe_sympy_basic_xdir_13091
+test_command:
+  - python
+  - run_oracle.py
+source_paths:
+  - sympy/core/basic.py
+  - sympy/core/exprtools.py
+  - sympy/core/numbers.py
+  - sympy/geometry/entity.py
+  - sympy/physics/optics/medium.py
+  - sympy/physics/vector/dyadic.py
+  - sympy/physics/vector/frame.py
+  - sympy/physics/vector/vector.py
+  - sympy/polys/agca/modules.py
+  - sympy/polys/domains/domain.py
+  - sympy/polys/domains/expressiondomain.py
+  - sympy/polys/domains/pythonrational.py
+  - sympy/polys/domains/quotientring.py
+  - sympy/polys/fields.py
+  - sympy/polys/monomials.py
+  - sympy/polys/polyclasses.py
+  - sympy/polys/polytools.py
+  - sympy/polys/rings.py
+  - sympy/polys/rootoftools.py
+  - sympy/tensor/array/ndim_array.py
+  - sympy/utilities/enumerative.py
+scaffold_paths:
+  - scaffold
+test_paths:
+  - run_oracle.py
+  - oracle_env.json

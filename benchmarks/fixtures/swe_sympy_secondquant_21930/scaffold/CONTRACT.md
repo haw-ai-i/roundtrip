@@ -1,0 +1,59 @@
+# Implementation target
+Write the module at `sympy/physics/secondquant.py`.
+
+## `sympy/physics/secondquant.py`
+Other modules import these names from it, so they MUST exist with these exact names:
+- `AnnihilateBoson`
+- `AnnihilateFermion`
+- `Annihilator`
+- `AntiSymmetricTensor`
+- `AppliesOnlyToSymbolicIndex`
+- `B`
+- `BBra`
+- `BKet`
+- `Bd`
+- `BosonState`
+- `BosonicBasis`
+- `BosonicOperator`
+- `Commutator`
+- `ContractionAppliesOnlyToFermions`
+- `CreateBoson`
+- `CreateFermion`
+- `Creator`
+- `Dagger`
+- `F`
+- `FBra`
+- `FKet`
+- `Fd`
+- `FermionState`
+- `FermionicOperator`
+- `FixedBosonicBasis`
+- `FockState`
+- `FockStateBosonBra`
+- `FockStateBosonKet`
+- `FockStateBra`
+- `FockStateFermionBra`
+- `FockStateFermionKet`
+- `FockStateKet`
+- `InnerProduct`
+- `KeyPrinter`
+- `NO`
+- `PermutationOperator`
+- `SecondQuantizationError`
+- `SqOperator`
+- `SubstitutionOfAmbigousOperatorFailed`
+- `TensorSymbol`
+- `VarBosonicBasis`
+- `ViolationOfPauliPrinciple`
+- `WicksTheoremDoesNotApply`
+- `_get_ordered_dummies`
+- `_sort_anticommuting_fermions`
+- `apply_operators`
+- `contraction`
+- `evaluate_deltas`
+- `matrix_rep`
+- `simplify_index_permutations`
+- `substitute_dummies`
+- `wicks`
+
+Implement them to satisfy the specification. Do not write tests.

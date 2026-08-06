@@ -1,0 +1,11 @@
+name: swe_sympy_perm_groups_19954
+test_command:
+  - python
+  - run_oracle.py
+source_paths:
+  - sympy/combinatorics/perm_groups.py
+scaffold_paths:
+  - scaffold
+test_paths:
+  - run_oracle.py
+  - oracle_env.json

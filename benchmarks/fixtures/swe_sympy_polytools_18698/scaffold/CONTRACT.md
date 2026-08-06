@@ -1,0 +1,67 @@
+# Implementation target
+Write the module at `sympy/polys/polytools.py`.
+
+## `sympy/polys/polytools.py`
+Other modules import these names from it, so they MUST exist with these exact names:
+- `GroebnerBasis`
+- `LC`
+- `LM`
+- `LT`
+- `Poly`
+- `PurePoly`
+- `_torational_factor_list`
+- `cancel`
+- `cofactors`
+- `compose`
+- `content`
+- `count_roots`
+- `decompose`
+- `degree`
+- `degree_list`
+- `discriminant`
+- `div`
+- `exquo`
+- `factor`
+- `factor_list`
+- `gcd`
+- `gcd_list`
+- `gcdex`
+- `gff`
+- `gff_list`
+- `groebner`
+- `ground_roots`
+- `half_gcdex`
+- `intervals`
+- `invert`
+- `is_zero_dimensional`
+- `lcm`
+- `lcm_list`
+- `monic`
+- `nroots`
+- `nth_power_roots_poly`
+- `parallel_poly_from_expr`
+- `pdiv`
+- `pexquo`
+- `poly`
+- `poly_from_expr`
+- `pquo`
+- `prem`
+- `primitive`
+- `quo`
+- `real_roots`
+- `reduced`
+- `refine_root`
+- `rem`
+- `resultant`
+- `sqf`
+- `sqf_list`
+- `sqf_norm`
+- `sqf_part`
+- `sturm`
+- `subresultants`
+- `terms_gcd`
+- `to_rational_coeffs`
+- `total_degree`
+- `trunc`
+
+Implement them to satisfy the specification. Do not write tests.

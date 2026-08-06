@@ -1,0 +1,11 @@
+name: swe_sympy_iterables_20154
+test_command:
+  - python
+  - run_oracle.py
+source_paths:
+  - sympy/utilities/iterables.py
+scaffold_paths:
+  - scaffold
+test_paths:
+  - run_oracle.py
+  - oracle_env.json

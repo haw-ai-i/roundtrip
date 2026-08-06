@@ -1,0 +1,34 @@
+{
+  "env_path": "~/Desktop/coundetrip/swebench_envs/django__django-11119",
+  "target_rel": "django/template/engine.py",
+  "target_rels": [
+    "django/template/engine.py"
+  ],
+  "source_basename": "engine.py",
+  "test_selection": [
+    "test_autoescape_off (template_tests.test_engine.RenderToStringTest)",
+    "test_cached_loader_priority (template_tests.test_engine.LoaderTests)",
+    "test_loader_priority (template_tests.test_engine.LoaderTests)",
+    "test_origin (template_tests.test_engine.LoaderTests)",
+    "test_basic_context (template_tests.test_engine.RenderToStringTest)",
+    "test_multiple_engines_configured (template_tests.test_engine.GetDefaultTests)",
+    "test_no_engines_configured (template_tests.test_engine.GetDefaultTests)",
+    "test_single_engine_configured (template_tests.test_engine.GetDefaultTests)"
+  ],
+  "oracle_files": [
+    "tests/template_tests/test_engine.py"
+  ],
+  "fail_to_pass": [
+    "test_autoescape_off (template_tests.test_engine.RenderToStringTest)"
+  ],
+  "pass_to_pass": [
+    "test_cached_loader_priority (template_tests.test_engine.LoaderTests)",
+    "test_loader_priority (template_tests.test_engine.LoaderTests)",
+    "test_origin (template_tests.test_engine.LoaderTests)",
+    "test_basic_context (template_tests.test_engine.RenderToStringTest)",
+    "test_multiple_engines_configured (template_tests.test_engine.GetDefaultTests)",
+    "test_no_engines_configured (template_tests.test_engine.GetDefaultTests)",
+    "test_single_engine_configured (template_tests.test_engine.GetDefaultTests)"
+  ],
+  "runner": "django"
+}

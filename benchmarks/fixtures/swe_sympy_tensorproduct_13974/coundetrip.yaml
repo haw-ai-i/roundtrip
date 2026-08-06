@@ -1,0 +1,11 @@
+name: swe_sympy_tensorproduct_13974
+test_command:
+  - python
+  - run_oracle.py
+source_paths:
+  - sympy/physics/quantum/tensorproduct.py
+scaffold_paths:
+  - scaffold
+test_paths:
+  - run_oracle.py
+  - oracle_env.json

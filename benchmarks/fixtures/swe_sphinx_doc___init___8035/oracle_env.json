@@ -1,0 +1,24 @@
+{
+  "env_path": "~/Desktop/coundetrip/swebench_envs/sphinx-doc__sphinx-8035",
+  "target_rel": "sphinx/ext/autodoc/__init__.py",
+  "target_rels": [
+    "sphinx/ext/autodoc/__init__.py"
+  ],
+  "source_basename": "__init__.py",
+  "test_selection": [
+    "tests/test_ext_autodoc_private_members.py::test_private_members",
+    "tests/test_ext_autodoc_private_members.py::test_private_field",
+    "tests/test_ext_autodoc_private_members.py::test_private_field_and_private_members"
+  ],
+  "oracle_files": [
+    "tests/test_ext_autodoc_private_members.py"
+  ],
+  "fail_to_pass": [
+    "tests/test_ext_autodoc_private_members.py::test_private_members"
+  ],
+  "pass_to_pass": [
+    "tests/test_ext_autodoc_private_members.py::test_private_field",
+    "tests/test_ext_autodoc_private_members.py::test_private_field_and_private_members"
+  ],
+  "runner": "pytest"
+}

@@ -1,0 +1,14 @@
+name: swe_django_operations_xdir_11138
+test_command:
+  - python
+  - run_oracle.py
+source_paths:
+  - django/db/backends/mysql/operations.py
+  - django/db/backends/oracle/operations.py
+  - django/db/backends/sqlite3/base.py
+  - django/db/backends/sqlite3/operations.py
+scaffold_paths:
+  - scaffold
+test_paths:
+  - run_oracle.py
+  - oracle_env.json

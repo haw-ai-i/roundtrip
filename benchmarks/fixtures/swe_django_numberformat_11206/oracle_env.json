@@ -1,0 +1,30 @@
+{
+  "env_path": "~/Desktop/coundetrip/swebench_envs/django__django-11206",
+  "target_rel": "django/utils/numberformat.py",
+  "target_rels": [
+    "django/utils/numberformat.py"
+  ],
+  "source_basename": "numberformat.py",
+  "test_selection": [
+    "test_decimal_numbers (utils_tests.test_numberformat.TestNumberFormat)",
+    "test_decimal_subclass (utils_tests.test_numberformat.TestNumberFormat)",
+    "test_float_numbers (utils_tests.test_numberformat.TestNumberFormat)",
+    "test_format_number (utils_tests.test_numberformat.TestNumberFormat)",
+    "test_format_string (utils_tests.test_numberformat.TestNumberFormat)",
+    "test_large_number (utils_tests.test_numberformat.TestNumberFormat)"
+  ],
+  "oracle_files": [
+    "tests/utils_tests/test_numberformat.py"
+  ],
+  "fail_to_pass": [
+    "test_decimal_numbers (utils_tests.test_numberformat.TestNumberFormat)",
+    "test_decimal_subclass (utils_tests.test_numberformat.TestNumberFormat)"
+  ],
+  "pass_to_pass": [
+    "test_float_numbers (utils_tests.test_numberformat.TestNumberFormat)",
+    "test_format_number (utils_tests.test_numberformat.TestNumberFormat)",
+    "test_format_string (utils_tests.test_numberformat.TestNumberFormat)",
+    "test_large_number (utils_tests.test_numberformat.TestNumberFormat)"
+  ],
+  "runner": "django"
+}

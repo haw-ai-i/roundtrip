@@ -1,0 +1,36 @@
+{
+  "env_path": "~/Desktop/coundetrip/swebench_envs/sympy__sympy-12489",
+  "target_rel": "sympy/combinatorics/permutations.py",
+  "target_rels": [
+    "sympy/combinatorics/permutations.py"
+  ],
+  "source_basename": "permutations.py",
+  "test_selection": [
+    "test_Permutation_subclassing",
+    "test_Permutation",
+    "test_josephus",
+    "test_ranking",
+    "test_mul",
+    "test_args",
+    "test_Cycle",
+    "test_from_sequence",
+    "test_printing_cyclic"
+  ],
+  "oracle_files": [
+    "sympy/combinatorics/tests/test_permutations.py"
+  ],
+  "fail_to_pass": [
+    "test_Permutation_subclassing"
+  ],
+  "pass_to_pass": [
+    "test_Permutation",
+    "test_josephus",
+    "test_ranking",
+    "test_mul",
+    "test_args",
+    "test_Cycle",
+    "test_from_sequence",
+    "test_printing_cyclic"
+  ],
+  "runner": "pytest"
+}

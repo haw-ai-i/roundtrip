@@ -1,0 +1,11 @@
+name: swe_django___init___13658
+test_command:
+  - python
+  - run_oracle.py
+source_paths:
+  - django/core/management/__init__.py
+scaffold_paths:
+  - scaffold
+test_paths:
+  - run_oracle.py
+  - oracle_env.json

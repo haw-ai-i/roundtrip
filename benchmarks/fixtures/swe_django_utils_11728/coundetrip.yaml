@@ -1,0 +1,11 @@
+name: swe_django_utils_11728
+test_command:
+  - python
+  - run_oracle.py
+source_paths:
+  - django/contrib/admindocs/utils.py
+scaffold_paths:
+  - scaffold
+test_paths:
+  - run_oracle.py
+  - oracle_env.json

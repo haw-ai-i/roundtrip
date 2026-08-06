@@ -1,0 +1,11 @@
+name: swe_django_related_descriptors_15957
+test_command:
+  - python
+  - run_oracle.py
+source_paths:
+  - django/db/models/fields/related_descriptors.py
+scaffold_paths:
+  - scaffold
+test_paths:
+  - run_oracle.py
+  - oracle_env.json

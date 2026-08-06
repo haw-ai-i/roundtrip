@@ -1,0 +1,11 @@
+name: swe_sphinx_doc___init___7910
+test_command:
+  - python
+  - run_oracle.py
+source_paths:
+  - sphinx/ext/napoleon/__init__.py
+scaffold_paths:
+  - scaffold
+test_paths:
+  - run_oracle.py
+  - oracle_env.json

@@ -1,0 +1,42 @@
+{
+  "env_path": "~/Desktop/coundetrip/swebench_envs/sympy__sympy-15809",
+  "target_rel": "sympy/functions/elementary/miscellaneous.py",
+  "target_rels": [
+    "sympy/functions/elementary/miscellaneous.py"
+  ],
+  "source_basename": "miscellaneous.py",
+  "test_selection": [
+    "test_Min",
+    "test_Max",
+    "test_minmax_assumptions",
+    "test_issue_8413",
+    "test_root",
+    "test_real_root",
+    "test_rewrite_MaxMin_as_Heaviside",
+    "test_rewrite_MaxMin_as_Piecewise",
+    "test_issue_11099",
+    "test_issue_12638",
+    "test_instantiation_evaluation",
+    "test_rewrite_as_Abs"
+  ],
+  "oracle_files": [
+    "sympy/functions/elementary/tests/test_miscellaneous.py"
+  ],
+  "fail_to_pass": [
+    "test_Min",
+    "test_Max"
+  ],
+  "pass_to_pass": [
+    "test_minmax_assumptions",
+    "test_issue_8413",
+    "test_root",
+    "test_real_root",
+    "test_rewrite_MaxMin_as_Heaviside",
+    "test_rewrite_MaxMin_as_Piecewise",
+    "test_issue_11099",
+    "test_issue_12638",
+    "test_instantiation_evaluation",
+    "test_rewrite_as_Abs"
+  ],
+  "runner": "pytest"
+}

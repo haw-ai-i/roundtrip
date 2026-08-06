@@ -1,0 +1,48 @@
+{
+  "env_path": "~/Desktop/coundetrip/swebench_envs/sympy__sympy-15017",
+  "target_rel": "sympy/tensor/array/dense_ndim_array.py",
+  "target_rels": [
+    "sympy/tensor/array/dense_ndim_array.py"
+  ],
+  "source_basename": "dense_ndim_array.py",
+  "test_selection": [
+    "test_ndim_array_initiation",
+    "test_reshape",
+    "test_iterator",
+    "test_sparse",
+    "test_calculation",
+    "test_ndim_array_converting",
+    "test_converting_functions",
+    "test_equality",
+    "test_arithmetic",
+    "test_higher_dimenions",
+    "test_rebuild_immutable_arrays",
+    "test_slices",
+    "test_diff_and_applyfunc",
+    "test_op_priority",
+    "test_symbolic_indexing"
+  ],
+  "oracle_files": [
+    "sympy/tensor/array/tests/test_immutable_ndim_array.py"
+  ],
+  "fail_to_pass": [
+    "test_ndim_array_initiation"
+  ],
+  "pass_to_pass": [
+    "test_reshape",
+    "test_iterator",
+    "test_sparse",
+    "test_calculation",
+    "test_ndim_array_converting",
+    "test_converting_functions",
+    "test_equality",
+    "test_arithmetic",
+    "test_higher_dimenions",
+    "test_rebuild_immutable_arrays",
+    "test_slices",
+    "test_diff_and_applyfunc",
+    "test_op_priority",
+    "test_symbolic_indexing"
+  ],
+  "runner": "pytest"
+}

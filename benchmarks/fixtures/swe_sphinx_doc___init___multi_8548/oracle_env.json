@@ -1,0 +1,32 @@
+{
+  "env_path": "~/Desktop/coundetrip/swebench_envs/sphinx-doc__sphinx-8548",
+  "target_rel": "sphinx/ext/autodoc/__init__.py",
+  "target_rels": [
+    "sphinx/ext/autodoc/__init__.py",
+    "sphinx/ext/autodoc/importer.py"
+  ],
+  "source_basename": "__init__.py",
+  "test_selection": [
+    "tests/test_ext_autodoc_autoclass.py::test_inherited_instance_variable",
+    "tests/test_ext_autodoc_autoclass.py::test_classes",
+    "tests/test_ext_autodoc_autoclass.py::test_instance_variable",
+    "tests/test_ext_autodoc_autoclass.py::test_decorators",
+    "tests/test_ext_autodoc_autoclass.py::test_slots_attribute",
+    "tests/test_ext_autodoc_autoclass.py::test_show_inheritance_for_subclass_of_generic_type"
+  ],
+  "oracle_files": [
+    "tests/roots/test-ext-autodoc/target/instance_variable.py",
+    "tests/test_ext_autodoc_autoclass.py"
+  ],
+  "fail_to_pass": [
+    "tests/test_ext_autodoc_autoclass.py::test_inherited_instance_variable"
+  ],
+  "pass_to_pass": [
+    "tests/test_ext_autodoc_autoclass.py::test_classes",
+    "tests/test_ext_autodoc_autoclass.py::test_instance_variable",
+    "tests/test_ext_autodoc_autoclass.py::test_decorators",
+    "tests/test_ext_autodoc_autoclass.py::test_slots_attribute",
+    "tests/test_ext_autodoc_autoclass.py::test_show_inheritance_for_subclass_of_generic_type"
+  ],
+  "runner": "pytest"
+}

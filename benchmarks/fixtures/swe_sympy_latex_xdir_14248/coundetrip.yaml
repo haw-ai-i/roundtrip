@@ -1,0 +1,13 @@
+name: swe_sympy_latex_xdir_14248
+test_command:
+  - python
+  - run_oracle.py
+source_paths:
+  - sympy/printing/latex.py
+  - sympy/printing/pretty/pretty.py
+  - sympy/printing/str.py
+scaffold_paths:
+  - scaffold
+test_paths:
+  - run_oracle.py
+  - oracle_env.json

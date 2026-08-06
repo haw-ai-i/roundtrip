@@ -1,0 +1,12 @@
+name: swe_sympy_matrices_xdir_13877
+test_command:
+  - python
+  - run_oracle.py
+source_paths:
+  - sympy/matrices/matrices.py
+  - sympy/utilities/randtest.py
+scaffold_paths:
+  - scaffold
+test_paths:
+  - run_oracle.py
+  - oracle_env.json

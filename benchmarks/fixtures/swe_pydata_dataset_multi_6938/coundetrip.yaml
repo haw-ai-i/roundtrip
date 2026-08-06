@@ -1,0 +1,12 @@
+name: swe_pydata_dataset_multi_6938
+test_command:
+  - python
+  - run_oracle.py
+source_paths:
+  - xarray/core/dataset.py
+  - xarray/core/variable.py
+scaffold_paths:
+  - scaffold
+test_paths:
+  - run_oracle.py
+  - oracle_env.json

@@ -1,0 +1,11 @@
+name: swe_django_apps_15127
+test_command:
+  - python
+  - run_oracle.py
+source_paths:
+  - django/contrib/messages/apps.py
+scaffold_paths:
+  - scaffold
+test_paths:
+  - run_oracle.py
+  - oracle_env.json

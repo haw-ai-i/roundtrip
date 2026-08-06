@@ -1,0 +1,24 @@
+{
+  "env_path": "~/Desktop/coundetrip/swebench_envs/sympy__sympy-23824",
+  "target_rel": "sympy/physics/hep/gamma_matrices.py",
+  "target_rels": [
+    "sympy/physics/hep/gamma_matrices.py"
+  ],
+  "source_basename": "gamma_matrices.py",
+  "test_selection": [
+    "test_kahane_simplify1",
+    "test_kahane_algorithm",
+    "test_gamma_matrix_class"
+  ],
+  "oracle_files": [
+    "sympy/physics/hep/tests/test_gamma_matrices.py"
+  ],
+  "fail_to_pass": [
+    "test_kahane_simplify1"
+  ],
+  "pass_to_pass": [
+    "test_kahane_algorithm",
+    "test_gamma_matrix_class"
+  ],
+  "runner": "pytest"
+}

@@ -1,0 +1,59 @@
+# Implementation target
+Write the module at `sympy/utilities/iterables.py`.
+
+## `sympy/utilities/iterables.py`
+Other modules import these names from it, so they MUST exist with these exact names:
+- `_partition`
+- `_set_partitions`
+- `binary_partitions`
+- `bracelets`
+- `capture`
+- `common_prefix`
+- `common_suffix`
+- `connected_components`
+- `dict_merge`
+- `filter_symbols`
+- `flatten`
+- `generate_bell`
+- `generate_derangements`
+- `generate_involutions`
+- `generate_oriented_forest`
+- `group`
+- `has_dups`
+- `has_variety`
+- `ibin`
+- `interactive_traversal`
+- `iproduct`
+- `is_palindromic`
+- `kbins`
+- `least_rotation`
+- `minlex`
+- `multiset`
+- `multiset_combinations`
+- `multiset_partitions`
+- `multiset_permutations`
+- `necklaces`
+- `numbered_symbols`
+- `ordered_partitions`
+- `partitions`
+- `permute_signs`
+- `postfixes`
+- `postorder_traversal`
+- `prefixes`
+- `reshape`
+- `rotate_left`
+- `rotate_right`
+- `rotations`
+- `roundrobin`
+- `runs`
+- `sift`
+- `signed_permutations`
+- `strongly_connected_components`
+- `subsets`
+- `take`
+- `topological_sort`
+- `unflatten`
+- `uniq`
+- `variations`
+
+Implement them to satisfy the specification. Do not write tests.

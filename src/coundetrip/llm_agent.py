@@ -174,6 +174,60 @@ _REGENERATE_SYSTEM = (
 _BLOCK_RE = re.compile(r"^=== (.+?) ===$", re.MULTILINE)
 
 
+class OpenAIClient:
+    """Client for any OpenAI-compatible endpoint (local vLLM or llama.cpp).
+    Used for open-weight models such as Qwen. Qwen3 may wrap output in
+    <think>...</think>; the wrapper is stripped so describe/regenerate see clean
+    text. temperature=0 for determinism. A client may be injected for testing.
+    """
+
+    def __init__(self, *, model="qwen3-8b", base_url=None, api_key=None,
+                 temperature=0.0, max_retries=5, client=None):
+        if client is None:
+            from openai import OpenAI
+            base_url = base_url or os.environ.get(
+                "COUNDETRIP_OPENAI_BASE", "http://localhost:8113/v1")
+            client = OpenAI(base_url=base_url, api_key=api_key or "local")
+        self._client = client
+        self._model = model
+        self._temperature = temperature
+        self._max_retries = max_retries
+        self.usage = None
+
+    @staticmethod
+    def _strip_think(text):
+        import re
+        return re.sub(r"^\s*<think>.*?</think>\s*", "", text, flags=re.DOTALL)
+
+    def complete(self, *, system: str, user: str) -> str:
+        import time
+        system = f"/no_think\n{system}"
+        last = None
+        for attempt in range(self._max_retries):
+            try:
+                resp = self._client.chat.completions.create(
+                    model=self._model,
+                    temperature=self._temperature,
+                    messages=[
+                        {"role": "system", "content": system},
+                        {"role": "user", "content": user},
+                    ],
+                )
+                u = getattr(resp, "usage", None)
+                if u is not None:
+                    self.usage = {
+                        "prompt_tokens": getattr(u, "prompt_tokens", None),
+                        "completion_tokens": getattr(u, "completion_tokens", None),
+                    }
+                return self._strip_think(resp.choices[0].message.content or "")
+            except Exception as exc:
+                last = exc
+                if not _is_retryable(exc) or attempt == self._max_retries - 1:
+                    raise
+                time.sleep(2 ** attempt)
+        raise last
+
+
 def _strip_code_fences(text: str) -> str:
     """Remove markdown code fences a model may wrap around a file body.
     A leading ```lang line and a trailing ``` line are dropped; content is unchanged
@@ -225,6 +279,73 @@ def _render_files(files: dict[str, str]) -> str:
     return "\n".join(f"=== {path} ===\n{content}" for path, content in files.items())
 
 
+def ast_describe(sources: dict[str, str]) -> str:
+    """Deterministic, zero-cost description baseline: emit each public
+    function and class as its signature plus docstring, no model call.
+
+    Tests how much roundtrip fidelity comes from the interface alone versus
+    from a model-written behavioural description.
+    """
+    import ast
+
+    def fmt_args(a: ast.arguments) -> str:
+        parts = []
+        posonly = getattr(a, "posonlyargs", [])
+        for arg in posonly + a.args:
+            t = f": {ast.unparse(arg.annotation)}" if arg.annotation else ""
+            parts.append(arg.arg + t)
+        if posonly:
+            parts.insert(len(posonly), "/")
+        if a.vararg:
+            parts.append("*" + a.vararg.arg)
+        elif a.kwonlyargs:
+            parts.append("*")
+        for arg in a.kwonlyargs:
+            t = f": {ast.unparse(arg.annotation)}" if arg.annotation else ""
+            parts.append(arg.arg + t)
+        if a.kwarg:
+            parts.append("**" + a.kwarg.arg)
+        return ", ".join(parts)
+
+    def describe_func(node, indent="") -> list[str]:
+        prefix = "async def" if isinstance(node, ast.AsyncFunctionDef) else "def"
+        ret = f" -> {ast.unparse(node.returns)}" if node.returns else ""
+        lines = [f"{indent}{prefix} {node.name}({fmt_args(node.args)}){ret}:"]
+        doc = ast.get_docstring(node)
+        if doc:
+            lines.append(f'{indent}    """{doc.strip()}"""')
+        return lines
+
+    out = []
+    for rel, code in sources.items():
+        out.append(f"# File: {rel}")
+        try:
+            tree = ast.parse(code)
+        except SyntaxError:
+            out.append("# (unparseable)")
+            continue
+        for node in tree.body:
+            if isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef)):
+                if node.name.startswith("_"):
+                    continue
+                out += describe_func(node)
+            elif isinstance(node, ast.ClassDef):
+                if node.name.startswith("_"):
+                    continue
+                bases = ", ".join(ast.unparse(b) for b in node.bases)
+                out.append(f"class {node.name}({bases}):" if bases else f"class {node.name}:")
+                cdoc = ast.get_docstring(node)
+                if cdoc:
+                    out.append(f'    """{cdoc.strip()}"""')
+                for sub in node.body:
+                    if isinstance(sub, (ast.FunctionDef, ast.AsyncFunctionDef)) and not (
+                        sub.name.startswith("_") and sub.name != "__init__"
+                    ):
+                        out += describe_func(sub, indent="    ")
+        out.append("")
+    return "\n".join(out)
+
+
 def describe(client: LLMClient) -> int:
     fixture = Path(os.environ["COUNDETRIP_FIXTURE"])
     out = Path(os.environ["COUNDETRIP_DESCRIPTION"])
@@ -233,9 +354,12 @@ def describe(client: LLMClient) -> int:
         str(p.relative_to(fixture)): p.read_text(encoding="utf-8")
         for p in list_source_files(manifest)
     }
-    user = "Source files:\n\n" + _render_files(sources)
-    _describe_sys = os.environ.get("COUNDETRIP_DESCRIBE_PROMPT", _DESCRIBE_SYSTEM)
-    description = client.complete(system=_describe_sys, user=user)
+    if os.environ.get("COUNDETRIP_DESCRIBER", "").lower() == "ast":
+        description = ast_describe(sources)
+    else:
+        user = "Source files:\n\n" + _render_files(sources)
+        _describe_sys = os.environ.get("COUNDETRIP_DESCRIBE_PROMPT", _DESCRIBE_SYSTEM)
+        description = client.complete(system=_describe_sys, user=user)
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(description, encoding="utf-8")
     return 0
@@ -271,6 +395,10 @@ def _build_client() -> LLMClient:
     replay = os.environ.get("COUNDETRIP_REPLAY_DIR")
     if replay:
         return ReplayClient(Path(replay))
+    if os.environ.get("COUNDETRIP_LLM", "").lower() == "openai":
+        model = os.environ.get("COUNDETRIP_MODEL", "qwen3-8b")
+        temperature = float(os.environ.get("COUNDETRIP_TEMPERATURE", "0.0"))
+        return OpenAIClient(model=model, temperature=temperature)
     if os.environ.get("GEMINI_API_KEY"):
         model = os.environ.get("COUNDETRIP_MODEL", "gemini-3.5-flash")
         temperature = float(os.environ.get("COUNDETRIP_TEMPERATURE", "0.0"))

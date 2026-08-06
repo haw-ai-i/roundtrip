@@ -1,0 +1,12 @@
+name: swe_pytest_dev_python_multi_8399
+test_command:
+  - python
+  - run_oracle.py
+source_paths:
+  - src/_pytest/python.py
+  - src/_pytest/unittest.py
+scaffold_paths:
+  - scaffold
+test_paths:
+  - run_oracle.py
+  - oracle_env.json

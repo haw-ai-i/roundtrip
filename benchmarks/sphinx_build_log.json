@@ -1,0 +1,32 @@
+[
+ {
+  "id": "sphinx-doc__sphinx-9711",
+  "ok": true,
+  "note": "verified after per-repo pins; oracle 1/1 passes"
+ },
+ {
+  "id": "sphinx-doc__sphinx-9698",
+  "ok": true,
+  "note": "baseline exit 0 with recipe"
+ },
+ {
+  "id": "sphinx-doc__sphinx-9602",
+  "ok": true,
+  "note": "baseline exit 0 with recipe"
+ },
+ {
+  "id": "sphinx-doc__sphinx-9673",
+  "ok": true,
+  "note": "rescuable with scoped oracle: F2P test passes 1/1 on gold; 5 neighbor tests fail from 3.14 typing-repr drift; score the instance F2P+P2P selection per SWE-bench definition"
+ },
+ {
+  "id": "sphinx-doc__sphinx-9658",
+  "ok": false,
+  "note": "excluded: 3.14 typing-repr drift breaks 6 assertions in the target module's own oracle tests"
+ },
+ {
+  "id": "sphinx-doc__sphinx-9367",
+  "ok": false,
+  "note": "excluded: era wall - sphinx 4.3 imports Union from types, removed in 3.14; conftest cannot load"
+ }
+]

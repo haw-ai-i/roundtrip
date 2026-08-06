@@ -1,0 +1,22 @@
+{
+  "env_path": "~/Desktop/coundetrip/swebench_envs/sympy__sympy-24443",
+  "target_rel": "sympy/combinatorics/homomorphisms.py",
+  "target_rels": [
+    "sympy/combinatorics/homomorphisms.py"
+  ],
+  "source_basename": "homomorphisms.py",
+  "test_selection": [
+    "test_homomorphism",
+    "test_isomorphisms"
+  ],
+  "oracle_files": [
+    "sympy/combinatorics/tests/test_homomorphisms.py"
+  ],
+  "fail_to_pass": [
+    "test_homomorphism"
+  ],
+  "pass_to_pass": [
+    "test_isomorphisms"
+  ],
+  "runner": "pytest"
+}

@@ -1,0 +1,12 @@
+name: swe_django_validators_xdir_13212
+test_command:
+  - python
+  - run_oracle.py
+source_paths:
+  - django/core/validators.py
+  - django/forms/fields.py
+scaffold_paths:
+  - scaffold
+test_paths:
+  - run_oracle.py
+  - oracle_env.json

@@ -1,0 +1,28 @@
+{
+  "env_path": "~/Desktop/coundetrip/swebench_envs/sympy__sympy-23950",
+  "target_rel": "sympy/sets/contains.py",
+  "target_rels": [
+    "sympy/sets/contains.py"
+  ],
+  "source_basename": "contains.py",
+  "test_selection": [
+    "test_as_set",
+    "test_contains_basic",
+    "test_issue_6194",
+    "test_issue_10326",
+    "test_binary_symbols"
+  ],
+  "oracle_files": [
+    "sympy/sets/tests/test_contains.py"
+  ],
+  "fail_to_pass": [
+    "test_as_set"
+  ],
+  "pass_to_pass": [
+    "test_contains_basic",
+    "test_issue_6194",
+    "test_issue_10326",
+    "test_binary_symbols"
+  ],
+  "runner": "pytest"
+}

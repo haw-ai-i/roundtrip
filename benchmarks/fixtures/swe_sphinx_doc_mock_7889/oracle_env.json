@@ -1,0 +1,30 @@
+{
+  "env_path": "~/Desktop/coundetrip/swebench_envs/sphinx-doc__sphinx-7889",
+  "target_rel": "sphinx/ext/autodoc/mock.py",
+  "target_rels": [
+    "sphinx/ext/autodoc/mock.py"
+  ],
+  "source_basename": "mock.py",
+  "test_selection": [
+    "tests/test_ext_autodoc_mock.py::test_MockObject",
+    "tests/test_ext_autodoc_mock.py::test_MockModule",
+    "tests/test_ext_autodoc_mock.py::test_mock",
+    "tests/test_ext_autodoc_mock.py::test_mock_does_not_follow_upper_modules",
+    "tests/test_ext_autodoc_mock.py::test_abc_MockObject",
+    "tests/test_ext_autodoc_mock.py::test_mock_decorator"
+  ],
+  "oracle_files": [
+    "tests/test_ext_autodoc_mock.py"
+  ],
+  "fail_to_pass": [
+    "tests/test_ext_autodoc_mock.py::test_MockObject"
+  ],
+  "pass_to_pass": [
+    "tests/test_ext_autodoc_mock.py::test_MockModule",
+    "tests/test_ext_autodoc_mock.py::test_mock",
+    "tests/test_ext_autodoc_mock.py::test_mock_does_not_follow_upper_modules",
+    "tests/test_ext_autodoc_mock.py::test_abc_MockObject",
+    "tests/test_ext_autodoc_mock.py::test_mock_decorator"
+  ],
+  "runner": "pytest"
+}

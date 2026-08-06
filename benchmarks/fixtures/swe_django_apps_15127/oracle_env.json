@@ -1,0 +1,23 @@
+{
+  "env_path": "~/Desktop/coundetrip/swebench_envs/django__django-15127",
+  "target_rel": "django/contrib/messages/apps.py",
+  "target_rels": [
+    "django/contrib/messages/apps.py"
+  ],
+  "source_basename": "apps.py",
+  "test_selection": [
+    "test_override_settings_level_tags (messages_tests.tests.TestLevelTags)",
+    "test_eq (messages_tests.tests.MessageTests)"
+  ],
+  "oracle_files": [
+    "tests/messages_tests/base.py",
+    "tests/messages_tests/tests.py"
+  ],
+  "fail_to_pass": [
+    "test_override_settings_level_tags (messages_tests.tests.TestLevelTags)"
+  ],
+  "pass_to_pass": [
+    "test_eq (messages_tests.tests.MessageTests)"
+  ],
+  "runner": "django"
+}

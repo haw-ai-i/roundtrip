@@ -1,0 +1,38 @@
+{
+  "env_path": "~/Desktop/coundetrip/swebench_envs/sympy__sympy-13031",
+  "target_rel": "sympy/matrices/sparse.py",
+  "target_rels": [
+    "sympy/matrices/sparse.py"
+  ],
+  "source_basename": "sparse.py",
+  "test_selection": [
+    "test_sparse_matrix",
+    "test_transpose",
+    "test_trace",
+    "test_CL_RL",
+    "test_add",
+    "test_errors",
+    "test_len",
+    "test_sparse_zeros_sparse_eye",
+    "test_copyin",
+    "test_sparse_solve"
+  ],
+  "oracle_files": [
+    "sympy/matrices/tests/test_sparse.py"
+  ],
+  "fail_to_pass": [
+    "test_sparse_matrix"
+  ],
+  "pass_to_pass": [
+    "test_transpose",
+    "test_trace",
+    "test_CL_RL",
+    "test_add",
+    "test_errors",
+    "test_len",
+    "test_sparse_zeros_sparse_eye",
+    "test_copyin",
+    "test_sparse_solve"
+  ],
+  "runner": "pytest"
+}

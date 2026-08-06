@@ -1,0 +1,13 @@
+name: swe_sphinx_doc_c_xdir_7590
+test_command:
+  - python
+  - run_oracle.py
+source_paths:
+  - sphinx/domains/c.py
+  - sphinx/domains/cpp.py
+  - sphinx/util/cfamily.py
+scaffold_paths:
+  - scaffold
+test_paths:
+  - run_oracle.py
+  - oracle_env.json

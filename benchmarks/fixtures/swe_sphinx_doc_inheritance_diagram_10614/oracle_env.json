@@ -1,0 +1,33 @@
+{
+  "env_path": "~/Desktop/coundetrip/swebench_envs/sphinx-doc__sphinx-10614",
+  "target_rel": "sphinx/ext/inheritance_diagram.py",
+  "target_rels": [
+    "sphinx/ext/inheritance_diagram.py"
+  ],
+  "source_basename": "inheritance_diagram.py",
+  "test_selection": [
+    "tests/test_ext_inheritance_diagram.py::test_inheritance_diagram_svg_html",
+    "tests/test_ext_inheritance_diagram.py::test_inheritance_diagram",
+    "tests/test_ext_inheritance_diagram.py::test_inheritance_diagram_png_html",
+    "tests/test_ext_inheritance_diagram.py::test_inheritance_diagram_latex",
+    "tests/test_ext_inheritance_diagram.py::test_inheritance_diagram_latex_alias",
+    "tests/test_ext_inheritance_diagram.py::test_import_classes"
+  ],
+  "oracle_files": [
+    "tests/roots/test-ext-inheritance_diagram/conf.py",
+    "tests/roots/test-ext-inheritance_diagram/subdir/other.py",
+    "tests/roots/test-ext-inheritance_diagram/test.py",
+    "tests/test_ext_inheritance_diagram.py"
+  ],
+  "fail_to_pass": [
+    "tests/test_ext_inheritance_diagram.py::test_inheritance_diagram_svg_html"
+  ],
+  "pass_to_pass": [
+    "tests/test_ext_inheritance_diagram.py::test_inheritance_diagram",
+    "tests/test_ext_inheritance_diagram.py::test_inheritance_diagram_png_html",
+    "tests/test_ext_inheritance_diagram.py::test_inheritance_diagram_latex",
+    "tests/test_ext_inheritance_diagram.py::test_inheritance_diagram_latex_alias",
+    "tests/test_ext_inheritance_diagram.py::test_import_classes"
+  ],
+  "runner": "pytest"
+}
