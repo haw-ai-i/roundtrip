@@ -134,9 +134,17 @@ def main() -> int:
         run(["git", "fetch", "--quiet", "--depth", "1", "origin", r["base_commit"]], cwd=target)
         run(["git", "checkout", "--quiet", "FETCH_HEAD"], cwd=target)
     except Exception:
-        shutil.rmtree(target)
-        run(["git", "clone", "--quiet", "--filter=blob:none", url, str(target)])
-        run(["git", "checkout", "--quiet", r["base_commit"]], cwd=target)
+        # Some commits can't be fetched at depth 1. Try a blobless fetch of the
+        # commit (fast: no file history, just the tree we need) before any full clone.
+        try:
+            run(["git", "fetch", "--quiet", "--filter=blob:none", "origin", r["base_commit"]], cwd=target)
+            run(["git", "checkout", "--quiet", "FETCH_HEAD"], cwd=target)
+        except Exception as e2:
+            print(f">> partial fetch failed ({e2}); full blobless clone", file=sys.stderr)
+            shutil.rmtree(target)
+            target.mkdir(parents=True, exist_ok=True)
+            run(["git", "clone", "--quiet", "--filter=blob:none", url, str(target)])
+            run(["git", "checkout", "--quiet", r["base_commit"]], cwd=target)
 
     venv = target / ".venv"
     base_python = sys.executable
