@@ -73,7 +73,7 @@ def main():
             skipped.append((iid, "not in Verified")); continue
         src = [f for f in FILE_RE.findall(r["patch"])
                if "/test" not in f and not f.startswith("test")]
-        if not 1 <= len(src) <= 5:
+        if not 1 <= len(src) <= 25:  # raised from 5 per Igor's request to include >5-file refactors
             skipped.append((iid, f"{len(src)} source files")); continue
         cross_dir = len({f.rsplit("/", 1)[0] for f in src}) > 1
         targets = [(rel, env / rel) for rel in src]

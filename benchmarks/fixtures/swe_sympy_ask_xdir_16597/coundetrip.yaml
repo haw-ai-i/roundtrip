@@ -1,0 +1,16 @@
+name: swe_sympy_ask_xdir_16597
+test_command:
+  - python
+  - run_oracle.py
+source_paths:
+  - sympy/assumptions/ask.py
+  - sympy/assumptions/ask_generated.py
+  - sympy/core/assumptions.py
+  - sympy/core/power.py
+  - sympy/printing/tree.py
+  - sympy/tensor/indexed.py
+scaffold_paths:
+  - scaffold
+test_paths:
+  - run_oracle.py
+  - oracle_env.json
