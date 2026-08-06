@@ -1,0 +1,11 @@
+name: swe_django_autodetector_11740
+test_command:
+  - python
+  - run_oracle.py
+source_paths:
+  - django/db/migrations/autodetector.py
+scaffold_paths:
+  - scaffold
+test_paths:
+  - run_oracle.py
+  - oracle_env.json

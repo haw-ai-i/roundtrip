@@ -1,0 +1,19 @@
+{
+  "env_path": "~/Desktop/coundetrip/swebench_envs/django__django-12419",
+  "target_rel": "django/conf/global_settings.py",
+  "target_rels": [
+    "django/conf/global_settings.py"
+  ],
+  "source_basename": "global_settings.py",
+  "test_selection": [
+    "test_middleware_headers (project_template.test_settings.TestStartProjectSettings)"
+  ],
+  "oracle_files": [
+    "tests/project_template/test_settings.py"
+  ],
+  "fail_to_pass": [
+    "test_middleware_headers (project_template.test_settings.TestStartProjectSettings)"
+  ],
+  "pass_to_pass": [],
+  "runner": "django"
+}

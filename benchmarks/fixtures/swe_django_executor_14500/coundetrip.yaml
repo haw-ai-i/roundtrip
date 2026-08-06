@@ -1,0 +1,11 @@
+name: swe_django_executor_14500
+test_command:
+  - python
+  - run_oracle.py
+source_paths:
+  - django/db/migrations/executor.py
+scaffold_paths:
+  - scaffold
+test_paths:
+  - run_oracle.py
+  - oracle_env.json

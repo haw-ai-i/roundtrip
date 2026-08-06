@@ -9,6 +9,146 @@
   "swe_django_validators_11099",
   "swe_django_engine_11119",
   "swe_django_response_11133",
+  "swe_django_models_11163",
+  "swe_django_deletion_11179",
+  "swe_django_numberformat_11206",
+  "swe_django___init___11211",
+  "swe_django_client_11239",
+  "swe_django_query_11265",
+  "swe_django_query_11299",
+  "swe_django_models_11433",
+  "swe_django_backends_11451",
+  "swe_django_resolvers_11477",
+  "swe_django_compiler_11490",
+  "swe_django_checks_11551",
+  "swe_django_compiler_11555",
+  "swe_django_aggregates_11603",
+  "swe_django_utils_11728",
+  "swe_django_autodetector_11740",
+  "swe_django_forms_11790",
+  "swe_django_serializer_11815",
+  "swe_django_base_11820",
+  "swe_django_http_11848",
+  "swe_django_fields_11880",
+  "swe_django_query_11951",
+  "swe_django_enums_11964",
+  "swe_django___init___11999",
+  "swe_django_ddl_references_12039",
+  "swe_django_query_12050",
+  "swe_django_serializer_12125",
+  "swe_django_options_12143",
+  "swe_django_widgets_12193",
+  "swe_django_library_12262",
+  "swe_django_base_12273",
+  "swe_django_widgets_12276",
+  "swe_django_enums_12304",
+  "swe_django_utils_12308",
+  "swe_django_global_settings_12419",
+  "swe_django_query_12663",
+  "swe_django_schema_12708",
+  "swe_django_options_12713",
+  "swe_django_autodetector_12754",
+  "swe_django_query_12774",
+  "swe_django_base_12858",
+  "swe_django_compiler_12965",
+  "swe_django_expressions_13012",
+  "swe_django___init___13023",
+  "swe_django_query_13028",
+  "swe_django_compiler_13033",
+  "swe_django_db_13089",
+  "swe_django_related_13109",
+  "swe_django_related_13112",
+  "swe_django_expressions_13128",
+  "swe_django_query_13158",
+  "swe_django_base_13279",
+  "swe_django_base_13297",
+  "swe_django_models_13315",
+  "swe_django_files_13343",
+  "swe_django_json_13346",
+  "swe_django_datetime_13363",
+  "swe_django_query_13406",
+  "swe_django_locks_13410",
+  "swe_django_query_13417",
+  "swe_django_expressions_13449",
+  "swe_django_debug_13513",
+  "swe_django_checks_13568",
+  "swe_django_query_13590",
+  "swe_django___init___13658",
+  "swe_django_dateformat_13670",
+  "swe_django_forms_13741",
+  "swe_django_models_13786",
+  "swe_django_functional_13794",
+  "swe_django_base_13807",
+  "swe_django_runserver_13809",
+  "swe_django_base_13810",
+  "swe_django_loader_13820",
+  "swe_django_base_13821",
+  "swe_django_autoreload_13837",
+  "swe_django_base_13925",
+  "swe_django_models_13933",
+  "swe_django_base_13964",
+  "swe_django_compiler_14007",
+  "swe_django_query_utils_14017",
+  "swe_django_boundfield_14034",
+  "swe_django_datastructures_14089",
+  "swe_django_compiler_14122",
+  "swe_django_query_utils_14140",
+  "swe_django_resolvers_14155",
+  "swe_django___init___14238",
+  "swe_django_autoreload_14311",
+  "swe_django_validators_14349",
+  "swe_django_lookups_14351",
+  "swe_django_dateformat_14373",
+  "swe_django_sites_14404",
+  "swe_django_schema_14434",
+  "swe_django_storage_14493",
+  "swe_django_executor_14500",
+  "swe_django_html_14539",
+  "swe_django_query_14559",
+  "swe_django_serializer_14580",
+  "swe_django_models_14725",
+  "swe_django_autocomplete_14752",
+  "swe_django_state_14765",
+  "swe_django_autoreload_14771",
+  "swe_django_helpers_14855",
+  "swe_django_models_14915",
+  "swe_django_models_14999",
+  "swe_django_inspectdb_15037",
+  "swe_django_trans_real_15098",
+  "swe_django_autodetector_15104",
+  "swe_django_apps_15127",
+  "swe_django_query_15128",
+  "swe_django_expressions_15161",
+  "swe_django_schema_15278",
+  "swe_django___init___15315",
+  "swe_django_query_15368",
+  "swe_django_aggregates_15375",
+  "swe_django_autodetector_15380",
+  "swe_django_expressions_15382",
+  "swe_django_options_15467",
+  "swe_django_models_15499",
+  "swe_django_json_15503",
+  "swe_django_query_15554",
+  "swe_django_query_utils_15569",
+  "swe_django_autoreload_15572",
+  "swe_django_models_15695",
+  "swe_django_manager_15731",
+  "swe_django_schema_15732",
+  "swe_django_formats_15741",
+  "swe_django_query_15814",
+  "swe_django_client_15851",
+  "swe_django_defaultfilters_15863",
+  "swe_django_models_15916",
+  "swe_django_expressions_15930",
+  "swe_django_related_descriptors_15957",
+  "swe_django_autodetector_15973",
+  "swe_django_expressions_16082",
+  "swe_django_options_16100",
+  "swe_django_base_16136",
+  "swe_django_forms_16139",
+  "swe_django_runserver_16145",
+  "swe_django___init___16255",
+  "swe_django_forms_16333",
   "swe_pydata_variable_2905",
   "swe_pydata_indexing_multi_3095",
   "swe_pydata_combine_3151",
@@ -172,20 +312,204 @@
    "reason": "self-check exit 2: run_oracle: some FAIL_TO_PASS entries are docstrings, not labels; cannot verify"
   },
   {
+   "id": "django__django-11276",
+   "reason": "self-check exit 2: run_oracle: some FAIL_TO_PASS entries are docstrings, not labels; cannot verify"
+  },
+  {
+   "id": "django__django-11292",
+   "reason": "self-check exit 1: System check identified no issues (0 silenced)."
+  },
+  {
+   "id": "django__django-11749",
+   "reason": "self-check exit 1: System check identified no issues (0 silenced)."
+  },
+  {
+   "id": "django__django-12209",
+   "reason": "self-check exit 2: run_oracle: some FAIL_TO_PASS entries are docstrings, not labels; cannot verify"
+  },
+  {
+   "id": "django__django-13401",
+   "reason": "self-check exit 2: run_oracle: some FAIL_TO_PASS entries are docstrings, not labels; cannot verify"
+  },
+  {
+   "id": "django__django-13516",
+   "reason": "self-check exit 1: System check identified no issues (0 silenced)."
+  },
+  {
+   "id": "django__django-13551",
+   "reason": "self-check exit 2: run_oracle: some FAIL_TO_PASS entries are docstrings, not labels; cannot verify"
+  },
+  {
+   "id": "django__django-13569",
+   "reason": "self-check exit 2: run_oracle: some FAIL_TO_PASS entries are docstrings, not labels; cannot verify"
+  },
+  {
+   "id": "django__django-14053",
+   "reason": "self-check exit 2: run_oracle: some FAIL_TO_PASS entries are docstrings, not labels; cannot verify"
+  },
+  {
+   "id": "django__django-14534",
+   "reason": "self-check exit 2: run_oracle: some FAIL_TO_PASS entries are docstrings, not labels; cannot verify"
+  },
+  {
+   "id": "django__django-14608",
+   "reason": "self-check exit 2: run_oracle: some FAIL_TO_PASS entries are docstrings, not labels; cannot verify"
+  },
+  {
+   "id": "django__django-14672",
+   "reason": "self-check exit 2: run_oracle: some FAIL_TO_PASS entries are docstrings, not labels; cannot verify"
+  },
+  {
+   "id": "django__django-14787",
+   "reason": "self-check exit 2: run_oracle: some FAIL_TO_PASS entries are docstrings, not labels; cannot verify"
+  },
+  {
+   "id": "django__django-14792",
+   "reason": "self-check exit 2: run_oracle: some FAIL_TO_PASS entries are docstrings, not labels; cannot verify"
+  },
+  {
+   "id": "django__django-15022",
+   "reason": "self-check exit 2: run_oracle: some FAIL_TO_PASS entries are docstrings, not labels; cannot verify"
+  },
+  {
+   "id": "django__django-15252",
+   "reason": "self-check exit 2: run_oracle: some FAIL_TO_PASS entries are docstrings, not labels; cannot verify"
+  },
+  {
+   "id": "django__django-15268",
+   "reason": "self-check exit 2: run_oracle: some FAIL_TO_PASS entries are docstrings, not labels; cannot verify"
+  },
+  {
+   "id": "django__django-15277",
+   "reason": "self-check exit 2: run_oracle: some FAIL_TO_PASS entries are docstrings, not labels; cannot verify"
+  },
+  {
+   "id": "django__django-15280",
+   "reason": "self-check exit 2: run_oracle: some FAIL_TO_PASS entries are docstrings, not labels; cannot verify"
+  },
+  {
+   "id": "django__django-15525",
+   "reason": "self-check exit 2: run_oracle: some FAIL_TO_PASS entries are docstrings, not labels; cannot verify"
+  },
+  {
+   "id": "django__django-15987",
+   "reason": "self-check exit 2: run_oracle: some FAIL_TO_PASS entries are docstrings, not labels; cannot verify"
+  },
+  {
+   "id": "django__django-16116",
+   "reason": "self-check exit 2: run_oracle: some FAIL_TO_PASS entries are docstrings, not labels; cannot verify"
+  },
+  {
+   "id": "django__django-16429",
+   "reason": "self-check exit 2: run_oracle: some FAIL_TO_PASS entries are docstrings, not labels; cannot verify"
+  },
+  {
+   "id": "django__django-16454",
+   "reason": "self-check exit 1: RuntimeError: Django module not found, reference tests/README.rst for instructions."
+  },
+  {
+   "id": "django__django-16485",
+   "reason": "self-check exit 1: RuntimeError: Django module not found, reference tests/README.rst for instructions."
+  },
+  {
+   "id": "django__django-16493",
+   "reason": "self-check exit 2: run_oracle: some FAIL_TO_PASS entries are docstrings, not labels; cannot verify"
+  },
+  {
+   "id": "django__django-16502",
+   "reason": "self-check exit 1: RuntimeError: Django module not found, reference tests/README.rst for instructions."
+  },
+  {
+   "id": "django__django-16527",
+   "reason": "self-check exit 1: RuntimeError: Django module not found, reference tests/README.rst for instructions."
+  },
+  {
+   "id": "django__django-16569",
+   "reason": "self-check exit 1: RuntimeError: Django module not found, reference tests/README.rst for instructions."
+  },
+  {
+   "id": "django__django-16595",
+   "reason": "self-check exit 1: RuntimeError: Django module not found, reference tests/README.rst for instructions."
+  },
+  {
+   "id": "django__django-16612",
+   "reason": "self-check exit 1: RuntimeError: Django module not found, reference tests/README.rst for instructions."
+  },
+  {
+   "id": "django__django-16642",
+   "reason": "self-check exit 2: run_oracle: some FAIL_TO_PASS entries are docstrings, not labels; cannot verify"
+  },
+  {
+   "id": "django__django-16661",
+   "reason": "self-check exit 1: RuntimeError: Django module not found, reference tests/README.rst for instructions."
+  },
+  {
+   "id": "django__django-16662",
+   "reason": "self-check exit 2: run_oracle: some FAIL_TO_PASS entries are docstrings, not labels; cannot verify"
+  },
+  {
+   "id": "django__django-16667",
+   "reason": "self-check exit 1: RuntimeError: Django module not found, reference tests/README.rst for instructions."
+  },
+  {
+   "id": "django__django-16801",
+   "reason": "self-check exit 1: RuntimeError: Django module not found, reference tests/README.rst for instructions."
+  },
+  {
+   "id": "django__django-16819",
+   "reason": "self-check exit 1: RuntimeError: Django module not found, reference tests/README.rst for instructions."
+  },
+  {
+   "id": "django__django-16877",
+   "reason": "self-check exit 1: RuntimeError: Django module not found, reference tests/README.rst for instructions."
+  },
+  {
+   "id": "django__django-16899",
+   "reason": "self-check exit 1: RuntimeError: Django module not found, reference tests/README.rst for instructions."
+  },
+  {
+   "id": "django__django-16901",
+   "reason": "self-check exit 1: RuntimeError: Django module not found, reference tests/README.rst for instructions."
+  },
+  {
+   "id": "django__django-16950",
+   "reason": "self-check exit 2: run_oracle: some FAIL_TO_PASS entries are docstrings, not labels; cannot verify"
+  },
+  {
+   "id": "django__django-17029",
+   "reason": "self-check exit 1: RuntimeError: Django module not found, reference tests/README.rst for instructions."
+  },
+  {
+   "id": "django__django-17084",
+   "reason": "self-check exit 1: RuntimeError: Django module not found, reference tests/README.rst for instructions."
+  },
+  {
+   "id": "django__django-17087",
+   "reason": "self-check exit 1: RuntimeError: Django module not found, reference tests/README.rst for instructions."
+  },
+  {
+   "id": "django__django-7530",
+   "reason": "self-check exit 1: ModuleNotFoundError: No module named 'django.utils.six.moves'"
+  },
+  {
+   "id": "django__django-9296",
+   "reason": "self-check exit 1: RuntimeError: Django module not found, reference tests/README.rst for instructions."
+  },
+  {
    "id": "flask-4992",
    "reason": "not in Verified"
   },
   {
    "id": "pytest-dev__pytest-5262",
-   "reason": "self-check exit 2: 1 error in 2.10 seconds"
+   "reason": "self-check exit 2: 1 error in 1.42 seconds"
   },
   {
    "id": "pytest-dev__pytest-7324",
-   "reason": "self-check exit 4: no tests ran in 0.02s"
+   "reason": "self-check exit 4: no tests ran in 0.01s"
   },
   {
    "id": "pytest-dev__pytest-7521",
-   "reason": "self-check exit 2: 2 errors in 2.32s"
+   "reason": "self-check exit 2: 2 errors in 1.84s"
   },
   {
    "id": "sphinx-doc__sphinx-10435",
@@ -205,7 +529,7 @@
   },
   {
    "id": "sphinx-doc__sphinx-9229",
-   "reason": "self-check exit 1: 1 failed, 13 passed in 0.68s"
+   "reason": "self-check exit 1: 1 failed, 13 passed in 0.63s"
   },
   {
    "id": "sympy__sympy-11618",
@@ -221,7 +545,7 @@
   },
   {
    "id": "sympy__sympy-24661",
-   "reason": "self-check exit 1: 7 failed, 21 passed, 4 warnings in 0.17s"
+   "reason": "self-check exit 1: 7 failed, 21 passed, 4 warnings in 0.09s"
   },
   {
    "id": "sympy__sympy-24909",

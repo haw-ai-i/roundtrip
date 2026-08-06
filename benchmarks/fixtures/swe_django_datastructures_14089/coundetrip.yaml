@@ -1,0 +1,11 @@
+name: swe_django_datastructures_14089
+test_command:
+  - python
+  - run_oracle.py
+source_paths:
+  - django/utils/datastructures.py
+scaffold_paths:
+  - scaffold
+test_paths:
+  - run_oracle.py
+  - oracle_env.json

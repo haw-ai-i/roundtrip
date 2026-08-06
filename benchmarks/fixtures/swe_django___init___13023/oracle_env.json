@@ -1,0 +1,40 @@
+{
+  "env_path": "~/Desktop/coundetrip/swebench_envs/django__django-13023",
+  "target_rel": "django/db/models/fields/__init__.py",
+  "target_rels": [
+    "django/db/models/fields/__init__.py"
+  ],
+  "source_basename": "__init__.py",
+  "test_selection": [
+    "test_invalid_value (model_fields.test_decimalfield.DecimalFieldTests)",
+    "test_lookup_really_big_value (model_fields.test_decimalfield.DecimalFieldTests)",
+    "test_default (model_fields.test_decimalfield.DecimalFieldTests)",
+    "test_filter_with_strings (model_fields.test_decimalfield.DecimalFieldTests)",
+    "test_get_prep_value (model_fields.test_decimalfield.DecimalFieldTests)",
+    "test_max_decimal_places_validation (model_fields.test_decimalfield.DecimalFieldTests)",
+    "test_max_digits_validation (model_fields.test_decimalfield.DecimalFieldTests)",
+    "test_max_whole_digits_validation (model_fields.test_decimalfield.DecimalFieldTests)",
+    "Trailing zeros in the fractional part aren't truncated.",
+    "test_save_without_float_conversion (model_fields.test_decimalfield.DecimalFieldTests)",
+    "test_to_python (model_fields.test_decimalfield.DecimalFieldTests)"
+  ],
+  "oracle_files": [
+    "tests/model_fields/test_decimalfield.py"
+  ],
+  "fail_to_pass": [
+    "test_invalid_value (model_fields.test_decimalfield.DecimalFieldTests)",
+    "test_lookup_really_big_value (model_fields.test_decimalfield.DecimalFieldTests)"
+  ],
+  "pass_to_pass": [
+    "test_default (model_fields.test_decimalfield.DecimalFieldTests)",
+    "test_filter_with_strings (model_fields.test_decimalfield.DecimalFieldTests)",
+    "test_get_prep_value (model_fields.test_decimalfield.DecimalFieldTests)",
+    "test_max_decimal_places_validation (model_fields.test_decimalfield.DecimalFieldTests)",
+    "test_max_digits_validation (model_fields.test_decimalfield.DecimalFieldTests)",
+    "test_max_whole_digits_validation (model_fields.test_decimalfield.DecimalFieldTests)",
+    "Trailing zeros in the fractional part aren't truncated.",
+    "test_save_without_float_conversion (model_fields.test_decimalfield.DecimalFieldTests)",
+    "test_to_python (model_fields.test_decimalfield.DecimalFieldTests)"
+  ],
+  "runner": "django"
+}

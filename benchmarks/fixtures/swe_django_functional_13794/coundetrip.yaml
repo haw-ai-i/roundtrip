@@ -1,0 +1,11 @@
+name: swe_django_functional_13794
+test_command:
+  - python
+  - run_oracle.py
+source_paths:
+  - django/utils/functional.py
+scaffold_paths:
+  - scaffold
+test_paths:
+  - run_oracle.py
+  - oracle_env.json

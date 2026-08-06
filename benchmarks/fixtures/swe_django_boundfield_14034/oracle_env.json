@@ -1,0 +1,44 @@
+{
+  "env_path": "~/Desktop/coundetrip/swebench_envs/django__django-14034",
+  "target_rel": "django/forms/boundfield.py",
+  "target_rels": [
+    "django/forms/boundfield.py"
+  ],
+  "source_basename": "boundfield.py",
+  "test_selection": [
+    "test_render_required_attributes (forms_tests.field_tests.test_multivaluefield.MultiValueFieldTest)",
+    "test_bad_choice (forms_tests.field_tests.test_multivaluefield.MultiValueFieldTest)",
+    "test_clean (forms_tests.field_tests.test_multivaluefield.MultiValueFieldTest)",
+    "test_clean_disabled_multivalue (forms_tests.field_tests.test_multivaluefield.MultiValueFieldTest)",
+    "test_disabled_has_changed (forms_tests.field_tests.test_multivaluefield.MultiValueFieldTest)",
+    "test_form_as_table (forms_tests.field_tests.test_multivaluefield.MultiValueFieldTest)",
+    "test_form_as_table_data (forms_tests.field_tests.test_multivaluefield.MultiValueFieldTest)",
+    "test_form_cleaned_data (forms_tests.field_tests.test_multivaluefield.MultiValueFieldTest)",
+    "Test when the first widget's data has changed.",
+    "Test when the last widget's data has changed. This ensures that it is",
+    "test_has_changed_no_initial (forms_tests.field_tests.test_multivaluefield.MultiValueFieldTest)",
+    "test_has_changed_same (forms_tests.field_tests.test_multivaluefield.MultiValueFieldTest)",
+    "If insufficient data is provided, None is substituted."
+  ],
+  "oracle_files": [
+    "tests/forms_tests/field_tests/test_multivaluefield.py"
+  ],
+  "fail_to_pass": [
+    "test_render_required_attributes (forms_tests.field_tests.test_multivaluefield.MultiValueFieldTest)"
+  ],
+  "pass_to_pass": [
+    "test_bad_choice (forms_tests.field_tests.test_multivaluefield.MultiValueFieldTest)",
+    "test_clean (forms_tests.field_tests.test_multivaluefield.MultiValueFieldTest)",
+    "test_clean_disabled_multivalue (forms_tests.field_tests.test_multivaluefield.MultiValueFieldTest)",
+    "test_disabled_has_changed (forms_tests.field_tests.test_multivaluefield.MultiValueFieldTest)",
+    "test_form_as_table (forms_tests.field_tests.test_multivaluefield.MultiValueFieldTest)",
+    "test_form_as_table_data (forms_tests.field_tests.test_multivaluefield.MultiValueFieldTest)",
+    "test_form_cleaned_data (forms_tests.field_tests.test_multivaluefield.MultiValueFieldTest)",
+    "Test when the first widget's data has changed.",
+    "Test when the last widget's data has changed. This ensures that it is",
+    "test_has_changed_no_initial (forms_tests.field_tests.test_multivaluefield.MultiValueFieldTest)",
+    "test_has_changed_same (forms_tests.field_tests.test_multivaluefield.MultiValueFieldTest)",
+    "If insufficient data is provided, None is substituted."
+  ],
+  "runner": "django"
+}
