@@ -15,6 +15,8 @@ import shutil
 import subprocess
 import sys
 from pathlib import Path
+import os as _os
+ORACLE_ENV = {**_os.environ, 'MPLBACKEND': 'Agg', 'DISPLAY': ''}
 
 HERE = Path(__file__).resolve().parent
 cfg = json.loads((HERE / "oracle_env.json").read_text(encoding="utf-8"))
@@ -100,7 +102,7 @@ bare = [t for t in selection if "::" not in t]
 if node_ids and not bare:
     files = sorted({t.split("::")[0] for t in node_ids})
     col = subprocess.run([str(venv_py), "-m", "pytest", "--collect-only", "-q", *files],
-                         cwd=str(env), capture_output=True, text=True, timeout=600)
+                         cwd=str(env), capture_output=True, text=True, timeout=600, env=ORACLE_ENV)
     existing = {l.strip() for l in col.stdout.splitlines() if "::" in l}
     f2p = set(cfg.get("fail_to_pass") or [])
     missing_f2p = [t for t in node_ids if t in f2p and t not in existing]
@@ -119,7 +121,7 @@ elif bare:
     # exact ids (with all parametrizations) for precisely the named tests.
     files = [str(env / f) for f in oracle_files]
     col = subprocess.run([str(venv_py), "-m", "pytest", "--collect-only", "-q", *files],
-                         cwd=str(env), capture_output=True, text=True, timeout=600)
+                         cwd=str(env), capture_output=True, text=True, timeout=600, env=ORACLE_ENV)
     ids = [l.strip() for l in col.stdout.splitlines() if "::" in l]
     base = lambda i: i.split("::")[-1].split("[")[0]
     want = set(bare)
@@ -140,7 +142,7 @@ else:
 
 try:
     cp = subprocess.run([str(venv_py), "-m", "pytest", *args, "-q", "--tb=no"],
-                        cwd=str(env), capture_output=True, text=True, timeout=900)
+                        cwd=str(env), capture_output=True, text=True, timeout=900, env=ORACLE_ENV)
     sys.stdout.write(cp.stdout)
     sys.stderr.write(cp.stderr)
     rc = cp.returncode

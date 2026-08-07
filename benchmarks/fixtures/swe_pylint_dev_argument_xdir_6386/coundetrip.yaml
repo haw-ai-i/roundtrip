@@ -1,0 +1,14 @@
+name: swe_pylint_dev_argument_xdir_6386
+test_command:
+  - python
+  - run_oracle.py
+source_paths:
+  - pylint/config/argument.py
+  - pylint/config/arguments_manager.py
+  - pylint/config/utils.py
+  - pylint/lint/base_options.py
+scaffold_paths:
+  - scaffold
+test_paths:
+  - run_oracle.py
+  - oracle_env.json

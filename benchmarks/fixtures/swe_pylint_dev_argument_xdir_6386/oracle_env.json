@@ -1,0 +1,37 @@
+{
+  "env_path": "~/Desktop/coundetrip/swebench_envs/pylint-dev__pylint-6386",
+  "target_rel": "pylint/config/argument.py",
+  "target_rels": [
+    "pylint/config/argument.py",
+    "pylint/config/arguments_manager.py",
+    "pylint/config/utils.py",
+    "pylint/lint/base_options.py"
+  ],
+  "source_basename": "argument.py",
+  "test_selection": [
+    "tests/config/test_config.py::test_short_verbose",
+    "tests/config/test_config.py::test_can_read_toml_env_variable",
+    "tests/config/test_config.py::test_unknown_message_id",
+    "tests/config/test_config.py::test_unknown_option_name",
+    "tests/config/test_config.py::test_unknown_short_option_name",
+    "tests/config/test_config.py::test_unknown_confidence",
+    "tests/config/test_config.py::test_unknown_yes_no",
+    "tests/config/test_config.py::test_unknown_py_version"
+  ],
+  "oracle_files": [
+    "tests/config/test_config.py"
+  ],
+  "fail_to_pass": [
+    "tests/config/test_config.py::test_short_verbose"
+  ],
+  "pass_to_pass": [
+    "tests/config/test_config.py::test_can_read_toml_env_variable",
+    "tests/config/test_config.py::test_unknown_message_id",
+    "tests/config/test_config.py::test_unknown_option_name",
+    "tests/config/test_config.py::test_unknown_short_option_name",
+    "tests/config/test_config.py::test_unknown_confidence",
+    "tests/config/test_config.py::test_unknown_yes_no",
+    "tests/config/test_config.py::test_unknown_py_version"
+  ],
+  "runner": "pytest"
+}

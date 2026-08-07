@@ -1,0 +1,12 @@
+name: swe_mwaskom_scales_xdir_3187
+test_command:
+  - python
+  - run_oracle.py
+source_paths:
+  - seaborn/_core/scales.py
+  - seaborn/utils.py
+scaffold_paths:
+  - scaffold
+test_paths:
+  - run_oracle.py
+  - oracle_env.json
