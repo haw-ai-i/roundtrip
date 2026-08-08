@@ -419,7 +419,7 @@ def describe(client: LLMClient) -> int:
         description = ast_describe(sources)
     else:
         _describe_sys = os.environ.get("COUNDETRIP_DESCRIBE_PROMPT", _DESCRIBE_SYSTEM)
-        budget = int(os.environ.get("COUNDETRIP_DESCRIBE_BUDGET_CHARS", "80000"))
+        budget = int(os.environ.get("COUNDETRIP_DESCRIBE_BUDGET_CHARS", "60000"))
         combined = _render_files(sources)
         if len(combined) <= budget:
             # Fits: single-call describe (original behavior).
