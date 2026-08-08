@@ -41,7 +41,7 @@ def run_roundtrip(
     agent_cmd: list[str],
     runs_dir: Path,
     run_id: str | None = None,
-    agent_timeout_sec: int | None = 600,
+    agent_timeout_sec: int | None = int(__import__("os").environ.get("COUNDETRIP_AGENT_TIMEOUT", "600")),
     runner: Runner | None = None,
 ) -> dict[str, Any]:
     """

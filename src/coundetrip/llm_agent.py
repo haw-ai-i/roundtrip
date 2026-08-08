@@ -160,6 +160,14 @@ _DESCRIBE_SYSTEM = (
     "description alone, without seeing the code. Describe behavior, not a "
     "line-by-line transcription. Do not include or infer test code."
 )
+_COMPOSE_SYSTEM = (
+    "You are given per-file natural-language specifications of the modules in a "
+    "Python package. Combine them into one coherent package-level specification "
+    "that preserves every function and class described (including underscore-prefixed "
+    "ones), their inputs, outputs, and edge cases, and makes cross-file relationships "
+    "explicit, so an engineer could reimplement the whole package from your text alone. "
+    "Do not drop detail; do not include or infer test code."
+)
 
 _REGENERATE_SYSTEM = (
     "You are given a natural-language specification and a project scaffold. Implement "
@@ -350,6 +358,55 @@ def ast_describe(sources: dict[str, str]) -> str:
     return "\n".join(out)
 
 
+def _chunk_source(code: str, budget: int) -> list[str]:
+    """Split a large file into chunks of whole top-level definitions, each under
+    ``budget`` chars (rough proxy for context). Line-slices if unparseable."""
+    import ast
+    try:
+        tree = ast.parse(code)
+    except SyntaxError:
+        lines = code.splitlines(keepends=True)
+        step = max(1, len(lines) * budget // max(1, len(code)))
+        return ["".join(lines[i:i+step]) for i in range(0, len(lines), step)] or [code]
+    lines = code.splitlines(keepends=True)
+    tops = [n for n in tree.body if isinstance(n, (ast.FunctionDef, ast.AsyncFunctionDef, ast.ClassDef))]
+    if not tops:
+        return [code]
+    header = "".join(lines[:tops[0].lineno - 1])
+    segs = []
+    for i, node in enumerate(tops):
+        start = node.lineno - 1
+        end = tops[i+1].lineno - 1 if i+1 < len(tops) else len(lines)
+        segs.append("".join(lines[start:end]))
+    chunks, cur = [], header
+    for seg in segs:
+        if len(cur) + len(seg) > budget and cur.strip():
+            chunks.append(cur); cur = header + seg
+        else:
+            cur += seg
+    if cur.strip():
+        chunks.append(cur)
+    return chunks
+
+
+def _compose(client, blocks, budget):
+    """Combine per-file spec blocks into one package spec. If the blocks together
+    exceed ``budget``, compose in batches then recurse on the batch results, so the
+    compose call itself never exceeds context."""
+    joined = "\n\n".join(blocks)
+    if len(joined) <= budget:
+        return client.complete(system=_COMPOSE_SYSTEM, user="Per-file specifications:\n\n" + joined)
+    batches, cur, cur_len = [], [], 0
+    for b in blocks:
+        if cur and cur_len + len(b) > budget:
+            batches.append(cur); cur, cur_len = [], 0
+        cur.append(b); cur_len += len(b) + 2
+    if cur:
+        batches.append(cur)
+    partials = [client.complete(system=_COMPOSE_SYSTEM, user="Per-file specifications:\n\n" + "\n\n".join(bt)) for bt in batches]
+    return _compose(client, partials, budget)
+
+
 def describe(client: LLMClient) -> int:
     fixture = Path(os.environ["COUNDETRIP_FIXTURE"])
     out = Path(os.environ["COUNDETRIP_DESCRIPTION"])
@@ -361,9 +418,31 @@ def describe(client: LLMClient) -> int:
     if os.environ.get("COUNDETRIP_DESCRIBER", "").lower() == "ast":
         description = ast_describe(sources)
     else:
-        user = "Source files:\n\n" + _render_files(sources)
         _describe_sys = os.environ.get("COUNDETRIP_DESCRIBE_PROMPT", _DESCRIBE_SYSTEM)
-        description = client.complete(system=_describe_sys, user=user)
+        budget = int(os.environ.get("COUNDETRIP_DESCRIBE_BUDGET_CHARS", "80000"))
+        combined = _render_files(sources)
+        if len(combined) <= budget:
+            # Fits: single-call describe (original behavior).
+            description = client.complete(system=_describe_sys, user="Source files:\n\n" + combined)
+        else:
+            # Too large for one context: describe each file, then compose. This is the
+            # minimal agentic path so packages that exceed the context window still
+            # produce a description instead of erroring out.
+            per_file = {}
+            for rel, code in sources.items():
+                rendered = _render_files({rel: code})
+                if len(rendered) <= budget:
+                    per_file[rel] = client.complete(system=_describe_sys, user="Source file:\n\n" + rendered)
+                else:
+                    # single file exceeds budget: chunk by top-level defs, describe each
+                    chunks = _chunk_source(code, budget)
+                    parts = []
+                    for j, ch in enumerate(chunks):
+                        one = _render_files({f"{rel} (part {j+1}/{len(chunks)})": ch})
+                        parts.append(client.complete(system=_describe_sys, user="Source file part:\n\n" + one))
+                    per_file[rel] = "\n\n".join(parts)
+            blocks = [f"=== {rel} ===\n{d}" for rel, d in per_file.items()]
+            description = _compose(client, blocks, budget)
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(description, encoding="utf-8")
     return 0
