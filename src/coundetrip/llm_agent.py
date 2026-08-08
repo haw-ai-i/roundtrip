@@ -377,7 +377,23 @@ def _chunk_source(code: str, budget: int) -> list[str]:
     for i, node in enumerate(tops):
         start = node.lineno - 1
         end = tops[i+1].lineno - 1 if i+1 < len(tops) else len(lines)
-        segs.append("".join(lines[start:end]))
+        seg = "".join(lines[start:end])
+        if len(seg) > budget and isinstance(node, ast.ClassDef):
+            # A single class exceeds budget: split it into its methods so no
+            # chunk is larger than one method. Each sub-chunk carries the class
+            # signature line for context.
+            body = [m for m in node.body
+                    if isinstance(m, (ast.FunctionDef, ast.AsyncFunctionDef))]
+            class_sig = lines[node.lineno - 1]
+            if body:
+                for j, m in enumerate(body):
+                    mstart = m.lineno - 1
+                    mend = body[j+1].lineno - 1 if j+1 < len(body) else end
+                    segs.append(class_sig + "".join(lines[mstart:mend]))
+            else:
+                segs.append(seg)
+        else:
+            segs.append(seg)
     chunks, cur = [], header
     for seg in segs:
         if len(cur) + len(seg) > budget and cur.strip():
