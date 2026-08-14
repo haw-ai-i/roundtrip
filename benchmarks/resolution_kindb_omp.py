@@ -31,6 +31,9 @@ out_path.parent.mkdir(parents=True, exist_ok=True)
 results = json.loads(out_path.read_text()) if out_path.exists() else {}
 
 
+LAST_USAGE = {}
+
+
 def run_omp(cwd, system_prompt, user_prompt, timeout=2400, tries=4):
     """Call omp once and return (agent_end_frame, error). Retries when omp
     returns no agent_end frame: on a single-slot model node, a call fired
@@ -40,6 +43,7 @@ def run_omp(cwd, system_prompt, user_prompt, timeout=2400, tries=4):
            "--no-session", "--no-lsp", "--mode", "json", "--thinking", "off",
            "--system-prompt", system_prompt, "-p", user_prompt]
     last_err = None
+    _tok = {"input": 0, "output": 0, "total": 0}
     for attempt in range(tries):
         proc = subprocess.run(cmd, cwd=str(cwd), capture_output=True, text=True, timeout=timeout)
         final = None
@@ -58,9 +62,11 @@ def run_omp(cwd, system_prompt, user_prompt, timeout=2400, tries=4):
             if isinstance(msg, dict) and msg.get("stopReason") == "error":
                 err = msg.get("errorMessage")
         if final is not None:
+            LAST_USAGE.update(_tok)
             return final, err
         last_err = err
         time.sleep(2 * (attempt + 1))
+    LAST_USAGE.update(_tok)
     return None, last_err
 
 
@@ -250,6 +256,7 @@ def main():
             fracs, resolved = [], 0
             for _ in range(N):
                 repo, edited = resolve_once(env, issue, descs[cond], target_rels)
+                _used = dict(LAST_USAGE)
                 if not edited:
                     shutil.rmtree(repo.parent, ignore_errors=True)
                     row[cond] = {"failed": "agent made no edit (check connection)"}
@@ -265,7 +272,8 @@ def main():
                     resolved += 1
             if not fracs:
                 continue
-            row[cond] = {"fracs": fracs, "mean": round(sum(fracs) / len(fracs), 3),
+            row[cond] = {"tokens": _used,
+                         "fracs": fracs, "mean": round(sum(fracs) / len(fracs), 3),
                          "resolved": str(resolved) + "/" + str(N)}
             print(fix.ljust(34) + cond.ljust(12) + str(fracs) + " resolved=" + str(resolved) + "/" + str(N), flush=True)
         results[fix] = row

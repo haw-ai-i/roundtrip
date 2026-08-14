@@ -84,6 +84,13 @@ def main():
     print("-" * 78)
     print(f"{'MEAN pass fraction':<44}{mean_a:>12.3f}{mean_b:>12.3f}{mean_b - mean_a:>+10.3f}")
 
+    tok_a = [data[f]["issue_only"].get("tokens", {}).get("total", 0) for f in paired]
+    tok_b = [data[f]["optimized"].get("tokens", {}).get("total", 0) for f in paired]
+    if any(tok_a) or any(tok_b):
+        ma = sum(tok_a) / len(tok_a)
+        mb = sum(tok_b) / len(tok_b)
+        print(f"{'MEAN resolve tokens':<44}{ma:>12.0f}{mb:>12.0f}{mb - ma:>+10.0f}")
+
     res_a = sum(x for x in (resolved_count(data[f], "issue_only") for f in paired) if x)
     res_b = sum(x for x in (resolved_count(data[f], "optimized") for f in paired) if x)
     print(f"{'RESOLVED (all tests pass)':<44}{res_a:>12d}{res_b:>12d}{res_b - res_a:>+10d}")
