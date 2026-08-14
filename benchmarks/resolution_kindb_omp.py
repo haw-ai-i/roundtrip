@@ -16,12 +16,13 @@ OMP = os.environ.get("COUNDETRIP_OMP_BIN", "omp")
 PROVIDER = "local-qwen"
 MODEL = "hf.co/unsloth/Qwen3.6-35B-A3B-GGUF:UD-Q4_K_M"
 
-RES_SYS = ("You are a coding agent resolving a repository issue. The full "
-           "repository is present in your working directory. You are given the "
-           "issue and, possibly, documentation of the modules to modify. Read the "
-           "relevant files with your read tool, then use your write tool to edit "
-           "the file(s) in place so they resolve the issue. Keep every existing "
-           "path; modify only what the fix requires.")
+RES_SYS = ("You are a coding agent resolving a repository issue. The repository "
+           "is in your working directory. Read ONLY the file(s) named in the "
+           "prompt - do NOT search or grep the rest of the repository. As soon "
+           "as you have read them, immediately call your edit tool to apply the "
+           "fix to those file(s). Your task is not complete until you have made "
+           "an edit. Do not explain the fix instead of making it. Make the "
+           "smallest change that resolves the issue.")
 
 DESC_SYS_OPTIMIZED = DISCOVERED
 
@@ -123,6 +124,15 @@ def resolve_once(env, issue, desc, target_rels):
     shutil.copytree(env, repo,
                     ignore=shutil.ignore_patterns(".git", ".venv"),
                     symlinks=True)
+    # setup_swebench_env applies the gold patch to the env so the roundtrip
+    # source passes by construction. For issue resolution the agent must face
+    # the PRE-FIX code, so restore each target file from the HEAD blob. Test
+    # files keep their test patch so the FAIL_TO_PASS tests exist.
+    for _rel in target_rels:
+        _pre = subprocess.run(["git", "-C", str(env), "show", "HEAD:" + _rel],
+                              capture_output=True, text=True).stdout
+        if _pre.strip():
+            (repo / _rel).write_text(_pre, encoding="utf-8")
     files_line = ", ".join(target_rels)
     user = "# Issue" + chr(10) + issue + chr(10) + chr(10)
     if desc is not None:
@@ -140,7 +150,7 @@ def resolve_once(env, issue, desc, target_rels):
         return out
 
     before = digests()
-    for _ in range(2):
+    for _ in range(4):
         frame, err = run_omp(repo, RES_SYS, user)
         if err:
             sys.stderr.write("resolve omp error: " + str(err) + chr(10))
@@ -198,7 +208,7 @@ def wait_for_endpoint(tries=30, delay=20):
     import urllib.request
     for _ in range(tries):
         try:
-            urllib.request.urlopen("http://localhost:11500/v1/models", timeout=5)
+            urllib.request.urlopen("http://127.0.0.1:11434/v1/models", timeout=5)
             return True
         except Exception:
             sys.stderr.write("endpoint down, waiting..." + chr(10))
