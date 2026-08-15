@@ -14,6 +14,16 @@ from pathlib import Path
 RESULTS = Path("benchmarks/baseline_results/transfer_kindb_omp.json")
 CONDS = ["issue_only", "optimized"]
 
+# Fixtures whose oracle cannot run at all, verified by scoring the pre-fix
+# source: the FAIL_TO_PASS test is not collectable, or the oracle's test file
+# is missing. They score 0.0 in both conditions and measure nothing, so they
+# are excluded from the paired comparison rather than counted as ties.
+EXCLUDED = {
+    "swe_pytest_dev___init___xdir_5840",      # rc 2, FAIL_TO_PASS not collectable
+    "swe_pytest_dev_python_multi_8399",       # rc 2, FAIL_TO_PASS not collectable
+    "swe_sympy_basic_xdir_13091",             # rc 4, oracle test file missing
+}
+
 
 def load():
     if not RESULTS.exists():
@@ -48,6 +58,8 @@ def main():
     data = load()
     paired, incomplete = {}, {}
     for fix, row in data.items():
+        if fix in EXCLUDED:
+            continue
         vals = {c: scored(row, c) for c in CONDS}
         if all(v is not None for v in vals.values()):
             paired[fix] = vals
