@@ -39,9 +39,16 @@ def run_omp(cwd, system_prompt, user_prompt, timeout=2400, tries=4):
     returns no agent_end frame: on a single-slot model node, a call fired
     right after another can come back empty while the node releases the
     prior request. A short, growing settle between tries lets the node idle."""
+    # The prompt can exceed the OS argv limit (the optimized condition carries
+    # an ~9k-char description), so hand it to omp as an @file reference.
+    _pf = tempfile.NamedTemporaryFile("w", suffix=".md", delete=False,
+                                      encoding="utf-8")
+    _pf.write(user_prompt)
+    _pf.close()
     cmd = [OMP, "--provider", PROVIDER, "--model", MODEL,
            "--no-session", "--no-lsp", "--mode", "json", "--thinking", "off",
-           "--system-prompt", system_prompt, "-p", user_prompt]
+           "--max-time", "20m",
+           "--system-prompt", system_prompt, "-p", "@" + _pf.name]
     last_err = None
     _tok = {"input": 0, "output": 0, "total": 0}
     for attempt in range(tries):
@@ -59,14 +66,22 @@ def run_omp(cwd, system_prompt, user_prompt, timeout=2400, tries=4):
             if obj.get("type") == "agent_end":
                 final = obj
             msg = obj.get("message")
-            if isinstance(msg, dict) and msg.get("stopReason") == "error":
-                err = msg.get("errorMessage")
+            if isinstance(msg, dict):
+                if msg.get("stopReason") == "error":
+                    err = msg.get("errorMessage")
+                _u = msg.get("usage")
+                if isinstance(_u, dict) and _u.get("totalTokens"):
+                    _tok["input"] = _u.get("input") or 0
+                    _tok["output"] = _u.get("output") or 0
+                    _tok["total"] = _u.get("totalTokens") or 0
         if final is not None:
             LAST_USAGE.update(_tok)
+            os.unlink(_pf.name)
             return final, err
         last_err = err
         time.sleep(2 * (attempt + 1))
     LAST_USAGE.update(_tok)
+    os.unlink(_pf.name)
     return None, last_err
 
 
