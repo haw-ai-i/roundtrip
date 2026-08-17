@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/django__django-11880",
+  "env_path": "~/coundetrip/swebench_envs/django__django-11880",
   "target_rel": "django/forms/fields.py",
   "target_rels": [
     "django/forms/fields.py"

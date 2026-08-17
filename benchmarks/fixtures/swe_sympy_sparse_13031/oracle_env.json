@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/sympy__sympy-13031",
+  "env_path": "~/coundetrip/swebench_envs/sympy__sympy-13031",
   "target_rel": "sympy/matrices/sparse.py",
   "target_rels": [
     "sympy/matrices/sparse.py"

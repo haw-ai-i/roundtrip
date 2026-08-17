@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/sympy__sympy-14531",
+  "env_path": "~/coundetrip/swebench_envs/sympy__sympy-14531",
   "target_rel": "sympy/printing/str.py",
   "target_rels": [
     "sympy/printing/str.py"

@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/sympy__sympy-15345",
+  "env_path": "~/coundetrip/swebench_envs/sympy__sympy-15345",
   "target_rel": "sympy/printing/mathematica.py",
   "target_rels": [
     "sympy/printing/mathematica.py"

@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/sympy__sympy-16597",
+  "env_path": "~/coundetrip/swebench_envs/sympy__sympy-16597",
   "target_rel": "sympy/assumptions/ask.py",
   "target_rels": [
     "sympy/assumptions/ask.py",

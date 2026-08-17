@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/sympy__sympy-19040",
+  "env_path": "~/coundetrip/swebench_envs/sympy__sympy-19040",
   "target_rel": "sympy/polys/factortools.py",
   "target_rels": [
     "sympy/polys/factortools.py"

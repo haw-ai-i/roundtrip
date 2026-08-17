@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/sympy__sympy-23824",
+  "env_path": "~/coundetrip/swebench_envs/sympy__sympy-23824",
   "target_rel": "sympy/physics/hep/gamma_matrices.py",
   "oracle_rel": "sympy/physics/hep/tests/test_gamma_matrices.py",
   "source_basename": "gamma_matrices.py"

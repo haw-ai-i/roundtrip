@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/django__django-14089",
+  "env_path": "~/coundetrip/swebench_envs/django__django-14089",
   "target_rel": "django/utils/datastructures.py",
   "target_rels": [
     "django/utils/datastructures.py"

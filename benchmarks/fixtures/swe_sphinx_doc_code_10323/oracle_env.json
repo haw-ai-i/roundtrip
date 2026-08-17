@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/sphinx-doc__sphinx-10323",
+  "env_path": "~/coundetrip/swebench_envs/sphinx-doc__sphinx-10323",
   "target_rel": "sphinx/directives/code.py",
   "target_rels": [
     "sphinx/directives/code.py"

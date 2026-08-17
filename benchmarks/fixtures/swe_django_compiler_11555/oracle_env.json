@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/django__django-11555",
+  "env_path": "~/coundetrip/swebench_envs/django__django-11555",
   "target_rel": "django/db/models/sql/compiler.py",
   "target_rels": [
     "django/db/models/sql/compiler.py"

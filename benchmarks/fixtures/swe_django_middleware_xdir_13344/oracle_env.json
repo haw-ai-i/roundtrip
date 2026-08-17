@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/django__django-13344",
+  "env_path": "~/coundetrip/swebench_envs/django__django-13344",
   "target_rel": "django/contrib/sessions/middleware.py",
   "target_rels": [
     "django/contrib/sessions/middleware.py",

@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/sympy__sympy-18199",
+  "env_path": "~/coundetrip/swebench_envs/sympy__sympy-18199",
   "target_rel": "sympy/ntheory/residue_ntheory.py",
   "target_rels": [
     "sympy/ntheory/residue_ntheory.py"

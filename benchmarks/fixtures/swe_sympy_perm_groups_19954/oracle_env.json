@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/sympy__sympy-19954",
+  "env_path": "~/coundetrip/swebench_envs/sympy__sympy-19954",
   "target_rel": "sympy/combinatorics/perm_groups.py",
   "target_rels": [
     "sympy/combinatorics/perm_groups.py"

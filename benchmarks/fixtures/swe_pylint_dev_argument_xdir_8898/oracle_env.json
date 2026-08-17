@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/pylint-dev__pylint-8898",
+  "env_path": "~/coundetrip/swebench_envs/pylint-dev__pylint-8898",
   "target_rel": "pylint/config/argument.py",
   "target_rels": [
     "pylint/config/argument.py",

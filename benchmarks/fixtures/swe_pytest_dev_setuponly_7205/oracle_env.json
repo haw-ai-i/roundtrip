@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/pytest-dev__pytest-7205",
+  "env_path": "~/coundetrip/swebench_envs/pytest-dev__pytest-7205",
   "target_rel": "src/_pytest/setuponly.py",
   "target_rels": [
     "src/_pytest/setuponly.py"

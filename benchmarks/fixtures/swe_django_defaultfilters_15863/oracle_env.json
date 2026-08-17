@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/django__django-15863",
+  "env_path": "~/coundetrip/swebench_envs/django__django-15863",
   "target_rel": "django/template/defaultfilters.py",
   "target_rels": [
     "django/template/defaultfilters.py"

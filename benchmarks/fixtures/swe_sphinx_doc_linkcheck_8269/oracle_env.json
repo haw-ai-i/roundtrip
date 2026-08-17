@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/sphinx-doc__sphinx-8269",
+  "env_path": "~/coundetrip/swebench_envs/sphinx-doc__sphinx-8269",
   "target_rel": "sphinx/builders/linkcheck.py",
   "target_rels": [
     "sphinx/builders/linkcheck.py"

@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/pydata__xarray-4075",
+  "env_path": "~/coundetrip/swebench_envs/pydata__xarray-4075",
   "target_rel": "xarray/core/weighted.py",
   "target_rels": [
     "xarray/core/weighted.py"

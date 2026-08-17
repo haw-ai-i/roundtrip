@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/sympy__sympy-13852",
+  "env_path": "~/coundetrip/swebench_envs/sympy__sympy-13852",
   "target_rel": "sympy/functions/special/zeta_functions.py",
   "target_rels": [
     "sympy/functions/special/zeta_functions.py"

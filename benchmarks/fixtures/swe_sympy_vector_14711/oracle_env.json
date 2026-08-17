@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/sympy__sympy-14711",
+  "env_path": "~/coundetrip/swebench_envs/sympy__sympy-14711",
   "target_rel": "sympy/physics/vector/vector.py",
   "target_rels": [
     "sympy/physics/vector/vector.py"

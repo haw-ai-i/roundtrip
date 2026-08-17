@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/sympy__sympy-13974",
+  "env_path": "~/coundetrip/swebench_envs/sympy__sympy-13974",
   "target_rel": "sympy/physics/quantum/tensorproduct.py",
   "target_rels": [
     "sympy/physics/quantum/tensorproduct.py"

@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/sympy__sympy-15017",
+  "env_path": "~/coundetrip/swebench_envs/sympy__sympy-15017",
   "target_rel": "sympy/tensor/array/dense_ndim_array.py",
   "target_rels": [
     "sympy/tensor/array/dense_ndim_array.py"

@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/django__django-15037",
+  "env_path": "~/coundetrip/swebench_envs/django__django-15037",
   "target_rel": "django/core/management/commands/inspectdb.py",
   "target_rels": [
     "django/core/management/commands/inspectdb.py"

@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/django__django-10999",
+  "env_path": "~/coundetrip/swebench_envs/django__django-10999",
   "target_rel": "django/utils/dateparse.py",
   "target_rels": [
     "django/utils/dateparse.py"

@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/django__django-15569",
+  "env_path": "~/coundetrip/swebench_envs/django__django-15569",
   "target_rel": "django/db/models/query_utils.py",
   "target_rels": [
     "django/db/models/query_utils.py"

@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/sphinx-doc__sphinx-9658",
+  "env_path": "~/coundetrip/swebench_envs/sphinx-doc__sphinx-9658",
   "target_rel": "sphinx/ext/autodoc/mock.py",
   "target_rels": [
     "sphinx/ext/autodoc/mock.py"

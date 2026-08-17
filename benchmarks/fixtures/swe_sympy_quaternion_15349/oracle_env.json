@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/sympy__sympy-15349",
+  "env_path": "~/coundetrip/swebench_envs/sympy__sympy-15349",
   "target_rel": "sympy/algebras/quaternion.py",
   "target_rels": [
     "sympy/algebras/quaternion.py"

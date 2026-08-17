@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/pylint-dev__pylint-4604",
+  "env_path": "~/coundetrip/swebench_envs/pylint-dev__pylint-4604",
   "target_rel": "pylint/checkers/variables.py",
   "target_rels": [
     "pylint/checkers/variables.py",

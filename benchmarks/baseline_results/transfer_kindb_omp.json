@@ -1,0 +1,1230 @@
+{
+ "swe_django_base_multi_11333": {
+  "issue_only": {
+   "tokens": {
+    "input": 22629,
+    "output": 390,
+    "total": 23019
+   },
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  },
+  "optimized": {
+   "tokens": {
+    "input": 36908,
+    "output": 58,
+    "total": 36966
+   },
+   "fracs": [
+    0.667
+   ],
+   "mean": 0.667,
+   "resolved": "0/1"
+  }
+ },
+ "swe_django_base_multi_14376": {
+  "issue_only": {
+   "tokens": {
+    "input": 16122,
+    "output": 338,
+    "total": 16460
+   },
+   "fracs": [
+    0.889
+   ],
+   "mean": 0.889,
+   "resolved": "0/1"
+  },
+  "optimized": {
+   "tokens": {
+    "input": 26615,
+    "output": 442,
+    "total": 27057
+   },
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  }
+ },
+ "swe_django_client_xdir_14315": {
+  "issue_only": {
+   "tokens": {
+    "input": 13626,
+    "output": 341,
+    "total": 13967
+   },
+   "fracs": [
+    0.727
+   ],
+   "mean": 0.727,
+   "resolved": "0/1"
+  },
+  "optimized": {
+   "tokens": {
+    "input": 17045,
+    "output": 414,
+    "total": 17459
+   },
+   "fracs": [
+    0.727
+   ],
+   "mean": 0.727,
+   "resolved": "0/1"
+  }
+ },
+ "swe_django_defaultfilters_xdir_15103": {
+  "issue_only": {
+   "tokens": {
+    "input": 20284,
+    "output": 281,
+    "total": 20565
+   },
+   "fracs": [
+    0.947
+   ],
+   "mean": 0.947,
+   "resolved": "0/1"
+  },
+  "optimized": {
+   "tokens": {
+    "input": 33178,
+    "output": 110,
+    "total": 33288
+   },
+   "fracs": [
+    0.947
+   ],
+   "mean": 0.947,
+   "resolved": "0/1"
+  }
+ },
+ "swe_django_fields_xdir_16256": {
+  "issue_only": {
+   "tokens": {
+    "input": 42956,
+    "output": 392,
+    "total": 43348
+   },
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  },
+  "optimized": {
+   "tokens": {
+    "input": 42345,
+    "output": 1513,
+    "total": 43858
+   },
+   "fracs": [
+    0.933
+   ],
+   "mean": 0.933,
+   "resolved": "0/1"
+  }
+ },
+ "swe_django_flush_xdir_12741": {
+  "issue_only": {
+   "tokens": {
+    "input": 15443,
+    "output": 220,
+    "total": 15663
+   },
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  },
+  "optimized": {
+   "tokens": {
+    "input": 21421,
+    "output": 264,
+    "total": 21685
+   },
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  }
+ },
+ "swe_django_operations_xdir_14170": {
+  "issue_only": {
+   "tokens": {
+    "input": 62551,
+    "output": 1009,
+    "total": 63560
+   },
+   "fracs": [
+    0.974
+   ],
+   "mean": 0.974,
+   "resolved": "0/1"
+  },
+  "optimized": {
+   "tokens": {
+    "input": 35472,
+    "output": 423,
+    "total": 35895
+   },
+   "fracs": [
+    0.895
+   ],
+   "mean": 0.895,
+   "resolved": "0/1"
+  }
+ },
+ "swe_django_related_xdir_12406": {
+  "issue_only": {
+   "tokens": {
+    "input": 40738,
+    "output": 205,
+    "total": 40943
+   },
+   "fracs": [
+    0.981
+   ],
+   "mean": 0.981,
+   "resolved": "0/1"
+  },
+  "optimized": {
+   "tokens": {
+    "input": 53277,
+    "output": 264,
+    "total": 53541
+   },
+   "fracs": [
+    0.975
+   ],
+   "mean": 0.975,
+   "resolved": "0/1"
+  }
+ },
+ "swe_django_schema_xdir_15561": {
+  "issue_only": {
+   "tokens": {
+    "input": 30260,
+    "output": 255,
+    "total": 30515
+   },
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  },
+  "optimized": {
+   "tokens": {
+    "input": 36631,
+    "output": 169,
+    "total": 36800
+   },
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  }
+ },
+ "swe_django_utils_multi_12155": {
+  "issue_only": {
+   "tokens": {
+    "input": 14836,
+    "output": 417,
+    "total": 15253
+   },
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  },
+  "optimized": {
+   "tokens": {
+    "input": 19628,
+    "output": 227,
+    "total": 19855
+   },
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  }
+ },
+ "swe_django_utils_xdir_11885": {
+  "issue_only": {
+   "tokens": {
+    "input": 39459,
+    "output": 144,
+    "total": 39603
+   },
+   "fracs": [
+    0.932
+   ],
+   "mean": 0.932,
+   "resolved": "0/1"
+  },
+  "optimized": {
+   "tokens": {
+    "input": 34609,
+    "output": 284,
+    "total": 34893
+   },
+   "fracs": [
+    0.0
+   ],
+   "mean": 0.0,
+   "resolved": "0/1"
+  }
+ },
+ "swe_django_utils_xdir_13512": {
+  "issue_only": {
+   "tokens": {
+    "input": 23321,
+    "output": 457,
+    "total": 23778
+   },
+   "fracs": [
+    0.971
+   ],
+   "mean": 0.971,
+   "resolved": "0/1"
+  },
+  "optimized": {
+   "tokens": {
+    "input": 40324,
+    "output": 522,
+    "total": 40846
+   },
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  }
+ },
+ "swe_django_validators_xdir_13212": {
+  "issue_only": {
+   "tokens": {
+    "input": 59003,
+    "output": 717,
+    "total": 59720
+   },
+   "fracs": [
+    0.429
+   ],
+   "mean": 0.429,
+   "resolved": "0/1"
+  },
+  "optimized": {
+   "tokens": {
+    "input": 46255,
+    "output": 585,
+    "total": 46840
+   },
+   "fracs": [
+    0.571
+   ],
+   "mean": 0.571,
+   "resolved": "0/1"
+  }
+ },
+ "swe_pydata_dataarray_multi_3993": {
+  "issue_only": {
+   "tokens": {
+    "input": 17205,
+    "output": 374,
+    "total": 17579
+   },
+   "fracs": [
+    0.998
+   ],
+   "mean": 0.998,
+   "resolved": "0/1"
+  },
+  "optimized": {
+   "tokens": {
+    "input": 39001,
+    "output": 285,
+    "total": 39286
+   },
+   "fracs": [
+    0.998
+   ],
+   "mean": 0.998,
+   "resolved": "0/1"
+  }
+ },
+ "swe_pydata_dataset_multi_3305": {
+  "issue_only": {
+   "tokens": {
+    "input": 31887,
+    "output": 255,
+    "total": 32142
+   },
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  },
+  "optimized": {
+   "tokens": {
+    "input": 37166,
+    "output": 373,
+    "total": 37539
+   },
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  }
+ },
+ "swe_pydata_dataset_multi_6992": {
+  "issue_only": {
+   "tokens": {
+    "input": 22140,
+    "output": 270,
+    "total": 22410
+   },
+   "fracs": [
+    0.987
+   ],
+   "mean": 0.987,
+   "resolved": "0/1"
+  },
+  "optimized": {
+   "tokens": {
+    "input": 41933,
+    "output": 429,
+    "total": 42362
+   },
+   "fracs": [
+    0.987
+   ],
+   "mean": 0.987,
+   "resolved": "0/1"
+  }
+ },
+ "swe_pydata_indexing_multi_3095": {
+  "issue_only": {
+   "tokens": {
+    "input": 37779,
+    "output": 309,
+    "total": 38088
+   },
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  },
+  "optimized": {
+   "tokens": {
+    "input": 50096,
+    "output": 459,
+    "total": 50555
+   },
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  }
+ },
+ "swe_pytest_dev___init___xdir_5840": {
+  "issue_only": {
+   "tokens": {
+    "input": 26967,
+    "output": 434,
+    "total": 27401
+   },
+   "fracs": [
+    0.0
+   ],
+   "mean": 0.0,
+   "resolved": "0/1"
+  },
+  "optimized": {
+   "tokens": {
+    "input": 30195,
+    "output": 523,
+    "total": 30718
+   },
+   "fracs": [
+    0.0
+   ],
+   "mean": 0.0,
+   "resolved": "0/1"
+  }
+ },
+ "swe_sphinx_doc_application_xdir_8120": {
+  "issue_only": {
+   "tokens": {
+    "input": 28415,
+    "output": 290,
+    "total": 28705
+   },
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  },
+  "optimized": {
+   "tokens": {
+    "input": 40436,
+    "output": 644,
+    "total": 41080
+   },
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  }
+ },
+ "swe_sphinx_doc_other_xdir_10673": {
+  "issue_only": {
+   "tokens": {
+    "input": 41599,
+    "output": 649,
+    "total": 42248
+   },
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  },
+  "optimized": {
+   "tokens": {
+    "input": 59897,
+    "output": 100,
+    "total": 59997
+   },
+   "fracs": [
+    0.0
+   ],
+   "mean": 0.0,
+   "resolved": "0/1"
+  }
+ },
+ "swe_sphinx_doc_python_xdir_7462": {
+  "issue_only": {
+   "tokens": {
+    "input": 16769,
+    "output": 174,
+    "total": 16943
+   },
+   "fracs": [
+    0.946
+   ],
+   "mean": 0.946,
+   "resolved": "0/1"
+  },
+  "optimized": {
+   "tokens": {
+    "input": 36043,
+    "output": 190,
+    "total": 36233
+   },
+   "fracs": [
+    0.973
+   ],
+   "mean": 0.973,
+   "resolved": "0/1"
+  }
+ },
+ "swe_sphinx_doc_python_xdir_8551": {
+  "issue_only": {
+   "tokens": {
+    "input": 43974,
+    "output": 334,
+    "total": 44308
+   },
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  },
+  "optimized": {
+   "tokens": {
+    "input": 51353,
+    "output": 277,
+    "total": 51630
+   },
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  }
+ },
+ "swe_sphinx_doc_python_xdir_9461": {
+  "issue_only": {
+   "tokens": {
+    "input": 45178,
+    "output": 69,
+    "total": 45247
+   },
+   "fracs": [
+    0.952
+   ],
+   "mean": 0.952,
+   "resolved": "0/1"
+  },
+  "optimized": {
+   "tokens": {
+    "input": 67036,
+    "output": 233,
+    "total": 67269
+   },
+   "fracs": [
+    0.952
+   ],
+   "mean": 0.952,
+   "resolved": "0/1"
+  }
+ },
+ "swe_sympy_ask_xdir_16597": {
+  "issue_only": {
+   "tokens": {
+    "input": 35310,
+    "output": 503,
+    "total": 35813
+   },
+   "fracs": [
+    0.961
+   ],
+   "mean": 0.961,
+   "resolved": "0/1"
+  },
+  "optimized": {
+   "tokens": {
+    "input": 74026,
+    "output": 375,
+    "total": 74401
+   },
+   "fracs": [
+    0.961
+   ],
+   "mean": 0.961,
+   "resolved": "0/1"
+  }
+ },
+ "swe_django___init___xdir_11734": {
+  "issue_only": {
+   "tokens": {
+    "input": 32271,
+    "output": 346,
+    "total": 32617
+   },
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  },
+  "optimized": {
+   "tokens": {
+    "input": 50432,
+    "output": 33,
+    "total": 50465
+   },
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  }
+ },
+ "swe_django_base_multi_12325": {
+  "issue_only": {
+   "tokens": {
+    "input": 23453,
+    "output": 231,
+    "total": 23684
+   },
+   "fracs": [
+    0.99
+   ],
+   "mean": 0.99,
+   "resolved": "0/1"
+  },
+  "optimized": {
+   "tokens": {
+    "input": 35080,
+    "output": 510,
+    "total": 35590
+   },
+   "fracs": [
+    0.99
+   ],
+   "mean": 0.99,
+   "resolved": "0/1"
+  }
+ },
+ "swe_django_cookie_xdir_13195": {
+  "issue_only": {
+   "tokens": {
+    "input": 26861,
+    "output": 112,
+    "total": 26973
+   },
+   "fracs": [
+    0.997
+   ],
+   "mean": 0.997,
+   "resolved": "0/1"
+  },
+  "optimized": {
+   "tokens": {
+    "input": 40400,
+    "output": 347,
+    "total": 40747
+   },
+   "fracs": [
+    0.992
+   ],
+   "mean": 0.992,
+   "resolved": "0/1"
+  }
+ },
+ "swe_django_operations_xdir_11138": {
+  "issue_only": {
+   "tokens": {
+    "input": 27428,
+    "output": 390,
+    "total": 27818
+   },
+   "fracs": [
+    0.986
+   ],
+   "mean": 0.986,
+   "resolved": "0/1"
+  },
+  "optimized": {
+   "tokens": {
+    "input": 44060,
+    "output": 477,
+    "total": 44537
+   },
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  }
+ },
+ "swe_django_query_xdir_16315": {
+  "issue_only": {
+   "tokens": {
+    "input": 35329,
+    "output": 437,
+    "total": 35766
+   },
+   "fracs": [
+    0.976
+   ],
+   "mean": 0.976,
+   "resolved": "0/1"
+  },
+  "optimized": {
+   "tokens": {
+    "input": 69059,
+    "output": 424,
+    "total": 69483
+   },
+   "fracs": [
+    0.805
+   ],
+   "mean": 0.805,
+   "resolved": "0/1"
+  }
+ },
+ "swe_django_related_lookups_xdir_16032": {
+  "issue_only": {
+   "tokens": {
+    "input": 25928,
+    "output": 434,
+    "total": 26362
+   },
+   "fracs": [
+    0.973
+   ],
+   "mean": 0.973,
+   "resolved": "0/1"
+  },
+  "optimized": {
+   "tokens": {
+    "input": 58779,
+    "output": 393,
+    "total": 59172
+   },
+   "fracs": [
+    0.973
+   ],
+   "mean": 0.973,
+   "resolved": "0/1"
+  }
+ },
+ "swe_pydata_dataset_multi_6938": {
+  "issue_only": {
+   "tokens": {
+    "input": 22822,
+    "output": 323,
+    "total": 23145
+   },
+   "fracs": [
+    0.998
+   ],
+   "mean": 0.998,
+   "resolved": "0/1"
+  },
+  "optimized": {
+   "tokens": {
+    "input": 27483,
+    "output": 349,
+    "total": 27832
+   },
+   "fracs": [
+    0.998
+   ],
+   "mean": 0.998,
+   "resolved": "0/1"
+  }
+ },
+ "swe_pytest_dev_python_multi_8399": {
+  "issue_only": {
+   "tokens": {
+    "input": 19213,
+    "output": 547,
+    "total": 19760
+   },
+   "fracs": [
+    0.0
+   ],
+   "mean": 0.0,
+   "resolved": "0/1"
+  },
+  "optimized": {
+   "tokens": {
+    "input": 24975,
+    "output": 218,
+    "total": 25193
+   },
+   "fracs": [
+    0.0
+   ],
+   "mean": 0.0,
+   "resolved": "0/1"
+  }
+ },
+ "swe_sphinx_doc___init___multi_8548": {
+  "issue_only": {
+   "tokens": {
+    "input": 29456,
+    "output": 393,
+    "total": 29849
+   },
+   "fracs": [
+    0.833
+   ],
+   "mean": 0.833,
+   "resolved": "0/1"
+  },
+  "optimized": {
+   "tokens": {
+    "input": 63893,
+    "output": 284,
+    "total": 64177
+   },
+   "fracs": [
+    0.833
+   ],
+   "mean": 0.833,
+   "resolved": "0/1"
+  }
+ },
+ "swe_sphinx_doc_c_xdir_7590": {
+  "issue_only": {
+   "tokens": {
+    "input": 36617,
+    "output": 596,
+    "total": 37213
+   },
+   "fracs": [
+    0.96
+   ],
+   "mean": 0.96,
+   "resolved": "0/1"
+  },
+  "optimized": {
+   "tokens": {
+    "input": 32282,
+    "output": 98790,
+    "total": 131072
+   },
+   "fracs": [
+    0.96
+   ],
+   "mean": 0.96,
+   "resolved": "0/1"
+  }
+ },
+ "swe_sympy_basic_xdir_13091": {
+  "issue_only": {
+   "tokens": {
+    "input": 58383,
+    "output": 46,
+    "total": 58429
+   },
+   "fracs": [
+    0.0
+   ],
+   "mean": 0.0,
+   "resolved": "0/1"
+  },
+  "optimized": {
+   "tokens": {
+    "input": 14493,
+    "output": 258,
+    "total": 14751
+   },
+   "fracs": [
+    0.0
+   ],
+   "mean": 0.0,
+   "resolved": "0/1"
+  }
+ },
+ "swe_sympy_dagger_multi_19783": {
+  "issue_only": {
+   "tokens": {
+    "input": 16939,
+    "output": 133,
+    "total": 17072
+   },
+   "fracs": [
+    0.909
+   ],
+   "mean": 0.909,
+   "resolved": "0/1"
+  },
+  "optimized": {
+   "tokens": {
+    "input": 24696,
+    "output": 67,
+    "total": 24763
+   },
+   "fracs": [
+    0.909
+   ],
+   "mean": 0.909,
+   "resolved": "0/1"
+  }
+ },
+ "swe_django_compiler_multi_15563": {
+  "issue_only": {
+   "tokens": {
+    "input": 20870,
+    "output": 290,
+    "total": 21160
+   },
+   "fracs": [
+    0.9
+   ],
+   "mean": 0.9,
+   "resolved": "0/1"
+  },
+  "optimized": {
+   "tokens": {
+    "input": 25001,
+    "output": 651,
+    "total": 25652
+   },
+   "fracs": [
+    0.0
+   ],
+   "mean": 0.0,
+   "resolved": "0/1"
+  }
+ },
+ "swe_sphinx_doc___init___multi_8593": {
+  "issue_only": {
+   "tokens": {
+    "input": 42580,
+    "output": 438,
+    "total": 43018
+   },
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  },
+  "optimized": {
+   "tokens": {
+    "input": 25241,
+    "output": 136,
+    "total": 25377
+   },
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  }
+ },
+ "swe_sympy_matrices_xdir_13877": {
+  "issue_only": {
+   "tokens": {
+    "input": 17362,
+    "output": 444,
+    "total": 17806
+   },
+   "fracs": [
+    0.0
+   ],
+   "mean": 0.0,
+   "resolved": "0/1"
+  },
+  "optimized": {
+   "tokens": {
+    "input": 37316,
+    "output": 295,
+    "total": 37611
+   },
+   "fracs": [
+    0.0
+   ],
+   "mean": 0.0,
+   "resolved": "0/1"
+  }
+ },
+ "swe_sympy_radsimp_multi_17318": {
+  "issue_only": {
+   "tokens": {
+    "input": 29701,
+    "output": 474,
+    "total": 30175
+   },
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  },
+  "optimized": {
+   "tokens": {
+    "input": 26183,
+    "output": 325,
+    "total": 26508
+   },
+   "fracs": [
+    0.909
+   ],
+   "mean": 0.909,
+   "resolved": "0/1"
+  }
+ },
+ "swe_sympy_relational_xdir_20438": {
+  "issue_only": {
+   "tokens": {
+    "input": 37971,
+    "output": 396,
+    "total": 38367
+   },
+   "fracs": [
+    0.979
+   ],
+   "mean": 0.979,
+   "resolved": "0/1"
+  },
+  "optimized": {
+   "tokens": {
+    "input": 20154,
+    "output": 191,
+    "total": 20345
+   },
+   "fracs": [
+    0.979
+   ],
+   "mean": 0.979,
+   "resolved": "0/1"
+  }
+ },
+ "swe_django_compiler_multi_10554": {
+  "issue_only": {
+   "failed": "agent made no edit (check connection)"
+  },
+  "optimized": {
+   "tokens": {
+    "input": 59327,
+    "output": 1141,
+    "total": 60468
+   },
+   "fracs": [
+    0.0
+   ],
+   "mean": 0.0,
+   "resolved": "0/1"
+  }
+ },
+ "swe_django_expressions_xdir_16263": {
+  "issue_only": {
+   "tokens": {
+    "input": 69524,
+    "output": 154,
+    "total": 69678
+   },
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  },
+  "optimized": {
+   "failed": "agent made no edit (check connection)"
+  }
+ },
+ "swe_django_middleware_xdir_13344": {
+  "issue_only": {
+   "failed": "agent made no edit (check connection)"
+  },
+  "optimized": {
+   "failed": "agent made no edit (check connection)"
+  }
+ },
+ "swe_django_operations_xdir_13121": {
+  "issue_only": {
+   "failed": "agent made no edit (check connection)"
+  },
+  "optimized": {
+   "tokens": {
+    "input": 58999,
+    "output": 231,
+    "total": 59230
+   },
+   "fracs": [
+    0.994
+   ],
+   "mean": 0.994,
+   "resolved": "0/1"
+  }
+ },
+ "swe_sympy_codeprinter_multi_22080": {
+  "issue_only": {
+   "failed": "agent made no edit (check connection)"
+  },
+  "optimized": {
+   "failed": "agent made no edit (check connection)"
+  }
+ },
+ "swe_sympy_latex_xdir_14248": {
+  "issue_only": {
+   "tokens": {
+    "input": 33009,
+    "output": 157,
+    "total": 33166
+   },
+   "fracs": [
+    0.0
+   ],
+   "mean": 0.0,
+   "resolved": "0/1"
+  },
+  "optimized": {
+   "failed": "agent made no edit (check connection)"
+  }
+ },
+ "swe_pylint_dev_argument_xdir_6386": {
+  "issue_only": {
+   "tokens": {
+    "input": 25019,
+    "output": 226,
+    "total": 25245
+   },
+   "fracs": [
+    0.875
+   ],
+   "mean": 0.875,
+   "resolved": "0/1"
+  },
+  "optimized": {
+   "tokens": {
+    "input": 30087,
+    "output": 339,
+    "total": 30426
+   },
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  }
+ },
+ "swe_pylint_dev_argument_xdir_8898": {
+  "issue_only": {
+   "tokens": {
+    "input": 21184,
+    "output": 480,
+    "total": 21664
+   },
+   "fracs": [
+    0.944
+   ],
+   "mean": 0.944,
+   "resolved": "0/1"
+  },
+  "optimized": {
+   "tokens": {
+    "input": 33676,
+    "output": 124,
+    "total": 33800
+   },
+   "fracs": [
+    0.0
+   ],
+   "mean": 0.0,
+   "resolved": "0/1"
+  }
+ },
+ "swe_pylint_dev_variables_xdir_4604": {
+  "issue_only": {
+   "tokens": {
+    "input": 23751,
+    "output": 396,
+    "total": 24147
+   },
+   "fracs": [
+    0.0
+   ],
+   "mean": 0.0,
+   "resolved": "0/1"
+  },
+  "optimized": {
+   "tokens": {
+    "input": 41389,
+    "output": 87,
+    "total": 41476
+   },
+   "fracs": [
+    0.0
+   ],
+   "mean": 0.0,
+   "resolved": "0/1"
+  }
+ }
+}

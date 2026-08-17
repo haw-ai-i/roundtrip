@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/sympy__sympy-15599",
+  "env_path": "~/coundetrip/swebench_envs/sympy__sympy-15599",
   "target_rel": "sympy/core/mod.py",
   "target_rels": [
     "sympy/core/mod.py"

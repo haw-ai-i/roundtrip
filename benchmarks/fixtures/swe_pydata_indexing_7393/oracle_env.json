@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/pydata__xarray-7393",
+  "env_path": "~/coundetrip/swebench_envs/pydata__xarray-7393",
   "target_rel": "xarray/core/indexing.py",
   "target_rels": [
     "xarray/core/indexing.py"

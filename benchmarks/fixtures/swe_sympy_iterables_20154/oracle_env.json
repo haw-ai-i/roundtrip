@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/sympy__sympy-20154",
+  "env_path": "~/coundetrip/swebench_envs/sympy__sympy-20154",
   "target_rel": "sympy/utilities/iterables.py",
   "target_rels": [
     "sympy/utilities/iterables.py"

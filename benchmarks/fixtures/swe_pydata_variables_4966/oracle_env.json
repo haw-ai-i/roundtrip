@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/pydata__xarray-4966",
+  "env_path": "~/coundetrip/swebench_envs/pydata__xarray-4966",
   "target_rel": "xarray/coding/variables.py",
   "target_rels": [
     "xarray/coding/variables.py"

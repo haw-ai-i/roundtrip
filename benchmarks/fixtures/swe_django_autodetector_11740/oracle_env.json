@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/django__django-11740",
+  "env_path": "~/coundetrip/swebench_envs/django__django-11740",
   "target_rel": "django/db/migrations/autodetector.py",
   "target_rels": [
     "django/db/migrations/autodetector.py"

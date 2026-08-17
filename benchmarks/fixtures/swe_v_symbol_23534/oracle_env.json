@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/sympy__sympy-23534",
+  "env_path": "~/coundetrip/swebench_envs/sympy__sympy-23534",
   "target_rel": "sympy/core/symbol.py",
   "oracle_rel": "sympy/core/tests/test_symbol.py",
   "source_basename": "symbol.py"

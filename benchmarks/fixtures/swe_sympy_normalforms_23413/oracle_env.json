@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/sympy__sympy-23413",
+  "env_path": "~/coundetrip/swebench_envs/sympy__sympy-23413",
   "target_rel": "sympy/polys/matrices/normalforms.py",
   "target_rels": [
     "sympy/polys/matrices/normalforms.py"

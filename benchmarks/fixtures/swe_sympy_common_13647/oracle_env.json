@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/sympy__sympy-13647",
+  "env_path": "~/coundetrip/swebench_envs/sympy__sympy-13647",
   "target_rel": "sympy/matrices/common.py",
   "target_rels": [
     "sympy/matrices/common.py"

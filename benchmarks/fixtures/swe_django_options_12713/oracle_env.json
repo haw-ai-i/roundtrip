@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/django__django-12713",
+  "env_path": "~/coundetrip/swebench_envs/django__django-12713",
   "target_rel": "django/contrib/admin/options.py",
   "target_rels": [
     "django/contrib/admin/options.py"

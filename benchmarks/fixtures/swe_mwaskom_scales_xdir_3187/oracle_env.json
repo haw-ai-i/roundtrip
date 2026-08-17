@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/mwaskom__seaborn-3187",
+  "env_path": "~/coundetrip/swebench_envs/mwaskom__seaborn-3187",
   "target_rel": "seaborn/_core/scales.py",
   "target_rels": [
     "seaborn/_core/scales.py",

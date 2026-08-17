@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/django__django-13410",
+  "env_path": "~/coundetrip/swebench_envs/django__django-13410",
   "target_rel": "django/core/files/locks.py",
   "target_rels": [
     "django/core/files/locks.py"

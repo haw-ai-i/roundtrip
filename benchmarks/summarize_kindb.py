@@ -22,6 +22,7 @@ EXCLUDED = {
     "swe_pytest_dev___init___xdir_5840",      # rc 2, FAIL_TO_PASS not collectable
     "swe_pytest_dev_python_multi_8399",       # rc 2, FAIL_TO_PASS not collectable
     "swe_sympy_basic_xdir_13091",             # rc 4, oracle test file missing
+    "swe_sympy_matrices_xdir_13877",          # rc 4, oracle test dir missing
 }
 
 

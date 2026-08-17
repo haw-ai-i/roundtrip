@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/sympy__sympy-24909",
+  "env_path": "~/coundetrip/swebench_envs/sympy__sympy-24909",
   "target_rel": "sympy/physics/units/prefixes.py",
   "oracle_rel": "sympy/physics/units/tests/test_prefixes.py",
   "source_basename": "prefixes.py"

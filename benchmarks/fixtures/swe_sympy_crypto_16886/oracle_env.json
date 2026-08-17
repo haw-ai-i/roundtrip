@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/sympy__sympy-16886",
+  "env_path": "~/coundetrip/swebench_envs/sympy__sympy-16886",
   "target_rel": "sympy/crypto/crypto.py",
   "target_rels": [
     "sympy/crypto/crypto.py"

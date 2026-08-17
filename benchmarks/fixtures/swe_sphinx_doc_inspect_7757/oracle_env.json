@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/sphinx-doc__sphinx-7757",
+  "env_path": "~/coundetrip/swebench_envs/sphinx-doc__sphinx-7757",
   "target_rel": "sphinx/util/inspect.py",
   "target_rels": [
     "sphinx/util/inspect.py"
