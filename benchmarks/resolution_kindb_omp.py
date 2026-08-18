@@ -251,7 +251,11 @@ def main():
             break
         fdir = Path("benchmarks/fixtures") / fix
         cfg = json.loads((fdir / "oracle_env.json").read_text())
-        env = Path(os.path.expandvars(cfg["env_path"])).expanduser()
+        _envs_base = os.environ.get("COUNDETRIP_ENVS_BASE")
+        if _envs_base:
+            env = Path(_envs_base).expanduser() / Path(cfg["env_path"]).name
+        else:
+            env = Path(os.path.expandvars(cfg["env_path"])).expanduser()
         target_rels = cfg.get("target_rels") or [cfg["target_rel"]]
         issue = (fdir / "issue.md").read_text(encoding="utf-8")
         prefix_srcs = {}
