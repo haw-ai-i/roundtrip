@@ -13,7 +13,8 @@ for f in FIX:
     scores, ratios = [], []
     for i in range(N):
         rid = f"vfid_{f}_{i}"
-        env = dict(os.environ); env["COUNDETRIP_MODEL"] = "gemini-3.5-flash"
+        env = dict(os.environ)
+        env.setdefault("COUNDETRIP_MODEL", "gemini-3.5-flash")
         subprocess.run(["uv","run","python","-m","coundetrip.cli","run",
                         "--fixture", f"benchmarks/fixtures/{f}",
                         "--agent", "python -m coundetrip.llm_agent",
