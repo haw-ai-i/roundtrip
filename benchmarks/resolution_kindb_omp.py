@@ -302,7 +302,11 @@ def main():
                     resolved += 1
             if not fracs:
                 continue
+            _dtxt = descs[cond] or ""
+            _dchars = len(_dtxt)
+            _dwords = len(_dtxt.split())
             row[cond] = {"tokens": _used, "calls": _cc,
+                         "desc_chars": _dchars, "desc_words": _dwords,
                          "fracs": fracs, "mean": round(sum(fracs) / len(fracs), 3),
                          "resolved": str(resolved) + "/" + str(N)}
             print(fix.ljust(34) + cond.ljust(12) + str(fracs) + " resolved=" + str(resolved) + "/" + str(N), flush=True)
