@@ -32,6 +32,7 @@ results = json.loads(out_path.read_text()) if out_path.exists() else {}
 
 
 LAST_USAGE = {}
+LAST_CALLS = {'read': 0, 'edit': 0, 'total': 0}
 
 
 def run_omp(cwd, system_prompt, user_prompt, timeout=2400, tries=4):
@@ -51,6 +52,7 @@ def run_omp(cwd, system_prompt, user_prompt, timeout=2400, tries=4):
            "--system-prompt", system_prompt, "-p", "@" + _pf.name]
     last_err = None
     _tok = {"input": 0, "output": 0, "total": 0}
+    _calls = {"read": 0, "edit": 0, "total": 0}
     for attempt in range(tries):
         proc = subprocess.run(cmd, cwd=str(cwd), capture_output=True, text=True, timeout=timeout)
         final = None
@@ -74,13 +76,21 @@ def run_omp(cwd, system_prompt, user_prompt, timeout=2400, tries=4):
                     _tok["input"] = _u.get("input") or 0
                     _tok["output"] = _u.get("output") or 0
                     _tok["total"] = _u.get("totalTokens") or 0
+                for _b in (msg.get("content") or []):
+                    if isinstance(_b, dict) and _b.get("type") == "tool_use":
+                        _nm = (_b.get("name") or "").lower()
+                        _calls["total"] += 1
+                        if any(k in _nm for k in ("edit","write","replace")):
+                            _calls["edit"] += 1
+                        elif any(k in _nm for k in ("read","view","grep","search","cat","ls")):
+                            _calls["read"] += 1
         if final is not None:
-            LAST_USAGE.update(_tok)
+            LAST_USAGE.update(_tok); LAST_CALLS.update(_calls)
             os.unlink(_pf.name)
             return final, err
         last_err = err
         time.sleep(2 * (attempt + 1))
-    LAST_USAGE.update(_tok)
+    LAST_USAGE.update(_tok); LAST_CALLS.update(_calls)
     os.unlink(_pf.name)
     return None, last_err
 
@@ -276,6 +286,7 @@ def main():
             for _ in range(N):
                 repo, edited = resolve_once(env, issue, descs[cond], target_rels)
                 _used = dict(LAST_USAGE)
+                _cc = dict(LAST_CALLS)
                 if not edited:
                     shutil.rmtree(repo.parent, ignore_errors=True)
                     row[cond] = {"failed": "agent made no edit (check connection)"}
@@ -291,7 +302,7 @@ def main():
                     resolved += 1
             if not fracs:
                 continue
-            row[cond] = {"tokens": _used,
+            row[cond] = {"tokens": _used, "calls": _cc,
                          "fracs": fracs, "mean": round(sum(fracs) / len(fracs), 3),
                          "resolved": str(resolved) + "/" + str(N)}
             print(fix.ljust(34) + cond.ljust(12) + str(fracs) + " resolved=" + str(resolved) + "/" + str(N), flush=True)
