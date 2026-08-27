@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/sympy__sympy-23117",
+  "env_path": "~/coundetrip/swebench_envs/sympy__sympy-23117",
   "target_rel": "sympy/tensor/array/ndim_array.py",
   "oracle_rel": "sympy/tensor/array/tests/test_ndim_array.py",
   "source_basename": "ndim_array.py"

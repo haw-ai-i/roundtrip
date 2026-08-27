@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/sympy__sympy-13615",
+  "env_path": "~/coundetrip/swebench_envs/sympy__sympy-13615",
   "target_rel": "sympy/sets/sets.py",
   "target_rels": [
     "sympy/sets/sets.py"

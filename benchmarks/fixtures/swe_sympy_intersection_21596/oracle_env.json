@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/sympy__sympy-21596",
+  "env_path": "~/coundetrip/swebench_envs/sympy__sympy-21596",
   "target_rel": "sympy/sets/handlers/intersection.py",
   "target_rels": [
     "sympy/sets/handlers/intersection.py"

@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/sympy__sympy-20438",
+  "env_path": "~/coundetrip/swebench_envs/sympy__sympy-20438",
   "target_rel": "sympy/core/relational.py",
   "target_rels": [
     "sympy/core/relational.py",

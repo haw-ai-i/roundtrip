@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/django__django-12741",
+  "env_path": "~/coundetrip/swebench_envs/django__django-12741",
   "target_rel": "django/core/management/commands/flush.py",
   "target_rels": [
     "django/core/management/commands/flush.py",

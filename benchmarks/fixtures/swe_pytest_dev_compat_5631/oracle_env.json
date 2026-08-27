@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/pytest-dev__pytest-5631",
+  "env_path": "~/coundetrip/swebench_envs/pytest-dev__pytest-5631",
   "target_rel": "src/_pytest/compat.py",
   "target_rels": [
     "src/_pytest/compat.py"

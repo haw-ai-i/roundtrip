@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/django__django-13809",
+  "env_path": "~/coundetrip/swebench_envs/django__django-13809",
   "target_rel": "django/core/management/commands/runserver.py",
   "target_rels": [
     "django/core/management/commands/runserver.py"

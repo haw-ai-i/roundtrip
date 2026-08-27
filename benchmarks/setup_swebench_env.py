@@ -63,6 +63,11 @@ PYTHON_FOR_REPO = {
     # wheels for the current Python (e.g. numpy<2 stops at 3.12), so the venv is
     # created with an interpreter of the instance's era, resolved via uv.
     "pydata__xarray": "3.10",
+    # pylint: pre-3.11 wrapt uses inspect.formatargspec (removed in 3.11)
+    "pylint-dev__pylint-4": "3.9",
+    "pylint-dev__pylint-6": "3.10",
+    "pylint-dev__pylint-8": "3.10",
+    "mwaskom__seaborn-3": "3.10",
 }
 
 EXTRA_PINS = {

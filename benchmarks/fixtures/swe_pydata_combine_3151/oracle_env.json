@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/pydata__xarray-3151",
+  "env_path": "~/coundetrip/swebench_envs/pydata__xarray-3151",
   "target_rel": "xarray/core/combine.py",
   "target_rels": [
     "xarray/core/combine.py"

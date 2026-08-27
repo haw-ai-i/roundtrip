@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/django__django-12039",
+  "env_path": "~/coundetrip/swebench_envs/django__django-12039",
   "target_rel": "django/db/backends/ddl_references.py",
   "target_rels": [
     "django/db/backends/ddl_references.py"

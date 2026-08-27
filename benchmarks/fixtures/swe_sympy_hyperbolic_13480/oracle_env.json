@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/sympy__sympy-13480",
+  "env_path": "~/coundetrip/swebench_envs/sympy__sympy-13480",
   "target_rel": "sympy/functions/elementary/hyperbolic.py",
   "target_rels": [
     "sympy/functions/elementary/hyperbolic.py"

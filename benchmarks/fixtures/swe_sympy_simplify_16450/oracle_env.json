@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/sympy__sympy-16450",
+  "env_path": "~/coundetrip/swebench_envs/sympy__sympy-16450",
   "target_rel": "sympy/simplify/simplify.py",
   "target_rels": [
     "sympy/simplify/simplify.py"

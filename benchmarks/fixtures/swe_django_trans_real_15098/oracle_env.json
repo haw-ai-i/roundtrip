@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/django__django-15098",
+  "env_path": "~/coundetrip/swebench_envs/django__django-15098",
   "target_rel": "django/utils/translation/trans_real.py",
   "target_rels": [
     "django/utils/translation/trans_real.py"

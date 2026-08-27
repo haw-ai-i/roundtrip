@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/sympy__sympy-21847",
+  "env_path": "~/coundetrip/swebench_envs/sympy__sympy-21847",
   "target_rel": "sympy/polys/monomials.py",
   "target_rels": [
     "sympy/polys/monomials.py"

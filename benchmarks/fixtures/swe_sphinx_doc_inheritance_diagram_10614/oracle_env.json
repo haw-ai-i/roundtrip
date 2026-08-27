@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/sphinx-doc__sphinx-10614",
+  "env_path": "~/coundetrip/swebench_envs/sphinx-doc__sphinx-10614",
   "target_rel": "sphinx/ext/inheritance_diagram.py",
   "target_rels": [
     "sphinx/ext/inheritance_diagram.py"

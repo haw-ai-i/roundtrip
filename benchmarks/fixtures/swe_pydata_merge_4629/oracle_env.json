@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/pydata__xarray-4629",
+  "env_path": "~/coundetrip/swebench_envs/pydata__xarray-4629",
   "target_rel": "xarray/core/merge.py",
   "target_rels": [
     "xarray/core/merge.py"

@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/sympy__sympy-13878",
+  "env_path": "~/coundetrip/swebench_envs/sympy__sympy-13878",
   "target_rel": "sympy/stats/crv_types.py",
   "target_rels": [
     "sympy/stats/crv_types.py"

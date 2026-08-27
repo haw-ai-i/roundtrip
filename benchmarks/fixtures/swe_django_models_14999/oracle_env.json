@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/django__django-14999",
+  "env_path": "~/coundetrip/swebench_envs/django__django-14999",
   "target_rel": "django/db/migrations/operations/models.py",
   "target_rels": [
     "django/db/migrations/operations/models.py"

@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/django__django-15741",
+  "env_path": "~/coundetrip/swebench_envs/django__django-15741",
   "target_rel": "django/utils/formats.py",
   "target_rels": [
     "django/utils/formats.py"

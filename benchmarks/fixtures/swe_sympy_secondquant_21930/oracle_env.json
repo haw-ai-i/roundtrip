@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/sympy__sympy-21930",
+  "env_path": "~/coundetrip/swebench_envs/sympy__sympy-21930",
   "target_rel": "sympy/physics/secondquant.py",
   "target_rels": [
     "sympy/physics/secondquant.py"

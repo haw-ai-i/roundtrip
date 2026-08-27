@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/django__django-15375",
+  "env_path": "~/coundetrip/swebench_envs/django__django-15375",
   "target_rel": "django/db/models/aggregates.py",
   "target_rels": [
     "django/db/models/aggregates.py"

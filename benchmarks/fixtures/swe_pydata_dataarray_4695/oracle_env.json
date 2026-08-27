@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/pydata__xarray-4695",
+  "env_path": "~/coundetrip/swebench_envs/pydata__xarray-4695",
   "target_rel": "xarray/core/dataarray.py",
   "target_rels": [
     "xarray/core/dataarray.py"

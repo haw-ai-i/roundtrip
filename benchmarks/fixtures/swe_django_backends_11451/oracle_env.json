@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/django__django-11451",
+  "env_path": "~/coundetrip/swebench_envs/django__django-11451",
   "target_rel": "django/contrib/auth/backends.py",
   "target_rels": [
     "django/contrib/auth/backends.py"

@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/django__django-15572",
+  "env_path": "~/coundetrip/swebench_envs/django__django-15572",
   "target_rel": "django/template/autoreload.py",
   "target_rels": [
     "django/template/autoreload.py"

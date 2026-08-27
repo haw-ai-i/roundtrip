@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/django__django-13128",
+  "env_path": "~/coundetrip/swebench_envs/django__django-13128",
   "target_rel": "django/db/models/expressions.py",
   "target_rels": [
     "django/db/models/expressions.py"

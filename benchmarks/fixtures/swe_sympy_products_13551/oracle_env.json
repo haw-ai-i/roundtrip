@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/sympy__sympy-13551",
+  "env_path": "~/coundetrip/swebench_envs/sympy__sympy-13551",
   "target_rel": "sympy/concrete/products.py",
   "target_rels": [
     "sympy/concrete/products.py"

@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/sympy__sympy-24443",
+  "env_path": "~/coundetrip/swebench_envs/sympy__sympy-24443",
   "target_rel": "sympy/combinatorics/homomorphisms.py",
   "target_rels": [
     "sympy/combinatorics/homomorphisms.py"

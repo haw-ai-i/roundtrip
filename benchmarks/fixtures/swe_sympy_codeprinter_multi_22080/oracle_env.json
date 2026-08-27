@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/sympy__sympy-22080",
+  "env_path": "~/coundetrip/swebench_envs/sympy__sympy-22080",
   "target_rel": "sympy/printing/codeprinter.py",
   "target_rels": [
     "sympy/printing/codeprinter.py",

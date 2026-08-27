@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/sphinx-doc__sphinx-9673",
+  "env_path": "~/coundetrip/swebench_envs/sphinx-doc__sphinx-9673",
   "target_rel": "sphinx/ext/autodoc/typehints.py",
   "target_rels": [
     "sphinx/ext/autodoc/typehints.py"

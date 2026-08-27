@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/sympy__sympy-22456",
+  "env_path": "~/coundetrip/swebench_envs/sympy__sympy-22456",
   "target_rel": "sympy/codegen/ast.py",
   "target_rels": [
     "sympy/codegen/ast.py"

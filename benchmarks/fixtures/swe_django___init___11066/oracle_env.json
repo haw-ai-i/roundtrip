@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/django__django-11066",
+  "env_path": "~/coundetrip/swebench_envs/django__django-11066",
   "target_rel": "django/contrib/contenttypes/management/__init__.py",
   "target_rels": [
     "django/contrib/contenttypes/management/__init__.py"

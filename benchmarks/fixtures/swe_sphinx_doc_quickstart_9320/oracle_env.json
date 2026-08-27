@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/sphinx-doc__sphinx-9320",
+  "env_path": "~/coundetrip/swebench_envs/sphinx-doc__sphinx-9320",
   "target_rel": "sphinx/cmd/quickstart.py",
   "target_rels": [
     "sphinx/cmd/quickstart.py"

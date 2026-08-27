@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/django__django-11119",
+  "env_path": "~/coundetrip/swebench_envs/django__django-11119",
   "target_rel": "django/template/engine.py",
   "target_rels": [
     "django/template/engine.py"

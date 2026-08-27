@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/sympy__sympy-20428",
+  "env_path": "~/coundetrip/swebench_envs/sympy__sympy-20428",
   "target_rel": "sympy/polys/domains/expressiondomain.py",
   "target_rels": [
     "sympy/polys/domains/expressiondomain.py"

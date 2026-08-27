@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/django__django-15851",
+  "env_path": "~/coundetrip/swebench_envs/django__django-15851",
   "target_rel": "django/db/backends/postgresql/client.py",
   "target_rels": [
     "django/db/backends/postgresql/client.py"

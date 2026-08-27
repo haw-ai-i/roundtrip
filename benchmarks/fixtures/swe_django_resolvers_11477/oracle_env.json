@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/django__django-11477",
+  "env_path": "~/coundetrip/swebench_envs/django__django-11477",
   "target_rel": "django/urls/resolvers.py",
   "target_rels": [
     "django/urls/resolvers.py"

@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/sympy__sympy-19783",
+  "env_path": "~/coundetrip/swebench_envs/sympy__sympy-19783",
   "target_rel": "sympy/physics/quantum/dagger.py",
   "target_rels": [
     "sympy/physics/quantum/dagger.py",

@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/sympy__sympy-12096",
+  "env_path": "~/coundetrip/swebench_envs/sympy__sympy-12096",
   "target_rel": "sympy/core/function.py",
   "target_rels": [
     "sympy/core/function.py"

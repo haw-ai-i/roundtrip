@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/django__django-10914",
+  "env_path": "~/coundetrip/swebench_envs/django__django-10914",
   "target_rel": "django/conf/global_settings.py",
   "target_rels": [
     "django/conf/global_settings.py"

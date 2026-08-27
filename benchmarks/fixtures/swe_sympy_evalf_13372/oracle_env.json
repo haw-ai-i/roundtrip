@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/sympy__sympy-13372",
+  "env_path": "~/coundetrip/swebench_envs/sympy__sympy-13372",
   "target_rel": "sympy/core/evalf.py",
   "target_rels": [
     "sympy/core/evalf.py"

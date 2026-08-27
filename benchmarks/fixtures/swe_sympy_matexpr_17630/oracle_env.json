@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/sympy__sympy-17630",
+  "env_path": "~/coundetrip/swebench_envs/sympy__sympy-17630",
   "target_rel": "sympy/matrices/expressions/matexpr.py",
   "target_rels": [
     "sympy/matrices/expressions/matexpr.py"

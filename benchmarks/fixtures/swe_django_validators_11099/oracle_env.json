@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/django__django-11099",
+  "env_path": "~/coundetrip/swebench_envs/django__django-11099",
   "target_rel": "django/contrib/auth/validators.py",
   "target_rels": [
     "django/contrib/auth/validators.py"

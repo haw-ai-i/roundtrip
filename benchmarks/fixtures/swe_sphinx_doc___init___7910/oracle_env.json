@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/sphinx-doc__sphinx-7910",
+  "env_path": "~/coundetrip/swebench_envs/sphinx-doc__sphinx-7910",
   "target_rel": "sphinx/ext/napoleon/__init__.py",
   "target_rels": [
     "sphinx/ext/napoleon/__init__.py"

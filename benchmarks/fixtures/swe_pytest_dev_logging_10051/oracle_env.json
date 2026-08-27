@@ -1,5 +1,5 @@
 {
-  "env_path": "~/Desktop/coundetrip/swebench_envs/pytest-dev__pytest-10051",
+  "env_path": "~/coundetrip/swebench_envs/pytest-dev__pytest-10051",
   "target_rel": "src/_pytest/logging.py",
   "target_rels": [
     "src/_pytest/logging.py"
