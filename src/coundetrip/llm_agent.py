@@ -201,13 +201,17 @@ class OpenAIClient:
 
     def complete(self, *, system: str, user: str) -> str:
         import time
-        system = f"/no_think\n{system}"
+        # Reasoning models (e.g. Qwen3.5 via ollama) place their chain-of-thought in
+        # a separate field and need generous max_tokens to finish thinking AND emit
+        # the answer; too small a budget returns empty content (finish_reason=length).
+        max_tokens = int(os.environ.get("COUNDETRIP_MAX_TOKENS", "8192"))
         last = None
         for attempt in range(self._max_retries):
             try:
                 resp = self._client.chat.completions.create(
                     model=self._model,
                     temperature=self._temperature,
+                    max_tokens=max_tokens,
                     messages=[
                         {"role": "system", "content": system},
                         {"role": "user", "content": user},
