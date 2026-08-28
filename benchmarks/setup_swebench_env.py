@@ -132,7 +132,7 @@ def main() -> int:
     target.parent.mkdir(parents=True, exist_ok=True)
 
     url = f"https://github.com/{r['repo']}.git"
-    cache = Path.home() / "Desktop" / "coundetrip" / "repo_cache" / f"{r['repo'].replace('/', '__')}.git"
+    cache = Path.home() / (r["repo"].split("/")[-1] + "_cache.git")
     if target.exists():
         shutil.rmtree(target)
     if cache.exists():
