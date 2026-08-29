@@ -9,6 +9,7 @@ import hashlib, json, os, re, shutil, subprocess, sys, tempfile, time
 from pathlib import Path
 
 from coundetrip.scoring import parse_pytest_summary
+from coundetrip.llm_agent import ast_describe
 
 N = 1
 DISCOVERED = Path("benchmarks/stage3_best_prompt.txt").read_text(encoding="utf-8")
@@ -26,7 +27,7 @@ RES_SYS = ("You are a coding agent resolving a repository issue. The repository 
 
 DESC_SYS_OPTIMIZED = DISCOVERED
 
-out_path = Path("benchmarks/baseline_results/transfer_kindb_omp.json")
+out_path = Path(os.environ.get("COUNDETRIP_OUT", "benchmarks/baseline_results/transfer_kindb_omp.json"))
 out_path.parent.mkdir(parents=True, exist_ok=True)
 results = json.loads(out_path.read_text()) if out_path.exists() else {}
 
@@ -35,7 +36,16 @@ LAST_USAGE = {}
 LAST_CALLS = {'read': 0, 'edit': 0, 'total': 0}
 
 
-def run_omp(cwd, system_prompt, user_prompt, timeout=2400, tries=4):
+_MAXT = os.environ.get("COUNDETRIP_MAXTIME", "5m")
+_TRIES = int(os.environ.get("COUNDETRIP_TRIES", "2"))
+def _maxt_secs(mt):
+    mt = mt.strip()
+    if mt.endswith("m"): return int(float(mt[:-1]) * 60)
+    if mt.endswith("h"): return int(float(mt[:-1]) * 3600)
+    return int(float(mt.rstrip("s")))
+def run_omp(cwd, system_prompt, user_prompt, timeout=None, tries=None):
+    if timeout is None: timeout = _maxt_secs(_MAXT) + 60
+    if tries is None: tries = _TRIES
     """Call omp once and return (agent_end_frame, error). Retries when omp
     returns no agent_end frame: on a single-slot model node, a call fired
     right after another can come back empty while the node releases the
@@ -48,7 +58,7 @@ def run_omp(cwd, system_prompt, user_prompt, timeout=2400, tries=4):
     _pf.close()
     cmd = [OMP, "--provider", PROVIDER, "--model", MODEL,
            "--no-session", "--no-lsp", "--mode", "json", "--thinking", "off",
-           "--max-time", "20m",
+           "--max-time", _MAXT,
            "--system-prompt", system_prompt, "-p", "@" + _pf.name]
     last_err = None
     _tok = {"input": 0, "output": 0, "total": 0}
@@ -144,6 +154,31 @@ def describe(prefix_srcs, system_prompt):
             return ""
         parts.append("## " + rel + chr(10) + got.strip())
     return (chr(10) + chr(10)).join(parts)
+
+SUMM_SYS = ("You compress a file specification into a minimal static summary. "
+            "Output ONLY the summary, no preamble.")
+def summarize(desc, budget_words=90):
+    """Compress a full description into a compact (~10^2 token) static summary.
+    Bug-agnostic: summarizes the description text only, independent of any issue."""
+    if not desc or not desc.strip():
+        return ""
+    with tempfile.TemporaryDirectory(prefix="omp_summ_") as td:
+        stage = Path(td)
+        (stage / "spec.md").write_text(desc, encoding="utf-8")
+        user = ("Read spec.md in full using your read tool. Then write a compact "
+                "summary of at most " + str(budget_words) + " words capturing only "
+                "what is needed to understand and modify this file: its purpose, key "
+                "functions/classes and their contracts, and important invariants. "
+                "Output the summary as your final message.")
+        got = ""
+        for _ in range(4):
+            frame, err = run_omp(stage, SUMM_SYS, user)
+            if err:
+                sys.stderr.write("summarize omp error: " + str(err) + chr(10))
+            got = final_text(frame)
+            if got.strip():
+                break
+    return got.strip()
 
 
 def resolve_once(env, issue, desc, target_rels):
@@ -276,10 +311,24 @@ def main():
                 prefix_srcs[rel] = src
         if not prefix_srcs:
             print(fix, "no pre-fix source, skipping"); continue
+        _conds = os.environ.get("COUNDETRIP_CONDS", "issue_only,optimized,compact,ast").split(",")
+        _need_full = ("optimized" in _conds) or ("compact" in _conds)
+        _dcache = Path("benchmarks/descriptions"); _dcache.mkdir(exist_ok=True)
+        _dfile = _dcache / (fix + ".md")
+        _full = ""
+        if _need_full:
+            if _dfile.exists():
+                _full = _dfile.read_text(encoding="utf-8")
+            else:
+                _full = describe(prefix_srcs, DESC_SYS_OPTIMIZED)
+                if _full.strip():
+                    _dfile.write_text(_full, encoding="utf-8")
         descs = {"issue_only": None,
-                 "optimized": describe(prefix_srcs, DESC_SYS_OPTIMIZED)}
+                 "optimized": _full,
+                 "compact": summarize(_full) if "compact" in _conds else "",
+                 "ast": ast_describe(prefix_srcs) if "ast" in _conds else ""}
         row = {}
-        for cond in ["issue_only", "optimized"]:
+        for cond in os.environ.get("COUNDETRIP_CONDS", "issue_only,optimized,compact,ast").split(","):
             if cond != "issue_only" and not descs[cond]:
                 row[cond] = {"skipped": "describe empty"}; continue
             fracs, resolved = [], 0
