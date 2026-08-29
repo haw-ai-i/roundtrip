@@ -1,0 +1,104 @@
+========================================================================================================
+PER-FIXTURE 4-WAY (score, or NE=no-edit)
+========================================================================================================
+fixture                                         issue    optim  compact      ast   note
+--------------------------------------------------------------------------------------------------------
+swe_django___init___xdir_11734                  1.000    1.000    1.000    1.000   
+swe_django_base_multi_11333                     1.000    0.667    0.667    0.667   compact-issue=-0.33
+swe_django_base_multi_12325                     0.990    0.990    0.990    0.990   
+swe_django_base_multi_14376                     0.889    1.000    0.889    1.000   
+swe_django_client_xdir_14315                    0.727    0.727    0.818    0.727   
+swe_django_compiler_multi_10554                    NE    0.000       NE    0.000   
+swe_django_compiler_multi_15563                    NE    0.000       NE       NE   
+swe_django_cookie_xdir_13195                    0.997    0.992    1.000    0.992   
+swe_django_defaultfilters_xdir_15103            0.947    0.947    0.895    0.947   
+swe_django_expressions_xdir_16263               1.000       NE       NE       NE   COMPACT-ONLY-FAIL
+swe_django_fields_xdir_16256                    1.000    0.933    1.000    1.000   
+swe_django_flush_xdir_12741                     1.000    1.000    1.000    1.000   
+swe_django_middleware_xdir_13344                   NE       NE       NE       NE   
+swe_django_operations_xdir_11138                0.986    0.932    0.986    0.905   
+swe_django_operations_xdir_13121                   NE    0.994       NE       NE   
+swe_django_operations_xdir_14170                0.974    0.895    1.000    1.000   
+swe_django_query_xdir_16315                     0.976    0.805    0.805    1.000   compact-issue=-0.17
+swe_django_related_lookups_xdir_16032           0.973    0.973       NE    0.973   COMPACT-ONLY-FAIL
+swe_django_related_xdir_12406                   0.981    0.975    0.975    0.975   
+swe_django_schema_xdir_15561                    1.000    1.000    1.000    1.000   
+swe_django_utils_multi_12155                    1.000    1.000    1.000    1.000   
+swe_django_utils_xdir_11885                     0.727    0.000       NE    0.477   COMPACT-ONLY-FAIL
+swe_django_utils_xdir_13512                     1.000    0.971    0.971    0.971   
+swe_django_validators_xdir_13212                0.857    0.714    0.714    0.714   compact-issue=-0.14
+swe_pydata_dataarray_multi_3993                 0.998    0.998    0.998    0.998   
+swe_pydata_dataset_multi_3305                   1.000    1.000    1.000    1.000   
+swe_pydata_dataset_multi_6938                   0.998    0.998    0.998    0.998   
+swe_pydata_dataset_multi_6992                   0.987    0.987    0.987    0.987   
+swe_pydata_indexing_multi_3095                  1.000    1.000    1.000    0.988   
+swe_pylint_dev_argument_xdir_6386               0.875    1.000    0.875    0.875   
+swe_pylint_dev_argument_xdir_8898               0.944    0.944    0.944    1.000   
+swe_pylint_dev_variables_xdir_4604              0.000    0.000    0.000    1.000   
+swe_sphinx_doc___init___multi_8548              0.833    0.833    0.833    0.167   
+swe_sphinx_doc___init___multi_8593              1.000    1.000    1.000    0.333   
+swe_sphinx_doc_application_xdir_8120            1.000    1.000    1.000    1.000   
+swe_sphinx_doc_c_xdir_7590                      0.960    0.960    0.960    0.960   
+swe_sphinx_doc_other_xdir_10673                 1.000    0.600    0.900    0.000   
+swe_sphinx_doc_python_xdir_7462                 0.946    0.973    0.973    0.946   
+swe_sphinx_doc_python_xdir_8551                 1.000    1.000    1.000    1.000   
+swe_sphinx_doc_python_xdir_9461                 0.952    0.952    0.952       NE   
+swe_sympy_ask_xdir_16597                        0.961    0.961    0.961    0.961   
+swe_sympy_codeprinter_multi_22080                  NE       NE       NE    0.968   
+swe_sympy_dagger_multi_19783                    0.909    0.909    1.000    1.000   
+swe_sympy_latex_xdir_14248                      0.000       NE       NE       NE   COMPACT-ONLY-FAIL
+swe_sympy_radsimp_multi_17318                   1.000    0.909    0.909    0.909   
+swe_sympy_relational_xdir_20438                 0.979    0.979    0.000    0.979   compact-issue=-0.98
+
+========================================================================================================
+ROBUSTNESS: no-edit overlap analysis
+========================================================================================================
+issue_only   no-edits: 5  -> ['django_compiler_multi_10554', 'django_compiler_multi_15563', 'django_middleware_xdir_13344', 'django_operations_xdir_13121', 'sympy_codeprinter_multi_22080']
+optimized    no-edits: 4  -> ['django_expressions_xdir_16263', 'django_middleware_xdir_13344', 'sympy_codeprinter_multi_22080', 'sympy_latex_xdir_14248']
+compact      no-edits: 9  -> ['django_compiler_multi_10554', 'django_compiler_multi_15563', 'django_expressions_xdir_16263', 'django_middleware_xdir_13344', 'django_operations_xdir_13121', 'django_related_lookups_xdir_16032', 'django_utils_xdir_11885', 'sympy_codeprinter_multi_22080', 'sympy_latex_xdir_14248']
+ast          no-edits: 6  -> ['django_compiler_multi_15563', 'django_expressions_xdir_16263', 'django_middleware_xdir_13344', 'django_operations_xdir_13121', 'sphinx_doc_python_xdir_9461', 'sympy_latex_xdir_14248']
+
+compact no-edits where >=1 other condition SUCCEEDED (real compression cost): 8
+   django_expressions_xdir_16263            succeeded in: issue_only
+   django_utils_xdir_11885                  succeeded in: issue_only,optimized,ast
+   django_compiler_multi_15563              succeeded in: optimized
+   django_related_lookups_xdir_16032        succeeded in: issue_only,optimized,ast
+   django_operations_xdir_13121             succeeded in: optimized
+   sympy_codeprinter_multi_22080            succeeded in: ast
+   sympy_latex_xdir_14248                   succeeded in: issue_only
+   django_compiler_multi_10554              succeeded in: optimized,ast
+compact no-edits also failing everywhere (hard fixture, not compact-specific): 1
+   django_middleware_xdir_13344
+====================================================================================
+MECHANISM: do compact failures cluster on #target-files or description size?
+====================================================================================
+fixture                                    #files  full_words  category
+------------------------------------------------------------------------------------
+django_compiler_multi_15563                     2        4748  COMPACT-FAIL
+django_utils_xdir_11885                         2        4419  COMPACT-FAIL
+django_operations_xdir_13121                    4       10180  COMPACT-FAIL
+sympy_codeprinter_multi_22080                   2        2754  COMPACT-FAIL
+sympy_latex_xdir_14248                          3        2873  COMPACT-FAIL
+django_related_lookups_xdir_16032               2        6164  COMPACT-FAIL
+django_compiler_multi_10554                     2        7699  COMPACT-FAIL
+django_expressions_xdir_16263                   4       10731  COMPACT-FAIL
+sympy_relational_xdir_20438                     3        4344  WRONG-EDIT
+------------------------------------------------------------------------------------
+compact-FAIL     n=8   avg #files=2.62  multi-file(>1)=8/8  avg full_words=6196
+compact-OK       n=40  avg #files=2.85  multi-file(>1)=40/40  avg full_words=5929
+
+READ: if FAIL avg #files >> OK avg #files, the 70-word summary can't cover
+      multiple target files -> that's the mechanism of the robustness tax.
+STRICT PAIRED SET (all 4 conditions scored): 36 fixtures
+
+condition     resolved  mean_frac  desc_words
+---------------------------------------------
+issue_only          14      0.936           0
+optimized           11      0.906        4866
+compact             13      0.890          70
+ast                 14      0.889        4024
+
+PAIRED McNEMAR vs issue_only (same 36 fixtures):
+  optimized  optimized better:2  issue_only better:5  p=0.4531
+  compact    compact better:3  issue_only better:4  p=1.0000
+  ast        ast better:6  issue_only better:6  p=1.0000
