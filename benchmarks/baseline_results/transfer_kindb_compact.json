@@ -1,0 +1,887 @@
+{
+ "swe_django___init___xdir_11734": {
+  "compact": {
+   "tokens": {
+    "input": 39737,
+    "output": 309,
+    "total": 40046
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 671,
+   "desc_words": 79,
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  }
+ },
+ "swe_django_base_multi_11333": {
+  "compact": {
+   "tokens": {
+    "input": 24684,
+    "output": 134,
+    "total": 24818
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 275,
+   "desc_words": 38,
+   "fracs": [
+    0.667
+   ],
+   "mean": 0.667,
+   "resolved": "0/1"
+  }
+ },
+ "swe_django_base_multi_12325": {
+  "compact": {
+   "tokens": {
+    "input": 24764,
+    "output": 382,
+    "total": 25146
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 734,
+   "desc_words": 77,
+   "fracs": [
+    0.99
+   ],
+   "mean": 0.99,
+   "resolved": "0/1"
+  }
+ },
+ "swe_django_base_multi_14376": {
+  "compact": {
+   "tokens": {
+    "input": 18987,
+    "output": 359,
+    "total": 19346
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 620,
+   "desc_words": 70,
+   "fracs": [
+    0.889
+   ],
+   "mean": 0.889,
+   "resolved": "0/1"
+  }
+ },
+ "swe_django_client_xdir_14315": {
+  "compact": {
+   "tokens": {
+    "input": 14052,
+    "output": 321,
+    "total": 14373
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 749,
+   "desc_words": 92,
+   "fracs": [
+    0.818
+   ],
+   "mean": 0.818,
+   "resolved": "0/1"
+  }
+ },
+ "swe_django_compiler_multi_10554": {
+  "compact": {
+   "failed": "agent made no edit (check connection)"
+  }
+ },
+ "swe_django_compiler_multi_15563": {
+  "compact": {
+   "failed": "agent made no edit (check connection)"
+  }
+ },
+ "swe_django_cookie_xdir_13195": {
+  "compact": {
+   "tokens": {
+    "input": 34444,
+    "output": 293,
+    "total": 34737
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 700,
+   "desc_words": 66,
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  }
+ },
+ "swe_django_defaultfilters_xdir_15103": {
+  "compact": {
+   "tokens": {
+    "input": 16234,
+    "output": 153,
+    "total": 16387
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 624,
+   "desc_words": 65,
+   "fracs": [
+    0.895
+   ],
+   "mean": 0.895,
+   "resolved": "0/1"
+  }
+ },
+ "swe_django_expressions_xdir_16263": {
+  "compact": {
+   "failed": "agent made no edit (check connection)"
+  }
+ },
+ "swe_django_fields_xdir_16256": {
+  "compact": {
+   "tokens": {
+    "input": 37928,
+    "output": 582,
+    "total": 38510
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 773,
+   "desc_words": 68,
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  }
+ },
+ "swe_django_flush_xdir_12741": {
+  "compact": {
+   "tokens": {
+    "input": 17707,
+    "output": 266,
+    "total": 17973
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 593,
+   "desc_words": 69,
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  }
+ },
+ "swe_django_middleware_xdir_13344": {
+  "compact": {
+   "failed": "agent made no edit (check connection)"
+  }
+ },
+ "swe_django_operations_xdir_11138": {
+  "compact": {
+   "tokens": {
+    "input": 41390,
+    "output": 398,
+    "total": 41788
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 802,
+   "desc_words": 83,
+   "fracs": [
+    0.986
+   ],
+   "mean": 0.986,
+   "resolved": "0/1"
+  }
+ },
+ "swe_django_operations_xdir_13121": {
+  "compact": {
+   "failed": "agent made no edit (check connection)"
+  }
+ },
+ "swe_django_operations_xdir_14170": {
+  "compact": {
+   "tokens": {
+    "input": 29311,
+    "output": 276,
+    "total": 29587
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 629,
+   "desc_words": 73,
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  }
+ },
+ "swe_django_query_xdir_16315": {
+  "compact": {
+   "tokens": {
+    "input": 47206,
+    "output": 387,
+    "total": 47593
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 710,
+   "desc_words": 71,
+   "fracs": [
+    0.805
+   ],
+   "mean": 0.805,
+   "resolved": "0/1"
+  }
+ },
+ "swe_django_related_lookups_xdir_16032": {
+  "compact": {
+   "failed": "agent made no edit (check connection)"
+  }
+ },
+ "swe_django_related_xdir_12406": {
+  "compact": {
+   "tokens": {
+    "input": 25798,
+    "output": 394,
+    "total": 26192
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 699,
+   "desc_words": 67,
+   "fracs": [
+    0.975
+   ],
+   "mean": 0.975,
+   "resolved": "0/1"
+  }
+ },
+ "swe_django_schema_xdir_15561": {
+  "compact": {
+   "tokens": {
+    "input": 23919,
+    "output": 368,
+    "total": 24287
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 630,
+   "desc_words": 68,
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  }
+ },
+ "swe_django_utils_multi_12155": {
+  "compact": {
+   "tokens": {
+    "input": 14429,
+    "output": 232,
+    "total": 14661
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 658,
+   "desc_words": 53,
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  }
+ },
+ "swe_django_utils_xdir_11885": {
+  "compact": {
+   "failed": "agent made no edit (check connection)"
+  }
+ },
+ "swe_django_utils_xdir_13512": {
+  "compact": {
+   "tokens": {
+    "input": 20778,
+    "output": 420,
+    "total": 21198
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 527,
+   "desc_words": 55,
+   "fracs": [
+    0.971
+   ],
+   "mean": 0.971,
+   "resolved": "0/1"
+  }
+ },
+ "swe_django_validators_xdir_13212": {
+  "compact": {
+   "tokens": {
+    "input": 51831,
+    "output": 287,
+    "total": 52118
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 707,
+   "desc_words": 60,
+   "fracs": [
+    0.714
+   ],
+   "mean": 0.714,
+   "resolved": "0/1"
+  }
+ },
+ "swe_pydata_dataarray_multi_3993": {
+  "compact": {
+   "tokens": {
+    "input": 25997,
+    "output": 363,
+    "total": 26360
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 620,
+   "desc_words": 66,
+   "fracs": [
+    0.998
+   ],
+   "mean": 0.998,
+   "resolved": "0/1"
+  }
+ },
+ "swe_pydata_dataset_multi_3305": {
+  "compact": {
+   "tokens": {
+    "input": 32942,
+    "output": 487,
+    "total": 33429
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 655,
+   "desc_words": 74,
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  }
+ },
+ "swe_pydata_dataset_multi_6938": {
+  "compact": {
+   "tokens": {
+    "input": 56939,
+    "output": 300,
+    "total": 57239
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 611,
+   "desc_words": 67,
+   "fracs": [
+    0.998
+   ],
+   "mean": 0.998,
+   "resolved": "0/1"
+  }
+ },
+ "swe_pydata_dataset_multi_6992": {
+  "compact": {
+   "tokens": {
+    "input": 27462,
+    "output": 408,
+    "total": 27870
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 562,
+   "desc_words": 66,
+   "fracs": [
+    0.987
+   ],
+   "mean": 0.987,
+   "resolved": "0/1"
+  }
+ },
+ "swe_pydata_indexing_multi_3095": {
+  "compact": {
+   "tokens": {
+    "input": 23446,
+    "output": 381,
+    "total": 23827
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 734,
+   "desc_words": 77,
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  }
+ },
+ "swe_pylint_dev_argument_xdir_6386": {
+  "compact": {
+   "tokens": {
+    "input": 28688,
+    "output": 245,
+    "total": 28933
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 824,
+   "desc_words": 78,
+   "fracs": [
+    0.875
+   ],
+   "mean": 0.875,
+   "resolved": "0/1"
+  }
+ },
+ "swe_pylint_dev_argument_xdir_8898": {
+  "compact": {
+   "tokens": {
+    "input": 22173,
+    "output": 154,
+    "total": 22327
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 668,
+   "desc_words": 80,
+   "fracs": [
+    0.944
+   ],
+   "mean": 0.944,
+   "resolved": "0/1"
+  }
+ },
+ "swe_pylint_dev_variables_xdir_4604": {
+  "compact": {
+   "tokens": {
+    "input": 38522,
+    "output": 499,
+    "total": 39021
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 702,
+   "desc_words": 73,
+   "fracs": [
+    0.0
+   ],
+   "mean": 0.0,
+   "resolved": "0/1"
+  }
+ },
+ "swe_pytest_dev___init___xdir_5840": {
+  "compact": {
+   "tokens": {
+    "input": 20722,
+    "output": 432,
+    "total": 21154
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 581,
+   "desc_words": 70,
+   "fracs": [
+    0.0
+   ],
+   "mean": 0.0,
+   "resolved": "0/1"
+  }
+ },
+ "swe_pytest_dev_python_multi_8399": {
+  "compact": {
+   "tokens": {
+    "input": 18826,
+    "output": 222,
+    "total": 19048
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 878,
+   "desc_words": 83,
+   "fracs": [
+    0.0
+   ],
+   "mean": 0.0,
+   "resolved": "0/1"
+  }
+ },
+ "swe_sphinx_doc___init___multi_8548": {
+  "compact": {
+   "tokens": {
+    "input": 32517,
+    "output": 18976,
+    "total": 51493
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 616,
+   "desc_words": 55,
+   "fracs": [
+    0.833
+   ],
+   "mean": 0.833,
+   "resolved": "0/1"
+  }
+ },
+ "swe_sphinx_doc___init___multi_8593": {
+  "compact": {
+   "tokens": {
+    "input": 43799,
+    "output": 506,
+    "total": 44305
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 738,
+   "desc_words": 71,
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  }
+ },
+ "swe_sphinx_doc_application_xdir_8120": {
+  "compact": {
+   "tokens": {
+    "input": 21687,
+    "output": 415,
+    "total": 22102
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 673,
+   "desc_words": 70,
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  }
+ },
+ "swe_sphinx_doc_c_xdir_7590": {
+  "compact": {
+   "tokens": {
+    "input": 58936,
+    "output": 327,
+    "total": 59263
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 643,
+   "desc_words": 74,
+   "fracs": [
+    0.96
+   ],
+   "mean": 0.96,
+   "resolved": "0/1"
+  }
+ },
+ "swe_sphinx_doc_other_xdir_10673": {
+  "compact": {
+   "tokens": {
+    "input": 32174,
+    "output": 131,
+    "total": 32305
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 648,
+   "desc_words": 71,
+   "fracs": [
+    0.9
+   ],
+   "mean": 0.9,
+   "resolved": "0/1"
+  }
+ },
+ "swe_sphinx_doc_python_xdir_7462": {
+  "compact": {
+   "tokens": {
+    "input": 20924,
+    "output": 435,
+    "total": 21359
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 653,
+   "desc_words": 72,
+   "fracs": [
+    0.973
+   ],
+   "mean": 0.973,
+   "resolved": "0/1"
+  }
+ },
+ "swe_sphinx_doc_python_xdir_8551": {
+  "compact": {
+   "tokens": {
+    "input": 35805,
+    "output": 547,
+    "total": 36352
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 693,
+   "desc_words": 80,
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  }
+ },
+ "swe_sphinx_doc_python_xdir_9461": {
+  "compact": {
+   "tokens": {
+    "input": 65594,
+    "output": 163,
+    "total": 65757
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 686,
+   "desc_words": 72,
+   "fracs": [
+    0.952
+   ],
+   "mean": 0.952,
+   "resolved": "0/1"
+  }
+ },
+ "swe_sympy_ask_xdir_16597": {
+  "compact": {
+   "tokens": {
+    "input": 27573,
+    "output": 297,
+    "total": 27870
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 721,
+   "desc_words": 85,
+   "fracs": [
+    0.961
+   ],
+   "mean": 0.961,
+   "resolved": "0/1"
+  }
+ },
+ "swe_sympy_basic_xdir_13091": {
+  "compact": {
+   "tokens": {
+    "input": 97847,
+    "output": 90,
+    "total": 97937
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 685,
+   "desc_words": 81,
+   "fracs": [
+    0.0
+   ],
+   "mean": 0.0,
+   "resolved": "0/1"
+  }
+ },
+ "swe_sympy_codeprinter_multi_22080": {
+  "compact": {
+   "failed": "agent made no edit (check connection)"
+  }
+ },
+ "swe_sympy_dagger_multi_19783": {
+  "compact": {
+   "tokens": {
+    "input": 31798,
+    "output": 167,
+    "total": 31965
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 624,
+   "desc_words": 68,
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  }
+ },
+ "swe_sympy_latex_xdir_14248": {
+  "compact": {
+   "failed": "agent made no edit (check connection)"
+  }
+ },
+ "swe_sympy_radsimp_multi_17318": {
+  "compact": {
+   "tokens": {
+    "input": 21831,
+    "output": 356,
+    "total": 22187
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 747,
+   "desc_words": 79,
+   "fracs": [
+    0.909
+   ],
+   "mean": 0.909,
+   "resolved": "0/1"
+  }
+ },
+ "swe_sympy_relational_xdir_20438": {
+  "compact": {
+   "tokens": {
+    "input": 39840,
+    "output": 125,
+    "total": 39965
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 598,
+   "desc_words": 69,
+   "fracs": [
+    0.0
+   ],
+   "mean": 0.0,
+   "resolved": "0/1"
+  }
+ }
+}

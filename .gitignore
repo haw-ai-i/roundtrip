@@ -31,3 +31,4 @@ benchmarks/*_openwiki/
 benchmarks/*/openwiki/
 benchmarks/**/AGENTS.md
 runs/
+swebench_envs/

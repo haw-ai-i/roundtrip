@@ -1,0 +1,956 @@
+{
+ "swe_django___init___xdir_11734": {
+  "ast": {
+   "tokens": {
+    "input": 33311,
+    "output": 387,
+    "total": 33698
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 34044,
+   "desc_words": 4249,
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  }
+ },
+ "swe_django_base_multi_11333": {
+  "ast": {
+   "tokens": {
+    "input": 20272,
+    "output": 200,
+    "total": 20472
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 2871,
+   "desc_words": 318,
+   "fracs": [
+    0.667
+   ],
+   "mean": 0.667,
+   "resolved": "0/1"
+  }
+ },
+ "swe_django_base_multi_12325": {
+  "ast": {
+   "tokens": {
+    "input": 27562,
+    "output": 400,
+    "total": 27962
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 8671,
+   "desc_words": 1164,
+   "fracs": [
+    0.99
+   ],
+   "mean": 0.99,
+   "resolved": "0/1"
+  }
+ },
+ "swe_django_base_multi_14376": {
+  "ast": {
+   "tokens": {
+    "input": 15501,
+    "output": 194,
+    "total": 15695
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 1759,
+   "desc_words": 174,
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  }
+ },
+ "swe_django_client_xdir_14315": {
+  "ast": {
+   "tokens": {
+    "input": 13429,
+    "output": 165,
+    "total": 13594
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 474,
+   "desc_words": 35,
+   "fracs": [
+    0.727
+   ],
+   "mean": 0.727,
+   "resolved": "0/1"
+  }
+ },
+ "swe_django_compiler_multi_10554": {
+  "ast": {
+   "tokens": {
+    "input": 41986,
+    "output": 33,
+    "total": 42019
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 27331,
+   "desc_words": 3863,
+   "fracs": [
+    0.0
+   ],
+   "mean": 0.0,
+   "resolved": "0/1"
+  }
+ },
+ "swe_django_compiler_multi_15563": {
+  "ast": {
+   "failed": "agent made no edit (check connection)"
+  }
+ },
+ "swe_django_cookie_xdir_13195": {
+  "ast": {
+   "tokens": {
+    "input": 26920,
+    "output": 231,
+    "total": 27151
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 5162,
+   "desc_words": 543,
+   "fracs": [
+    0.992
+   ],
+   "mean": 0.992,
+   "resolved": "0/1"
+  }
+ },
+ "swe_django_defaultfilters_xdir_15103": {
+  "ast": {
+   "tokens": {
+    "input": 27319,
+    "output": 150,
+    "total": 27469
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 13404,
+   "desc_words": 1786,
+   "fracs": [
+    0.947
+   ],
+   "mean": 0.947,
+   "resolved": "0/1"
+  }
+ },
+ "swe_django_expressions_xdir_16263": {
+  "ast": {
+   "failed": "agent made no edit (check connection)"
+  }
+ },
+ "swe_django_fields_xdir_16256": {
+  "ast": {
+   "tokens": {
+    "input": 37954,
+    "output": 637,
+    "total": 38591
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 5743,
+   "desc_words": 537,
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  }
+ },
+ "swe_django_flush_xdir_12741": {
+  "ast": {
+   "tokens": {
+    "input": 18835,
+    "output": 266,
+    "total": 19101
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 14266,
+   "desc_words": 1823,
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  }
+ },
+ "swe_django_middleware_xdir_13344": {
+  "ast": {
+   "failed": "agent made no edit (check connection)"
+  }
+ },
+ "swe_django_operations_xdir_11138": {
+  "ast": {
+   "tokens": {
+    "input": 58737,
+    "output": 119,
+    "total": 58856
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 9005,
+   "desc_words": 792,
+   "fracs": [
+    0.905
+   ],
+   "mean": 0.905,
+   "resolved": "0/1"
+  }
+ },
+ "swe_django_operations_xdir_13121": {
+  "ast": {
+   "failed": "agent made no edit (check connection)"
+  }
+ },
+ "swe_django_operations_xdir_14170": {
+  "ast": {
+   "tokens": {
+    "input": 35552,
+    "output": 496,
+    "total": 36048
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 18871,
+   "desc_words": 2205,
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  }
+ },
+ "swe_django_query_xdir_16315": {
+  "ast": {
+   "tokens": {
+    "input": 33641,
+    "output": 382,
+    "total": 34023
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 20629,
+   "desc_words": 2688,
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  }
+ },
+ "swe_django_related_lookups_xdir_16032": {
+  "ast": {
+   "tokens": {
+    "input": 39980,
+    "output": 26,
+    "total": 40006
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 19344,
+   "desc_words": 2647,
+   "fracs": [
+    0.973
+   ],
+   "mean": 0.973,
+   "resolved": "0/1"
+  }
+ },
+ "swe_django_related_xdir_12406": {
+  "ast": {
+   "tokens": {
+    "input": 27156,
+    "output": 608,
+    "total": 27764
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 16166,
+   "desc_words": 1851,
+   "fracs": [
+    0.975
+   ],
+   "mean": 0.975,
+   "resolved": "0/1"
+  }
+ },
+ "swe_django_schema_xdir_15561": {
+  "ast": {
+   "tokens": {
+    "input": 31847,
+    "output": 348,
+    "total": 32195
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 18164,
+   "desc_words": 1948,
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  }
+ },
+ "swe_django_utils_multi_12155": {
+  "ast": {
+   "tokens": {
+    "input": 14593,
+    "output": 298,
+    "total": 14891
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 2867,
+   "desc_words": 253,
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  }
+ },
+ "swe_django_utils_xdir_11885": {
+  "ast": {
+   "tokens": {
+    "input": 44628,
+    "output": 3419,
+    "total": 48047
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 6422,
+   "desc_words": 834,
+   "fracs": [
+    0.477
+   ],
+   "mean": 0.477,
+   "resolved": "0/1"
+  }
+ },
+ "swe_django_utils_xdir_13512": {
+  "ast": {
+   "tokens": {
+    "input": 21516,
+    "output": 288,
+    "total": 21804
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 12176,
+   "desc_words": 1451,
+   "fracs": [
+    0.971
+   ],
+   "mean": 0.971,
+   "resolved": "0/1"
+  }
+ },
+ "swe_django_validators_xdir_13212": {
+  "ast": {
+   "tokens": {
+    "input": 33196,
+    "output": 255,
+    "total": 33451
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 10172,
+   "desc_words": 1141,
+   "fracs": [
+    0.714
+   ],
+   "mean": 0.714,
+   "resolved": "0/1"
+  }
+ },
+ "swe_pydata_dataarray_multi_3993": {
+  "ast": {
+   "tokens": {
+    "input": 79439,
+    "output": 399,
+    "total": 79838
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 205433,
+   "desc_words": 28203,
+   "fracs": [
+    0.998
+   ],
+   "mean": 0.998,
+   "resolved": "0/1"
+  }
+ },
+ "swe_pydata_dataset_multi_3305": {
+  "ast": {
+   "tokens": {
+    "input": 60178,
+    "output": 147,
+    "total": 60325
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 95977,
+   "desc_words": 13109,
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  }
+ },
+ "swe_pydata_dataset_multi_6938": {
+  "ast": {
+   "tokens": {
+    "input": 78191,
+    "output": 388,
+    "total": 78579
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 189623,
+   "desc_words": 26439,
+   "fracs": [
+    0.998
+   ],
+   "mean": 0.998,
+   "resolved": "0/1"
+  }
+ },
+ "swe_pydata_dataset_multi_6992": {
+  "ast": {
+   "tokens": {
+    "input": 61305,
+    "output": 160,
+    "total": 61465
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 162089,
+   "desc_words": 22262,
+   "fracs": [
+    0.987
+   ],
+   "mean": 0.987,
+   "resolved": "0/1"
+  }
+ },
+ "swe_pydata_indexing_multi_3095": {
+  "ast": {
+   "tokens": {
+    "input": 41399,
+    "output": 567,
+    "total": 41966
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 31050,
+   "desc_words": 4234,
+   "fracs": [
+    0.988
+   ],
+   "mean": 0.988,
+   "resolved": "0/1"
+  }
+ },
+ "swe_pylint_dev_argument_xdir_6386": {
+  "ast": {
+   "tokens": {
+    "input": 26930,
+    "output": 109,
+    "total": 27039
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 147,
+   "desc_words": 12,
+   "fracs": [
+    0.875
+   ],
+   "mean": 0.875,
+   "resolved": "0/1"
+  }
+ },
+ "swe_pylint_dev_argument_xdir_8898": {
+  "ast": {
+   "tokens": {
+    "input": 24137,
+    "output": 236,
+    "total": 24373
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 1672,
+   "desc_words": 218,
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  }
+ },
+ "swe_pylint_dev_variables_xdir_4604": {
+  "ast": {
+   "tokens": {
+    "input": 43947,
+    "output": 328,
+    "total": 44275
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 3462,
+   "desc_words": 357,
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  }
+ },
+ "swe_pytest_dev___init___xdir_5840": {
+  "ast": {
+   "tokens": {
+    "input": 27251,
+    "output": 261,
+    "total": 27512
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 7612,
+   "desc_words": 870,
+   "fracs": [
+    0.0
+   ],
+   "mean": 0.0,
+   "resolved": "0/1"
+  }
+ },
+ "swe_pytest_dev_python_multi_8399": {
+  "ast": {
+   "tokens": {
+    "input": 22874,
+    "output": 236,
+    "total": 23110
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 10087,
+   "desc_words": 1163,
+   "fracs": [
+    0.0
+   ],
+   "mean": 0.0,
+   "resolved": "0/1"
+  }
+ },
+ "swe_sphinx_doc___init___multi_8548": {
+  "ast": {
+   "tokens": {
+    "input": 38596,
+    "output": 138,
+    "total": 38734
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 19849,
+   "desc_words": 2229,
+   "fracs": [
+    0.167
+   ],
+   "mean": 0.167,
+   "resolved": "0/1"
+  }
+ },
+ "swe_sphinx_doc___init___multi_8593": {
+  "ast": {
+   "tokens": {
+    "input": 41448,
+    "output": 971,
+    "total": 42419
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 20528,
+   "desc_words": 2298,
+   "fracs": [
+    0.333
+   ],
+   "mean": 0.333,
+   "resolved": "0/1"
+  }
+ },
+ "swe_sphinx_doc_application_xdir_8120": {
+  "ast": {
+   "tokens": {
+    "input": 26020,
+    "output": 469,
+    "total": 26489
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 24768,
+   "desc_words": 3137,
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  }
+ },
+ "swe_sphinx_doc_c_xdir_7590": {
+  "ast": {
+   "tokens": {
+    "input": 79319,
+    "output": 135,
+    "total": 79454
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 52220,
+   "desc_words": 5188,
+   "fracs": [
+    0.96
+   ],
+   "mean": 0.96,
+   "resolved": "0/1"
+  }
+ },
+ "swe_sphinx_doc_other_xdir_10673": {
+  "ast": {
+   "tokens": {
+    "input": 53882,
+    "output": 205,
+    "total": 54087
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 3738,
+   "desc_words": 454,
+   "fracs": [
+    0.0
+   ],
+   "mean": 0.0,
+   "resolved": "0/1"
+  }
+ },
+ "swe_sphinx_doc_python_xdir_7462": {
+  "ast": {
+   "tokens": {
+    "input": 22721,
+    "output": 256,
+    "total": 22977
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 8481,
+   "desc_words": 995,
+   "fracs": [
+    0.946
+   ],
+   "mean": 0.946,
+   "resolved": "0/1"
+  }
+ },
+ "swe_sphinx_doc_python_xdir_8551": {
+  "ast": {
+   "tokens": {
+    "input": 44607,
+    "output": 1002,
+    "total": 45609
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 11525,
+   "desc_words": 1401,
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  }
+ },
+ "swe_sphinx_doc_python_xdir_9461": {
+  "ast": {
+   "failed": "agent made no edit (check connection)"
+  }
+ },
+ "swe_sympy_ask_xdir_16597": {
+  "ast": {
+   "tokens": {
+    "input": 69250,
+    "output": 293,
+    "total": 69543
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 40961,
+   "desc_words": 5172,
+   "fracs": [
+    0.961
+   ],
+   "mean": 0.961,
+   "resolved": "0/1"
+  }
+ },
+ "swe_sympy_basic_xdir_13091": {
+  "ast": {
+   "tokens": {
+    "input": 107636,
+    "output": 70,
+    "total": 107706
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 235712,
+   "desc_words": 33363,
+   "fracs": [
+    0.0
+   ],
+   "mean": 0.0,
+   "resolved": "0/1"
+  }
+ },
+ "swe_sympy_codeprinter_multi_22080": {
+  "ast": {
+   "tokens": {
+    "input": 69050,
+    "output": 912,
+    "total": 69962
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 11158,
+   "desc_words": 1542,
+   "fracs": [
+    0.968
+   ],
+   "mean": 0.968,
+   "resolved": "0/1"
+  }
+ },
+ "swe_sympy_dagger_multi_19783": {
+  "ast": {
+   "tokens": {
+    "input": 24645,
+    "output": 354,
+    "total": 24999
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 8837,
+   "desc_words": 1098,
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  }
+ },
+ "swe_sympy_latex_xdir_14248": {
+  "ast": {
+   "failed": "agent made no edit (check connection)"
+  }
+ },
+ "swe_sympy_matrices_xdir_13877": {
+  "ast": {
+   "tokens": {
+    "input": 31076,
+    "output": 608,
+    "total": 31684
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 43658,
+   "desc_words": 6503,
+   "fracs": [
+    0.0
+   ],
+   "mean": 0.0,
+   "resolved": "0/1"
+  }
+ },
+ "swe_sympy_radsimp_multi_17318": {
+  "ast": {
+   "tokens": {
+    "input": 32061,
+    "output": 910,
+    "total": 32971
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 16035,
+   "desc_words": 2424,
+   "fracs": [
+    0.909
+   ],
+   "mean": 0.909,
+   "resolved": "0/1"
+  }
+ },
+ "swe_sympy_relational_xdir_20438": {
+  "ast": {
+   "tokens": {
+    "input": 42603,
+    "output": 350,
+    "total": 42953
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 17489,
+   "desc_words": 2683,
+   "fracs": [
+    0.979
+   ],
+   "mean": 0.979,
+   "resolved": "0/1"
+  }
+ }
+}

@@ -259,84 +259,6 @@
    "resolved": "1/1"
   }
  },
- "swe_django_utils_xdir_11885": {
-  "issue_only": {
-   "tokens": {
-    "input": 39459,
-    "output": 144,
-    "total": 39603
-   },
-   "fracs": [
-    0.932
-   ],
-   "mean": 0.932,
-   "resolved": "0/1"
-  },
-  "optimized": {
-   "tokens": {
-    "input": 34609,
-    "output": 284,
-    "total": 34893
-   },
-   "fracs": [
-    0.0
-   ],
-   "mean": 0.0,
-   "resolved": "0/1"
-  }
- },
- "swe_django_utils_xdir_13512": {
-  "issue_only": {
-   "tokens": {
-    "input": 23321,
-    "output": 457,
-    "total": 23778
-   },
-   "fracs": [
-    0.971
-   ],
-   "mean": 0.971,
-   "resolved": "0/1"
-  },
-  "optimized": {
-   "tokens": {
-    "input": 40324,
-    "output": 522,
-    "total": 40846
-   },
-   "fracs": [
-    1.0
-   ],
-   "mean": 1.0,
-   "resolved": "1/1"
-  }
- },
- "swe_django_validators_xdir_13212": {
-  "issue_only": {
-   "tokens": {
-    "input": 59003,
-    "output": 717,
-    "total": 59720
-   },
-   "fracs": [
-    0.429
-   ],
-   "mean": 0.429,
-   "resolved": "0/1"
-  },
-  "optimized": {
-   "tokens": {
-    "input": 46255,
-    "output": 585,
-    "total": 46840
-   },
-   "fracs": [
-    0.571
-   ],
-   "mean": 0.571,
-   "resolved": "0/1"
-  }
- },
  "swe_pydata_dataarray_multi_3993": {
   "issue_only": {
    "tokens": {
@@ -493,58 +415,6 @@
    "resolved": "1/1"
   }
  },
- "swe_sphinx_doc_other_xdir_10673": {
-  "issue_only": {
-   "tokens": {
-    "input": 41599,
-    "output": 649,
-    "total": 42248
-   },
-   "fracs": [
-    1.0
-   ],
-   "mean": 1.0,
-   "resolved": "1/1"
-  },
-  "optimized": {
-   "tokens": {
-    "input": 59897,
-    "output": 100,
-    "total": 59997
-   },
-   "fracs": [
-    0.0
-   ],
-   "mean": 0.0,
-   "resolved": "0/1"
-  }
- },
- "swe_sphinx_doc_python_xdir_7462": {
-  "issue_only": {
-   "tokens": {
-    "input": 16769,
-    "output": 174,
-    "total": 16943
-   },
-   "fracs": [
-    0.946
-   ],
-   "mean": 0.946,
-   "resolved": "0/1"
-  },
-  "optimized": {
-   "tokens": {
-    "input": 36043,
-    "output": 190,
-    "total": 36233
-   },
-   "fracs": [
-    0.973
-   ],
-   "mean": 0.973,
-   "resolved": "0/1"
-  }
- },
  "swe_sphinx_doc_python_xdir_8551": {
   "issue_only": {
    "tokens": {
@@ -699,32 +569,6 @@
    ],
    "mean": 0.992,
    "resolved": "0/1"
-  }
- },
- "swe_django_operations_xdir_11138": {
-  "issue_only": {
-   "tokens": {
-    "input": 27428,
-    "output": 390,
-    "total": 27818
-   },
-   "fracs": [
-    0.986
-   ],
-   "mean": 0.986,
-   "resolved": "0/1"
-  },
-  "optimized": {
-   "tokens": {
-    "input": 44060,
-    "output": 477,
-    "total": 44537
-   },
-   "fracs": [
-    1.0
-   ],
-   "mean": 1.0,
-   "resolved": "1/1"
   }
  },
  "swe_django_query_xdir_16315": {
@@ -932,32 +776,6 @@
     0.909
    ],
    "mean": 0.909,
-   "resolved": "0/1"
-  }
- },
- "swe_django_compiler_multi_15563": {
-  "issue_only": {
-   "tokens": {
-    "input": 20870,
-    "output": 290,
-    "total": 21160
-   },
-   "fracs": [
-    0.9
-   ],
-   "mean": 0.9,
-   "resolved": "0/1"
-  },
-  "optimized": {
-   "tokens": {
-    "input": 25001,
-    "output": 651,
-    "total": 25652
-   },
-   "fracs": [
-    0.0
-   ],
-   "mean": 0.0,
    "resolved": "0/1"
   }
  },
@@ -1175,32 +993,6 @@
    "resolved": "1/1"
   }
  },
- "swe_pylint_dev_argument_xdir_8898": {
-  "issue_only": {
-   "tokens": {
-    "input": 21184,
-    "output": 480,
-    "total": 21664
-   },
-   "fracs": [
-    0.944
-   ],
-   "mean": 0.944,
-   "resolved": "0/1"
-  },
-  "optimized": {
-   "tokens": {
-    "input": 33676,
-    "output": 124,
-    "total": 33800
-   },
-   "fracs": [
-    0.0
-   ],
-   "mean": 0.0,
-   "resolved": "0/1"
-  }
- },
  "swe_pylint_dev_variables_xdir_4604": {
   "issue_only": {
    "tokens": {
@@ -1224,6 +1016,280 @@
     0.0
    ],
    "mean": 0.0,
+   "resolved": "0/1"
+  }
+ },
+ "swe_django_compiler_multi_15563": {
+  "issue_only": {
+   "failed": "agent made no edit (check connection)"
+  },
+  "optimized": {
+   "tokens": {
+    "input": 46732,
+    "output": 228,
+    "total": 46960
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "fracs": [
+    0.0
+   ],
+   "mean": 0.0,
+   "resolved": "0/1"
+  }
+ },
+ "swe_django_operations_xdir_11138": {
+  "issue_only": {
+   "tokens": {
+    "input": 70187,
+    "output": 834,
+    "total": 71021
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "fracs": [
+    0.986
+   ],
+   "mean": 0.986,
+   "resolved": "0/1"
+  },
+  "optimized": {
+   "tokens": {
+    "input": 76155,
+    "output": 332,
+    "total": 76487
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "fracs": [
+    0.932
+   ],
+   "mean": 0.932,
+   "resolved": "0/1"
+  }
+ },
+ "swe_django_utils_xdir_11885": {
+  "issue_only": {
+   "tokens": {
+    "input": 27332,
+    "output": 415,
+    "total": 27747
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "fracs": [
+    0.727
+   ],
+   "mean": 0.727,
+   "resolved": "0/1"
+  },
+  "optimized": {
+   "tokens": {
+    "input": 32313,
+    "output": 217,
+    "total": 32530
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "fracs": [
+    0.0
+   ],
+   "mean": 0.0,
+   "resolved": "0/1"
+  }
+ },
+ "swe_django_utils_xdir_13512": {
+  "issue_only": {
+   "tokens": {
+    "input": 21912,
+    "output": 376,
+    "total": 22288
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  },
+  "optimized": {
+   "tokens": {
+    "input": 30466,
+    "output": 214,
+    "total": 30680
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "fracs": [
+    0.971
+   ],
+   "mean": 0.971,
+   "resolved": "0/1"
+  }
+ },
+ "swe_django_validators_xdir_13212": {
+  "issue_only": {
+   "tokens": {
+    "input": 55826,
+    "output": 445,
+    "total": 56271
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "fracs": [
+    0.857
+   ],
+   "mean": 0.857,
+   "resolved": "0/1"
+  },
+  "optimized": {
+   "tokens": {
+    "input": 79050,
+    "output": 257,
+    "total": 79307
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "fracs": [
+    0.714
+   ],
+   "mean": 0.714,
+   "resolved": "0/1"
+  }
+ },
+ "swe_pylint_dev_argument_xdir_8898": {
+  "issue_only": {
+   "tokens": {
+    "input": 24781,
+    "output": 396,
+    "total": 25177
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "fracs": [
+    0.944
+   ],
+   "mean": 0.944,
+   "resolved": "0/1"
+  },
+  "optimized": {
+   "tokens": {
+    "input": 33779,
+    "output": 405,
+    "total": 34184
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "fracs": [
+    0.944
+   ],
+   "mean": 0.944,
+   "resolved": "0/1"
+  }
+ },
+ "swe_sphinx_doc_other_xdir_10673": {
+  "issue_only": {
+   "tokens": {
+    "input": 37770,
+    "output": 448,
+    "total": 38218
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  },
+  "optimized": {
+   "tokens": {
+    "input": 62326,
+    "output": 5296,
+    "total": 67622
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "fracs": [
+    0.6
+   ],
+   "mean": 0.6,
+   "resolved": "0/1"
+  }
+ },
+ "swe_sphinx_doc_python_xdir_7462": {
+  "issue_only": {
+   "tokens": {
+    "input": 19347,
+    "output": 716,
+    "total": 20063
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "fracs": [
+    0.946
+   ],
+   "mean": 0.946,
+   "resolved": "0/1"
+  },
+  "optimized": {
+   "tokens": {
+    "input": 28047,
+    "output": 277,
+    "total": 28324
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "fracs": [
+    0.973
+   ],
+   "mean": 0.973,
    "resolved": "0/1"
   }
  }
