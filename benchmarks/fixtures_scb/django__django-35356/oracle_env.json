@@ -1,0 +1,57 @@
+{
+ "env_path": "~/coundetrip/swebench_envs/django__django-35356",
+ "target_rel": "django/db/models/query_utils.py",
+ "target_rels": [
+  "django/db/models/query_utils.py",
+  "django/db/models/sql/compiler.py",
+  "django/db/models/sql/query.py"
+ ],
+ "source_basename": "query_utils.py",
+ "test_selection": [
+  "defer_regress.tests.DeferRegressionTest.test_self_referential_one_to_one",
+  "defer_regress.tests.DeferDeletionSignalsTests.test_delete_defered_model",
+  "defer_regress.tests.DeferDeletionSignalsTests.test_delete_defered_proxy_model",
+  "defer_regress.tests.DeferRegressionTest.test_basic",
+  "defer_regress.tests.DeferRegressionTest.test_common_model_different_mask",
+  "defer_regress.tests.DeferRegressionTest.test_defer_annotate_select_related",
+  "defer_regress.tests.DeferRegressionTest.test_defer_many_to_many_ignored",
+  "defer_regress.tests.DeferRegressionTest.test_defer_reverse_many_to_many_ignored",
+  "defer_regress.tests.DeferRegressionTest.test_defer_with_select_related",
+  "defer_regress.tests.DeferRegressionTest.test_only_and_defer_usage_on_proxy_models",
+  "defer_regress.tests.DeferRegressionTest.test_only_many_to_many_ignored",
+  "defer_regress.tests.DeferRegressionTest.test_only_reverse_many_to_many_ignored",
+  "defer_regress.tests.DeferRegressionTest.test_only_with_select_related",
+  "defer_regress.tests.DeferRegressionTest.test_proxy_model_defer_with_select_related",
+  "defer_regress.tests.DeferRegressionTest.test_resolve_columns",
+  "defer_regress.tests.DeferRegressionTest.test_reverse_one_to_one_relations",
+  "defer_regress.tests.DeferRegressionTest.test_ticket_16409",
+  "defer_regress.tests.DeferRegressionTest.test_ticket_23270"
+ ],
+ "oracle_files": [
+  "tests/defer_regress/models.py",
+  "tests/defer_regress/tests.py"
+ ],
+ "fail_to_pass": [
+  "defer_regress.tests.DeferRegressionTest.test_self_referential_one_to_one"
+ ],
+ "pass_to_pass": [
+  "defer_regress.tests.DeferDeletionSignalsTests.test_delete_defered_model",
+  "defer_regress.tests.DeferDeletionSignalsTests.test_delete_defered_proxy_model",
+  "defer_regress.tests.DeferRegressionTest.test_basic",
+  "defer_regress.tests.DeferRegressionTest.test_common_model_different_mask",
+  "defer_regress.tests.DeferRegressionTest.test_defer_annotate_select_related",
+  "defer_regress.tests.DeferRegressionTest.test_defer_many_to_many_ignored",
+  "defer_regress.tests.DeferRegressionTest.test_defer_reverse_many_to_many_ignored",
+  "defer_regress.tests.DeferRegressionTest.test_defer_with_select_related",
+  "defer_regress.tests.DeferRegressionTest.test_only_and_defer_usage_on_proxy_models",
+  "defer_regress.tests.DeferRegressionTest.test_only_many_to_many_ignored",
+  "defer_regress.tests.DeferRegressionTest.test_only_reverse_many_to_many_ignored",
+  "defer_regress.tests.DeferRegressionTest.test_only_with_select_related",
+  "defer_regress.tests.DeferRegressionTest.test_proxy_model_defer_with_select_related",
+  "defer_regress.tests.DeferRegressionTest.test_resolve_columns",
+  "defer_regress.tests.DeferRegressionTest.test_reverse_one_to_one_relations",
+  "defer_regress.tests.DeferRegressionTest.test_ticket_16409",
+  "defer_regress.tests.DeferRegressionTest.test_ticket_23270"
+ ],
+ "runner": "django"
+}

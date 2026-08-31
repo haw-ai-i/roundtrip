@@ -1,0 +1,28 @@
+{
+ "env_path": "~/coundetrip/swebench_envs/sympy__sympy-23852",
+ "target_rel": "sympy/tensor/array/ndim_array.py",
+ "target_rels": [
+  "sympy/tensor/array/ndim_array.py"
+ ],
+ "source_basename": "ndim_array.py",
+ "test_selection": [
+  "sympy/tensor/array/tests/test_ndim_array.py::test_issue_17851",
+  "sympy/tensor/array/tests/test_ndim_array.py::test_issue_and_18715",
+  "sympy/tensor/array/tests/test_ndim_array.py::test_array_negative_indices",
+  "sympy/tensor/array/tests/test_ndim_array.py::test_issue_18361",
+  "sympy/tensor/array/tests/test_ndim_array.py::test_issue_20222"
+ ],
+ "oracle_files": [
+  "sympy/tensor/array/tests/test_ndim_array.py"
+ ],
+ "fail_to_pass": [
+  "sympy/tensor/array/tests/test_ndim_array.py::test_issue_17851",
+  "sympy/tensor/array/tests/test_ndim_array.py::test_issue_and_18715"
+ ],
+ "pass_to_pass": [
+  "sympy/tensor/array/tests/test_ndim_array.py::test_array_negative_indices",
+  "sympy/tensor/array/tests/test_ndim_array.py::test_issue_18361",
+  "sympy/tensor/array/tests/test_ndim_array.py::test_issue_20222"
+ ],
+ "runner": "pytest"
+}

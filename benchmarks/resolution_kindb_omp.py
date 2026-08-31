@@ -283,8 +283,12 @@ def wait_for_endpoint(tries=30, delay=20):
 
 
 def main():
-    made = json.load(open("benchmarks/fixtures_v2.json"))["made"]
-    kindb = [m for m in made if "multi" in m or "xdir" in m]
+    _fixroot = Path(os.environ.get("COUNDETRIP_FIXROOT", "benchmarks/fixtures"))
+    if os.environ.get("COUNDETRIP_FIXROOT"):
+        kindb = sorted(p.name for p in _fixroot.iterdir() if (p / "oracle_env.json").exists())
+    else:
+        made = json.load(open("benchmarks/fixtures_v2.json"))["made"]
+        kindb = [m for m in made if "multi" in m or "xdir" in m]
     only = sys.argv[1:] if len(sys.argv) > 1 else None
     if only:
         kindb = [m for m in kindb if m in only]
@@ -294,7 +298,7 @@ def main():
         if not wait_for_endpoint():
             print("endpoint unreachable, stopping before recording bad data", flush=True)
             break
-        fdir = Path("benchmarks/fixtures") / fix
+        fdir = _fixroot / fix
         cfg = json.loads((fdir / "oracle_env.json").read_text())
         _envs_base = os.environ.get("COUNDETRIP_ENVS_BASE")
         if _envs_base:
@@ -323,7 +327,10 @@ def main():
                 _full = describe(prefix_srcs, DESC_SYS_OPTIMIZED)
                 if _full.strip():
                     _dfile.write_text(_full, encoding="utf-8")
+        _ctxf = fdir / "context.md"
+        _ctx = _ctxf.read_text(encoding="utf-8") if _ctxf.exists() else ""
         descs = {"issue_only": None,
+                 "context": _ctx,
                  "optimized": _full,
                  "compact": summarize(_full) if "compact" in _conds else "",
                  "ast": ast_describe(prefix_srcs) if "ast" in _conds else ""}

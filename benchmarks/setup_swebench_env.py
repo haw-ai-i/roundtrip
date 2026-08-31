@@ -121,7 +121,10 @@ def main() -> int:
     except ImportError:
         sys.exit("Need `datasets`: run `uv pip install datasets`.")
 
-    ds = load_dataset(args.dataset, split="test")
+    if args.dataset.endswith(".json") and Path(args.dataset).exists():
+        ds = json.loads(Path(args.dataset).read_text(encoding="utf-8"))
+    else:
+        ds = load_dataset(args.dataset, split="test")
     r = next((x for x in ds if x["instance_id"] == args.instance_id), None)
     if r is None:
         sys.exit(f"instance {args.instance_id} not found in {args.dataset}")
@@ -190,8 +193,8 @@ def main() -> int:
 
     test_files = _FILE_RE.findall(r["test_patch"])
     gold_files = _FILE_RE.findall(r["patch"])
-    f2p = json.loads(r["FAIL_TO_PASS"])
-    p2p = json.loads(r["PASS_TO_PASS"])
+    f2p = r["FAIL_TO_PASS"] if isinstance(r["FAIL_TO_PASS"], list) else json.loads(r["FAIL_TO_PASS"])
+    p2p = r["PASS_TO_PASS"] if isinstance(r["PASS_TO_PASS"], list) else json.loads(r["PASS_TO_PASS"])
 
     print(f"\n>> oracle: {len(f2p)} FAIL_TO_PASS + {len(p2p)} PASS_TO_PASS in {test_files}")
     cp = run([str(py), "-m", "pytest", "-q", *test_files], cwd=target, check=False)

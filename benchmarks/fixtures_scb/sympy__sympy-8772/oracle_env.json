@@ -1,0 +1,52 @@
+{
+ "env_path": "~/coundetrip/swebench_envs/sympy__sympy-8772",
+ "target_rel": "sympy/functions/combinatorial/numbers.py",
+ "target_rels": [
+  "sympy/functions/combinatorial/numbers.py"
+ ],
+ "source_basename": "numbers.py",
+ "test_selection": [
+  "sympy/functions/combinatorial/tests/test_comb_numbers.py::test_bell",
+  "sympy/functions/combinatorial/tests/test_comb_numbers.py::test_bernoulli",
+  "sympy/functions/combinatorial/tests/test_comb_numbers.py::test_catalan",
+  "sympy/functions/combinatorial/tests/test_comb_numbers.py::test_euler",
+  "sympy/functions/combinatorial/tests/test_comb_numbers.py::test_euler_odd",
+  "sympy/functions/combinatorial/tests/test_comb_numbers.py::test_euler_polynomial_rewrite",
+  "sympy/functions/combinatorial/tests/test_comb_numbers.py::test_euler_polynomials",
+  "sympy/functions/combinatorial/tests/test_comb_numbers.py::test_fibonacci",
+  "sympy/functions/combinatorial/tests/test_comb_numbers.py::test_genocchi",
+  "sympy/functions/combinatorial/tests/test_comb_numbers.py::test_harmonic",
+  "sympy/functions/combinatorial/tests/test_comb_numbers.py::test_harmonic_evalf",
+  "sympy/functions/combinatorial/tests/test_comb_numbers.py::test_harmonic_rational",
+  "sympy/functions/combinatorial/tests/test_comb_numbers.py::test_harmonic_rewrite_polygamma",
+  "sympy/functions/combinatorial/tests/test_comb_numbers.py::test_harmonic_rewrite_sum",
+  "sympy/functions/combinatorial/tests/test_comb_numbers.py::test_issue_8496",
+  "sympy/functions/combinatorial/tests/test_comb_numbers.py::test_issue_8601",
+  "sympy/functions/combinatorial/tests/test_comb_numbers.py::test_nC_nP_nT"
+ ],
+ "oracle_files": [
+  "sympy/functions/combinatorial/tests/test_comb_numbers.py"
+ ],
+ "fail_to_pass": [
+  "sympy/functions/combinatorial/tests/test_comb_numbers.py::test_bell"
+ ],
+ "pass_to_pass": [
+  "sympy/functions/combinatorial/tests/test_comb_numbers.py::test_bernoulli",
+  "sympy/functions/combinatorial/tests/test_comb_numbers.py::test_catalan",
+  "sympy/functions/combinatorial/tests/test_comb_numbers.py::test_euler",
+  "sympy/functions/combinatorial/tests/test_comb_numbers.py::test_euler_odd",
+  "sympy/functions/combinatorial/tests/test_comb_numbers.py::test_euler_polynomial_rewrite",
+  "sympy/functions/combinatorial/tests/test_comb_numbers.py::test_euler_polynomials",
+  "sympy/functions/combinatorial/tests/test_comb_numbers.py::test_fibonacci",
+  "sympy/functions/combinatorial/tests/test_comb_numbers.py::test_genocchi",
+  "sympy/functions/combinatorial/tests/test_comb_numbers.py::test_harmonic",
+  "sympy/functions/combinatorial/tests/test_comb_numbers.py::test_harmonic_evalf",
+  "sympy/functions/combinatorial/tests/test_comb_numbers.py::test_harmonic_rational",
+  "sympy/functions/combinatorial/tests/test_comb_numbers.py::test_harmonic_rewrite_polygamma",
+  "sympy/functions/combinatorial/tests/test_comb_numbers.py::test_harmonic_rewrite_sum",
+  "sympy/functions/combinatorial/tests/test_comb_numbers.py::test_issue_8496",
+  "sympy/functions/combinatorial/tests/test_comb_numbers.py::test_issue_8601",
+  "sympy/functions/combinatorial/tests/test_comb_numbers.py::test_nC_nP_nT"
+ ],
+ "runner": "pytest"
+}

@@ -1,0 +1,36 @@
+{
+ "env_path": "~/coundetrip/swebench_envs/django__django-32012",
+ "target_rel": "django/db/backends/base/creation.py",
+ "target_rels": [
+  "django/db/backends/base/creation.py"
+ ],
+ "source_basename": "creation.py",
+ "test_selection": [
+  "backends.base.test_creation.TestDbCreationTests.test_migrate_test_setting_false",
+  "backends.base.test_creation.TestDbCreationTests.test_migrate_test_setting_true",
+  "backends.base.test_creation.TestDbSignatureTests.test_custom_test_name",
+  "backends.base.test_creation.TestDbSignatureTests.test_custom_test_name_with_test_prefix",
+  "backends.base.test_creation.TestDbSignatureTests.test_default_name",
+  "backends.base.test_creation.TestDeserializeDbFromString.test_circular_reference",
+  "backends.base.test_creation.TestDeserializeDbFromString.test_circular_reference_with_natural_key",
+  "backends.base.test_creation.TestDeserializeDbFromString.test_self_reference"
+ ],
+ "oracle_files": [
+  "tests/backends/base/app_unmigrated/migrations/0001_initial.py",
+  "tests/backends/base/app_unmigrated/models.py",
+  "tests/backends/base/test_creation.py"
+ ],
+ "fail_to_pass": [
+  "backends.base.test_creation.TestDbCreationTests.test_migrate_test_setting_false"
+ ],
+ "pass_to_pass": [
+  "backends.base.test_creation.TestDbCreationTests.test_migrate_test_setting_true",
+  "backends.base.test_creation.TestDbSignatureTests.test_custom_test_name",
+  "backends.base.test_creation.TestDbSignatureTests.test_custom_test_name_with_test_prefix",
+  "backends.base.test_creation.TestDbSignatureTests.test_default_name",
+  "backends.base.test_creation.TestDeserializeDbFromString.test_circular_reference",
+  "backends.base.test_creation.TestDeserializeDbFromString.test_circular_reference_with_natural_key",
+  "backends.base.test_creation.TestDeserializeDbFromString.test_self_reference"
+ ],
+ "runner": "django"
+}

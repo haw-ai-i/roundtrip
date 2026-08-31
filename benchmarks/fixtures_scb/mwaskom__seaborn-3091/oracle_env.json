@@ -1,0 +1,24 @@
+{
+ "env_path": "~/coundetrip/swebench_envs/mwaskom__seaborn-3091",
+ "target_rel": "seaborn/_stats/regression.py",
+ "target_rels": [
+  "seaborn/_stats/regression.py"
+ ],
+ "source_basename": "regression.py",
+ "test_selection": [
+  "tests/_stats/test_regression.py::TestPolyFit::test_missing_data",
+  "tests/_stats/test_regression.py::TestPolyFit::test_no_grouper",
+  "tests/_stats/test_regression.py::TestPolyFit::test_one_grouper"
+ ],
+ "oracle_files": [
+  "tests/_stats/test_regression.py"
+ ],
+ "fail_to_pass": [
+  "tests/_stats/test_regression.py::TestPolyFit::test_missing_data"
+ ],
+ "pass_to_pass": [
+  "tests/_stats/test_regression.py::TestPolyFit::test_no_grouper",
+  "tests/_stats/test_regression.py::TestPolyFit::test_one_grouper"
+ ],
+ "runner": "pytest"
+}
