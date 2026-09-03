@@ -1,0 +1,1210 @@
+{
+ "django__django-11776": {
+  "issue_only": {
+   "tokens": {
+    "input": 31793,
+    "output": 19,
+    "total": 31812
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 0,
+   "desc_words": 0,
+   "fracs": [
+    0.0
+   ],
+   "mean": 0.0,
+   "resolved": "0/1"
+  },
+  "context": {
+   "tokens": {
+    "input": 5410,
+    "output": 375,
+    "total": 25767
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 669,
+   "desc_words": 96,
+   "fracs": [
+    0.0
+   ],
+   "mean": 0.0,
+   "resolved": "0/1"
+  }
+ },
+ "django__django-18166": {
+  "issue_only": {
+   "tokens": {
+    "input": 2977,
+    "output": 168,
+    "total": 15170
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 0,
+   "desc_words": 0,
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  },
+  "context": {
+   "tokens": {
+    "input": 3714,
+    "output": 180,
+    "total": 19938
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 669,
+   "desc_words": 96,
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  }
+ },
+ "django__django-1891": {
+  "issue_only": {
+   "tokens": {
+    "input": 14305,
+    "output": 228,
+    "total": 14533
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 0,
+   "desc_words": 0,
+   "fracs": [
+    0.0
+   ],
+   "mean": 0.0,
+   "resolved": "0/1"
+  },
+  "context": {
+   "tokens": {
+    "input": 12524,
+    "output": 45,
+    "total": 12569
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 669,
+   "desc_words": 96,
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  }
+ },
+ "django__django-20098": {
+  "issue_only": {
+   "tokens": {
+    "input": 3612,
+    "output": 101,
+    "total": 15764
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 0,
+   "desc_words": 0,
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  },
+  "context": {
+   "tokens": {
+    "input": 4152,
+    "output": 156,
+    "total": 28540
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 669,
+   "desc_words": 96,
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  }
+ },
+ "django__django-21501": {
+  "issue_only": {
+   "tokens": {
+    "input": 2994,
+    "output": 114,
+    "total": 27273
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 0,
+   "desc_words": 0,
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  },
+  "context": {
+   "tokens": {
+    "input": 3818,
+    "output": 121,
+    "total": 28040
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 669,
+   "desc_words": 96,
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  }
+ },
+ "django__django-25916": {
+  "issue_only": {
+   "tokens": {
+    "input": 3063,
+    "output": 92,
+    "total": 35443
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 0,
+   "desc_words": 0,
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  },
+  "context": {
+   "tokens": {
+    "input": 3271,
+    "output": 197,
+    "total": 39868
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 669,
+   "desc_words": 96,
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  }
+ },
+ "django__django-26486": {
+  "issue_only": {
+   "tokens": {
+    "input": 2127,
+    "output": 62,
+    "total": 50234
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 0,
+   "desc_words": 0,
+   "fracs": [
+    0.0
+   ],
+   "mean": 0.0,
+   "resolved": "0/1"
+  },
+  "context": {
+   "tokens": {
+    "input": 2715,
+    "output": 323,
+    "total": 22991
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 669,
+   "desc_words": 96,
+   "fracs": [
+    0.0
+   ],
+   "mean": 0.0,
+   "resolved": "0/1"
+  }
+ },
+ "django__django-27858": {
+  "issue_only": {
+   "tokens": {
+    "input": 3949,
+    "output": 274,
+    "total": 32447
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 0,
+   "desc_words": 0,
+   "fracs": [
+    0.0
+   ],
+   "mean": 0.0,
+   "resolved": "0/1"
+  },
+  "context": {
+   "tokens": {
+    "input": 5244,
+    "output": 274,
+    "total": 37784
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 669,
+   "desc_words": 96,
+   "fracs": [
+    0.0
+   ],
+   "mean": 0.0,
+   "resolved": "0/1"
+  }
+ },
+ "django__django-27910": {
+  "issue_only": {
+   "tokens": {
+    "input": 36697,
+    "output": 0,
+    "total": 36697
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 0,
+   "desc_words": 0,
+   "fracs": [
+    0.0
+   ],
+   "mean": 0.0,
+   "resolved": "0/1"
+  },
+  "context": {
+   "tokens": {
+    "input": 55876,
+    "output": 0,
+    "total": 55876
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 669,
+   "desc_words": 96,
+   "fracs": [
+    0.0
+   ],
+   "mean": 0.0,
+   "resolved": "0/1"
+  }
+ },
+ "django__django-27995": {
+  "issue_only": {
+   "tokens": {
+    "input": 4464,
+    "output": 239,
+    "total": 32644
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 0,
+   "desc_words": 0,
+   "fracs": [
+    0.63
+   ],
+   "mean": 0.63,
+   "resolved": "0/1"
+  },
+  "context": {
+   "tokens": {
+    "input": 3248,
+    "output": 241,
+    "total": 59876
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 669,
+   "desc_words": 96,
+   "fracs": [
+    0.63
+   ],
+   "mean": 0.63,
+   "resolved": "0/1"
+  }
+ },
+ "django__django-28211": {
+  "issue_only": {
+   "tokens": {
+    "input": 18732,
+    "output": 127,
+    "total": 18859
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 0,
+   "desc_words": 0,
+   "fracs": [
+    0.0
+   ],
+   "mean": 0.0,
+   "resolved": "0/1"
+  },
+  "context": {
+   "tokens": {
+    "input": 3112,
+    "output": 131,
+    "total": 27373
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 669,
+   "desc_words": 96,
+   "fracs": [
+    0.0
+   ],
+   "mean": 0.0,
+   "resolved": "0/1"
+  }
+ },
+ "django__django-28862": {
+  "issue_only": {
+   "tokens": {
+    "input": 3131,
+    "output": 78,
+    "total": 55576
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 0,
+   "desc_words": 0,
+   "fracs": [
+    0.0
+   ],
+   "mean": 0.0,
+   "resolved": "0/1"
+  },
+  "context": {
+   "tokens": {
+    "input": 5983,
+    "output": 225,
+    "total": 34366
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 669,
+   "desc_words": 96,
+   "fracs": [
+    0.0
+   ],
+   "mean": 0.0,
+   "resolved": "0/1"
+  }
+ },
+ "django__django-28916": {
+  "issue_only": {
+   "tokens": {
+    "input": 44086,
+    "output": 0,
+    "total": 44086
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 0,
+   "desc_words": 0,
+   "fracs": [
+    0.0
+   ],
+   "mean": 0.0,
+   "resolved": "0/1"
+  },
+  "context": {
+   "tokens": {
+    "input": 34210,
+    "output": 6,
+    "total": 34216
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 669,
+   "desc_words": 96,
+   "fracs": [
+    0.0
+   ],
+   "mean": 0.0,
+   "resolved": "0/1"
+  }
+ },
+ "django__django-29124": {
+  "issue_only": {
+   "tokens": {
+    "input": 3973,
+    "output": 389,
+    "total": 24527
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 0,
+   "desc_words": 0,
+   "fracs": [
+    0.0
+   ],
+   "mean": 0.0,
+   "resolved": "0/1"
+  },
+  "context": {
+   "tokens": {
+    "input": 4057,
+    "output": 0,
+    "total": 36268
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 669,
+   "desc_words": 96,
+   "fracs": [
+    0.0
+   ],
+   "mean": 0.0,
+   "resolved": "0/1"
+  }
+ },
+ "django__django-29838": {
+  "issue_only": {
+   "tokens": {
+    "input": 2477,
+    "output": 125,
+    "total": 14563
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 0,
+   "desc_words": 0,
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  },
+  "context": {
+   "tokens": {
+    "input": 3351,
+    "output": 278,
+    "total": 11598
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 669,
+   "desc_words": 96,
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  }
+ },
+ "django__django-30254": {
+  "issue_only": {
+   "tokens": {
+    "input": 5629,
+    "output": 283,
+    "total": 26047
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 0,
+   "desc_words": 0,
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  },
+  "context": {
+   "tokens": {
+    "input": 3578,
+    "output": 78,
+    "total": 15721
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 669,
+   "desc_words": 96,
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  }
+ },
+ "django__django-30651": {
+  "issue_only": {
+   "tokens": {
+    "input": 3325,
+    "output": 71,
+    "total": 27636
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 0,
+   "desc_words": 0,
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  },
+  "context": {
+   "tokens": {
+    "input": 5990,
+    "output": 373,
+    "total": 34572
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 669,
+   "desc_words": 96,
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  }
+ },
+ "django__django-30931": {
+  "issue_only": {
+   "tokens": {
+    "input": 7378,
+    "output": 102,
+    "total": 7480
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 0,
+   "desc_words": 0,
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  },
+  "context": {
+   "tokens": {
+    "input": 5703,
+    "output": 63,
+    "total": 17831
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 669,
+   "desc_words": 96,
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  }
+ },
+ "django__django-31051": {
+  "issue_only": {
+   "tokens": {
+    "input": 5805,
+    "output": 168,
+    "total": 30185
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 0,
+   "desc_words": 0,
+   "fracs": [
+    0.0
+   ],
+   "mean": 0.0,
+   "resolved": "0/1"
+  },
+  "context": {
+   "tokens": {
+    "input": 5045,
+    "output": 250,
+    "total": 21362
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 669,
+   "desc_words": 96,
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  }
+ },
+ "django__django-31504": {
+  "issue_only": {
+   "tokens": {
+    "input": 2277,
+    "output": 92,
+    "total": 34695
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 0,
+   "desc_words": 0,
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  },
+  "context": {
+   "tokens": {
+    "input": 4096,
+    "output": 0,
+    "total": 40535
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 669,
+   "desc_words": 96,
+   "fracs": [
+    0.0
+   ],
+   "mean": 0.0,
+   "resolved": "0/1"
+  }
+ },
+ "django__django-31864": {
+  "issue_only": {
+   "tokens": {
+    "input": 5800,
+    "output": 90,
+    "total": 9856
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 0,
+   "desc_words": 0,
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  },
+  "context": {
+   "tokens": {
+    "input": 4439,
+    "output": 188,
+    "total": 12626
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 669,
+   "desc_words": 96,
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  }
+ },
+ "django__django-32012": {
+  "issue_only": {
+   "tokens": {
+    "input": 102316,
+    "output": 92,
+    "total": 102408
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 0,
+   "desc_words": 0,
+   "fracs": [
+    0.0
+   ],
+   "mean": 0.0,
+   "resolved": "0/1"
+  },
+  "context": {
+   "tokens": {
+    "input": 2222,
+    "output": 51,
+    "total": 42641
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 669,
+   "desc_words": 96,
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  }
+ },
+ "django__django-32260": {
+  "issue_only": {
+   "tokens": {
+    "input": 4373,
+    "output": 187,
+    "total": 24466
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 0,
+   "desc_words": 0,
+   "fracs": [
+    0.0
+   ],
+   "mean": 0.0,
+   "resolved": "0/1"
+  },
+  "context": {
+   "tokens": {
+    "input": 2816,
+    "output": 137,
+    "total": 26831
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 669,
+   "desc_words": 96,
+   "fracs": [
+    0.0
+   ],
+   "mean": 0.0,
+   "resolved": "0/1"
+  }
+ },
+ "django__django-32450": {
+  "issue_only": {
+   "tokens": {
+    "input": 30453,
+    "output": 198,
+    "total": 30651
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 0,
+   "desc_words": 0,
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  },
+  "context": {
+   "tokens": {
+    "input": 4230,
+    "output": 142,
+    "total": 16377
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 669,
+   "desc_words": 96,
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  }
+ },
+ "django__django-34176": {
+  "issue_only": {
+   "tokens": {
+    "input": 4113,
+    "output": 317,
+    "total": 65072
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 0,
+   "desc_words": 0,
+   "fracs": [
+    0.0
+   ],
+   "mean": 0.0,
+   "resolved": "0/1"
+  },
+  "context": {
+   "tokens": {
+    "input": 2879,
+    "output": 157,
+    "total": 31099
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 669,
+   "desc_words": 96,
+   "fracs": [
+    0.0
+   ],
+   "mean": 0.0,
+   "resolved": "0/1"
+  }
+ },
+ "django__django-34481": {
+  "issue_only": {
+   "tokens": {
+    "input": 5258,
+    "output": 148,
+    "total": 25466
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 0,
+   "desc_words": 0,
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  },
+  "context": {
+   "tokens": {
+    "input": 3404,
+    "output": 104,
+    "total": 31606
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 669,
+   "desc_words": 96,
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  }
+ },
+ "django__django-34525": {
+  "issue_only": {
+   "tokens": {
+    "input": 3781,
+    "output": 94,
+    "total": 52496
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 0,
+   "desc_words": 0,
+   "fracs": [
+    0.0
+   ],
+   "mean": 0.0,
+   "resolved": "0/1"
+  },
+  "context": {
+   "tokens": {
+    "input": 2651,
+    "output": 106,
+    "total": 51478
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 669,
+   "desc_words": 96,
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  }
+ },
+ "django__django-34570": {
+  "issue_only": {
+   "tokens": {
+    "input": 4644,
+    "output": 187,
+    "total": 28990
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 0,
+   "desc_words": 0,
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  },
+  "context": {
+   "tokens": {
+    "input": 3764,
+    "output": 406,
+    "total": 24259
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 669,
+   "desc_words": 96,
+   "fracs": [
+    0.0
+   ],
+   "mean": 0.0,
+   "resolved": "0/1"
+  }
+ },
+ "django__django-35356": {
+  "issue_only": {
+   "tokens": {
+    "input": 3870,
+    "output": 342,
+    "total": 52438
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 0,
+   "desc_words": 0,
+   "fracs": [
+    1.0
+   ],
+   "mean": 1.0,
+   "resolved": "1/1"
+  },
+  "context": {
+   "tokens": {
+    "input": 3692,
+    "output": 231,
+    "total": 31857
+   },
+   "calls": {
+    "read": 0,
+    "edit": 0,
+    "total": 0
+   },
+   "desc_chars": 669,
+   "desc_words": 96,
+   "fracs": [
+    0.0
+   ],
+   "mean": 0.0,
+   "resolved": "0/1"
+  }
+ },
+ "django__django-21204": {
+  "issue_only": {
+   "failed": "agent made no edit (check connection)"
+  },
+  "context": {
+   "failed": "agent made no edit (check connection)"
+  }
+ },
+ "django__django-28147": {
+  "issue_only": {
+   "failed": "agent made no edit (check connection)"
+  },
+  "context": {
+   "failed": "agent made no edit (check connection)"
+  }
+ },
+ "django__django-29123": {
+  "issue_only": {
+   "failed": "agent made no edit (check connection)"
+  },
+  "context": {
+   "failed": "agent made no edit (check connection)"
+  }
+ },
+ "django__django-31181": {
+  "issue_only": {
+   "failed": "agent made no edit (check connection)"
+  },
+  "context": {
+   "failed": "agent made no edit (check connection)"
+  }
+ },
+ "django__django-33871": {
+  "issue_only": {
+   "failed": "agent made no edit (check connection)"
+  },
+  "context": {
+   "failed": "agent made no edit (check connection)"
+  }
+ },
+ "django__django-30153": {
+  "issue_only": {
+   "failed": "agent made no edit (check connection)"
+  },
+  "context": {
+   "failed": "agent made no edit (check connection)"
+  }
+ }
+}

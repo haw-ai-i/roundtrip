@@ -14,8 +14,8 @@ from coundetrip.llm_agent import ast_describe
 N = 1
 DISCOVERED = Path("benchmarks/stage3_best_prompt.txt").read_text(encoding="utf-8")
 OMP = os.environ.get("COUNDETRIP_OMP_BIN", "omp")
-PROVIDER = "local-qwen"
-MODEL = "hf.co/unsloth/Qwen3.6-35B-A3B-GGUF:UD-Q4_K_M"
+PROVIDER = os.environ.get("COUNDETRIP_PROVIDER", "local-qwen")
+MODEL = os.environ.get("COUNDETRIP_MODEL", "hf.co/unsloth/Qwen3.6-35B-A3B-GGUF:UD-Q4_K_M")
 
 RES_SYS = ("You are a coding agent resolving a repository issue. The repository "
            "is in your working directory. Read ONLY the file(s) named in the "
@@ -242,7 +242,8 @@ def parse_django_summary(stderr, stdout):
                 bad += int(mm.group(1))
         if bad == 0:
             bad = total
-    return total - bad, bad
+    passed = max(0, total - bad)   # clamp: a pass count can never be negative
+    return passed, bad
 
 
 def score(fix, fdir, repo):
@@ -274,6 +275,8 @@ def wait_for_endpoint(tries=30, delay=20):
     import urllib.request
     for _ in range(tries):
         try:
+            if PROVIDER != "local-qwen":
+                return True
             urllib.request.urlopen("http://127.0.0.1:11434/v1/models", timeout=5)
             return True
         except Exception:
