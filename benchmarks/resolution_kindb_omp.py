@@ -58,6 +58,7 @@ def run_omp(cwd, system_prompt, user_prompt, timeout=None, tries=None):
     _pf.close()
     cmd = [OMP, "--provider", PROVIDER, "--model", MODEL,
            "--no-session", "--no-lsp", "--mode", "json", "--thinking", "off",
+           "--service-tier", os.environ.get("COUNDETRIP_TIER", "flex"),
            "--max-time", _MAXT,
            "--system-prompt", system_prompt, "-p", "@" + _pf.name]
     last_err = None
