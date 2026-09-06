@@ -1,0 +1,1254 @@
+{
+ "astropy__astropy-15082": {
+  "pull_s": 7,
+  "targets": [
+   "astropy/nddata/mixins/ndarithmetic.py"
+  ],
+  "conds": {
+   "issue_only": {
+    "tokens": {
+     "input": 4062,
+     "output": 216,
+     "total": 32761
+    },
+    "resolved": true,
+    "eval_tail": " tests after patch...\n  \u2713 Ran 135 test(s)\n\nResults:\n  FAIL_TO_PASS: 3/3 passed\n  PASS_TO_PASS: 132/132 passed\n  Resolved: True\n  \u2713 Cleaned up instance image: jiayuanz3/swecontextbench:astropy.astropy-15082\n\n============================================================\n\u2713 Evaluation complete: 1/1 resolved\nReport written to: scb_issue_only_astropy_astropy-15082.json\nLogs written to: logs/run_evaluation/scb_issue_only_astropy_astropy-15082\n============================================================\n"
+   },
+   "context": {
+    "tokens": {
+     "input": 2927,
+     "output": 190,
+     "total": 35742
+    },
+    "resolved": true,
+    "eval_tail": "unning tests after patch...\n  \u2713 Ran 135 test(s)\n\nResults:\n  FAIL_TO_PASS: 3/3 passed\n  PASS_TO_PASS: 132/132 passed\n  Resolved: True\n  \u2713 Cleaned up instance image: jiayuanz3/swecontextbench:astropy.astropy-15082\n\n============================================================\n\u2713 Evaluation complete: 1/1 resolved\nReport written to: scb_context_astropy_astropy-15082.json\nLogs written to: logs/run_evaluation/scb_context_astropy_astropy-15082\n============================================================\n"
+   },
+   "compact": {
+    "tokens": {
+     "input": 5919,
+     "output": 239,
+     "total": 42664
+    },
+    "summary_tokens": {
+     "input": 9270,
+     "output": 535,
+     "total": 9805
+    },
+    "summary_words": 79,
+    "resolved": true,
+    "eval_tail": "unning tests after patch...\n  \u2713 Ran 135 test(s)\n\nResults:\n  FAIL_TO_PASS: 3/3 passed\n  PASS_TO_PASS: 132/132 passed\n  Resolved: True\n  \u2713 Cleaned up instance image: jiayuanz3/swecontextbench:astropy.astropy-15082\n\n============================================================\n\u2713 Evaluation complete: 1/1 resolved\nReport written to: scb_compact_astropy_astropy-15082.json\nLogs written to: logs/run_evaluation/scb_compact_astropy_astropy-15082\n============================================================\n"
+   }
+  }
+ },
+ "django__django-11776": {
+  "pull_s": 8,
+  "targets": [
+   "django/forms/forms.py",
+   "django/forms/utils.py"
+  ],
+  "conds": {
+   "issue_only": {
+    "tokens": {
+     "input": 5928,
+     "output": 1316,
+     "total": 100811
+    },
+    "resolved": true,
+    "eval_tail": "ning tests after patch...\n  \u2713 Ran 302 test(s)\n\nResults:\n  FAIL_TO_PASS: 12/12 passed\n  PASS_TO_PASS: 290/290 passed\n  Resolved: True\n  \u2713 Cleaned up instance image: jiayuanz3/swecontextbench:django.django-11776\n\n============================================================\n\u2713 Evaluation complete: 1/1 resolved\nReport written to: scb_issue_only_django_django-11776.json\nLogs written to: logs/run_evaluation/scb_issue_only_django_django-11776\n============================================================\n"
+   },
+   "context": {
+    "tokens": {
+     "input": 2885,
+     "output": 120,
+     "total": 51742
+    },
+    "resolved": true,
+    "eval_tail": "\n\u2192 Running tests after patch...\n  \u2713 Ran 302 test(s)\n\nResults:\n  FAIL_TO_PASS: 12/12 passed\n  PASS_TO_PASS: 290/290 passed\n  Resolved: True\n  \u2713 Cleaned up instance image: jiayuanz3/swecontextbench:django.django-11776\n\n============================================================\n\u2713 Evaluation complete: 1/1 resolved\nReport written to: scb_context_django_django-11776.json\nLogs written to: logs/run_evaluation/scb_context_django_django-11776\n============================================================\n"
+   },
+   "compact": {
+    "tokens": {
+     "input": 5610,
+     "output": 207,
+     "total": 58792
+    },
+    "summary_tokens": {
+     "input": 15532,
+     "output": 500,
+     "total": 16032
+    },
+    "summary_words": 75,
+    "resolved": true,
+    "eval_tail": "\n\u2192 Running tests after patch...\n  \u2713 Ran 302 test(s)\n\nResults:\n  FAIL_TO_PASS: 12/12 passed\n  PASS_TO_PASS: 290/290 passed\n  Resolved: True\n  \u2713 Cleaned up instance image: jiayuanz3/swecontextbench:django.django-11776\n\n============================================================\n\u2713 Evaluation complete: 1/1 resolved\nReport written to: scb_compact_django_django-11776.json\nLogs written to: logs/run_evaluation/scb_compact_django_django-11776\n============================================================\n"
+   }
+  }
+ },
+ "django__django-1891": {
+  "pull_s": 30,
+  "targets": [
+   "django/forms/models.py"
+  ],
+  "conds": {
+   "issue_only": {
+    "tokens": {
+     "input": 2379,
+     "output": 131,
+     "total": 26811
+    },
+    "resolved": true,
+    "eval_tail": "\u2192 Running tests after patch...\n  \u2713 Ran 148 test(s)\n\nResults:\n  FAIL_TO_PASS: 1/1 passed\n  PASS_TO_PASS: 147/147 passed\n  Resolved: True\n  \u2713 Cleaned up instance image: jiayuanz3/swecontextbench:django.django-1891\n\n============================================================\n\u2713 Evaluation complete: 1/1 resolved\nReport written to: scb_issue_only_django_django-1891.json\nLogs written to: logs/run_evaluation/scb_issue_only_django_django-1891\n============================================================\n"
+   },
+   "context": {
+    "tokens": {
+     "input": 2051,
+     "output": 100,
+     "total": 22394
+    },
+    "resolved": true,
+    "eval_tail": "plied\n\u2192 Running tests after patch...\n  \u2713 Ran 148 test(s)\n\nResults:\n  FAIL_TO_PASS: 1/1 passed\n  PASS_TO_PASS: 147/147 passed\n  Resolved: True\n  \u2713 Cleaned up instance image: jiayuanz3/swecontextbench:django.django-1891\n\n============================================================\n\u2713 Evaluation complete: 1/1 resolved\nReport written to: scb_context_django_django-1891.json\nLogs written to: logs/run_evaluation/scb_context_django_django-1891\n============================================================\n"
+   },
+   "compact": {
+    "tokens": {
+     "input": 6072,
+     "output": 109,
+     "total": 22375
+    },
+    "summary_tokens": {
+     "input": 4006,
+     "output": 299,
+     "total": 28699
+    },
+    "summary_words": 86,
+    "resolved": true,
+    "eval_tail": "plied\n\u2192 Running tests after patch...\n  \u2713 Ran 148 test(s)\n\nResults:\n  FAIL_TO_PASS: 1/1 passed\n  PASS_TO_PASS: 147/147 passed\n  Resolved: True\n  \u2713 Cleaned up instance image: jiayuanz3/swecontextbench:django.django-1891\n\n============================================================\n\u2713 Evaluation complete: 1/1 resolved\nReport written to: scb_compact_django_django-1891.json\nLogs written to: logs/run_evaluation/scb_compact_django_django-1891\n============================================================\n"
+   }
+  }
+ },
+ "django__django-21204": {
+  "pull_s": 28,
+  "targets": [
+   "django/db/models/query_utils.py",
+   "django/db/models/sql/compiler.py",
+   "django/db/models/sql/query.py"
+  ],
+  "conds": {
+   "issue_only": {
+    "tokens": {
+     "input": 3006,
+     "output": 926,
+     "total": 121808
+    },
+    "resolved": true,
+    "eval_tail": "unning tests after patch...\n  \u2713 Ran 345 test(s)\n\nResults:\n  FAIL_TO_PASS: 3/3 passed\n  PASS_TO_PASS: 342/342 passed\n  Resolved: True\n  \u2713 Cleaned up instance image: jiayuanz3/swecontextbench:django.django-21204\n\n============================================================\n\u2713 Evaluation complete: 1/1 resolved\nReport written to: scb_issue_only_django_django-21204.json\nLogs written to: logs/run_evaluation/scb_issue_only_django_django-21204\n============================================================\n"
+   },
+   "context": {
+    "tokens": {
+     "input": 2950,
+     "output": 4386,
+     "total": 137575
+    },
+    "resolved": null,
+    "note": "no edit"
+   },
+   "compact": {
+    "tokens": {
+     "input": 10146,
+     "output": 1829,
+     "total": 166871
+    },
+    "summary_tokens": {
+     "input": 4907,
+     "output": 400,
+     "total": 66514
+    },
+    "summary_words": 84,
+    "resolved": null,
+    "note": "no edit"
+   }
+  }
+ },
+ "django__django-25916": {
+  "pull_s": 5,
+  "targets": [
+   "django/contrib/sitemaps/__init__.py",
+   "django/contrib/sitemaps/views.py"
+  ],
+  "conds": {
+   "issue_only": {
+    "tokens": {
+     "input": 2310,
+     "output": 366,
+     "total": 169762
+    },
+    "resolved": false,
+    "eval_tail": "Running tests after patch...\n  \u2713 Ran 58 test(s)\n\nResults:\n  FAIL_TO_PASS: 2/12 passed\n  PASS_TO_PASS: 43/46 passed\n  Resolved: False\n  \u2713 Cleaned up instance image: jiayuanz3/swecontextbench:django.django-25916\n\n============================================================\n\u2713 Evaluation complete: 0/1 resolved\nReport written to: scb_issue_only_django_django-25916.json\nLogs written to: logs/run_evaluation/scb_issue_only_django_django-25916\n============================================================\n"
+   },
+   "context": {
+    "tokens": {
+     "input": 14402,
+     "output": 339,
+     "total": 112355
+    },
+    "resolved": false,
+    "eval_tail": "ied\n\u2192 Running tests after patch...\n  \u2713 Ran 58 test(s)\n\nResults:\n  FAIL_TO_PASS: 2/12 passed\n  PASS_TO_PASS: 43/46 passed\n  Resolved: False\n  \u2713 Cleaned up instance image: jiayuanz3/swecontextbench:django.django-25916\n\n============================================================\n\u2713 Evaluation complete: 0/1 resolved\nReport written to: scb_context_django_django-25916.json\nLogs written to: logs/run_evaluation/scb_context_django_django-25916\n============================================================\n"
+   },
+   "compact": {
+    "tokens": {
+     "input": 4358,
+     "output": 271,
+     "total": 69451
+    },
+    "summary_tokens": {
+     "input": 7230,
+     "output": 2225,
+     "total": 9455
+    },
+    "summary_words": 77,
+    "resolved": false,
+    "eval_tail": "ied\n\u2192 Running tests after patch...\n  \u2713 Ran 58 test(s)\n\nResults:\n  FAIL_TO_PASS: 0/12 passed\n  PASS_TO_PASS: 46/46 passed\n  Resolved: False\n  \u2713 Cleaned up instance image: jiayuanz3/swecontextbench:django.django-25916\n\n============================================================\n\u2713 Evaluation complete: 0/1 resolved\nReport written to: scb_compact_django_django-25916.json\nLogs written to: logs/run_evaluation/scb_compact_django_django-25916\n============================================================\n"
+   }
+  }
+ },
+ "django__django-27910": {
+  "pull_s": 7,
+  "targets": [
+   "django/db/migrations/serializer.py",
+   "django/db/models/__init__.py",
+   "django/db/models/enums.py"
+  ],
+  "conds": {
+   "issue_only": {
+    "tokens": {
+     "input": 2576,
+     "output": 591,
+     "total": 76044
+    },
+    "resolved": null,
+    "note": "no edit"
+   },
+   "context": {
+    "tokens": {
+     "input": 2924,
+     "output": 1236,
+     "total": 97445
+    },
+    "resolved": null,
+    "note": "no edit"
+   },
+   "compact": {
+    "tokens": {
+     "input": 2532,
+     "output": 71,
+     "total": 83620
+    },
+    "summary_tokens": {
+     "input": 4619,
+     "output": 189,
+     "total": 21074
+    },
+    "summary_words": 72,
+    "resolved": null,
+    "note": "no edit"
+   }
+  }
+ },
+ "django__django-28147": {
+  "pull_s": 5,
+  "targets": [
+   "django/db/models/fields/related.py",
+   "django/db/models/fields/related_descriptors.py"
+  ],
+  "conds": {
+   "issue_only": {
+    "tokens": {
+     "input": 4474,
+     "output": 206,
+     "total": 102151
+    },
+    "resolved": false,
+    "eval_tail": " Running tests after patch...\n  \u2713 Ran 66 test(s)\n\nResults:\n  FAIL_TO_PASS: 0/2 passed\n  PASS_TO_PASS: 67/67 passed\n  Resolved: False\n  \u2713 Cleaned up instance image: jiayuanz3/swecontextbench:django.django-28147\n\n============================================================\n\u2713 Evaluation complete: 0/1 resolved\nReport written to: scb_issue_only_django_django-28147.json\nLogs written to: logs/run_evaluation/scb_issue_only_django_django-28147\n============================================================\n"
+   },
+   "context": {
+    "tokens": {
+     "input": 2571,
+     "output": 387,
+     "total": 108457
+    },
+    "resolved": false,
+    "eval_tail": "lied\n\u2192 Running tests after patch...\n  \u2713 Ran 66 test(s)\n\nResults:\n  FAIL_TO_PASS: 0/2 passed\n  PASS_TO_PASS: 67/67 passed\n  Resolved: False\n  \u2713 Cleaned up instance image: jiayuanz3/swecontextbench:django.django-28147\n\n============================================================\n\u2713 Evaluation complete: 0/1 resolved\nReport written to: scb_context_django_django-28147.json\nLogs written to: logs/run_evaluation/scb_context_django_django-28147\n============================================================\n"
+   },
+   "compact": {
+    "tokens": {
+     "input": 4793,
+     "output": 6504,
+     "total": 108770
+    },
+    "summary_tokens": {
+     "input": 6663,
+     "output": 1566,
+     "total": 49033
+    },
+    "summary_words": 72,
+    "resolved": null,
+    "note": "no edit"
+   }
+  }
+ },
+ "django__django-28211": {
+  "pull_s": 27,
+  "targets": [
+   "django/db/models/query_utils.py"
+  ],
+  "conds": {
+   "issue_only": {
+    "tokens": {
+     "input": 3681,
+     "output": 146,
+     "total": 36073
+    },
+    "resolved": true,
+    "eval_tail": "\u2192 Running tests after patch...\n  \u2713 Ran 13 test(s)\n\nResults:\n  FAIL_TO_PASS: 2/2 passed\n  PASS_TO_PASS: 11/11 passed\n  Resolved: True\n  \u2713 Cleaned up instance image: jiayuanz3/swecontextbench:django.django-28211\n\n============================================================\n\u2713 Evaluation complete: 1/1 resolved\nReport written to: scb_issue_only_django_django-28211.json\nLogs written to: logs/run_evaluation/scb_issue_only_django_django-28211\n============================================================\n"
+   },
+   "context": {
+    "tokens": {
+     "input": 2501,
+     "output": 123,
+     "total": 43093
+    },
+    "resolved": true,
+    "eval_tail": "plied\n\u2192 Running tests after patch...\n  \u2713 Ran 13 test(s)\n\nResults:\n  FAIL_TO_PASS: 2/2 passed\n  PASS_TO_PASS: 11/11 passed\n  Resolved: True\n  \u2713 Cleaned up instance image: jiayuanz3/swecontextbench:django.django-28211\n\n============================================================\n\u2713 Evaluation complete: 1/1 resolved\nReport written to: scb_context_django_django-28211.json\nLogs written to: logs/run_evaluation/scb_context_django_django-28211\n============================================================\n"
+   },
+   "compact": {
+    "tokens": {
+     "input": 5762,
+     "output": 86,
+     "total": 58644
+    },
+    "summary_tokens": {
+     "input": 8726,
+     "output": 264,
+     "total": 8990
+    },
+    "summary_words": 85,
+    "resolved": true,
+    "eval_tail": "plied\n\u2192 Running tests after patch...\n  \u2713 Ran 13 test(s)\n\nResults:\n  FAIL_TO_PASS: 2/2 passed\n  PASS_TO_PASS: 11/11 passed\n  Resolved: True\n  \u2713 Cleaned up instance image: jiayuanz3/swecontextbench:django.django-28211\n\n============================================================\n\u2713 Evaluation complete: 1/1 resolved\nReport written to: scb_compact_django_django-28211.json\nLogs written to: logs/run_evaluation/scb_compact_django_django-28211\n============================================================\n"
+   }
+  }
+ },
+ "django__django-29123": {
+  "pull_s": 2,
+  "targets": [
+   "django/db/migrations/operations/models.py"
+  ],
+  "conds": {
+   "issue_only": {
+    "tokens": {
+     "input": 2074,
+     "output": 877,
+     "total": 112580
+    },
+    "resolved": null,
+    "note": "no edit"
+   },
+   "context": {
+    "tokens": {
+     "input": 3837,
+     "output": 6311,
+     "total": 115755
+    },
+    "resolved": null,
+    "note": "no edit"
+   },
+   "compact": {
+    "tokens": {
+     "input": 3245,
+     "output": 91,
+     "total": 104795
+    },
+    "summary_tokens": {
+     "input": 2621,
+     "output": 474,
+     "total": 19366
+    },
+    "summary_words": 76,
+    "resolved": null,
+    "note": "no edit"
+   }
+  }
+ },
+ "django__django-31504": {
+  "pull_s": 30,
+  "targets": [
+   "django/core/management/commands/makemigrations.py"
+  ],
+  "conds": {
+   "issue_only": {
+    "tokens": {
+     "input": 3741,
+     "output": 84,
+     "total": 44198
+    },
+    "resolved": true,
+    "eval_tail": "\u2192 Running tests after patch...\n  \u2713 Ran 97 test(s)\n\nResults:\n  FAIL_TO_PASS: 1/1 passed\n  PASS_TO_PASS: 96/96 passed\n  Resolved: True\n  \u2713 Cleaned up instance image: jiayuanz3/swecontextbench:django.django-31504\n\n============================================================\n\u2713 Evaluation complete: 1/1 resolved\nReport written to: scb_issue_only_django_django-31504.json\nLogs written to: logs/run_evaluation/scb_issue_only_django_django-31504\n============================================================\n"
+   },
+   "context": {
+    "tokens": {
+     "input": 17426,
+     "output": 66,
+     "total": 17492
+    },
+    "resolved": false,
+    "eval_tail": "lied\n\u2192 Running tests after patch...\n  \u2713 Ran 97 test(s)\n\nResults:\n  FAIL_TO_PASS: 0/1 passed\n  PASS_TO_PASS: 96/96 passed\n  Resolved: False\n  \u2713 Cleaned up instance image: jiayuanz3/swecontextbench:django.django-31504\n\n============================================================\n\u2713 Evaluation complete: 0/1 resolved\nReport written to: scb_context_django_django-31504.json\nLogs written to: logs/run_evaluation/scb_context_django_django-31504\n============================================================\n"
+   },
+   "compact": {
+    "tokens": {
+     "input": 12985,
+     "output": 59,
+     "total": 106750
+    },
+    "summary_tokens": {
+     "input": 8423,
+     "output": 288,
+     "total": 8711
+    },
+    "summary_words": 83,
+    "resolved": false,
+    "eval_tail": "lied\n\u2192 Running tests after patch...\n  \u2713 Ran 97 test(s)\n\nResults:\n  FAIL_TO_PASS: 0/1 passed\n  PASS_TO_PASS: 96/96 passed\n  Resolved: False\n  \u2713 Cleaned up instance image: jiayuanz3/swecontextbench:django.django-31504\n\n============================================================\n\u2713 Evaluation complete: 0/1 resolved\nReport written to: scb_compact_django_django-31504.json\nLogs written to: logs/run_evaluation/scb_compact_django_django-31504\n============================================================\n"
+   }
+  }
+ },
+ "django__django-31864": {
+  "pull_s": 24,
+  "targets": [
+   "django/contrib/sessions/backends/base.py"
+  ],
+  "conds": {
+   "issue_only": {
+    "tokens": {
+     "input": 15627,
+     "output": 77,
+     "total": 15704
+    },
+    "resolved": true,
+    "eval_tail": "unning tests after patch...\n  \u2713 Ran 381 test(s)\n\nResults:\n  FAIL_TO_PASS: 9/9 passed\n  PASS_TO_PASS: 372/372 passed\n  Resolved: True\n  \u2713 Cleaned up instance image: jiayuanz3/swecontextbench:django.django-31864\n\n============================================================\n\u2713 Evaluation complete: 1/1 resolved\nReport written to: scb_issue_only_django_django-31864.json\nLogs written to: logs/run_evaluation/scb_issue_only_django_django-31864\n============================================================\n"
+   },
+   "context": {
+    "tokens": {
+     "input": 15040,
+     "output": 79,
+     "total": 15119
+    },
+    "resolved": true,
+    "eval_tail": "ed\n\u2192 Running tests after patch...\n  \u2713 Ran 381 test(s)\n\nResults:\n  FAIL_TO_PASS: 9/9 passed\n  PASS_TO_PASS: 372/372 passed\n  Resolved: True\n  \u2713 Cleaned up instance image: jiayuanz3/swecontextbench:django.django-31864\n\n============================================================\n\u2713 Evaluation complete: 1/1 resolved\nReport written to: scb_context_django_django-31864.json\nLogs written to: logs/run_evaluation/scb_context_django_django-31864\n============================================================\n"
+   },
+   "compact": {
+    "tokens": {
+     "input": 5213,
+     "output": 93,
+     "total": 21469
+    },
+    "summary_tokens": {
+     "input": 7143,
+     "output": 370,
+     "total": 7513
+    },
+    "summary_words": 78,
+    "resolved": true,
+    "eval_tail": "ed\n\u2192 Running tests after patch...\n  \u2713 Ran 381 test(s)\n\nResults:\n  FAIL_TO_PASS: 9/9 passed\n  PASS_TO_PASS: 372/372 passed\n  Resolved: True\n  \u2713 Cleaned up instance image: jiayuanz3/swecontextbench:django.django-31864\n\n============================================================\n\u2713 Evaluation complete: 1/1 resolved\nReport written to: scb_compact_django_django-31864.json\nLogs written to: logs/run_evaluation/scb_compact_django_django-31864\n============================================================\n"
+   }
+  }
+ },
+ "django__django-32260": {
+  "pull_s": 62,
+  "targets": [
+   "django/contrib/admindocs/utils.py",
+   "django/urls/resolvers.py",
+   "django/views/debug.py",
+   "django/views/generic/base.py"
+  ],
+  "conds": {
+   "issue_only": {
+    "tokens": {
+     "input": 3912,
+     "output": 197,
+     "total": 60825
+    },
+    "resolved": false,
+    "eval_tail": " Running tests after patch...\n  \u2713 Ran 82 test(s)\n\nResults:\n  FAIL_TO_PASS: 1/2 passed\n  PASS_TO_PASS: 81/82 passed\n  Resolved: False\n  \u2713 Cleaned up instance image: jiayuanz3/swecontextbench:django.django-32260\n\n============================================================\n\u2713 Evaluation complete: 0/1 resolved\nReport written to: scb_issue_only_django_django-32260.json\nLogs written to: logs/run_evaluation/scb_issue_only_django_django-32260\n============================================================\n"
+   },
+   "context": {
+    "tokens": {
+     "input": 2936,
+     "output": 227,
+     "total": 76178
+    },
+    "resolved": false,
+    "eval_tail": "lied\n\u2192 Running tests after patch...\n  \u2713 Ran 83 test(s)\n\nResults:\n  FAIL_TO_PASS: 1/2 passed\n  PASS_TO_PASS: 82/82 passed\n  Resolved: False\n  \u2713 Cleaned up instance image: jiayuanz3/swecontextbench:django.django-32260\n\n============================================================\n\u2713 Evaluation complete: 0/1 resolved\nReport written to: scb_context_django_django-32260.json\nLogs written to: logs/run_evaluation/scb_context_django_django-32260\n============================================================\n"
+   },
+   "compact": {
+    "tokens": {
+     "input": 4553,
+     "output": 83,
+     "total": 69610
+    },
+    "summary_tokens": {
+     "input": 2165,
+     "output": 544,
+     "total": 31184
+    },
+    "summary_words": 79,
+    "resolved": false,
+    "eval_tail": "lied\n\u2192 Running tests after patch...\n  \u2713 Ran 83 test(s)\n\nResults:\n  FAIL_TO_PASS: 1/2 passed\n  PASS_TO_PASS: 81/82 passed\n  Resolved: False\n  \u2713 Cleaned up instance image: jiayuanz3/swecontextbench:django.django-32260\n\n============================================================\n\u2713 Evaluation complete: 0/1 resolved\nReport written to: scb_compact_django_django-32260.json\nLogs written to: logs/run_evaluation/scb_compact_django_django-32260\n============================================================\n"
+   }
+  }
+ },
+ "matplotlib__matplotlib-23687": {
+  "pull_s": 8,
+  "targets": [
+   "lib/matplotlib/axes/_axes.py",
+   "lib/matplotlib/cbook/__init__.py",
+   "lib/matplotlib/dates.py",
+   "lib/matplotlib/units.py"
+  ],
+  "conds": {
+   "issue_only": {
+    "tokens": {
+     "input": 2248,
+     "output": 57,
+     "total": 26524
+    },
+    "resolved": null,
+    "note": "no edit"
+   },
+   "context": {
+    "tokens": {
+     "input": 6061,
+     "output": 75,
+     "total": 103492
+    },
+    "resolved": false,
+    "eval_tail": "patch...\n  \u2713 Ran 795 test(s)\n\nResults:\n  FAIL_TO_PASS: 3/4 passed\n  PASS_TO_PASS: 791/791 passed\n  Resolved: False\n  \u2713 Cleaned up instance image: jiayuanz3/swecontextbench:matplotlib.matplotlib-23687\n\n============================================================\n\u2713 Evaluation complete: 0/1 resolved\nReport written to: scb_context_matplotlib_matplotlib-23687.json\nLogs written to: logs/run_evaluation/scb_context_matplotlib_matplotlib-23687\n============================================================\n"
+   },
+   "compact": {
+    "tokens": {
+     "input": 5604,
+     "output": 249,
+     "total": 82962
+    },
+    "summary_tokens": {
+     "input": 3491,
+     "output": 872,
+     "total": 69746
+    },
+    "summary_words": 84,
+    "resolved": false,
+    "eval_tail": "patch...\n  \u2713 Ran 795 test(s)\n\nResults:\n  FAIL_TO_PASS: 1/4 passed\n  PASS_TO_PASS: 791/791 passed\n  Resolved: False\n  \u2713 Cleaned up instance image: jiayuanz3/swecontextbench:matplotlib.matplotlib-23687\n\n============================================================\n\u2713 Evaluation complete: 0/1 resolved\nReport written to: scb_compact_matplotlib_matplotlib-23687.json\nLogs written to: logs/run_evaluation/scb_compact_matplotlib_matplotlib-23687\n============================================================\n"
+   }
+  }
+ },
+ "matplotlib__matplotlib-24818": {
+  "pull_s": 9,
+  "targets": [
+   "lib/matplotlib/axes/_axes.py",
+   "lib/matplotlib/cbook.py"
+  ],
+  "conds": {
+   "issue_only": {
+    "tokens": {
+     "input": 5272,
+     "output": 106,
+     "total": 58235
+    },
+    "resolved": false,
+    "eval_tail": " file ignored\nError processing line 1 of /home/b3iq/coundetrip/.venv/lib/python3.10/site-packages/matplotlib-nspkg.pth:\n\n  Traceback (most recent call last):\n    File \"/home/b3iq/.local/share/uv/python/cpython-3.10-linux-x86_64-gnu/lib/python3.10/site.py\", line 195, in addpackage\n      exec(line)\n    File \"<string>\", line 1, in <module>\n    File \"<frozen importlib._bootstrap>\", line 568, in module_from_spec\n  AttributeError: 'NoneType' object has no attribute 'loader'\n\nRemainder of file ignored\n"
+   },
+   "context": {
+    "tokens": {
+     "input": 5589,
+     "output": 98,
+     "total": 34187
+    },
+    "resolved": false,
+    "eval_tail": " file ignored\nError processing line 1 of /home/b3iq/coundetrip/.venv/lib/python3.10/site-packages/matplotlib-nspkg.pth:\n\n  Traceback (most recent call last):\n    File \"/home/b3iq/.local/share/uv/python/cpython-3.10-linux-x86_64-gnu/lib/python3.10/site.py\", line 195, in addpackage\n      exec(line)\n    File \"<string>\", line 1, in <module>\n    File \"<frozen importlib._bootstrap>\", line 568, in module_from_spec\n  AttributeError: 'NoneType' object has no attribute 'loader'\n\nRemainder of file ignored\n"
+   },
+   "compact": {
+    "tokens": {
+     "input": 4864,
+     "output": 113,
+     "total": 25336
+    },
+    "summary_tokens": {
+     "input": 2208,
+     "output": 234,
+     "total": 55487
+    },
+    "summary_words": 82,
+    "resolved": false,
+    "eval_tail": " file ignored\nError processing line 1 of /home/b3iq/coundetrip/.venv/lib/python3.10/site-packages/matplotlib-nspkg.pth:\n\n  Traceback (most recent call last):\n    File \"/home/b3iq/.local/share/uv/python/cpython-3.10-linux-x86_64-gnu/lib/python3.10/site.py\", line 195, in addpackage\n      exec(line)\n    File \"<string>\", line 1, in <module>\n    File \"<frozen importlib._bootstrap>\", line 568, in module_from_spec\n  AttributeError: 'NoneType' object has no attribute 'loader'\n\nRemainder of file ignored\n"
+   }
+  }
+ },
+ "matplotlib__matplotlib-26331": {
+  "pull_s": 9,
+  "targets": [
+   "lib/mpl_toolkits/axes_grid1/axes_rgb.py"
+  ],
+  "conds": {
+   "issue_only": {
+    "tokens": {
+     "input": 3448,
+     "output": 129,
+     "total": 76629
+    },
+    "resolved": true,
+    "eval_tail": "tch...\n  \u2713 Ran 51 test(s)\n\nResults:\n  FAIL_TO_PASS: 1/1 passed\n  PASS_TO_PASS: 50/50 passed\n  Resolved: True\n  \u2713 Cleaned up instance image: jiayuanz3/swecontextbench:matplotlib.matplotlib-26331\n\n============================================================\n\u2713 Evaluation complete: 1/1 resolved\nReport written to: scb_issue_only_matplotlib_matplotlib-26331.json\nLogs written to: logs/run_evaluation/scb_issue_only_matplotlib_matplotlib-26331\n============================================================\n"
+   },
+   "context": {
+    "tokens": {
+     "input": 2976,
+     "output": 134,
+     "total": 63986
+    },
+    "resolved": true,
+    "eval_tail": "ter patch...\n  \u2713 Ran 51 test(s)\n\nResults:\n  FAIL_TO_PASS: 1/1 passed\n  PASS_TO_PASS: 50/50 passed\n  Resolved: True\n  \u2713 Cleaned up instance image: jiayuanz3/swecontextbench:matplotlib.matplotlib-26331\n\n============================================================\n\u2713 Evaluation complete: 1/1 resolved\nReport written to: scb_context_matplotlib_matplotlib-26331.json\nLogs written to: logs/run_evaluation/scb_context_matplotlib_matplotlib-26331\n============================================================\n"
+   },
+   "compact": {
+    "tokens": {
+     "input": 2464,
+     "output": 154,
+     "total": 67664
+    },
+    "summary_tokens": {
+     "input": 6540,
+     "output": 412,
+     "total": 6952
+    },
+    "summary_words": 85,
+    "resolved": true,
+    "eval_tail": "ter patch...\n  \u2713 Ran 51 test(s)\n\nResults:\n  FAIL_TO_PASS: 1/1 passed\n  PASS_TO_PASS: 50/50 passed\n  Resolved: True\n  \u2713 Cleaned up instance image: jiayuanz3/swecontextbench:matplotlib.matplotlib-26331\n\n============================================================\n\u2713 Evaluation complete: 1/1 resolved\nReport written to: scb_compact_matplotlib_matplotlib-26331.json\nLogs written to: logs/run_evaluation/scb_compact_matplotlib_matplotlib-26331\n============================================================\n"
+   }
+  }
+ },
+ "matplotlib__matplotlib-27361": {
+  "pull_s": 70,
+  "targets": [
+   "lib/mpl_toolkits/mplot3d/art3d.py"
+  ],
+  "conds": {
+   "issue_only": {
+    "tokens": {
+     "input": 2346,
+     "output": 189,
+     "total": 47411
+    },
+    "resolved": true,
+    "eval_tail": "...\n  \u2713 Ran 151 test(s)\n\nResults:\n  FAIL_TO_PASS: 1/1 passed\n  PASS_TO_PASS: 150/150 passed\n  Resolved: True\n  \u2713 Cleaned up instance image: jiayuanz3/swecontextbench:matplotlib.matplotlib-27361\n\n============================================================\n\u2713 Evaluation complete: 1/1 resolved\nReport written to: scb_issue_only_matplotlib_matplotlib-27361.json\nLogs written to: logs/run_evaluation/scb_issue_only_matplotlib_matplotlib-27361\n============================================================\n"
+   },
+   "context": {
+    "tokens": {
+     "input": 5565,
+     "output": 717,
+     "total": 59015
+    },
+    "resolved": null,
+    "note": "no edit"
+   },
+   "compact": {
+    "tokens": {
+     "input": 3106,
+     "output": 176,
+     "total": 80414
+    },
+    "summary_tokens": {
+     "input": 5783,
+     "output": 220,
+     "total": 18195
+    },
+    "summary_words": 80,
+    "resolved": false,
+    "eval_tail": "patch...\n  \u2713 Ran 151 test(s)\n\nResults:\n  FAIL_TO_PASS: 0/1 passed\n  PASS_TO_PASS: 150/150 passed\n  Resolved: False\n  \u2713 Cleaned up instance image: jiayuanz3/swecontextbench:matplotlib.matplotlib-27361\n\n============================================================\n\u2713 Evaluation complete: 0/1 resolved\nReport written to: scb_compact_matplotlib_matplotlib-27361.json\nLogs written to: logs/run_evaluation/scb_compact_matplotlib_matplotlib-27361\n============================================================\n"
+   }
+  }
+ },
+ "mwaskom__seaborn-3203": {
+  "pull_s": 48,
+  "targets": [
+   "seaborn/_core/exceptions.py",
+   "seaborn/_core/plot.py",
+   "seaborn/_marks/base.py",
+   "seaborn/palettes.py"
+  ],
+  "conds": {
+   "issue_only": {
+    "tokens": {
+     "input": 3775,
+     "output": 1870,
+     "total": 87010
+    },
+    "resolved": false,
+    "eval_tail": " tests after patch...\n  \u2713 Ran 299 test(s)\n\nResults:\n  FAIL_TO_PASS: 0/174 passed\n  PASS_TO_PASS: 298/298 passed\n  Resolved: False\n  \u2713 Cleaned up instance image: jiayuanz3/swecontextbench:mwaskom.seaborn-3203\n\n============================================================\n\u2713 Evaluation complete: 0/1 resolved\nReport written to: scb_issue_only_mwaskom_seaborn-3203.json\nLogs written to: logs/run_evaluation/scb_issue_only_mwaskom_seaborn-3203\n============================================================\n"
+   },
+   "context": {
+    "tokens": {
+     "input": 3917,
+     "output": 191,
+     "total": 93453
+    },
+    "resolved": false,
+    "eval_tail": "ning tests after patch...\n  \u2713 Ran 472 test(s)\n\nResults:\n  FAIL_TO_PASS: 173/174 passed\n  PASS_TO_PASS: 298/298 passed\n  Resolved: False\n  \u2713 Cleaned up instance image: jiayuanz3/swecontextbench:mwaskom.seaborn-3203\n\n============================================================\n\u2713 Evaluation complete: 0/1 resolved\nReport written to: scb_context_mwaskom_seaborn-3203.json\nLogs written to: logs/run_evaluation/scb_context_mwaskom_seaborn-3203\n============================================================\n"
+   },
+   "compact": {
+    "tokens": {
+     "input": 2045,
+     "output": 216,
+     "total": 67273
+    },
+    "summary_tokens": {
+     "input": 4823,
+     "output": 501,
+     "total": 33841
+    },
+    "summary_words": 82,
+    "resolved": false,
+    "eval_tail": "ning tests after patch...\n  \u2713 Ran 472 test(s)\n\nResults:\n  FAIL_TO_PASS: 173/174 passed\n  PASS_TO_PASS: 298/298 passed\n  Resolved: False\n  \u2713 Cleaned up instance image: jiayuanz3/swecontextbench:mwaskom.seaborn-3203\n\n============================================================\n\u2713 Evaluation complete: 0/1 resolved\nReport written to: scb_compact_mwaskom_seaborn-3203.json\nLogs written to: logs/run_evaluation/scb_compact_mwaskom_seaborn-3203\n============================================================\n"
+   }
+  }
+ },
+ "psf__requests-3359": {
+  "pull_s": 14,
+  "targets": [
+   "requests/models.py",
+   "requests/utils.py"
+  ],
+  "conds": {
+   "issue_only": {
+    "tokens": {
+     "input": 3941,
+     "output": 82,
+     "total": 36522
+    },
+    "resolved": false,
+    "eval_tail": "lied\n\u2192 Running tests after patch...\n  \u2713 Ran 69 test(s)\n\nResults:\n  FAIL_TO_PASS: 0/2 passed\n  PASS_TO_PASS: 67/67 passed\n  Resolved: False\n  \u2713 Cleaned up instance image: jiayuanz3/swecontextbench:psf.requests-3359\n\n============================================================\n\u2713 Evaluation complete: 0/1 resolved\nReport written to: scb_issue_only_psf_requests-3359.json\nLogs written to: logs/run_evaluation/scb_issue_only_psf_requests-3359\n============================================================\n"
+   },
+   "context": {
+    "tokens": {
+     "input": 7554,
+     "output": 215,
+     "total": 68861
+    },
+    "resolved": null,
+    "note": "no edit"
+   },
+   "compact": {
+    "tokens": {
+     "input": 2605,
+     "output": 136,
+     "total": 63537
+    },
+    "summary_tokens": {
+     "input": 2947,
+     "output": 233,
+     "total": 23519
+    },
+    "summary_words": 75,
+    "resolved": false,
+    "eval_tail": "ch applied\n\u2192 Running tests after patch...\n  \u2713 Ran 69 test(s)\n\nResults:\n  FAIL_TO_PASS: 0/2 passed\n  PASS_TO_PASS: 67/67 passed\n  Resolved: False\n  \u2713 Cleaned up instance image: jiayuanz3/swecontextbench:psf.requests-3359\n\n============================================================\n\u2713 Evaluation complete: 0/1 resolved\nReport written to: scb_compact_psf_requests-3359.json\nLogs written to: logs/run_evaluation/scb_compact_psf_requests-3359\n============================================================\n"
+   }
+  }
+ },
+ "pydata__xarray-508": {
+  "pull_s": 4,
+  "targets": [
+   "xarray/core/concat.py"
+  ],
+  "conds": {
+   "issue_only": {
+    "tokens": {
+     "input": 3761,
+     "output": 191,
+     "total": 93324
+    },
+    "resolved": true,
+    "eval_tail": "ied\n\u2192 Running tests after patch...\n  \u2713 Ran 94 test(s)\n\nResults:\n  FAIL_TO_PASS: 16/16 passed\n  PASS_TO_PASS: 78/78 passed\n  Resolved: True\n  \u2713 Cleaned up instance image: jiayuanz3/swecontextbench:pydata.xarray-508\n\n============================================================\n\u2713 Evaluation complete: 1/1 resolved\nReport written to: scb_issue_only_pydata_xarray-508.json\nLogs written to: logs/run_evaluation/scb_issue_only_pydata_xarray-508\n============================================================\n"
+   },
+   "context": {
+    "tokens": {
+     "input": 4630,
+     "output": 62,
+     "total": 86081
+    },
+    "resolved": null,
+    "note": "no edit"
+   },
+   "compact": {
+    "tokens": {
+     "input": 4127,
+     "output": 310,
+     "total": 89841
+    },
+    "summary_tokens": {
+     "input": 10482,
+     "output": 201,
+     "total": 10683
+    },
+    "summary_words": 84,
+    "resolved": null,
+    "note": "no edit"
+   }
+  }
+ },
+ "scikit-learn__scikit-learn-12622": {
+  "pull_s": 5,
+  "targets": [
+   "sklearn/utils/validation.py"
+  ],
+  "conds": {
+   "issue_only": {
+    "tokens": {
+     "input": 2165,
+     "output": 218,
+     "total": 55372
+    },
+    "resolved": true,
+    "eval_tail": "an 64 test(s)\n\nResults:\n  FAIL_TO_PASS: 1/1 passed\n  PASS_TO_PASS: 63/63 passed\n  Resolved: True\n  \u2713 Cleaned up instance image: jiayuanz3/swecontextbench:scikit-learn.scikit-learn-12622\n\n============================================================\n\u2713 Evaluation complete: 1/1 resolved\nReport written to: scb_issue_only_scikit-learn_scikit-learn-12622.json\nLogs written to: logs/run_evaluation/scb_issue_only_scikit-learn_scikit-learn-12622\n============================================================\n"
+   },
+   "context": {
+    "tokens": {
+     "input": 3641,
+     "output": 220,
+     "total": 44537
+    },
+    "resolved": true,
+    "eval_tail": "\n  \u2713 Ran 64 test(s)\n\nResults:\n  FAIL_TO_PASS: 1/1 passed\n  PASS_TO_PASS: 63/63 passed\n  Resolved: True\n  \u2713 Cleaned up instance image: jiayuanz3/swecontextbench:scikit-learn.scikit-learn-12622\n\n============================================================\n\u2713 Evaluation complete: 1/1 resolved\nReport written to: scb_context_scikit-learn_scikit-learn-12622.json\nLogs written to: logs/run_evaluation/scb_context_scikit-learn_scikit-learn-12622\n============================================================\n"
+   },
+   "compact": {
+    "tokens": {
+     "input": 3169,
+     "output": 161,
+     "total": 39974
+    },
+    "summary_tokens": {
+     "input": 12547,
+     "output": 522,
+     "total": 13069
+    },
+    "summary_words": 84,
+    "resolved": true,
+    "eval_tail": "\n  \u2713 Ran 64 test(s)\n\nResults:\n  FAIL_TO_PASS: 1/1 passed\n  PASS_TO_PASS: 63/63 passed\n  Resolved: True\n  \u2713 Cleaned up instance image: jiayuanz3/swecontextbench:scikit-learn.scikit-learn-12622\n\n============================================================\n\u2713 Evaluation complete: 1/1 resolved\nReport written to: scb_compact_scikit-learn_scikit-learn-12622.json\nLogs written to: logs/run_evaluation/scb_compact_scikit-learn_scikit-learn-12622\n============================================================\n"
+   }
+  }
+ },
+ "scikit-learn__scikit-learn-13771": {
+  "pull_s": 10,
+  "targets": [
+   "sklearn/ensemble/voting.py"
+  ],
+  "conds": {
+   "issue_only": {
+    "tokens": {
+     "input": 3919,
+     "output": 706,
+     "total": 122856
+    },
+    "resolved": false,
+    "eval_tail": "n 23 test(s)\n\nResults:\n  FAIL_TO_PASS: 2/5 passed\n  PASS_TO_PASS: 18/18 passed\n  Resolved: False\n  \u2713 Cleaned up instance image: jiayuanz3/swecontextbench:scikit-learn.scikit-learn-13771\n\n============================================================\n\u2713 Evaluation complete: 0/1 resolved\nReport written to: scb_issue_only_scikit-learn_scikit-learn-13771.json\nLogs written to: logs/run_evaluation/scb_issue_only_scikit-learn_scikit-learn-13771\n============================================================\n"
+   },
+   "context": {
+    "tokens": {
+     "input": 4196,
+     "output": 155,
+     "total": 110134
+    },
+    "resolved": false,
+    "eval_tail": "  \u2713 Ran 23 test(s)\n\nResults:\n  FAIL_TO_PASS: 2/5 passed\n  PASS_TO_PASS: 18/18 passed\n  Resolved: False\n  \u2713 Cleaned up instance image: jiayuanz3/swecontextbench:scikit-learn.scikit-learn-13771\n\n============================================================\n\u2713 Evaluation complete: 0/1 resolved\nReport written to: scb_context_scikit-learn_scikit-learn-13771.json\nLogs written to: logs/run_evaluation/scb_context_scikit-learn_scikit-learn-13771\n============================================================\n"
+   },
+   "compact": {
+    "tokens": {
+     "input": 112971,
+     "output": 222,
+     "total": 113193
+    },
+    "summary_tokens": {
+     "input": 7799,
+     "output": 214,
+     "total": 8013
+    },
+    "summary_words": 84,
+    "resolved": false,
+    "eval_tail": "  \u2713 Ran 23 test(s)\n\nResults:\n  FAIL_TO_PASS: 2/5 passed\n  PASS_TO_PASS: 18/18 passed\n  Resolved: False\n  \u2713 Cleaned up instance image: jiayuanz3/swecontextbench:scikit-learn.scikit-learn-13771\n\n============================================================\n\u2713 Evaluation complete: 0/1 resolved\nReport written to: scb_compact_scikit-learn_scikit-learn-13771.json\nLogs written to: logs/run_evaluation/scb_compact_scikit-learn_scikit-learn-13771\n============================================================\n"
+   }
+  }
+ },
+ "scikit-learn__scikit-learn-5970": {
+  "pull_s": 7,
+  "targets": [
+   "sklearn/decomposition/kernel_pca.py"
+  ],
+  "conds": {
+   "issue_only": {
+    "tokens": {
+     "input": 3488,
+     "output": 266,
+     "total": 117887
+    },
+    "resolved": null,
+    "note": "no edit"
+   },
+   "context": {
+    "tokens": {
+     "input": 2146,
+     "output": 80,
+     "total": 128365
+    },
+    "resolved": true,
+    "eval_tail": "...\n  \u2713 Ran 55 test(s)\n\nResults:\n  FAIL_TO_PASS: 1/1 passed\n  PASS_TO_PASS: 54/54 passed\n  Resolved: True\n  \u2713 Cleaned up instance image: jiayuanz3/swecontextbench:scikit-learn.scikit-learn-5970\n\n============================================================\n\u2713 Evaluation complete: 1/1 resolved\nReport written to: scb_context_scikit-learn_scikit-learn-5970.json\nLogs written to: logs/run_evaluation/scb_context_scikit-learn_scikit-learn-5970\n============================================================\n"
+   },
+   "compact": {
+    "tokens": {
+     "input": 5492,
+     "output": 107,
+     "total": 99201
+    },
+    "summary_tokens": {
+     "input": 6448,
+     "output": 588,
+     "total": 7036
+    },
+    "summary_words": 78,
+    "resolved": null,
+    "note": "no edit"
+   }
+  }
+ },
+ "sympy__sympy-11275": {
+  "pull_s": 9,
+  "targets": [
+   "sympy/simplify/radsimp.py"
+  ],
+  "conds": {
+   "issue_only": {
+    "tokens": {
+     "input": 4250,
+     "output": 198,
+     "total": 110000
+    },
+    "resolved": true,
+    "eval_tail": "ed\n\u2192 Running tests after patch...\n  \u2713 Ran 122 test(s)\n\nResults:\n  FAIL_TO_PASS: 2/2 passed\n  PASS_TO_PASS: 119/120 passed\n  Resolved: True\n  \u2713 Cleaned up instance image: jiayuanz3/swecontextbench:sympy.sympy-11275\n\n============================================================\n\u2713 Evaluation complete: 1/1 resolved\nReport written to: scb_issue_only_sympy_sympy-11275.json\nLogs written to: logs/run_evaluation/scb_issue_only_sympy_sympy-11275\n============================================================\n"
+   },
+   "context": {
+    "tokens": {
+     "input": 3618,
+     "output": 192,
+     "total": 121632
+    },
+    "resolved": true,
+    "eval_tail": " applied\n\u2192 Running tests after patch...\n  \u2713 Ran 122 test(s)\n\nResults:\n  FAIL_TO_PASS: 2/2 passed\n  PASS_TO_PASS: 119/120 passed\n  Resolved: True\n  \u2713 Cleaned up instance image: jiayuanz3/swecontextbench:sympy.sympy-11275\n\n============================================================\n\u2713 Evaluation complete: 1/1 resolved\nReport written to: scb_context_sympy_sympy-11275.json\nLogs written to: logs/run_evaluation/scb_context_sympy_sympy-11275\n============================================================\n"
+   },
+   "compact": {
+    "tokens": {
+     "input": 2425,
+     "output": 210,
+     "total": 103901
+    },
+    "summary_tokens": {
+     "input": 2386,
+     "output": 411,
+     "total": 23079
+    },
+    "summary_words": 82,
+    "resolved": true,
+    "eval_tail": " applied\n\u2192 Running tests after patch...\n  \u2713 Ran 122 test(s)\n\nResults:\n  FAIL_TO_PASS: 2/2 passed\n  PASS_TO_PASS: 120/120 passed\n  Resolved: True\n  \u2713 Cleaned up instance image: jiayuanz3/swecontextbench:sympy.sympy-11275\n\n============================================================\n\u2713 Evaluation complete: 1/1 resolved\nReport written to: scb_compact_sympy_sympy-11275.json\nLogs written to: logs/run_evaluation/scb_compact_sympy_sympy-11275\n============================================================\n"
+   }
+  }
+ },
+ "sympy__sympy-12427": {
+  "pull_s": 2,
+  "targets": [
+   "sympy/matrices/expressions/diagonal.py",
+   "sympy/matrices/expressions/matexpr.py",
+   "sympy/solvers/solveset.py"
+  ],
+  "conds": {
+   "issue_only": {
+    "tokens": {
+     "input": 4819,
+     "output": 104,
+     "total": 49655
+    },
+    "resolved": false,
+    "eval_tail": "lied\n\u2192 Running tests after patch...\n  \u2713 Ran 85 test(s)\n\nResults:\n  FAIL_TO_PASS: 0/3 passed\n  PASS_TO_PASS: 82/82 passed\n  Resolved: False\n  \u2713 Cleaned up instance image: jiayuanz3/swecontextbench:sympy.sympy-12427\n\n============================================================\n\u2713 Evaluation complete: 0/1 resolved\nReport written to: scb_issue_only_sympy_sympy-12427.json\nLogs written to: logs/run_evaluation/scb_issue_only_sympy_sympy-12427\n============================================================\n"
+   },
+   "context": {
+    "tokens": {
+     "input": 2519,
+     "output": 145,
+     "total": 35136
+    },
+    "resolved": false,
+    "eval_tail": "ch applied\n\u2192 Running tests after patch...\n  \u2713 Ran 85 test(s)\n\nResults:\n  FAIL_TO_PASS: 0/3 passed\n  PASS_TO_PASS: 82/82 passed\n  Resolved: False\n  \u2713 Cleaned up instance image: jiayuanz3/swecontextbench:sympy.sympy-12427\n\n============================================================\n\u2713 Evaluation complete: 0/1 resolved\nReport written to: scb_context_sympy_sympy-12427.json\nLogs written to: logs/run_evaluation/scb_context_sympy_sympy-12427\n============================================================\n"
+   },
+   "compact": {
+    "tokens": {
+     "input": 2392,
+     "output": 105,
+     "total": 26783
+    },
+    "summary_tokens": {
+     "input": 4773,
+     "output": 306,
+     "total": 33595
+    },
+    "summary_words": 73,
+    "resolved": false,
+    "eval_tail": "ch applied\n\u2192 Running tests after patch...\n  \u2713 Ran 85 test(s)\n\nResults:\n  FAIL_TO_PASS: 0/3 passed\n  PASS_TO_PASS: 82/82 passed\n  Resolved: False\n  \u2713 Cleaned up instance image: jiayuanz3/swecontextbench:sympy.sympy-12427\n\n============================================================\n\u2713 Evaluation complete: 0/1 resolved\nReport written to: scb_compact_sympy_sympy-12427.json\nLogs written to: logs/run_evaluation/scb_compact_sympy_sympy-12427\n============================================================\n"
+   }
+  }
+ },
+ "sympy__sympy-16342": {
+  "pull_s": 1,
+  "targets": [
+   "sympy/sets/fancysets.py",
+   "sympy/sets/sets.py"
+  ],
+  "conds": {
+   "issue_only": {
+    "tokens": {
+     "input": 13361,
+     "output": 527,
+     "total": 152286
+    },
+    "resolved": null,
+    "note": "no edit"
+   },
+   "context": {
+    "tokens": {
+     "input": 3002,
+     "output": 83,
+     "total": 112850
+    },
+    "resolved": null,
+    "note": "no edit"
+   },
+   "compact": {
+    "tokens": {
+     "input": 4467,
+     "output": 1037,
+     "total": 143955
+    },
+    "summary_tokens": {
+     "input": 3994,
+     "output": 357,
+     "total": 53307
+    },
+    "summary_words": 84,
+    "resolved": null,
+    "note": "no edit"
+   }
+  }
+ },
+ "sympy__sympy-17377": {
+  "pull_s": 5,
+  "targets": [
+   "sympy/ntheory/residue_ntheory.py"
+  ],
+  "conds": {
+   "issue_only": {
+    "tokens": {
+     "input": 2061,
+     "output": 133,
+     "total": 103789
+    },
+    "resolved": true,
+    "eval_tail": "ed\n\u2192 Running tests after patch...\n  \u2713 Ran 118 test(s)\n\nResults:\n  FAIL_TO_PASS: 2/2 passed\n  PASS_TO_PASS: 116/116 passed\n  Resolved: True\n  \u2713 Cleaned up instance image: jiayuanz3/swecontextbench:sympy.sympy-17377\n\n============================================================\n\u2713 Evaluation complete: 1/1 resolved\nReport written to: scb_issue_only_sympy_sympy-17377.json\nLogs written to: logs/run_evaluation/scb_issue_only_sympy_sympy-17377\n============================================================\n"
+   },
+   "context": {
+    "tokens": {
+     "input": 2792,
+     "output": 101,
+     "total": 63672
+    },
+    "resolved": true,
+    "eval_tail": " applied\n\u2192 Running tests after patch...\n  \u2713 Ran 118 test(s)\n\nResults:\n  FAIL_TO_PASS: 2/2 passed\n  PASS_TO_PASS: 116/116 passed\n  Resolved: True\n  \u2713 Cleaned up instance image: jiayuanz3/swecontextbench:sympy.sympy-17377\n\n============================================================\n\u2713 Evaluation complete: 1/1 resolved\nReport written to: scb_context_sympy_sympy-17377.json\nLogs written to: logs/run_evaluation/scb_context_sympy_sympy-17377\n============================================================\n"
+   },
+   "compact": {
+    "tokens": {
+     "input": 8053,
+     "output": 119,
+     "total": 109866
+    },
+    "summary_tokens": {
+     "input": 5852,
+     "output": 340,
+     "total": 18351
+    },
+    "summary_words": 81,
+    "resolved": null,
+    "note": "no edit"
+   }
+  }
+ },
+ "sympy__sympy-19235": {
+  "pull_s": 4,
+  "targets": [
+   "sympy/printing/latex.py"
+  ],
+  "conds": {
+   "issue_only": {
+    "tokens": {
+     "input": 4482,
+     "output": 103,
+     "total": 24826
+    },
+    "resolved": true,
+    "eval_tail": "ed\n\u2192 Running tests after patch...\n  \u2713 Ran 145 test(s)\n\nResults:\n  FAIL_TO_PASS: 1/1 passed\n  PASS_TO_PASS: 144/144 passed\n  Resolved: True\n  \u2713 Cleaned up instance image: jiayuanz3/swecontextbench:sympy.sympy-19235\n\n============================================================\n\u2713 Evaluation complete: 1/1 resolved\nReport written to: scb_issue_only_sympy_sympy-19235.json\nLogs written to: logs/run_evaluation/scb_issue_only_sympy_sympy-19235\n============================================================\n"
+   },
+   "context": {
+    "tokens": {
+     "input": 3092,
+     "output": 161,
+     "total": 19409
+    },
+    "resolved": true,
+    "eval_tail": " applied\n\u2192 Running tests after patch...\n  \u2713 Ran 145 test(s)\n\nResults:\n  FAIL_TO_PASS: 1/1 passed\n  PASS_TO_PASS: 144/144 passed\n  Resolved: True\n  \u2713 Cleaned up instance image: jiayuanz3/swecontextbench:sympy.sympy-19235\n\n============================================================\n\u2713 Evaluation complete: 1/1 resolved\nReport written to: scb_context_sympy_sympy-19235.json\nLogs written to: logs/run_evaluation/scb_context_sympy_sympy-19235\n============================================================\n"
+   },
+   "compact": {
+    "tokens": {
+     "input": 2948,
+     "output": 136,
+     "total": 19213
+    },
+    "summary_tokens": {
+     "input": 3028,
+     "output": 531,
+     "total": 28027
+    },
+    "summary_words": 88,
+    "resolved": true,
+    "eval_tail": " applied\n\u2192 Running tests after patch...\n  \u2713 Ran 145 test(s)\n\nResults:\n  FAIL_TO_PASS: 1/1 passed\n  PASS_TO_PASS: 144/144 passed\n  Resolved: True\n  \u2713 Cleaned up instance image: jiayuanz3/swecontextbench:sympy.sympy-19235\n\n============================================================\n\u2713 Evaluation complete: 1/1 resolved\nReport written to: scb_compact_sympy_sympy-19235.json\nLogs written to: logs/run_evaluation/scb_compact_sympy_sympy-19235\n============================================================\n"
+   }
+  }
+ },
+ "sympy__sympy-19558": {
+  "pull_s": 1,
+  "targets": [
+   "sympy/functions/elementary/complexes.py"
+  ],
+  "conds": {
+   "issue_only": {
+    "tokens": {
+     "input": 5303,
+     "output": 64,
+     "total": 131223
+    },
+    "resolved": null,
+    "note": "no edit"
+   },
+   "context": {
+    "tokens": {
+     "input": 5228,
+     "output": 735,
+     "total": 139815
+    },
+    "resolved": null,
+    "note": "no edit"
+   },
+   "compact": {
+    "tokens": {
+     "input": 5763,
+     "output": 105,
+     "total": 119540
+    },
+    "summary_tokens": {
+     "input": 5370,
+     "output": 206,
+     "total": 17766
+    },
+    "summary_words": 77,
+    "resolved": null,
+    "note": "no edit"
+   }
+  }
+ },
+ "sympy__sympy-26642": {
+  "pull_s": 2,
+  "targets": [
+   "sympy/parsing/mathematica.py"
+  ],
+  "conds": {
+   "issue_only": {
+    "tokens": {
+     "input": 5636,
+     "output": 109,
+     "total": 26001
+    },
+    "resolved": false,
+    "eval_tail": "applied\n\u2192 Running tests after patch...\n  \u2713 Ran 3 test(s)\n\nResults:\n  FAIL_TO_PASS: 1/2 passed\n  PASS_TO_PASS: 1/1 passed\n  Resolved: False\n  \u2713 Cleaned up instance image: jiayuanz3/swecontextbench:sympy.sympy-26642\n\n============================================================\n\u2713 Evaluation complete: 0/1 resolved\nReport written to: scb_issue_only_sympy_sympy-26642.json\nLogs written to: logs/run_evaluation/scb_issue_only_sympy_sympy-26642\n============================================================\n"
+   },
+   "context": {
+    "tokens": {
+     "input": 5105,
+     "output": 96,
+     "total": 25420
+    },
+    "resolved": false,
+    "eval_tail": "Patch applied\n\u2192 Running tests after patch...\n  \u2713 Ran 3 test(s)\n\nResults:\n  FAIL_TO_PASS: 1/2 passed\n  PASS_TO_PASS: 1/1 passed\n  Resolved: False\n  \u2713 Cleaned up instance image: jiayuanz3/swecontextbench:sympy.sympy-26642\n\n============================================================\n\u2713 Evaluation complete: 0/1 resolved\nReport written to: scb_context_sympy_sympy-26642.json\nLogs written to: logs/run_evaluation/scb_context_sympy_sympy-26642\n============================================================\n"
+   },
+   "compact": {
+    "tokens": {
+     "input": 5234,
+     "output": 110,
+     "total": 21564
+    },
+    "summary_tokens": {
+     "input": 4904,
+     "output": 262,
+     "total": 29616
+    },
+    "summary_words": 85,
+    "resolved": false,
+    "eval_tail": "Patch applied\n\u2192 Running tests after patch...\n  \u2713 Ran 3 test(s)\n\nResults:\n  FAIL_TO_PASS: 1/2 passed\n  PASS_TO_PASS: 1/1 passed\n  Resolved: False\n  \u2713 Cleaned up instance image: jiayuanz3/swecontextbench:sympy.sympy-26642\n\n============================================================\n\u2713 Evaluation complete: 0/1 resolved\nReport written to: scb_compact_sympy_sympy-26642.json\nLogs written to: logs/run_evaluation/scb_compact_sympy_sympy-26642\n============================================================\n"
+   }
+  }
+ },
+ "sympy__sympy-27868": {
+  "pull_s": 4,
+  "targets": [
+   "sympy/parsing/mathematica.py",
+   "sympy/parsing/mathematica_named_characters.py"
+  ],
+  "conds": {
+   "issue_only": {
+    "tokens": {
+     "input": 2134,
+     "output": 157,
+     "total": 120219
+    },
+    "resolved": false,
+    "eval_tail": "applied\n\u2192 Running tests after patch...\n  \u2713 Ran 3 test(s)\n\nResults:\n  FAIL_TO_PASS: 0/2 passed\n  PASS_TO_PASS: 1/1 passed\n  Resolved: False\n  \u2713 Cleaned up instance image: jiayuanz3/swecontextbench:sympy.sympy-27868\n\n============================================================\n\u2713 Evaluation complete: 0/1 resolved\nReport written to: scb_issue_only_sympy_sympy-27868.json\nLogs written to: logs/run_evaluation/scb_issue_only_sympy_sympy-27868\n============================================================\n"
+   },
+   "context": {
+    "tokens": {
+     "input": 4644,
+     "output": 47,
+     "total": 85881
+    },
+    "resolved": null,
+    "note": "no edit"
+   },
+   "compact": {
+    "tokens": {
+     "input": 4408,
+     "output": 42,
+     "total": 81601
+    },
+    "summary_tokens": {
+     "input": 16745,
+     "output": 412,
+     "total": 17157
+    },
+    "summary_words": 83,
+    "resolved": false,
+    "eval_tail": "Patch applied\n\u2192 Running tests after patch...\n  \u2713 Ran 3 test(s)\n\nResults:\n  FAIL_TO_PASS: 0/2 passed\n  PASS_TO_PASS: 1/1 passed\n  Resolved: False\n  \u2713 Cleaned up instance image: jiayuanz3/swecontextbench:sympy.sympy-27868\n\n============================================================\n\u2713 Evaluation complete: 0/1 resolved\nReport written to: scb_compact_sympy_sympy-27868.json\nLogs written to: logs/run_evaluation/scb_compact_sympy_sympy-27868\n============================================================\n"
+   }
+  }
+ }
+}
