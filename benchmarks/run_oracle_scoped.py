@@ -67,13 +67,15 @@ if runner == "django":
     # "method (module.Class)" -> convert to "module.Class.method". Scope to the
     # instance's own F2P+P2P; drop P2P that fail on gold; F2P must all run.
     import re as _re
+    PAREN = _re.compile(r"(\w+)\s+\(([\w.]+)\)$")
+    DOTTED = _re.compile(r"^[\w.]+$")  # already module.Class.method
     def to_label(t):
-        m = _re.match(r"(\w+)\s+\(([\w.]+)\)", t)
+        m = PAREN.match(t)
         return f"{m.group(2)}.{m.group(1)}" if m else t
     def valid(t):
-        # SWE-bench sometimes stores a test's docstring instead of its label;
-        # keep only strings matching "method (module.Class)".
-        return bool(_re.match(r"\w+\s+\([\w.]+\)$", t))
+        # accept django paren-format "method (module.Class)" OR already-dotted
+        # "module.Class.method"; reject docstring-style descriptions (spaces/punct).
+        return bool(PAREN.match(t)) or bool(DOTTED.match(t))
     labels = [to_label(t) for t in selection if valid(t)]
     f2p_raw = cfg.get("fail_to_pass") or []
     f2p_valid = [t for t in f2p_raw if valid(t)]
@@ -86,7 +88,7 @@ if runner == "django":
     tests_dir = env / "tests"
     try:
         cp = subprocess.run(
-            [str(venv_py), "runtests.py", *labels, "--verbosity", "1", "--noinput", "--parallel", "1"],
+            [str(venv_py), "runtests.py", *labels, "--verbosity", "1", "--noinput"],
             cwd=str(tests_dir), capture_output=True, text=True, timeout=300)
     except subprocess.TimeoutExpired:
         sys.stderr.write("run_oracle: django runtests.py timed out (300s)\n")

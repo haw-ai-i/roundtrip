@@ -1,0 +1,51 @@
+{
+ "env_path": "~/coundetrip/swebench_envs/django__django-29838",
+ "target_rel": "django/db/models/expressions.py",
+ "target_rels": [
+  "django/db/models/expressions.py",
+  "django/utils/hashable.py",
+  "django/utils/tree.py"
+ ],
+ "source_basename": "expressions.py",
+ "test_selection": [
+  "utils_tests.test_hashable.TestHashable.test_count_equal",
+  "utils_tests.test_hashable.TestHashable.test_equal",
+  "utils_tests.test_hashable.TestHashable.test_unhashable",
+  "utils_tests.test_tree.NodeTests.test_hash",
+  "utils_tests.test_tree.NodeTests.test_add",
+  "utils_tests.test_tree.NodeTests.test_bool",
+  "utils_tests.test_tree.NodeTests.test_contains",
+  "utils_tests.test_tree.NodeTests.test_deepcopy",
+  "utils_tests.test_tree.NodeTests.test_eq_children",
+  "utils_tests.test_tree.NodeTests.test_eq_connector",
+  "utils_tests.test_tree.NodeTests.test_eq_negated",
+  "utils_tests.test_tree.NodeTests.test_len",
+  "utils_tests.test_tree.NodeTests.test_negate",
+  "utils_tests.test_tree.NodeTests.test_repr",
+  "utils_tests.test_tree.NodeTests.test_str"
+ ],
+ "oracle_files": [
+  "tests/utils_tests/test_hashable.py",
+  "tests/utils_tests/test_tree.py"
+ ],
+ "fail_to_pass": [
+  "utils_tests.test_hashable.TestHashable.test_count_equal",
+  "utils_tests.test_hashable.TestHashable.test_equal",
+  "utils_tests.test_hashable.TestHashable.test_unhashable",
+  "utils_tests.test_tree.NodeTests.test_hash"
+ ],
+ "pass_to_pass": [
+  "utils_tests.test_tree.NodeTests.test_add",
+  "utils_tests.test_tree.NodeTests.test_bool",
+  "utils_tests.test_tree.NodeTests.test_contains",
+  "utils_tests.test_tree.NodeTests.test_deepcopy",
+  "utils_tests.test_tree.NodeTests.test_eq_children",
+  "utils_tests.test_tree.NodeTests.test_eq_connector",
+  "utils_tests.test_tree.NodeTests.test_eq_negated",
+  "utils_tests.test_tree.NodeTests.test_len",
+  "utils_tests.test_tree.NodeTests.test_negate",
+  "utils_tests.test_tree.NodeTests.test_repr",
+  "utils_tests.test_tree.NodeTests.test_str"
+ ],
+ "runner": "django"
+}

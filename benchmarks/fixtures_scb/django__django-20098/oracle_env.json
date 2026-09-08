@@ -1,0 +1,26 @@
+{
+ "env_path": "~/coundetrip/swebench_envs/django__django-20098",
+ "target_rel": "django/core/checks/model_checks.py",
+ "target_rels": [
+  "django/core/checks/model_checks.py"
+ ],
+ "source_basename": "model_checks.py",
+ "test_selection": [
+  "check_framework.test_model_checks.DuplicateDBTableTests.test_collision_across_apps",
+  "check_framework.test_model_checks.DuplicateDBTableTests.test_collision_in_same_app",
+  "check_framework.test_model_checks.DuplicateDBTableTests.test_no_collision_for_proxy_models",
+  "check_framework.test_model_checks.DuplicateDBTableTests.test_no_collision_for_unmanaged_models"
+ ],
+ "oracle_files": [
+  "tests/check_framework/test_model_checks.py"
+ ],
+ "fail_to_pass": [
+  "check_framework.test_model_checks.DuplicateDBTableTests.test_collision_across_apps",
+  "check_framework.test_model_checks.DuplicateDBTableTests.test_collision_in_same_app"
+ ],
+ "pass_to_pass": [
+  "check_framework.test_model_checks.DuplicateDBTableTests.test_no_collision_for_proxy_models",
+  "check_framework.test_model_checks.DuplicateDBTableTests.test_no_collision_for_unmanaged_models"
+ ],
+ "runner": "django"
+}

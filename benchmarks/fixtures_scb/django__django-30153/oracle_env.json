@@ -1,0 +1,52 @@
+{
+ "env_path": "~/coundetrip/swebench_envs/django__django-30153",
+ "target_rel": "django/forms/widgets.py",
+ "target_rels": [
+  "django/forms/widgets.py"
+ ],
+ "source_basename": "widgets.py",
+ "test_selection": [
+  "forms_tests.tests.test_media.FormsMediaTestCase.test_merge_css_three_way",
+  "forms_tests.tests.test_media.FormsMediaTestCase.test_merge_js_three_way",
+  "forms_tests.tests.test_media.FormsMediaTestCase.test_combine_media",
+  "forms_tests.tests.test_media.FormsMediaTestCase.test_construction",
+  "forms_tests.tests.test_media.FormsMediaTestCase.test_form_media",
+  "forms_tests.tests.test_media.FormsMediaTestCase.test_html_safe",
+  "forms_tests.tests.test_media.FormsMediaTestCase.test_media_dsl",
+  "forms_tests.tests.test_media.FormsMediaTestCase.test_media_inheritance",
+  "forms_tests.tests.test_media.FormsMediaTestCase.test_media_inheritance_extends",
+  "forms_tests.tests.test_media.FormsMediaTestCase.test_media_inheritance_from_property",
+  "forms_tests.tests.test_media.FormsMediaTestCase.test_media_inheritance_single_type",
+  "forms_tests.tests.test_media.FormsMediaTestCase.test_media_property",
+  "forms_tests.tests.test_media.FormsMediaTestCase.test_media_property_parent_references",
+  "forms_tests.tests.test_media.FormsMediaTestCase.test_merge",
+  "forms_tests.tests.test_media.FormsMediaTestCase.test_merge_warning",
+  "forms_tests.tests.test_media.FormsMediaTestCase.test_multi_media",
+  "forms_tests.tests.test_media.FormsMediaTestCase.test_multi_widget"
+ ],
+ "oracle_files": [
+  "tests/forms_tests/tests/test_media.py"
+ ],
+ "fail_to_pass": [
+  "forms_tests.tests.test_media.FormsMediaTestCase.test_merge_css_three_way",
+  "forms_tests.tests.test_media.FormsMediaTestCase.test_merge_js_three_way"
+ ],
+ "pass_to_pass": [
+  "forms_tests.tests.test_media.FormsMediaTestCase.test_combine_media",
+  "forms_tests.tests.test_media.FormsMediaTestCase.test_construction",
+  "forms_tests.tests.test_media.FormsMediaTestCase.test_form_media",
+  "forms_tests.tests.test_media.FormsMediaTestCase.test_html_safe",
+  "forms_tests.tests.test_media.FormsMediaTestCase.test_media_dsl",
+  "forms_tests.tests.test_media.FormsMediaTestCase.test_media_inheritance",
+  "forms_tests.tests.test_media.FormsMediaTestCase.test_media_inheritance_extends",
+  "forms_tests.tests.test_media.FormsMediaTestCase.test_media_inheritance_from_property",
+  "forms_tests.tests.test_media.FormsMediaTestCase.test_media_inheritance_single_type",
+  "forms_tests.tests.test_media.FormsMediaTestCase.test_media_property",
+  "forms_tests.tests.test_media.FormsMediaTestCase.test_media_property_parent_references",
+  "forms_tests.tests.test_media.FormsMediaTestCase.test_merge",
+  "forms_tests.tests.test_media.FormsMediaTestCase.test_merge_warning",
+  "forms_tests.tests.test_media.FormsMediaTestCase.test_multi_media",
+  "forms_tests.tests.test_media.FormsMediaTestCase.test_multi_widget"
+ ],
+ "runner": "django"
+}

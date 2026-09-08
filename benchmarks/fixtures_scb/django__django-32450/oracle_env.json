@@ -1,0 +1,48 @@
+{
+ "env_path": "~/coundetrip/swebench_envs/django__django-32450",
+ "target_rel": "django/db/models/query_utils.py",
+ "target_rels": [
+  "django/db/models/query_utils.py"
+ ],
+ "source_basename": "query_utils.py",
+ "test_selection": [
+  "queries.test_q.QTests.test_combine_and_empty",
+  "queries.test_q.QTests.test_combine_or_empty",
+  "queries.test_q.QTests.test_combine_and_both_empty",
+  "queries.test_q.QTests.test_combine_not_q_object",
+  "queries.test_q.QTests.test_combine_or_both_empty",
+  "queries.test_q.QTests.test_deconstruct",
+  "queries.test_q.QTests.test_deconstruct_and",
+  "queries.test_q.QTests.test_deconstruct_multiple_kwargs",
+  "queries.test_q.QTests.test_deconstruct_negated",
+  "queries.test_q.QTests.test_deconstruct_nested",
+  "queries.test_q.QTests.test_deconstruct_or",
+  "queries.test_q.QTests.test_reconstruct",
+  "queries.test_q.QTests.test_reconstruct_and",
+  "queries.test_q.QTests.test_reconstruct_negated",
+  "queries.test_q.QTests.test_reconstruct_or"
+ ],
+ "oracle_files": [
+  "tests/queries/test_q.py"
+ ],
+ "fail_to_pass": [
+  "queries.test_q.QTests.test_combine_and_empty",
+  "queries.test_q.QTests.test_combine_or_empty"
+ ],
+ "pass_to_pass": [
+  "queries.test_q.QTests.test_combine_and_both_empty",
+  "queries.test_q.QTests.test_combine_not_q_object",
+  "queries.test_q.QTests.test_combine_or_both_empty",
+  "queries.test_q.QTests.test_deconstruct",
+  "queries.test_q.QTests.test_deconstruct_and",
+  "queries.test_q.QTests.test_deconstruct_multiple_kwargs",
+  "queries.test_q.QTests.test_deconstruct_negated",
+  "queries.test_q.QTests.test_deconstruct_nested",
+  "queries.test_q.QTests.test_deconstruct_or",
+  "queries.test_q.QTests.test_reconstruct",
+  "queries.test_q.QTests.test_reconstruct_and",
+  "queries.test_q.QTests.test_reconstruct_negated",
+  "queries.test_q.QTests.test_reconstruct_or"
+ ],
+ "runner": "django"
+}

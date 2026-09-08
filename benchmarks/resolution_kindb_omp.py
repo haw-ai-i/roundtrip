@@ -14,8 +14,8 @@ from coundetrip.llm_agent import ast_describe
 N = 1
 DISCOVERED = Path("benchmarks/stage3_best_prompt.txt").read_text(encoding="utf-8")
 OMP = os.environ.get("COUNDETRIP_OMP_BIN", "omp")
-PROVIDER = "local-qwen"
-MODEL = "hf.co/unsloth/Qwen3.6-35B-A3B-GGUF:UD-Q4_K_M"
+PROVIDER = os.environ.get("COUNDETRIP_PROVIDER", "local-qwen")
+MODEL = os.environ.get("COUNDETRIP_MODEL", "hf.co/unsloth/Qwen3.6-35B-A3B-GGUF:UD-Q4_K_M")
 
 RES_SYS = ("You are a coding agent resolving a repository issue. The repository "
            "is in your working directory. Read ONLY the file(s) named in the "
@@ -58,6 +58,7 @@ def run_omp(cwd, system_prompt, user_prompt, timeout=None, tries=None):
     _pf.close()
     cmd = [OMP, "--provider", PROVIDER, "--model", MODEL,
            "--no-session", "--no-lsp", "--mode", "json", "--thinking", "off",
+           "--service-tier", os.environ.get("COUNDETRIP_TIER", "flex"),
            "--max-time", _MAXT,
            "--system-prompt", system_prompt, "-p", "@" + _pf.name]
     last_err = None
@@ -242,7 +243,8 @@ def parse_django_summary(stderr, stdout):
                 bad += int(mm.group(1))
         if bad == 0:
             bad = total
-    return total - bad, bad
+    passed = max(0, total - bad)   # clamp: a pass count can never be negative
+    return passed, bad
 
 
 def score(fix, fdir, repo):
@@ -274,6 +276,8 @@ def wait_for_endpoint(tries=30, delay=20):
     import urllib.request
     for _ in range(tries):
         try:
+            if PROVIDER != "local-qwen":
+                return True
             urllib.request.urlopen("http://127.0.0.1:11434/v1/models", timeout=5)
             return True
         except Exception:
@@ -283,8 +287,12 @@ def wait_for_endpoint(tries=30, delay=20):
 
 
 def main():
-    made = json.load(open("benchmarks/fixtures_v2.json"))["made"]
-    kindb = [m for m in made if "multi" in m or "xdir" in m]
+    _fixroot = Path(os.environ.get("COUNDETRIP_FIXROOT", "benchmarks/fixtures"))
+    if os.environ.get("COUNDETRIP_FIXROOT"):
+        kindb = sorted(p.name for p in _fixroot.iterdir() if (p / "oracle_env.json").exists())
+    else:
+        made = json.load(open("benchmarks/fixtures_v2.json"))["made"]
+        kindb = [m for m in made if "multi" in m or "xdir" in m]
     only = sys.argv[1:] if len(sys.argv) > 1 else None
     if only:
         kindb = [m for m in kindb if m in only]
@@ -294,7 +302,7 @@ def main():
         if not wait_for_endpoint():
             print("endpoint unreachable, stopping before recording bad data", flush=True)
             break
-        fdir = Path("benchmarks/fixtures") / fix
+        fdir = _fixroot / fix
         cfg = json.loads((fdir / "oracle_env.json").read_text())
         _envs_base = os.environ.get("COUNDETRIP_ENVS_BASE")
         if _envs_base:
@@ -323,7 +331,10 @@ def main():
                 _full = describe(prefix_srcs, DESC_SYS_OPTIMIZED)
                 if _full.strip():
                     _dfile.write_text(_full, encoding="utf-8")
+        _ctxf = fdir / "context.md"
+        _ctx = _ctxf.read_text(encoding="utf-8") if _ctxf.exists() else ""
         descs = {"issue_only": None,
+                 "context": _ctx,
                  "optimized": _full,
                  "compact": summarize(_full) if "compact" in _conds else "",
                  "ast": ast_describe(prefix_srcs) if "ast" in _conds else ""}

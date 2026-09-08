@@ -1,0 +1,58 @@
+{
+ "env_path": "~/coundetrip/swebench_envs/sphinx-doc__sphinx-8588",
+ "target_rel": "sphinx/util/inspect.py",
+ "target_rels": [
+  "sphinx/util/inspect.py"
+ ],
+ "source_basename": "inspect.py",
+ "test_selection": [
+  "tests/test_util_inspect.py::test_TypeAliasNamespace",
+  "tests/test_ext_autodoc_configs.py::having::test_autoclass_content_and_docstring_signature_both",
+  "tests/test_ext_autodoc_configs.py::having::test_autoclass_content_and_docstring_signature_class",
+  "tests/test_ext_autodoc_configs.py::having::test_autoclass_content_and_docstring_signature_init",
+  "tests/test_ext_autodoc_configs.py::having::test_autoclass_content_both",
+  "tests/test_ext_autodoc_configs.py::having::test_autoclass_content_init",
+  "tests/test_ext_autodoc_configs.py::having::test_autodoc_default_options",
+  "tests/test_ext_autodoc_configs.py::having::test_autodoc_default_options_with_values",
+  "tests/test_ext_autodoc_configs.py::having::test_autodoc_docstring_signature",
+  "tests/test_ext_autodoc_configs.py::having::test_autodoc_inherit_docstrings",
+  "tests/test_ext_autodoc_configs.py::having::test_autodoc_typehints_description",
+  "tests/test_ext_autodoc_configs.py::having::test_autodoc_typehints_description_for_invalid_node",
+  "tests/test_ext_autodoc_configs.py::having::test_autodoc_typehints_description_no_undoc",
+  "tests/test_ext_autodoc_configs.py::having::test_autodoc_typehints_description_with_documented_init",
+  "tests/test_ext_autodoc_configs.py::having::test_autodoc_typehints_description_with_documented_init_no_undoc",
+  "tests/test_ext_autodoc_configs.py::having::test_autodoc_typehints_none",
+  "tests/test_ext_autodoc_configs.py::having::test_autodoc_typehints_none_for_overload",
+  "tests/test_ext_autodoc_configs.py::having::test_mocked_module_imports",
+  "tests/test_ext_autodoc_configs.py::test_autoclass_content_class"
+ ],
+ "oracle_files": [
+  "tests/roots/test-ext-autodoc/target/autodoc_type_aliases.py",
+  "tests/test_ext_autodoc_configs.py",
+  "tests/test_util_inspect.py"
+ ],
+ "fail_to_pass": [
+  "tests/test_util_inspect.py::test_TypeAliasNamespace"
+ ],
+ "pass_to_pass": [
+  "tests/test_ext_autodoc_configs.py::having::test_autoclass_content_and_docstring_signature_both",
+  "tests/test_ext_autodoc_configs.py::having::test_autoclass_content_and_docstring_signature_class",
+  "tests/test_ext_autodoc_configs.py::having::test_autoclass_content_and_docstring_signature_init",
+  "tests/test_ext_autodoc_configs.py::having::test_autoclass_content_both",
+  "tests/test_ext_autodoc_configs.py::having::test_autoclass_content_init",
+  "tests/test_ext_autodoc_configs.py::having::test_autodoc_default_options",
+  "tests/test_ext_autodoc_configs.py::having::test_autodoc_default_options_with_values",
+  "tests/test_ext_autodoc_configs.py::having::test_autodoc_docstring_signature",
+  "tests/test_ext_autodoc_configs.py::having::test_autodoc_inherit_docstrings",
+  "tests/test_ext_autodoc_configs.py::having::test_autodoc_typehints_description",
+  "tests/test_ext_autodoc_configs.py::having::test_autodoc_typehints_description_for_invalid_node",
+  "tests/test_ext_autodoc_configs.py::having::test_autodoc_typehints_description_no_undoc",
+  "tests/test_ext_autodoc_configs.py::having::test_autodoc_typehints_description_with_documented_init",
+  "tests/test_ext_autodoc_configs.py::having::test_autodoc_typehints_description_with_documented_init_no_undoc",
+  "tests/test_ext_autodoc_configs.py::having::test_autodoc_typehints_none",
+  "tests/test_ext_autodoc_configs.py::having::test_autodoc_typehints_none_for_overload",
+  "tests/test_ext_autodoc_configs.py::having::test_mocked_module_imports",
+  "tests/test_ext_autodoc_configs.py::test_autoclass_content_class"
+ ],
+ "runner": "pytest"
+}

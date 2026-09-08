@@ -1,0 +1,52 @@
+{
+ "env_path": "~/coundetrip/swebench_envs/django__django-33871",
+ "target_rel": "django/forms/boundfield.py",
+ "target_rels": [
+  "django/forms/boundfield.py"
+ ],
+ "source_basename": "boundfield.py",
+ "test_selection": [
+  "forms_tests.tests.tests.ModelFormCallableModelDefault.test_callable_default_hidden_widget_value_not_overridden",
+  "forms_tests.tests.tests.EmptyLabelTestCase.test_empty_field_char",
+  "forms_tests.tests.tests.EmptyLabelTestCase.test_empty_field_char_none",
+  "forms_tests.tests.tests.EmptyLabelTestCase.test_empty_field_integer",
+  "forms_tests.tests.tests.EmptyLabelTestCase.test_get_display_value_on_none",
+  "forms_tests.tests.tests.EmptyLabelTestCase.test_html_rendering_of_prepopulated_models",
+  "forms_tests.tests.tests.EmptyLabelTestCase.test_save_empty_label_forms",
+  "forms_tests.tests.tests.FormsModelTestCase.test_boundary_conditions",
+  "forms_tests.tests.tests.FormsModelTestCase.test_formfield_initial",
+  "forms_tests.tests.tests.FormsModelTestCase.test_unicode_filename",
+  "forms_tests.tests.tests.ManyToManyExclusionTestCase.test_m2m_field_exclusion",
+  "forms_tests.tests.tests.ModelFormCallableModelDefault.test_callable_initial_value",
+  "forms_tests.tests.tests.ModelFormCallableModelDefault.test_initial_instance_value",
+  "forms_tests.tests.tests.ModelFormCallableModelDefault.test_no_empty_option",
+  "forms_tests.tests.tests.RelatedModelFormTests.test_invalid_loading_order",
+  "forms_tests.tests.tests.RelatedModelFormTests.test_valid_loading_order",
+  "forms_tests.tests.tests.TestTicket14567.test_empty_queryset_return"
+ ],
+ "oracle_files": [
+  "tests/forms_tests/tests/tests.py"
+ ],
+ "fail_to_pass": [
+  "forms_tests.tests.tests.ModelFormCallableModelDefault.test_callable_default_hidden_widget_value_not_overridden"
+ ],
+ "pass_to_pass": [
+  "forms_tests.tests.tests.EmptyLabelTestCase.test_empty_field_char",
+  "forms_tests.tests.tests.EmptyLabelTestCase.test_empty_field_char_none",
+  "forms_tests.tests.tests.EmptyLabelTestCase.test_empty_field_integer",
+  "forms_tests.tests.tests.EmptyLabelTestCase.test_get_display_value_on_none",
+  "forms_tests.tests.tests.EmptyLabelTestCase.test_html_rendering_of_prepopulated_models",
+  "forms_tests.tests.tests.EmptyLabelTestCase.test_save_empty_label_forms",
+  "forms_tests.tests.tests.FormsModelTestCase.test_boundary_conditions",
+  "forms_tests.tests.tests.FormsModelTestCase.test_formfield_initial",
+  "forms_tests.tests.tests.FormsModelTestCase.test_unicode_filename",
+  "forms_tests.tests.tests.ManyToManyExclusionTestCase.test_m2m_field_exclusion",
+  "forms_tests.tests.tests.ModelFormCallableModelDefault.test_callable_initial_value",
+  "forms_tests.tests.tests.ModelFormCallableModelDefault.test_initial_instance_value",
+  "forms_tests.tests.tests.ModelFormCallableModelDefault.test_no_empty_option",
+  "forms_tests.tests.tests.RelatedModelFormTests.test_invalid_loading_order",
+  "forms_tests.tests.tests.RelatedModelFormTests.test_valid_loading_order",
+  "forms_tests.tests.tests.TestTicket14567.test_empty_queryset_return"
+ ],
+ "runner": "django"
+}

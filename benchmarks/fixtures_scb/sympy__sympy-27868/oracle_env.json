@@ -1,0 +1,26 @@
+{
+ "env_path": "~/coundetrip/swebench_envs/sympy__sympy-27868",
+ "target_rel": "sympy/parsing/mathematica.py",
+ "target_rels": [
+  "sympy/parsing/mathematica.py",
+  "sympy/parsing/mathematica_named_characters.py"
+ ],
+ "source_basename": "mathematica.py",
+ "test_selection": [
+  "sympy/parsing/tests/test_mathematica.py::test_mathematica",
+  "sympy/parsing/tests/test_mathematica.py::test_parser_mathematica_tokenizer",
+  "sympy/parsing/tests/test_mathematica.py::test_parser_mathematica_exp_alt"
+ ],
+ "oracle_files": [
+  "sympy/parsing/tests/test_mathematica.py",
+  "sympy/testing/quality_unicode.py"
+ ],
+ "fail_to_pass": [
+  "sympy/parsing/tests/test_mathematica.py::test_mathematica",
+  "sympy/parsing/tests/test_mathematica.py::test_parser_mathematica_tokenizer"
+ ],
+ "pass_to_pass": [
+  "sympy/parsing/tests/test_mathematica.py::test_parser_mathematica_exp_alt"
+ ],
+ "runner": "pytest"
+}

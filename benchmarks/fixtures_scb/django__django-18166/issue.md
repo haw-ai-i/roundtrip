@@ -1,0 +1,42 @@
+Allow the formset class to contribute kwargs to form instances
+
+Description
+(last modified by
+Łukasz Rekucki
+)
+When we use a formset, each form is instantiated by the method
+BaseFormSet._construct_forms()
+, which is called from
+BaseFormSet.__init__()
+_construct_forms()
+allows for additional kwargs to be passed through to the individual form constructor, but
+BaseFormSet.__init__()
+does not provide any mechanism for kwargs to be passed through to the
+_construct_forms()
+call.
+Also, we may not be able to supply a static unchanging list of kwargs that should be supplied to each form constructor - the kwargs we want to pass may depend upon the specific instance of the form being instantiated.
+I propose the following changes:
+Add a
+form_kwargs
+argument to
+BaseFormSet.__init__()
+. This would be stored on self, and consumed in
+BaseFormSet._construct_forms()
+Add a method,
+BaseFormSet._kwargs_for_form(self, i)
+. This method would be called for each form instantiated, passing the index of the form within the formset. The return value of this method would be merged with the form_kwargs supplied in
+BaseFormSet.__init__()
+and used to instantiate the form.
+With these changes, a user could add additional constructor arguments to all forms by passing in form_kwargs to the formset constructor, and could add additional constructor arguments to specific forms by implementing _kwargs_for_form on a derived BaseFormSet class.
+(I found it strange, when
+BaseFormSet
+was written, it was clearly intended to be able to pass kwargs to the forms -
+_construct_form()
+allows for it, there just is not the plumbing to do so. I worked around this by redefining - copy/pasting - the
+_construct_forms()
+method in my derived
+BaseFormSet
+class)
+Patch doesn't have tests or doc changes, will add if this idea gets traction.
+Cheers
+Tom
