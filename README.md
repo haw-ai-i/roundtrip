@@ -95,3 +95,17 @@ If `--agent` contains `stub_agent`, the runner appends the subcommand `describe`
 uv sync --extra dev
 uv run pytest
 ```
+
+## License
+
+The code in this repository is released under the [MIT License](LICENSE).
+Benchmark fixtures include source code and data from third-party projects,
+which remain under their original licenses; see
+[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for details.
+
+## Citation
+
+If you use this benchmark, please cite the accompanying paper:
+*Compact Documentation for Coding Agents: A Benchmark, an Optimizer, and Why It
+Does Not Transfer* (Md Shohel Arman and Igor Molybog, 2026).
+
