@@ -15,7 +15,7 @@
   "id": "sympy__sympy-12419",
   "target": "sympy/matrices/expressions/matexpr.py",
   "ok": false,
-  "tail": ">> git clone --quiet https://github.com/sympy/sympy.git /Users/mdshohelarman/Desktop/coundetrip/swebench_envs/sympy__sympy-12419"
+  "tail": ">> git clone --quiet https://github.com/sympy/sympy.git /path/to/coundetrip/swebench_envs/sympy__sympy-12419"
  },
  {
   "id": "sympy__sympy-12481",

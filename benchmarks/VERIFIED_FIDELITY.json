@@ -114,9 +114,9 @@
   "sd": 0.19245008972987523,
   "tok_ratio": 0.26667719270545515,
   "run_kinds": [
-   "import-crash (ImportError while loading conftest '/Users/mdshohelarman/Des)",
+   "import-crash (ImportError while loading conftest '/Users/user/Des)",
    "tests-ran (p=21 f=42)",
-   "import-crash (ImportError while loading conftest '/Users/mdshohelarman/Des)"
+   "import-crash (ImportError while loading conftest '/Users/user/Des)"
   ]
  },
  "swe_v_pycode_22914": {
