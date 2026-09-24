@@ -559,7 +559,7 @@
      "total": 58235
     },
     "resolved": false,
-    "eval_tail": " file ignored\nError processing line 1 of /home/b3iq/coundetrip/.venv/lib/python3.10/site-packages/matplotlib-nspkg.pth:\n\n  Traceback (most recent call last):\n    File \"/home/b3iq/.local/share/uv/python/cpython-3.10-linux-x86_64-gnu/lib/python3.10/site.py\", line 195, in addpackage\n      exec(line)\n    File \"<string>\", line 1, in <module>\n    File \"<frozen importlib._bootstrap>\", line 568, in module_from_spec\n  AttributeError: 'NoneType' object has no attribute 'loader'\n\nRemainder of file ignored\n"
+    "eval_tail": " file ignored\nError processing line 1 of /home/user/coundetrip/.venv/lib/python3.10/site-packages/matplotlib-nspkg.pth:\n\n  Traceback (most recent call last):\n    File \"/home/user/.local/share/uv/python/cpython-3.10-linux-x86_64-gnu/lib/python3.10/site.py\", line 195, in addpackage\n      exec(line)\n    File \"<string>\", line 1, in <module>\n    File \"<frozen importlib._bootstrap>\", line 568, in module_from_spec\n  AttributeError: 'NoneType' object has no attribute 'loader'\n\nRemainder of file ignored\n"
    },
    "context": {
     "tokens": {
@@ -568,7 +568,7 @@
      "total": 34187
     },
     "resolved": false,
-    "eval_tail": " file ignored\nError processing line 1 of /home/b3iq/coundetrip/.venv/lib/python3.10/site-packages/matplotlib-nspkg.pth:\n\n  Traceback (most recent call last):\n    File \"/home/b3iq/.local/share/uv/python/cpython-3.10-linux-x86_64-gnu/lib/python3.10/site.py\", line 195, in addpackage\n      exec(line)\n    File \"<string>\", line 1, in <module>\n    File \"<frozen importlib._bootstrap>\", line 568, in module_from_spec\n  AttributeError: 'NoneType' object has no attribute 'loader'\n\nRemainder of file ignored\n"
+    "eval_tail": " file ignored\nError processing line 1 of /home/user/coundetrip/.venv/lib/python3.10/site-packages/matplotlib-nspkg.pth:\n\n  Traceback (most recent call last):\n    File \"/home/user/.local/share/uv/python/cpython-3.10-linux-x86_64-gnu/lib/python3.10/site.py\", line 195, in addpackage\n      exec(line)\n    File \"<string>\", line 1, in <module>\n    File \"<frozen importlib._bootstrap>\", line 568, in module_from_spec\n  AttributeError: 'NoneType' object has no attribute 'loader'\n\nRemainder of file ignored\n"
    },
    "compact": {
     "tokens": {
@@ -583,7 +583,7 @@
     },
     "summary_words": 82,
     "resolved": false,
-    "eval_tail": " file ignored\nError processing line 1 of /home/b3iq/coundetrip/.venv/lib/python3.10/site-packages/matplotlib-nspkg.pth:\n\n  Traceback (most recent call last):\n    File \"/home/b3iq/.local/share/uv/python/cpython-3.10-linux-x86_64-gnu/lib/python3.10/site.py\", line 195, in addpackage\n      exec(line)\n    File \"<string>\", line 1, in <module>\n    File \"<frozen importlib._bootstrap>\", line 568, in module_from_spec\n  AttributeError: 'NoneType' object has no attribute 'loader'\n\nRemainder of file ignored\n"
+    "eval_tail": " file ignored\nError processing line 1 of /home/user/coundetrip/.venv/lib/python3.10/site-packages/matplotlib-nspkg.pth:\n\n  Traceback (most recent call last):\n    File \"/home/user/.local/share/uv/python/cpython-3.10-linux-x86_64-gnu/lib/python3.10/site.py\", line 195, in addpackage\n      exec(line)\n    File \"<string>\", line 1, in <module>\n    File \"<frozen importlib._bootstrap>\", line 568, in module_from_spec\n  AttributeError: 'NoneType' object has no attribute 'loader'\n\nRemainder of file ignored\n"
    }
   }
  },
@@ -2603,7 +2603,7 @@
      "total": 94563
     },
     "resolved": true,
-    "eval_tail": " file ignored\nError processing line 1 of /home/b3iq/coundetrip/.venv/lib/python3.10/site-packages/matplotlib-nspkg.pth:\n\n  Traceback (most recent call last):\n    File \"/home/b3iq/.local/share/uv/python/cpython-3.10-linux-x86_64-gnu/lib/python3.10/site.py\", line 195, in addpackage\n      exec(line)\n    File \"<string>\", line 1, in <module>\n    File \"<frozen importlib._bootstrap>\", line 568, in module_from_spec\n  AttributeError: 'NoneType' object has no attribute 'loader'\n\nRemainder of file ignored\n"
+    "eval_tail": " file ignored\nError processing line 1 of /home/user/coundetrip/.venv/lib/python3.10/site-packages/matplotlib-nspkg.pth:\n\n  Traceback (most recent call last):\n    File \"/home/user/.local/share/uv/python/cpython-3.10-linux-x86_64-gnu/lib/python3.10/site.py\", line 195, in addpackage\n      exec(line)\n    File \"<string>\", line 1, in <module>\n    File \"<frozen importlib._bootstrap>\", line 568, in module_from_spec\n  AttributeError: 'NoneType' object has no attribute 'loader'\n\nRemainder of file ignored\n"
    },
    "context": {
     "tokens": {
@@ -2612,7 +2612,7 @@
      "total": 93252
     },
     "resolved": true,
-    "eval_tail": " file ignored\nError processing line 1 of /home/b3iq/coundetrip/.venv/lib/python3.10/site-packages/matplotlib-nspkg.pth:\n\n  Traceback (most recent call last):\n    File \"/home/b3iq/.local/share/uv/python/cpython-3.10-linux-x86_64-gnu/lib/python3.10/site.py\", line 195, in addpackage\n      exec(line)\n    File \"<string>\", line 1, in <module>\n    File \"<frozen importlib._bootstrap>\", line 568, in module_from_spec\n  AttributeError: 'NoneType' object has no attribute 'loader'\n\nRemainder of file ignored\n"
+    "eval_tail": " file ignored\nError processing line 1 of /home/user/coundetrip/.venv/lib/python3.10/site-packages/matplotlib-nspkg.pth:\n\n  Traceback (most recent call last):\n    File \"/home/user/.local/share/uv/python/cpython-3.10-linux-x86_64-gnu/lib/python3.10/site.py\", line 195, in addpackage\n      exec(line)\n    File \"<string>\", line 1, in <module>\n    File \"<frozen importlib._bootstrap>\", line 568, in module_from_spec\n  AttributeError: 'NoneType' object has no attribute 'loader'\n\nRemainder of file ignored\n"
    },
    "compact": {
     "tokens": {
@@ -2627,7 +2627,7 @@
     },
     "summary_words": 75,
     "resolved": true,
-    "eval_tail": " file ignored\nError processing line 1 of /home/b3iq/coundetrip/.venv/lib/python3.10/site-packages/matplotlib-nspkg.pth:\n\n  Traceback (most recent call last):\n    File \"/home/b3iq/.local/share/uv/python/cpython-3.10-linux-x86_64-gnu/lib/python3.10/site.py\", line 195, in addpackage\n      exec(line)\n    File \"<string>\", line 1, in <module>\n    File \"<frozen importlib._bootstrap>\", line 568, in module_from_spec\n  AttributeError: 'NoneType' object has no attribute 'loader'\n\nRemainder of file ignored\n"
+    "eval_tail": " file ignored\nError processing line 1 of /home/user/coundetrip/.venv/lib/python3.10/site-packages/matplotlib-nspkg.pth:\n\n  Traceback (most recent call last):\n    File \"/home/user/.local/share/uv/python/cpython-3.10-linux-x86_64-gnu/lib/python3.10/site.py\", line 195, in addpackage\n      exec(line)\n    File \"<string>\", line 1, in <module>\n    File \"<frozen importlib._bootstrap>\", line 568, in module_from_spec\n  AttributeError: 'NoneType' object has no attribute 'loader'\n\nRemainder of file ignored\n"
    }
   }
  },
